@@ -20,7 +20,12 @@ filetype plugin indent on
 
 " Change leader
 let mapleader=","
-" let g:mapleader = ","
+" let g:mapleader=","
+
+set number
+" turn off backup for now
+set hlsearch
+set smartcase
 
 " Disable all arrow keys
 noremap <Up> <NOP>
