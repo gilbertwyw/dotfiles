@@ -13,7 +13,7 @@ $ ln -s pure/pure.zsh ~/dotfiles/oh-my-zsh/custom/pure.zsh-theme
 
 # backup exsiting rc files before proceeding
 $ ln -sf ~/dotfiles/vim/vimrc ~/.vimrc
-$ ln -sf ~/dotfiles/zshrc ~/.zshrc
+$ ln -sf ~/dotfiles/zsh/zshrc ~/.zshrc
 
 # require password
 $ chsh -s /bin/zsh
