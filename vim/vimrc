@@ -4,11 +4,26 @@ filetype off
 set rtp+=~/dotfiles/vim/bundle/vundle/
 call vundle#rc()
 
-" Vundle
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-sensible'
-Bundle 'kien/ctrlp.vim'
+" Vundle, install to ~/.vim/bundle/
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'airblade/vim-gitgutter'
 Bundle 'bling/vim-airline'
+Bundle 'editorconfig/editorconfig-vim'
+Bundle 'gmarik/vundle'
+Bundle 'junegunn/vim-easy-align'
+Bundle 'kien/ctrlp.vim'
+Bundle 'mattn/emmet-vim'
+Bundle 'rking/ag.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-sensible'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-unimpaired'
+
+" syntax
+Bundle 'digitaltoad/vim-jade'
 Bundle 'othree/html5.vim'
 
 " colorscheme
@@ -24,6 +39,7 @@ let mapleader=","
 
 set number
 " turn off backup for now
+set nobackup
 set hlsearch
 set smartcase
 
@@ -52,3 +68,16 @@ endif
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" ctrlp
+let g:ctrlp_working_path_mode = 'ra'
+
+" emmet-vim, enable just for html/css
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+" vim-easy-align
+" Start interactive EasyAlign in visual mode
+vmap <Enter> <Plug>(EasyAlign)
+" Start interactive EasyAlign with a Vim movement
+nmap <Leader>a <Plug>(EasyAlign)
