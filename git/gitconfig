@@ -1,0 +1,12 @@
+[user]
+	name = Gilbert Wong
+	email = gilbetwyw@gmail.com
+[color]
+	ui = auto
+[merge]
+	summary = true
+[core]
+	quotepath = false
+	editor = /usr/bin/vim -f
+	autocrlf = input
+	excludesfile = ~/.gitignore_global
