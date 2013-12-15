@@ -25,6 +25,8 @@ noremap <Right> <NOP>
 
 " git commit message
 autocmd Filetype gitcommit spell textwidth=72
+" turn on spell checking for markdown files
+autocmd BufRead,BufNewFile *.md setlocal spell
 
 " The Silver Searcher, http://robots.thoughtbot.com/faster-grepping-in-vim/
 if executable('ag')
