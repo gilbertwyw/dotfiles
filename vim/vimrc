@@ -1,4 +1,6 @@
 set nocompatible
+" otherwise NERDTree shows strange character instead of arrows
+set encoding=utf-8
 syntax on
 filetype off
 set rtp+=~/dotfiles/vim/bundle/vundle/
@@ -15,6 +17,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'rking/ag.vim'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
@@ -104,6 +107,11 @@ let g:ctrlp_working_path_mode = 'ra'
 " emmet-vim, enable just for html/css
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+" NERDTree
+autocmd vimenter * if !argc() | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+map <C-n> :NERDTreeToggle<CR>
 
 " vim-easy-align
 " Start interactive EasyAlign in visual mode
