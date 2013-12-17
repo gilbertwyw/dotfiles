@@ -23,8 +23,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-sensible'
-Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-surround'
 Bundle 'Yggdroot/indentLine'
 
@@ -76,7 +76,7 @@ set pastetoggle=<F2>
 set mouse=a
 
 " cut down key stroke for normal mode
-nnoremap ; :
+"nnoremap ; :
 
 " Disable all arrow keys
 noremap <Up> <NOP>
@@ -121,7 +121,7 @@ autocmd FileType html,css EmmetInstall
 " NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-map <C-n> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
 
 " vim-easy-align
 " Start interactive EasyAlign in visual mode
