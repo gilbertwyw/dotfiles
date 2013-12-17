@@ -10,3 +10,5 @@
 	editor = vim -f
 	autocrlf = input
 	excludesfile = ~/.gitignore_global
+[push]
+	default = simple
