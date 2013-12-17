@@ -7,6 +7,6 @@
 	summary = true
 [core]
 	quotepath = false
-	editor = /usr/bin/vim -f
+	editor = vim -f
 	autocrlf = input
 	excludesfile = ~/.gitignore_global
