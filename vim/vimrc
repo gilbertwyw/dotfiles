@@ -63,6 +63,7 @@ set hlsearch
 set ignorecase
 set smartcase
 
+" use soft tab
 set expandtab
 set tabstop=2
 " number of space to use for autoindenting
@@ -76,7 +77,6 @@ set mouse=a
 
 " cut down key stroke for normal mode
 nnoremap ; :
-
 
 " Disable all arrow keys
 noremap <Up> <NOP>
