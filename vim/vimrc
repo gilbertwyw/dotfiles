@@ -27,6 +27,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-surround'
 Bundle 'Yggdroot/indentLine'
+Bundle 'kchmck/vim-coffee-script'
 
 " syntax
 Bundle 'digitaltoad/vim-jade'
