@@ -76,3 +76,8 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # require `brew install z`
 . `brew --prefix`/etc/profile.d/z.sh
+
+# aliases
+alias bup="brew update"
+alias bout="brew outdated"
+alias buga="brew upgrade `brew outdated`"
