@@ -8,6 +8,7 @@ set rtp+=~/dotfiles/vim/bundle/vundle/
 call vundle#rc()
 
 " Vundle, install to ~/.vim/bundle/
+Bundle 'myusuf3/numbers.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'airblade/vim-gitgutter'
@@ -123,6 +124,10 @@ autocmd FileType html,css EmmetInstall
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <leader>n :NERDTreeToggle<CR>
+
+" numbers.vim
+nnoremap <F3> :NumbersToggle<CR>
+nnoremap <F4> :NumbersOnOff<CR>
 
 " vim-easy-align
 " Start interactive EasyAlign in visual mode
