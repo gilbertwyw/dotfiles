@@ -128,6 +128,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " NERDTree mirror mode by default
 map <silent> <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
 
+let NERDTreeIgnore=['\.sublime-*']
+
 " numbers.vim
 nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F4> :NumbersOnOff<CR>
