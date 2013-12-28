@@ -124,7 +124,9 @@ autocmd FileType html,css EmmetInstall
 " NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-map <leader>n :NERDTreeToggle<CR>
+
+" NERDTree mirror mode by default
+map <silent> <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
 
 " numbers.vim
 nnoremap <F3> :NumbersToggle<CR>
