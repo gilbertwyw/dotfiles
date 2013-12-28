@@ -78,6 +78,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 . `brew --prefix`/etc/profile.d/z.sh
 
 # aliases
-alias bup="brew update"
-alias bout="brew outdated"
-alias buga="brew upgrade `brew outdated`"
+alias bcu="brew cleanup"
+alias bod="brew outdated"
+alias bud="brew update"
+alias bug="brew upgrade"
