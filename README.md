@@ -29,3 +29,6 @@ $ vim +BundleInstall +qall
 $ cd ~/.vim/bundle/YouCompleteMe
 $ ./install.sh --clang-completer
 ```
+
+### Notes
+"pvm_ls:26: no matches found: default" will be gone after `pvm install <version>`

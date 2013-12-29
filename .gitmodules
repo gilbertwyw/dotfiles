@@ -10,3 +10,6 @@
 [submodule "tomorrow-theme"]
 	path = tomorrow-theme
 	url = https://github.com/chriskempson/tomorrow-theme
+[submodule "pvm"]
+	path = pvm
+	url = git://github.com/kaiinkinen/pvm.git

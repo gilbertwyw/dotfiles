@@ -82,3 +82,7 @@ alias bcu="brew cleanup"
 alias bod="brew outdated"
 alias bud="brew update"
 alias bug="brew upgrade"
+
+# pvm, play version manager
+. ~/dotfiles/pvm/pvm.sh
+
