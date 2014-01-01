@@ -46,6 +46,17 @@ filetype plugin indent on
 
 let mapleader=","
 
+" ~/.vimrc
+" *** The Right Hand system ***
+" in INSERT mode, escape to NORMAL mode
+inoremap ;l <Esc>
+" in INSERT mode, save & back to NORMAL mode
+inoremap ;k <Esc>:update<CR>
+" in INSERT mode, save & back to INSERT mode
+inoremap ;j <C-O>:update<CR>
+" in NORMAL mode, save & back to NORMAL mode
+nnoremap ;j :update<CR>
+
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
