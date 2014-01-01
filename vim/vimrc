@@ -8,6 +8,7 @@ set rtp+=~/dotfiles/vim/bundle/vundle/
 call vundle#rc()
 
 " Vundle, install to ~/.vim/bundle/
+Bundle 'maksimr/vim-jsbeautify'
 Bundle 'goldfeld/vim-seek'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'myusuf3/numbers.vim'
@@ -151,3 +152,8 @@ nnoremap <F4> :NumbersOnOff<CR>
 vmap <Enter> <Plug>(EasyAlign)
 " Start interactive EasyAlign with a Vim movement
 nmap <Leader>a <Plug>(EasyAlign)
+
+" vim-jsbeautify
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
