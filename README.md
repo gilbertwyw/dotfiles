@@ -6,9 +6,9 @@
 ## Set Up
 
 ```
-$ git clonehttps://github.com/gilbertwyw/dotfiles.git ~
+$ git clone https://github.com/gilbertwyw/dotfiles.git ~
 $ cd dotfiles
-$ git submodule update --init —-recursive
+$ git submodule update --init --recursive
 $ ln -s pure/pure.zsh ~/dotfiles/oh-my-zsh/custom/pure.zsh-theme
 
 # backup exsiting rc files before proceeding
@@ -18,6 +18,7 @@ $ ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
 $ ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
 $ ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
 $ ln -s ~/dotfiles/agignore ~/.agignore
+$ ln -s ~/dotfiles/editorconfig ~/.editorconfig
 
 # require password
 $ chsh -s /bin/zsh
@@ -25,7 +26,7 @@ $ chsh -s /bin/zsh
 # require `brew install macvim --override-system-vim`
 $ vim +BundleInstall +qall
 
-# the following 2 steps required for YouCompleteMe
+# the following 2 steps are required for YouCompleteMe
 $ cd ~/.vim/bundle/YouCompleteMe
 $ ./install.sh --clang-completer
 ```
