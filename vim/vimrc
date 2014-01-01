@@ -9,6 +9,7 @@ call vundle#rc()
 
 " Vundle, install to ~/.vim/bundle/
 Bundle 'maksimr/vim-jsbeautify'
+Bundle 'marijnh/tern_for_vim'
 Bundle 'goldfeld/vim-seek'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'myusuf3/numbers.vim'
@@ -158,5 +159,14 @@ nmap <Leader>a <Plug>(EasyAlign)
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+" tern_for_vim
+let g:tern_show_argument_hints='on_hold'
+nmap <Leader>tD :TernDoc<cr>
+nmap <Leader>tb :TernDocBrowse<cr>
+nmap <Leader>td :TernDef<cr>
+nmap <Leader>tr :TernRefs<cr>
+nmap <Leader>tR :TernRename<cr>
+
 " enable code folding by "vim-javascript-syntax'
 "au FileType javascript call JavaScriptFold()
