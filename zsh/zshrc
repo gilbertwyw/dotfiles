@@ -86,3 +86,6 @@ alias bug="brew upgrade"
 # pvm, play version manager
 . ~/dotfiles/pvm/pvm.sh
 
+export EDITOR=`which vim`
+eval "$(direnv hook $0)"
+
