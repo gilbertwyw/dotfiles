@@ -70,8 +70,8 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 set hidden
 
 set number
-" turn off backup for now
 
+" turn off backup for now
 set nobackup
 set noswapfile
 
@@ -79,7 +79,6 @@ set noswapfile
 set title
 
 set hlsearch
-
 set ignorecase
 set smartcase
 
@@ -111,10 +110,13 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " git commit message
-autocmd Filetype gitcommit spell textwidth=72
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " turn on spell checking for markdown files
 autocmd BufRead,BufNewFile *.md setlocal spell
+
+" turn off search highlight
+nnoremap <silent> <C-l> :nohlsearch<CR>
 
 " The Silver Searcher, http://robots.thoughtbot.com/faster-grepping-in-vim/
 if executable('ag')
