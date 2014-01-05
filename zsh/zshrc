@@ -77,6 +77,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # require `brew install z`
 . `brew --prefix`/etc/profile.d/z.sh
 
+# `brew install zsh-syntax-highlighting`
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # aliases
 alias bcu="brew cleanup"
 alias bod="brew outdated"
