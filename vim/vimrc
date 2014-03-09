@@ -116,7 +116,7 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 autocmd BufRead,BufNewFile *.md setlocal spell
 
 " turn off search highlight
-nnoremap <silent> <leader>h :nohlsearch<CR>
+nnoremap <silent> <leader><space> :noh<CR>
 
 " The Silver Searcher, http://robots.thoughtbot.com/faster-grepping-in-vim/
 if executable('ag')
