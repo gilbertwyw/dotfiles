@@ -35,6 +35,7 @@ Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-surround'
 Bundle 'Yggdroot/indentLine'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'ap/vim-css-color'
 
 " syntax
 Bundle 'digitaltoad/vim-jade'
