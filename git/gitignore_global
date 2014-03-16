@@ -46,3 +46,4 @@ Thumbs.db
 ##########
 .envrc
 .tern-project
+.agignore
