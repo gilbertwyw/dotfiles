@@ -19,6 +19,7 @@ $ ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
 $ ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
 $ ln -s ~/dotfiles/agignore ~/.agignore
 $ ln -s ~/dotfiles/editorconfig ~/.editorconfig
+$ ln -s  ~/dotfiles/ssh/config ~/.ssh/config
 
 # require password
 $ chsh -s /bin/zsh
