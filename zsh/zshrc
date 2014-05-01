@@ -68,8 +68,7 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 HOMEBREW_PATH=/usr/local/bin:/usr/local/sbin
-NPM_PREFIX="$(/usr/local/bin/npm config get prefix)"
-export PATH=$HOMEBREW_PATH:$NPM_PREFIX/bin:$PATH
+export PATH=$HOMEBREW_PATH:$PATH
 
 # from `brew info rbenv`
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -94,3 +93,7 @@ alias c='rougify'
 export EDITOR=`which vim`
 eval "$(direnv hook $0)"
 
+# manage node & npm using nvm
+source $(brew --prefix nvm)/nvm.sh
+NPM_PREFIX="$(npm config get prefix)"
+export PATH=$NPM_PREFIX/bin:$PATH
