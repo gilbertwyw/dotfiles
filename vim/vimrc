@@ -7,8 +7,11 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" Vundle, install to ~/.vim/bundle/
+" Vundle, install under ~/.vim/bundle/
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'SirVer/ultisnips'
+" snippets; used with 'ultisnips' 
+Bundle 'honza/vim-snippets'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'Yggdroot/indentLine'
 Bundle 'airblade/vim-gitgutter'
@@ -179,3 +182,8 @@ nmap <Leader>tR :TernRename<cr>
 
 " enable code folding by "vim-javascript-syntax'
 au FileType javascript call JavaScriptFold()
+
+" to avoid conflict with YouCompleteMe
+let g:UltiSnipsExpandTrigger="<c-j>"
+"let g:UltiSnipsJumpForwardTrigger="<c-j>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-k>"
