@@ -95,5 +95,3 @@ eval "$(direnv hook $0)"
 
 # manage node & npm using nvm
 source $(brew --prefix nvm)/nvm.sh
-NPM_PREFIX="$(npm config get prefix)"
-export PATH=$NPM_PREFIX/bin:$PATH
