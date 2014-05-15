@@ -184,6 +184,8 @@ nmap <Leader>tR :TernRename<cr>
 au FileType javascript call JavaScriptFold()
 
 " to avoid conflict with YouCompleteMe
+set rtp+=~/dotfiles/vim/
+let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<c-j>"
-"let g:UltiSnipsJumpForwardTrigger="<c-j>"
-"let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsSnippetsDir="~/dotfiles/vim/snips/"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
