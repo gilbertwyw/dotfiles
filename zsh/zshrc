@@ -93,5 +93,7 @@ alias c='rougify'
 export EDITOR=`which vim`
 eval "$(direnv hook $0)"
 
+# Otherwise, Node installs will be lost upon upgrading nvm
+export NVM_DIR=~/.nvm
 # manage node & npm using nvm
 source $(brew --prefix nvm)/nvm.sh
