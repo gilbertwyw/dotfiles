@@ -1,9 +1,11 @@
+tap caskroom/cask
 install ack
 install asciidoc
 install boost
 install boost-build
 install brew-cask
 install casperjs
+install chrome-cli
 install couchdb
 install ctags
 install direnv
@@ -17,7 +19,8 @@ install gtkmm
 install jenkins
 install jq
 install libyaml
-install macvim
+# require Xcode
+install macvim --override-system-vim
 install mongodb
 install mysql
 install neon
