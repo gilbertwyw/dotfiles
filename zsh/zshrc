@@ -80,12 +80,26 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # aliases
+
+## homebrew
 alias bcu="brew cleanup"
 alias bod="brew outdated"
 alias bud="brew update"
 alias bug="brew upgrade"
-# `gem install rouge`
+
+## homebrew-cask
+alias bci="brew cask install"
+alias bcl="brew cask list"
+alias bcs="brew cask search"
+
+## `gem install rouge`
 alias c='rougify'
+
+## hub
+alias git=hub
+
+## macvim
+alias m=mvim
 
 # pvm, play version manager
 . ~/dotfiles/pvm/pvm.sh
