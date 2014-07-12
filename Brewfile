@@ -29,6 +29,7 @@ install nmap
 install nvm
 install popt
 install pstree
+install python
 install rbenv-gem-rehash
 install reattach-to-user-namespace
 install redis
