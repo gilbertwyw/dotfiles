@@ -1,13 +1,21 @@
 ## Config Files
 
 - Homebrew
-- vim (macVim)
-- zsh (oh-my-zsh)
+- vim & macVim
+- zsh
+
 
 ## Set Up
 
-- Install XQuartz 
-- Install Xcode (for MacVim)
+Install:
+
+  - Xcode (for MacVim)
+  - [XQuartz](http://xquartz.macosforge.org)
+  - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+iTerm:
+
+  - [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme)
 
 ```
 $ git clone https://github.com/gilbertwyw/dotfiles.git ~
