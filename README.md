@@ -4,7 +4,6 @@
 - vim & macVim
 - zsh
 
-
 ## Set Up
 
 Install:
@@ -26,11 +25,17 @@ $ brew bundle Brefile
 # backup existing rc files before proceeding
 $ ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 $ ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
+
 $ ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
+
 $ ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
 $ ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
+
 $ ln -s ~/dotfiles/agignore ~/.agignore
 $ ln -s ~/dotfiles/editorconfig ~/.editorconfig
+
+$ ln -s ~/dotfiles/ruby/gemrc ~/.gemrc
+
 $ mkdir ~/.ssh
 $ ln -s  ~/dotfiles/ssh/config ~/.ssh/config
 
