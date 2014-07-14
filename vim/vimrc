@@ -110,11 +110,11 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-" Easy window navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+" Easy pane navigation
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
 
 " git commit message
 autocmd Filetype gitcommit setlocal spell textwidth=72
@@ -206,3 +206,7 @@ silent! if emoji#available()
   let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
   let g:gitgutter_sign_modified_removed = emoji#for('collision')
 endif
+
+" SHIFT + direction to change tab
+noremap <S-l> gt
+noremap <S-h> gT
