@@ -74,7 +74,7 @@ nnoremap ;j :update<CR>
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
-" hide buffer
+" Allow hidden buffers, don't limit to 1 file per window/split
 set hidden
 
 set number
@@ -96,7 +96,7 @@ set tabstop=2
 " number of space to use for autoindenting
 set shiftwidth=2
 
-" toggle paste mode 
+" toggle paste mode
 set pastetoggle=<F2>
 
 " enable mouse in all modes
@@ -184,7 +184,7 @@ nmap <Leader>tr :TernRefs<cr>
 nmap <Leader>tR :TernRename<cr>
 
 " enable code folding by "vim-javascript-syntax'
-au FileType javascript call JavaScriptFold()
+"au FileType javascript call JavaScriptFold()
 
 " to avoid conflict with YouCompleteMe
 set rtp+=~/dotfiles/vim/
