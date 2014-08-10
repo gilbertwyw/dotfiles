@@ -192,6 +192,10 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsSnippetsDir="~/dotfiles/vim/snips/"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
+
+" syntastic
+let g:syntastic_javascript_checkers = ['jsxhint']
+
 " vim-emoji
 "   - enable only when editing Markdown files
 "   - trigger by CTRL-X CTRL-U in INSERT mode with terminal vim
