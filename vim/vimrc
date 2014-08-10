@@ -211,3 +211,5 @@ endif
 " SHIFT + direction to change tab
 noremap <S-l> gt
 noremap <S-h> gT
+
+nnoremap <leader>ev :vsp $MYVIMRC<CR>
