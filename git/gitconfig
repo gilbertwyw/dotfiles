@@ -14,3 +14,9 @@
 	default = simple
 [help]
 	autocorrect = 1
+[alias]
+  cr = "!f() { git push origin @:refs/for/${1}; }; f"
+  f  = "!f() { git fetch ${1-origin}; }; f"
+  nb = "!f() { git checkout -t origin/${1} -b ${2}; }; f"
+  rp = "!f() { git rebase -p origin/${1}; }; f"
+
