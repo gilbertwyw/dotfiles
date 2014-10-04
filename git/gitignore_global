@@ -47,3 +47,4 @@ Thumbs.db
 .envrc
 .tern-project
 .agignore
+.rbenv-gemsets
