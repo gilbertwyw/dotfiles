@@ -1,15 +1,16 @@
 ## Config Files
 
+- Git
 - Homebrew
-- vim & macVim
-- zsh
+- Ruby
+- vim & MacVim
+- zsh (oh-my-zsh)
 
 ## Set Up
 
 Install:
 
   - Xcode (for MacVim)
-  - [XQuartz](http://xquartz.macosforge.org)
   - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 iTerm:
@@ -20,9 +21,10 @@ iTerm:
 $ git clone https://github.com/gilbertwyw/dotfiles.git ~
 $ cd dotfiles
 $ git submodule update --init --recursive
-$ brew bundle Brefile
+$ brew bundle Brewfile
 
 # backup existing rc files before proceeding
+
 $ ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 $ ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
 
