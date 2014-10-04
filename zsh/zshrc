@@ -37,7 +37,7 @@ ZSH_THEME="pure"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment following line if you want to  shown in the command execution time stamp 
+# Uncomment following line if you want to  shown in the command execution time stamp
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
 # yyyy-mm-dd
 # HIST_STAMPS="mm/dd/yyyy"
@@ -98,8 +98,17 @@ alias c='rougify'
 ## hub
 alias git=hub
 
-## macvim
+## short names
+alias eh='sudo vim /etc/hosts'
 alias m=mvim
+alias nn=npm
+# only enable it on Macintosh
+alias o=open
+alias r=ruby
+alias s=sass
+alias v=vim
+
+alias server=python -m SimpleHTTPServer
 
 # pvm, play version manager
 . ~/dotfiles/pvm/pvm.sh
