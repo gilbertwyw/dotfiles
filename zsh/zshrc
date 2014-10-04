@@ -67,31 +67,10 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-HOMEBREW_PATH=/usr/local/bin:/usr/local/sbin
-export PATH=$HOMEBREW_PATH:$PATH
-
-# from `brew info rbenv`
+# rbenv, https://github.com/sstephenson/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# require `brew install z`
-. `brew --prefix`/etc/profile.d/z.sh
-
-# `brew install zsh-syntax-highlighting`
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # aliases
-
-## homebrew
-alias bcu="brew cleanup"
-alias bod="brew outdated"
-alias bud="brew update"
-alias bug="brew upgrade"
-
-## homebrew-cask
-alias bci="brew cask install"
-alias bcl="brew cask list"
-alias bcs="brew cask search"
-
 ## `gem install rouge`
 alias c='rougify'
 
@@ -120,3 +99,29 @@ eval "$(direnv hook $0)"
 export NVM_DIR=~/.nvm
 # manage node & npm using nvm
 source $(brew --prefix nvm)/nvm.sh
+
+if [[ `uname` == 'Darwin' ]]
+then
+  ## Homebrew
+  HOMEBREW_PATH=/usr/local/bin:/usr/local/sbin
+  export PATH=$HOMEBREW_PATH:$PATH
+
+  # `brew info z`
+  . `brew --prefix`/etc/profile.d/z.sh
+
+  # `brew info zsh-syntax-highlighting`
+  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+  alias bcu="brew cleanup"
+  alias bod="brew outdated"
+  alias bud="brew update"
+  alias bug="brew upgrade"
+
+  ## homebrew-cask
+  alias bci="brew cask install"
+  alias bcl="brew cask list"
+  alias bcs="brew cask search"
+
+  # Java 7
+  export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_17.jdk/Contents/Home
+fi
