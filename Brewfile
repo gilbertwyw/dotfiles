@@ -12,8 +12,6 @@ install direnv
 install dos2unix
 install easy-tag
 install git
-install gradle
-install groovy
 install gsl
 install gtkmm
 install jenkins
@@ -34,7 +32,6 @@ install rbenv-gem-rehash
 install reattach-to-user-namespace
 install redis
 install ruby-build
-install scala
 install siege
 install sonar
 install sonar-runner
