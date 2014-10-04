@@ -19,7 +19,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'gmarik/vundle'
-Plugin 'goldfeld/vim-seek'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'junegunn/vim-emoji'
 Plugin 'kien/ctrlp.vim'
@@ -219,3 +218,22 @@ noremap <S-l> gt
 noremap <S-h> gT
 
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
+
+" copy from easy-motion
+"let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" Bi-directional find motion
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+nmap s <Plug>(easymotion-s)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s <Plug>(easymotion-s2)
+
+" Turn on case sensitive feature
+let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
