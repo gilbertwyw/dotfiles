@@ -1,26 +1,29 @@
-android-file-transfer
-anki
-atom
-betterzipql
-cakebrew
-charles
-induction
-iterm2
-java
-launchrocket
-macdown
-macvim
-qlcolorcode
-qlmarkdown
-qlprettypatch
-qlstephen
-quicklook-csv
-quicklook-json
-rdm
-selfcontrol
-skype
-suspicious-package
-tomighty
-vagrant
-virtualbox
-webp-quicklook
+install android-file-transfer
+install anki
+install atom
+install betterzipql
+install bittorrent-sync
+install cakebrew
+install charles
+install evernote
+install gas-mask
+install imageoptim
+install induction
+install iterm2
+install launchrocket
+install macdown
+install qlcolorcode
+install qlmarkdown
+install qlprettypatch
+install qlstephen
+install quicklook-csv
+install quicklook-json
+install rdm
+install selfcontrol
+install skype
+install suspicious-package
+install tomighty
+install vagrant
+install virtualbox
+install webp-quicklook
+install xquartz
