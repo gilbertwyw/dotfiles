@@ -53,6 +53,7 @@ Plugin 'moll/vim-node'
 " colorscheme
 Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Plugin 'daylerees/colour-schemes', {'rtp': 'vim/'}
+Plugin 'flazz/vim-colorschemes'
 
 colorscheme Tomorrow-Night
 
@@ -104,6 +105,7 @@ set pastetoggle=<F2>
 set mouse=a
 
 " cut down key stroke for normal mode
+" but lose the capability for repeating the linewise character searches
 "nnoremap ; :
 
 " Disable all arrow keys
