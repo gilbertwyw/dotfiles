@@ -1,29 +1,31 @@
-install android-file-transfer
-install anki
-install atom
-install betterzipql
-install bittorrent-sync
-install cakebrew
-install charles
-install evernote
-install gas-mask
-install imageoptim
-install induction
-install iterm2
-install launchrocket
-install macdown
-install qlcolorcode
-install qlmarkdown
-install qlprettypatch
-install qlstephen
-install quicklook-csv
-install quicklook-json
-install rdm
-install selfcontrol
-install skype
-install suspicious-package
-install tomighty
-install vagrant
-install virtualbox
-install webp-quicklook
-install xquartz
+#tap caskroom/cask
+install caskroom/cask/brew-cask
+cask install android-file-transfer
+cask install anki
+cask install atom
+cask install betterzipql
+cask install bittorrent-sync
+cask install cakebrew
+cask install charles
+cask install evernote
+cask install gas-mask
+cask install imageoptim
+cask install induction
+cask install iterm2
+cask install launchrocket
+cask install macdown
+cask install qlcolorcode
+cask install qlmarkdown
+cask install qlprettypatch
+cask install qlstephen
+cask install quicklook-csv
+cask install quicklook-json
+cask install rdm
+cask install selfcontrol
+cask install skype
+cask install suspicious-package
+cask install tomighty
+cask install vagrant
+cask install virtualbox
+cask install webp-quicklook
+cask install xquartz
