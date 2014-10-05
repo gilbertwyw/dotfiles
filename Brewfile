@@ -1,8 +1,10 @@
 install ack
 install asciidoc
+install autojump
 install boost-build
 install brew-cask
 install casperjs
+install cmake
 install couchdb
 install ctags
 install dart

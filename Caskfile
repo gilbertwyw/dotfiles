@@ -5,10 +5,13 @@ cask install anki
 cask install atom
 cask install betterzipql
 cask install bittorrent-sync
-cask install cakebrew
 cask install charles
 cask install evernote
+cask install firefox
+cask install font-droid-sans-mono
+cask install font-source-code-pro
 cask install gas-mask
+cask install github
 cask install imageoptim
 cask install induction
 cask install iterm2
@@ -24,8 +27,12 @@ cask install rdm
 cask install selfcontrol
 cask install skype
 cask install suspicious-package
+cask install the-unarchiver
 cask install tomighty
+cask install unrarx
 cask install vagrant
 cask install virtualbox
+cask install vlc
+cask install vox
 cask install webp-quicklook
 cask install xquartz
