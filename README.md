@@ -4,52 +4,64 @@
 - Homebrew
 - Ruby
 - vim & MacVim
-- zsh (oh-my-zsh)
+- [fish](http://fishshell.com/)
+- [Zsh](http://www.zsh.org/) & [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 ## Set Up
 
-Install:
+Pre-requisites:
 
   - Xcode (for MacVim)
-  - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+  - [Homebrew](http://brew.sh/)
+  - [Homebrew Cask](http://caskroom.io/)
 
-iTerm:
+Optional:
 
+  - [dracula-theme](https://github.com/zenorocha/dracula-theme)
   - [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme)
 
 ```
-$ git clone https://github.com/gilbertwyw/dotfiles.git ~
-$ cd dotfiles
-$ git submodule update --init --recursive
-$ brew bundle Brewfile
-
 # backup existing rc files before proceeding
 
-$ ln -s ~/dotfiles/vim/vimrc ~/.vimrc
-$ ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
+$ git clone https://github.com/gilbertwyw/dotfiles.git
 
-$ ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
+$ cd dotfiles
+$ git submodule update --init --recursive
 
-$ ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
-$ ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
+# vim-specific
+$ ln -s ~/vim/vimrc ~/.vimrc
+$ ln -s ~/vim/gvimrc ~/.gvimrc
 
-$ ln -s ~/dotfiles/agignore ~/.agignore
-$ ln -s ~/dotfiles/editorconfig ~/.editorconfig
+# fish shell
+$ brew install fish # follow the instruction in (brew info fish)
+$ ln -s ~/fish/config.fish ~/.config/fish/config.fish
+$ ln -s ~/fish/functions ~/.config/fish/functions
 
-$ ln -s ~/dotfiles/ruby/gemrc ~/.gemrc
+# or, for Zsh 
+$ ln -s ~/zsh/zshrc ~/.zshrc
 
+# Git
+$ ln -s ~/git/gitconfig ~/.gitconfig
+$ ln -s ~/git/gitignore_global ~/.gitignore_global
+
+# Ruby
+$ ln -s ~/ruby/gemrc ~/.gemrc
+
+# SSH
 $ mkdir ~/.ssh
-$ ln -s  ~/dotfiles/ssh/config ~/.ssh/config
+$ ln -s  ~/ssh/config ~/.ssh/config
 
-# not necessary if "oh-my-zsh" is intalled already
-$ chsh -s /bin/zsh
+# Others
+$ ln -s ~/agignore ~/.agignore
+$ ln -s ~/editorconfig ~/.editorconfig
 
-$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
-$ vim +BundleInstall +qall
+$ brew tap caskroom/fonts
 
-# the following 2 steps are required for YouCompleteMe
-$ cd ~/.vim/bundle/YouCompleteMe
-$ ./install.sh --clang-completer
+```
+
+## New machine / Re-installation
+```
+sudo xcodebuild -license
 ```
 
 ### Notes

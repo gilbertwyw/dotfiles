@@ -12,6 +12,7 @@ install direnv
 install dos2unix
 install easy-tag
 install editorconfig
+install fish
 install fontforge
 install gdal
 install gibo
