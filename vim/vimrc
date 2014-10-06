@@ -8,10 +8,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
 
+" vim-plug, install under ~/.vim/plugged
 call plug#begin('~/.vim/plugged')
 
-
-" Vundle, install under ~/.vim/bundle/
 Plug 'Lokaltog/vim-easymotion'
 Plug 'SirVer/ultisnips'
 " snippets; used with 'ultisnips'
@@ -22,7 +21,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'gmarik/vundle'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-emoji'
