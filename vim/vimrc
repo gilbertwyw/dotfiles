@@ -227,6 +227,7 @@ noremap <S-l> gt
 noremap <S-h> gT
 
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
+nnoremap <leader>sv :so $MYVIMRC<CR>
 
 " copy from easy-motion
 "let g:EasyMotion_do_mapping = 0 " Disable default mappings
