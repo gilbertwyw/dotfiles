@@ -12,8 +12,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'Lokaltog/vim-easymotion'
-Plug 'SirVer/ultisnips'
-" snippets; used with 'ultisnips'
 Plug 'Raimondi/delimitMate'
 Plug 'Valloric/MatchTagAlways'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
@@ -21,7 +19,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'honza/vim-snippets'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-emoji'
 Plug 'kien/ctrlp.vim'
@@ -41,6 +38,9 @@ Plug 'tpope/vim-unimpaired'
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
+" snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 " Front-End
 Plug 'ap/vim-css-color'
 Plug 'digitaltoad/vim-jade'
@@ -50,7 +50,7 @@ Plug 'othree/html5.vim'
 " Javascript & Node.js
 Plug 'jelera/vim-javascript-syntax'
 Plug 'kchmck/vim-coffee-script'
-Plug 'marijnh/tern_for_vim'
+Plug 'marijnh/tern_for_vim', { 'do': 'npm i' }
 Plug 'moll/vim-node'
 " colorscheme
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
@@ -153,7 +153,6 @@ let g:ctrlp_working_path_mode = 'ra'
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
-
 
 " emmet-vim, enable just for html/css
 let g:user_emmet_install_global = 0
