@@ -71,14 +71,19 @@ source $ZSH/oh-my-zsh.sh
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # aliases
+alias b=brew
+
 ## `gem install rouge`
 alias c='rougify'
+
+alias d=direnv
 
 ## hub
 alias git=hub
 
 ## short names
 alias eh='sudo vim /etc/hosts'
+alias i=ifconfig
 alias m=mvim
 alias nn=npm
 # only enable it on Macintosh
