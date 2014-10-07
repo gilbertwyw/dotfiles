@@ -53,6 +53,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm i' }
 Plug 'moll/vim-node'
 " colorscheme
+Plug 'chriskempson/base16-vim'
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'daylerees/colour-schemes', { 'rtp': 'vim' }
 Plug 'flazz/vim-colorschemes'
