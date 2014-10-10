@@ -1,5 +1,6 @@
 #tap caskroom/cask
 install caskroom/cask/brew-cask
+tap caskroom/fonts
 cask install android-file-transfer
 cask install anki
 cask install atom
