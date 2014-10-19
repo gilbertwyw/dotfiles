@@ -66,6 +66,8 @@ silent! colorscheme Tomorrow-Night
 
 let mapleader=','
 
+imap jk <Esc>
+
 " ~/.vimrc
 " *** The Right Hand system ***
 " in INSERT mode, escape to NORMAL mode
