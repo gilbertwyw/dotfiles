@@ -4,7 +4,6 @@ install autojump
 install boost-build
 install brew-cask
 install casperjs
-install cmake
 install couchdb
 install ctags
 install dart
@@ -25,7 +24,9 @@ install hub
 install jq
 install lame
 install libyaml
-install macvim --override-system-vim # require Xcode
+install lua
+install mackup
+install macvim --override-system-vim --with-luajit
 install meld
 install mongodb
 install neon
@@ -46,6 +47,7 @@ install siege
 install sonar
 install sonar-runner
 install subversion
+install the_platinum_searcher
 install the_silver_searcher
 install tig
 install tmux

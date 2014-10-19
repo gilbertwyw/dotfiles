@@ -10,6 +10,7 @@ cask install charles
 cask install evernote
 cask install firefox
 cask install font-droid-sans-mono
+cask install font-fira-sans
 cask install font-source-code-pro
 cask install gas-mask
 cask install github
