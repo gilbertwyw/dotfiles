@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Raimondi/delimitMate'
+Plug 'Shougo/unite.vim'
 Plug 'Valloric/MatchTagAlways'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'Yggdroot/indentLine'
@@ -21,7 +22,6 @@ Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-emoji'
-Plug 'kien/ctrlp.vim'
 Plug 'myusuf3/numbers.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
@@ -56,6 +56,9 @@ Plug 'moll/vim-node'
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'daylerees/colour-schemes', { 'rtp': 'vim' }
 Plug 'flazz/vim-colorschemes'
+" for Unite's features
+Plug 'Shougo/neomru.vim'
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 
 call plug#end()
 
@@ -125,7 +128,8 @@ noremap <Right> <NOP>
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
+" clash with Unite's redraw
+"noremap <C-l> <C-w>l
 
 " git commit message
 autocmd Filetype gitcommit setlocal spell textwidth=72
@@ -135,23 +139,6 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 
 " turn off search highlight
 nnoremap <silent> <leader><space> :noh<CR>
-
-" The Silver Searcher, http://robots.thoughtbot.com/faster-grepping-in-vim/
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  "let g:ctrlp_user_command = 'ag %s -U -l --nocolor -g ""'
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  "let g:ctrlp_use_caching = 0
-endif
-
-" ctrlp
-let g:ctrlp_cmd = 'CtrlPBuffer'
-let g:ctrlp_working_path_mode = 'ra'
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
@@ -249,3 +236,26 @@ let g:EasyMotion_smartcase = 1
 " JK motions: Line motions
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+" Unite settings
+nnoremap <leader>f :<C-u>Unite file_mru buffer file<CR>
+
+" recursive file search, start insert automatically and using fuzzy file matching
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
+
+let g:unite_source_file_rec_max_cache_files = 0
+call unite#custom#source('file_rec,file_rec/async', 'max_candidates', 0)
+
+" search through yank history
+let g:unite_source_history_yank_enable = 1
+nnoremap <leader>y :<C-u>Unite history/yank<CR>
+
+if executable('pt')
+  let g:unite_source_grep_command = 'pt'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor'
+  let g:unite_source_grep_recursive_opt = ''
+  let g:unite_source_grep_encoding = 'utf-8'
+  " not ignoring .gitignore files
+  let g:unite_source_rec_async_command = 'pt --nocolor --nogroup -g .'
+endif
