@@ -62,7 +62,7 @@ call plug#end()
 " syntastic: error: your shell /usr/local/bin/fish doesn't use traditional UNIX syntax for redirections
 set shell=/bin/sh
 
-colorscheme Tomorrow-Night
+silent! colorscheme Tomorrow-Night
 
 let mapleader=','
 
