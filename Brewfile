@@ -54,6 +54,7 @@ install tmux
 install trash
 install tree
 install ttfautohint
+install v
 install w3m
 install watch
 install xmlto

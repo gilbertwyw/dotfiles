@@ -90,7 +90,7 @@ alias nn=npm
 alias o=open
 alias r=ruby
 alias s=sass
-alias v=vim
+#alias v=vim
 
 alias server=python -m SimpleHTTPServer
 
