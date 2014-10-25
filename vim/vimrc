@@ -1,7 +1,9 @@
+" vim:fdm=marker
 set nocompatible
 " otherwise NERDTree shows strange character instead of arrows
 set encoding=utf-8
 
+" Plugin: vim-plug {{{
 if empty(glob('~/.vim/autoload/plug.vim'))
   !mkdir -p ~/.vim/autoload
   !curl -fLo ~/.vim/autoload/plug.vim
@@ -10,7 +12,8 @@ endif
 
 " vim-plug, install under ~/.vim/plugged
 call plug#begin('~/.vim/plugged')
-
+" Plugins {{{
+" General {{{
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Raimondi/delimitMate'
 Plug 'Shougo/unite.vim'
@@ -22,6 +25,7 @@ Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-emoji'
+Plug 'kshenoy/vim-signature'
 Plug 'myusuf3/numbers.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
@@ -35,57 +39,39 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-" Git
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-git'
-" snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-" Front-End
-Plug 'ap/vim-css-color'
-Plug 'digitaltoad/vim-jade'
-Plug 'maksimr/vim-jsbeautify'
-Plug 'mattn/emmet-vim'
-Plug 'othree/html5.vim'
-" Javascript & Node.js
-Plug 'jelera/vim-javascript-syntax'
-Plug 'kchmck/vim-coffee-script'
-Plug 'marijnh/tern_for_vim', { 'do': 'npm i' }
-Plug 'moll/vim-node'
-" colorscheme
+" }}}
+" colorscheme {{{
 Plug 'chriskempson/base16-vim'
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'daylerees/colour-schemes', { 'rtp': 'vim' }
 Plug 'flazz/vim-colorschemes'
-" for Unite's features
+" }}}
+" Git {{{
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+" }}}
+" Front-End {{{
+Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'sass'] }
+Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
+Plug 'jelera/vim-javascript-syntax'
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'maksimr/vim-jsbeautify'
+Plug 'marijnh/tern_for_vim', { 'do': 'npm i' }
+Plug 'mattn/emmet-vim'
+Plug 'moll/vim-node'
+Plug 'othree/html5.vim'
+" }}}
+" snippets {{{
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+" }}}
+" Unite's deps {{{
 Plug 'Shougo/neomru.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-
+" }}}
 call plug#end()
-
-" syntastic: error: your shell /usr/local/bin/fish doesn't use traditional UNIX syntax for redirections
-set shell=/bin/sh
-
-silent! colorscheme Tomorrow-Night
-
-let mapleader=','
-
-imap jk <Esc>
-
-" ~/.vimrc
-" *** The Right Hand system ***
-" in INSERT mode, escape to NORMAL mode
-inoremap ;l <Esc>
-" in INSERT mode, save & back to NORMAL mode
-inoremap ;k <Esc>:update<CR>
-" in INSERT mode, save & back to INSERT mode
-inoremap ;j <C-O>:update<CR>
-" in NORMAL mode, save & back to NORMAL mode
-nnoremap ;j :update<CR>
-
-" Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
+" }}}
+" }}}
 
 " Allow hidden buffers, don't limit to 1 file per window/split
 set hidden
@@ -99,25 +85,53 @@ set noswapfile
 " change the terminal's title
 set title
 
-set hlsearch
-set ignorecase
-set smartcase
-
-" use soft tab
-set expandtab
-set tabstop=2
-" number of space to use for autoindenting
-set shiftwidth=2
-
-" toggle paste mode
-set pastetoggle=<F2>
+" highlight current line
+set cursorline
 
 " enable mouse in all modes
 set mouse=a
 
-" cut down key stroke for normal mode
-" but lose the capability for repeating the linewise character searches
-"nnoremap ; :
+" toggle paste mode
+set pastetoggle=<F2>
+
+silent! colorscheme Tomorrow-Night
+
+"let mapleader=','
+let mapleader = "\<Space>"
+
+" Indentation {{{
+" use soft tab
+set expandtab
+" number of visual spaces per TAB
+set tabstop=2
+" number of space to use for autoindenting
+set shiftwidth=2
+" }}}
+" Mappings {{{
+" jk is escape
+imap jk <Esc>
+
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+
+" swap the jump keys
+nnoremap ' `
+nnoremap ` '
+
+" The Right Hand system, http://reefpoints.dockyard.com/2013/09/11/vim-staying-on-home-row-via-map.html
+" in INSERT mode, escape to NORMAL mode
+inoremap ;l <Esc>
+" in INSERT mode, save & back to NORMAL mode
+inoremap ;k <Esc>:update<CR>
+" in INSERT mode, save & back to INSERT mode
+inoremap ;j <C-O>:update<CR>
+" in NORMAL mode, save & back to NORMAL mode
+nnoremap ;j :update<CR>
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Disable all arrow keys
 noremap <Up> <NOP>
@@ -125,103 +139,45 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-" Easy pane navigation
+nnoremap <leader>ev :vsp $MYVIMRC<CR>
+nnoremap <leader>sv :so $MYVIMRC<CR>
+" }}}
+" Navigation {{{
+" Tab {{{
+noremap <S-l> gt
+noremap <S-h> gT
+" }}}
+" Window {{{
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 " clash with Unite's redraw
 "noremap <C-l> <C-w>l
-
-" git commit message
-autocmd Filetype gitcommit setlocal spell textwidth=72
-
-" turn on spell checking for markdown files
-autocmd BufRead,BufNewFile *.md setlocal spell
-
+" }}}
+" }}}
+" Search {{{
+set hlsearch
+set ignorecase
+set smartcase
 " turn off search highlight
 nnoremap <silent> <leader><space> :noh<CR>
+" }}}
 
-" bind K to grep word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" Git {{{
+" commit message
+autocmd Filetype gitcommit setlocal spell textwidth=72
+" }}}
+" MarkDown {{{
+" force *.md as MarkDown, https://github.com/tpope/vim-markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+" turn on spell checking for markdown files
+autocmd BufRead,BufNewFile *.md setlocal spell
+" }}}
 
-" emmet-vim, enable just for html/css
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
-
-" NERDTree
-autocmd vimenter * if !argc() | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-" NERDTree mirror mode by default
-map <silent> <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
-
-let NERDTreeIgnore=['\.sublime-*']
-
-" numbers.vim
-nnoremap <F3> :NumbersToggle<CR>
-nnoremap <F4> :NumbersOnOff<CR>
-
-" vim-easy-align
-" Start interactive EasyAlign in visual mode
-vmap <Enter> <Plug>(EasyAlign)
-" Start interactive EasyAlign with a Vim movement
-nmap <Leader>a <Plug>(EasyAlign)
-
-" vim-jsbeautify
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
-autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
-autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
-autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
-
-" tern_for_vim
-let g:tern_show_argument_hints='on_hold'
-nmap <Leader>tD :TernDoc<cr>
-nmap <Leader>tb :TernDocBrowse<cr>
-nmap <Leader>td :TernDef<cr>
-nmap <Leader>tr :TernRefs<cr>
-nmap <Leader>tR :TernRename<cr>
-
-" enable code folding by "vim-javascript-syntax'
-"au FileType javascript call JavaScriptFold()
-
-" to avoid conflict with YouCompleteMe
-set rtp+=~/dotfiles/vim/
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsSnippetsDir="~/dotfiles/vim/snips/"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
-
-" syntastic
-let g:syntastic_javascript_checkers = ['jsxhint']
-
-" vim-emoji
-"   - enable only when editing Markdown files
-"   - trigger by CTRL-X CTRL-U in INSERT mode with terminal vim
-augroup emoji_complete
-  autocmd!
-  autocmd FileType markdown setlocal completefunc=emoji#complete
-augroup END
-
-" Using Emojis as Git Gutter symbols, work only with terminal vim(?)
-silent! if emoji#available()
-  let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
-  let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
-  let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
-  let g:gitgutter_sign_modified_removed = emoji#for('collision')
-endif
-
-" SHIFT + direction to change tab
-noremap <S-l> gt
-noremap <S-h> gT
-
-nnoremap <leader>ev :vsp $MYVIMRC<CR>
-nnoremap <leader>sv :so $MYVIMRC<CR>
-
-" copy from easy-motion
-"let g:EasyMotion_do_mapping = 0 " Disable default mappings
-
+" Plugin: ag.vim {{{
+nnoremap <leader>g :Ag -i<space>
+" }}}
+" Plugin: EasyMotion {{{
 " Bi-directional find motion
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
 " `s{char}{label}`
@@ -230,15 +186,52 @@ nmap s <Plug>(easymotion-s)
 " `s{char}{char}{label}`
 " Need one more keystroke, but on average, it may be more comfortable.
 nmap s <Plug>(easymotion-s2)
-
 " Turn on case sensitive feature
 let g:EasyMotion_smartcase = 1
-
 " JK motions: Line motions
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
+map <leader>j <Plug>(easymotion-j)
+map <leader>k <Plug>(easymotion-k)
+" }}}
+" Plugin: emmet-vim {{{
+let g:user_emmet_install_global = 0
+" enable only for html/css
+autocmd FileType html,css EmmetInstall
+" }}}
+" Plugin: NERDTree {{{
+autocmd vimenter * if !argc() | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-" Unite settings
+" NERDTree mirror mode by default
+map <silent> <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
+" }}}
+" Plugin: numbers.vim {{{
+nnoremap <F3> :NumbersToggle<CR>
+nnoremap <F4> :NumbersOnOff<CR>
+" }}}
+" Plugin: syntastic {{{
+" syntastic: error:
+"   your shell /usr/local/bin/fish doesn't use traditional UNIX syntax for redirections
+set shell=/bin/sh
+let g:syntastic_javascript_checkers = ['jsxhint']
+" }}}
+" Plugin: tern_for_vim {{{
+let g:tern_show_argument_hints='on_hold'
+nmap <leader>tD :TernDoc<CR>
+nmap <leader>tb :TernDocBrowse<CR>
+nmap <leader>td :TernDef<CR>
+nmap <leader>tr :TernRefs<CR>
+nmap <leader>tR :TernRename<CR>
+" }}}
+" Plugin: UltiSnips {{{
+" to avoid conflict with YouCompleteMe
+set rtp+=~/dotfiles/vim/
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsSnippetsDir="~/dotfiles/vim/snips/"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
+" }}}
+" Plugin: Unite {{{
+nnoremap <leader>b :<C-u>Unite buffer<CR>
 nnoremap <leader>f :<C-u>Unite file_mru buffer file<CR>
 
 " recursive file search, start insert automatically and using fuzzy file matching
@@ -260,3 +253,54 @@ if executable('pt')
   " not ignoring .gitignore files
   let g:unite_source_rec_async_command = 'pt --nocolor --nogroup -g .'
 endif
+" }}}
+" Plugin: vim-easy-align {{{
+" Start interactive EasyAlign in visual mode
+vmap <Enter> <Plug>(EasyAlign)
+" Start interactive EasyAlign with a Vim movement
+nmap <leader>a <Plug>(EasyAlign)
+" }}}
+" Plugin: vim-emoji {{{
+" trigger by CTRL-X CTRL-U in INSERT mode with terminal vim
+augroup emoji_complete
+  autocmd!
+  " enable only when editing Markdown files
+  autocmd FileType markdown setlocal completefunc=emoji#complete
+augroup END
+
+" Using Emojis as Git Gutter symbols, work only with terminal vim(?)
+silent! if emoji#available()
+  let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
+  let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
+  let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
+  let g:gitgutter_sign_modified_removed = emoji#for('collision')
+endif
+" }}}
+" Plugin: vim-jsbeautify {{{
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<CR>
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<CR>
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<CR>
+autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<CR>
+autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<CR>
+autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<CR>
+" }}}
+
+" Temporarily disabled {{{
+" cut down key stroke for normal mode
+" but lose the capability for repeating the linewise character search
+"nnoremap ; :
+
+" enable code folding by "vim-javascript-syntax'
+"au FileType javascript call JavaScriptFold()
+
+" copy from easy-motion
+"let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" cut down key stroke for normal mode
+" but lose the capability for repeating the linewise character search
+"nnoremap ; :
+
+" bind K to grep word under cursor
+"nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" }}}
+
