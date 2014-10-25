@@ -23,10 +23,7 @@ Optional:
 ```
 # backup existing rc files before proceeding
 
-$ git clone https://github.com/gilbertwyw/dotfiles.git
-
-$ cd dotfiles
-$ git submodule update --init --recursive
+$ git clone --recursive https://github.com/gilbertwyw/dotfiles.git
 
 # vim-specific
 $ ln -s ~/vim/vimrc ~/.vimrc
@@ -37,7 +34,7 @@ $ brew install fish # follow the instruction in (brew info fish)
 $ ln -s ~/fish/config.fish ~/.config/fish/config.fish
 $ ln -s ~/fish/functions ~/.config/fish/functions
 
-# or, for Zsh 
+# or, for Zsh
 $ ln -s ~/zsh/zshrc ~/.zshrc
 
 # Git
