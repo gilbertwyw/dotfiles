@@ -100,11 +100,6 @@ alias server=python -m SimpleHTTPServer
 export EDITOR=`which vim`
 eval "$(direnv hook $0)"
 
-# Otherwise, Node installs will be lost upon upgrading nvm
-export NVM_DIR=~/.nvm
-# manage node & npm using nvm
-source $(brew --prefix nvm)/nvm.sh
-
 if [[ `uname` == 'Darwin' ]]
 then
   ## Homebrew
@@ -130,3 +125,9 @@ then
   # Java 7
   export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_17.jdk/Contents/Home
 fi
+
+# Otherwise, Node installs will be lost upon upgrading nvm
+export NVM_DIR=~/.nvm
+# manage node & npm using nvm
+source $(brew --prefix nvm)/nvm.sh
+
