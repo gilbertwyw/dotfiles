@@ -45,6 +45,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'daylerees/colour-schemes', { 'rtp': 'vim' }
 Plug 'flazz/vim-colorschemes'
+Plug 'junegunn/seoul256.vim'
 " }}}
 " Git {{{
 Plug 'tpope/vim-fugitive'
