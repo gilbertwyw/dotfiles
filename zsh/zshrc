@@ -84,6 +84,8 @@ alias git=hub
 ## short names
 alias eh='sudo vim /etc/hosts'
 alias i=ifconfig
+alias j=jekyll
+alias k=kill
 alias m=mvim
 alias nn=npm
 # only enable it on Macintosh
