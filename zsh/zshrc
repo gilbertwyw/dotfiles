@@ -96,6 +96,8 @@ alias s=sass
 
 alias server=python -m SimpleHTTPServer
 
+path=(~/bin $path)
+
 # pvm, play version manager
 . ~/dotfiles/pvm/pvm.sh
 
@@ -105,8 +107,11 @@ eval "$(direnv hook $0)"
 if [[ `uname` == 'Darwin' ]]
 then
   ## Homebrew
-  HOMEBREW_PATH=/usr/local/bin:/usr/local/sbin
-  export PATH=$HOMEBREW_PATH:$PATH
+  path=(
+    /usr/local/bin
+    /usr/local/sbin
+    $path
+  )
 
   # `brew info z`
   . `brew --prefix`/etc/profile.d/z.sh
@@ -133,3 +138,4 @@ export NVM_DIR=~/.nvm
 # manage node & npm using nvm
 source $(brew --prefix nvm)/nvm.sh
 
+typeset -U path
