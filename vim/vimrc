@@ -141,6 +141,8 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+map <F5> :setlocal spell! spelllang=en_us<CR>
+
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
 " }}}
