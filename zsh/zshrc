@@ -47,6 +47,12 @@ ZSH_THEME="pure"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
+fpath=(
+  /usr/local/share/zsh-completions
+  /usr/local/share/zsh/site-functions
+  $fpath
+)
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
