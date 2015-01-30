@@ -130,7 +130,7 @@ then
   alias bcs="brew cask search"
 
   # Java 7
-  export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_17.jdk/Contents/Home
+  [[ -f /usr/libexec/java_home ]] && export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 fi
 
 # Otherwise, Node installs will be lost upon upgrading nvm
