@@ -124,11 +124,7 @@ nnoremap k gk
 nnoremap ' `
 nnoremap ` '
 
-" The Right Hand system, http://reefpoints.dockyard.com/2013/09/11/vim-staying-on-home-row-via-map.html
-" in INSERT mode, escape to NORMAL mode
-inoremap ;l <Esc>
-" in INSERT mode, save & back to NORMAL mode
-inoremap ;k <Esc>:update<CR>
+" Part of the Right Hand system, http://reefpoints.dockyard.com/2013/09/11/vim-staying-on-home-row-via-map.html
 " in INSERT mode, save & back to INSERT mode
 inoremap ;j <C-O>:update<CR>
 " in NORMAL mode, save & back to NORMAL mode
