@@ -114,7 +114,7 @@ set shiftwidth=2
 " }}}
 " Mappings {{{
 " jk is escape
-imap jk <Esc>
+inoremap jk <Esc>
 
 " move vertically by visual line
 nnoremap j gj
@@ -302,6 +302,10 @@ augroup rainbow_parentheses " Plugin: rainbow_parentheses {{{2
   autocmd BufEnter * RainbowParenthesesLoadBraces
 augroup END " }}}2
 " }}}1
+
+" Auto-save a file when you leave insert mode
+autocmd InsertLeave * if expand('%') != '' | update | endif
+
 " Temporarily disabled {{{
 " cut down key stroke for normal mode
 " but lose the capability for repeating the linewise character search
