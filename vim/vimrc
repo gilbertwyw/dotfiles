@@ -71,9 +71,6 @@ Plug 'honza/vim-snippets'
 Plug 'Shougo/neomru.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " }}}
-" TypeScript {{{
-Plug 'leafgarland/typescript-vim'
-" }}}
 call plug#end()
 " }}}
 " }}}
