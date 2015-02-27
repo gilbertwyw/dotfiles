@@ -251,11 +251,11 @@ silent! if emoji#available()
 endif
 " }}}
 " Autocommands {{{1
-augroup emmet " Plugin: emmet-vim {{{2
-  autocmd!
-  let g:user_emmet_install_global = 0
-  autocmd FileType html,css EmmetInstall
-augroup END " }}}2
+"augroup emmet " Plugin: emmet-vim {{{2
+  "autocmd!
+  "let g:user_emmet_install_global = 0
+  "autocmd FileType html,sass,scss,css EmmetInstall
+"augroup END " }}}2
 augroup emoji " Plugin: vim-emoji {{{2
   autocmd!
   autocmd FileType markdown setlocal completefunc=emoji#complete
