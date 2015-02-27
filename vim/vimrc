@@ -297,7 +297,7 @@ augroup END " }}}2
 " }}}1
 
 " Auto-save a file when you leave insert mode
-autocmd InsertLeave * if expand('%') != '' | update | endif
+autocmd InsertLeave,TextChanged * if expand('%') != '' | update | endif
 
 " Temporarily disabled {{{
 " cut down key stroke for normal mode
