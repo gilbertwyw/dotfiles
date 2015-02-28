@@ -11,7 +11,7 @@
 
 Pre-requisites:
 
-  - Xcode (for MacVim)
+  - Xcode
   - [Homebrew](http://brew.sh/)
   - [Homebrew Cask](http://caskroom.io/)
 
@@ -21,11 +21,11 @@ Optional:
   - [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme)
 
 ```
-# backup existing rc files before proceeding
+# Backup existing rc files before proceeding
 
 $ git clone --recursive https://github.com/gilbertwyw/dotfiles.git
 
-# vim-specific
+# vim
 $ ln -s ~/vim/vimrc ~/.vimrc
 $ ln -s ~/vim/gvimrc ~/.gvimrc
 
@@ -52,7 +52,13 @@ $ ln -s  ~/ssh/config ~/.ssh/config
 $ ln -s ~/agignore ~/.agignore
 $ ln -s ~/editorconfig ~/.editorconfig
 
+# Tap the following formula repositories from GitHub
+$ brew tap caskroom/cask
 $ brew tap caskroom/fonts
+$ brew tap caskroom/versions
+$ brew tap dart-lang/dart
+$ brew tap homebrew/dupes
+$ brew tap homebrew/x11
 
 ```
 
