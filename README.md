@@ -53,13 +53,11 @@ $ ln -s  ~/dotfiles/ssh/config ~/.ssh/config
 $ ln -s ~/dotfiles/agignore ~/.agignore
 $ ln -s ~/dotfiles/editorconfig ~/.editorconfig
 
-# Tap the following formula repositories from GitHub
-$ brew tap caskroom/cask
-$ brew tap caskroom/fonts
-$ brew tap caskroom/versions
-$ brew tap dart-lang/dart
-$ brew tap homebrew/dupes
-$ brew tap homebrew/x11
+# Install all Homebrew formulae listed in Brewfile
+$ brew tap homebrew/brewdler
+$ cd dotfiles/
+$ brew brewdle [--dry-run]
+
 ```
 
 ## New machine / Re-installation
