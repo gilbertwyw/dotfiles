@@ -77,32 +77,31 @@ source $ZSH/oh-my-zsh.sh
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # aliases
-alias b=brew
 
-## `gem install rouge`
+## `RBENV_GEMSETS="global" gem install --verbose rouge`
 alias c='rougify'
-
 alias d=direnv
-
-## hub
-alias git=hub
-
-## short names
-alias eh='sudo vim /etc/hosts'
 alias i=ifconfig
 alias j=jekyll
 alias k=kill
 alias m=mvim
 alias nn=npm
-# only enable it on Macintosh
-alias o=open
 alias r=ruby
 alias s=sass
 #alias v=vim
 
+## others
+alias eh='sudo vim /etc/hosts'
+## `brew install hub`
+alias git=hub
 alias server=python -m SimpleHTTPServer
 
-path=(~/bin $path)
+path=(
+  ~/bin
+  /usr/local/bin
+  /usr/local/sbin
+  $path
+)
 
 # pvm, play version manager
 . ~/dotfiles/pvm/pvm.sh
@@ -112,12 +111,6 @@ eval "$(direnv hook $0)"
 
 if [[ `uname` == 'Darwin' ]]
 then
-  ## Homebrew
-  path=(
-    /usr/local/bin
-    /usr/local/sbin
-    $path
-  )
 
   # `brew info z`
   . `brew --prefix`/etc/profile.d/z.sh
@@ -125,11 +118,13 @@ then
   # `brew info zsh-syntax-highlighting`
   source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+  alias o=open
+
+  alias b=brew
   alias bcu="brew cleanup"
   alias bod="brew outdated"
   alias bud="brew update"
   alias bug="brew upgrade"
-
   ## homebrew-cask
   alias bci="brew cask install"
   alias bcl="brew cask list"
@@ -137,11 +132,10 @@ then
 
   # Java 7
   [[ -f /usr/libexec/java_home ]] && export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
-fi
 
-# Otherwise, Node installs will be lost upon upgrading nvm
-export NVM_DIR=~/.nvm
-# manage node & npm using nvm
-source $(brew --prefix nvm)/nvm.sh
+  # `brew info nvm`; after `mkdir ~/.nvm`
+  export NVM_DIR=~/.nvm
+  source $(brew --prefix nvm)/nvm.sh
+fi
 
 typeset -U path
