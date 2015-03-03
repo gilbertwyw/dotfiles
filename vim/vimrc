@@ -71,8 +71,11 @@ Plug 'honza/vim-snippets'
 Plug 'Shougo/neomru.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " }}}
-call plug#end()
+" clojure & clojurescript {{{
+Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
 " }}}
+" }}}
+call plug#end()
 " }}}
 
 " Allow hidden buffers, don't limit to 1 file per window/split
