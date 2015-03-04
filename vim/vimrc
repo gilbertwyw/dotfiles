@@ -144,6 +144,10 @@ map <F5> :setlocal spell! spelllang=en_us<CR>
 
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
+
+vnoremap Y "*y
+" In normal mode, do the same with the current line
+nnoremap Y "*yy
 " }}}
 " Navigation {{{
 " Tab {{{
