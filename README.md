@@ -13,12 +13,12 @@ Pre-requisites:
 
   - [Xcode](https://developer.apple.com/xcode/)
   - [Homebrew](http://brew.sh/)
-  - [Homebrew Cask](http://caskroom.io/)
 
 Optional:
 
-  - [dracula-theme](https://github.com/zenorocha/dracula-theme)
-  - [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme)
+  - Terminal themes
+    - [dracula-theme](https://github.com/zenorocha/dracula-theme)
+    - [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme)
 
 ```
 # Backup existing rc files before proceeding
