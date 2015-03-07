@@ -326,3 +326,8 @@ autocmd InsertLeave,TextChanged * if expand('%') != '' | update | endif
 "nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " }}}
 
+" Local config
+if filereadable($HOME . "/.vimrc.local")
+  source ~/.vimrc.local
+endif
+
