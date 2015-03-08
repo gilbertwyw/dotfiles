@@ -58,7 +58,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
+#export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -96,13 +96,6 @@ alias eh='sudo vim /etc/hosts'
 alias git=hub
 alias server=python -m SimpleHTTPServer
 
-path=(
-  ~/bin
-  /usr/local/bin
-  /usr/local/sbin
-  $path
-)
-
 # pvm, play version manager
 . ~/dotfiles/pvm/pvm.sh
 
@@ -111,6 +104,14 @@ eval "$(direnv hook $0)"
 
 if [[ `uname` == 'Darwin' ]]
 then
+  path=(
+    ~/bin
+    /usr/local/bin
+    /usr/local/sbin
+    # `brew info coreutils`
+    /usr/local/opt/coreutils/libexec/gnubin
+    $path
+  )
 
   # `brew info z`
   . `brew --prefix`/etc/profile.d/z.sh
@@ -136,6 +137,13 @@ then
   # `brew info nvm`; after `mkdir ~/.nvm`
   export NVM_DIR=~/.nvm
   source $(brew --prefix nvm)/nvm.sh
+
+  # `brew info coreutils`
+  # intentionally place after 'nvm', otherwise some part of MANPATH will be missing
+  manpath=(
+    /usr/local/opt/coreutils/libexec/gnuman
+    $manpath
+  )
 fi
 
 typeset -U path
