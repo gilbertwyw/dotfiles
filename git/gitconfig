@@ -20,3 +20,8 @@
   nb = "!f() { git checkout -t origin/${1} -b ${2}; }; f"
   rp = "!f() { git rebase -p origin/${1}; }; f"
 
+[color "decorate"]
+  head = bold white
+  branch = bold magenta
+  remotebranch = blue
+  tag = bold red
