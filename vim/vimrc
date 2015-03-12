@@ -95,14 +95,15 @@ set title
 set cursorline
 
 " enable mouse in all modes
-set mouse=a
+if has('mouse')
+  set mouse=a
+endif
 
 " toggle paste mode
 set pastetoggle=<F2>
 
 silent! colorscheme Tomorrow-Night
 
-"let mapleader=','
 let mapleader = "\<Space>"
 
 " Indentation {{{
