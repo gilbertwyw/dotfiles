@@ -56,6 +56,7 @@ Plug 'tpope/vim-git'
 " Front-End {{{
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'sass'] }
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
+Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
 Plug 'jelera/vim-javascript-syntax'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'maksimr/vim-jsbeautify'
@@ -270,6 +271,9 @@ silent! if emoji#available()
   let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
   let g:gitgutter_sign_modified_removed = emoji#for('collision')
 endif
+" }}}
+" Plugin: vim-jsdoc {{{
+let g:jsdoc_allow_input_prompt = 1
 " }}}
 " Autocommands {{{1
 "augroup emmet " Plugin: emmet-vim {{{2
