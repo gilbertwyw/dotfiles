@@ -31,7 +31,8 @@ $ ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 $ ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
 
 # fish shell
-$ brew install fish # follow the instruction in (brew info fish)
+$ brew install fish
+# then follow the instruction in `brew info fish`
 $ ln -s ~/dotfiles/fish/config.fish ~/.config/fish/config.fish
 $ ln -s ~/dotfiles/fish/functions ~/.config/fish/functions
 
