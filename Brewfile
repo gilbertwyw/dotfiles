@@ -111,7 +111,6 @@ brew 'neon'
 brew 'neovim', args: ['HEAD']
 brew 'nginx'
 brew 'nmap'
-brew 'node'
 brew 'nspr'
 brew 'nvm'
 brew 'openssl'
