@@ -101,6 +101,9 @@ if has('mouse')
   set mouse=a
 endif
 
+" flashing instead of beeping
+set visualbell
+
 " toggle paste mode
 set pastetoggle=<F2>
 
