@@ -96,6 +96,10 @@ set title
 " highlight current line
 set cursorline
 
+if (exists('+colorcolumn'))
+  set colorcolumn=80
+endif
+
 " enable mouse in all modes
 if has('mouse')
   set mouse=a
