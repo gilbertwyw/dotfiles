@@ -24,6 +24,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'haya14busa/incsearch.vim'
+Plug 'haya14busa/vim-asterisk'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-emoji'
 Plug 'kien/rainbow_parentheses.vim'
@@ -177,7 +178,7 @@ noremap <C-k> <C-w>k
 set hlsearch
 set ignorecase
 set smartcase
-" Plugin: 'incsearch'{{{2
+" Plugin: incsearch {{{2
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
@@ -189,6 +190,16 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
+" }}}2
+" Plugin: vim-asterisk {{{2
+map *   <Plug>(asterisk-*)
+map #   <Plug>(asterisk-#)
+map g*  <Plug>(asterisk-g*)
+map g#  <Plug>(asterisk-g#)
+map z*  <Plug>(asterisk-z*)
+map gz* <Plug>(asterisk-gz*)
+map z#  <Plug>(asterisk-z#)
+map gz# <Plug>(asterisk-gz#)
 " }}}2
 " }}}
 " Plugin: ag.vim {{{
