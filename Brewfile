@@ -102,7 +102,6 @@ brew 'libyaml'
 brew 'lua'
 brew 'luajit'
 brew 'lzlib'
-brew 'mackup'
 brew 'macvim', args: ['with-luajit', 'override-system-vim']
 brew 'meld'
 brew 'mongodb'
