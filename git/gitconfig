@@ -20,6 +20,14 @@
   nb = "!f() { git checkout -t origin/${1} -b ${2}; }; f"
   rp = "!f() { git rebase -p origin/${1}; }; f"
 
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
 [color "decorate"]
   head = bold white
   branch = bold magenta
