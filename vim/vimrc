@@ -291,6 +291,10 @@ silent! if emoji#available()
   let g:gitgutter_sign_modified_removed = emoji#for('collision')
 endif
 " }}}
+" Plugin: vim-g {{{
+let g:vim_g_command = "Go"
+let g:vim_g_f_command = "Gf"
+" }}}
 " Plugin: vim-jsdoc {{{
 let g:jsdoc_allow_input_prompt = 1
 " }}}
