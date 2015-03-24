@@ -1,0 +1,45 @@
+# React.js
+snippet jsxc "@jsx"
+/** @jsx React.DOM */
+endsnippet
+
+snippet tp. "this.props"
+this.props.$1
+endsnippet
+
+snippet tr. "this.refs"
+this.refs.$1
+endsnippet
+
+snippet ts. "this.state"
+this.state.$1
+endsnippet
+
+snippet tss "this.setState"
+this.setState($1);
+endsnippet
+
+snippet cwm "componentWillMount"
+componentWillMount: function() {
+	$1
+}
+endsnippet
+snippet gis "getInitialState"
+getInitialState: function() {
+	return $1;
+}
+endsnippet
+snippet rcc "React.createClass"
+var $1 = React.createClass({
+	render: function(){
+		return ($2);
+	}
+});
+endsnippet
+
+snippet rrc "React.renderComponet"
+React.renderComponent(
+	$1,
+	document.createElementById('$2');
+);
+endsnippet
