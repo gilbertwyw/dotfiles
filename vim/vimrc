@@ -207,13 +207,8 @@ map gz# <Plug>(asterisk-gz#)
 nnoremap <leader>g :Ag -i<space>
 " }}}
 " Plugin: EasyMotion {{{
-" Bi-directional find motion
-" Jump to anywhere you want with minimal keystrokes, with just one key binding.
-" `s{char}{label}`
-nmap s <Plug>(easymotion-s)
-" or
+" Bi-directional 2-character search
 " `s{char}{char}{label}`
-" Need one more keystroke, but on average, it may be more comfortable.
 nmap s <Plug>(easymotion-s2)
 " Turn on case sensitive feature
 let g:EasyMotion_smartcase = 1
