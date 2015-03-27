@@ -126,6 +126,8 @@ set tabstop=2
 set shiftwidth=2
 " }}}
 " Mappings {{{
+cmap w!! w !sudo tee > /dev/null %
+
 " jk is escape
 inoremap jk <Esc>
 
