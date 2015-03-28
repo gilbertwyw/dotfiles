@@ -50,6 +50,7 @@ Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'daylerees/colour-schemes', { 'rtp': 'vim' }
 Plug 'flazz/vim-colorschemes'
 Plug 'junegunn/seoul256.vim'
+Plug 'ujihisa/unite-colorscheme'
 " }}}
 " Git {{{
 Plug 'tpope/vim-fugitive'
@@ -225,6 +226,9 @@ map <silent> <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
 " Plugin: numbers.vim {{{
 nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F4> :NumbersOnOff<CR>
+" }}}
+" Plugin: unite-colorscheme {{{
+nmap <F6> :Unite colorscheme -auto-preview<CR>
 " }}}
 " Plugin: syntastic {{{
 " syntastic: error:
