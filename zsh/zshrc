@@ -94,7 +94,7 @@ alias wh=which
 alias eh='sudo vim /etc/hosts'
 ## `brew install hub`
 alias git=hub
-alias server=python -m SimpleHTTPServer
+alias server='python -m SimpleHTTPServer'
 
 # pvm, play version manager
 . ~/dotfiles/pvm/pvm.sh
