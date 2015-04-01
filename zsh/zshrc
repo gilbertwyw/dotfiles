@@ -126,10 +126,6 @@ then
   alias bod="brew outdated"
   alias bud="brew update"
   alias bug="brew upgrade"
-  ## homebrew-cask
-  alias bci="brew cask install"
-  alias bcl="brew cask list"
-  alias bcs="brew cask search"
 
   # Java 7
   [[ -f /usr/libexec/java_home ]] && export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
