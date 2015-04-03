@@ -77,24 +77,9 @@ source $ZSH/oh-my-zsh.sh
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
 
 ## `RBENV_GEMSETS="global" gem install --verbose rouge`
-alias c='rougify'
-alias d=direnv
-alias i=ifconfig
-alias j=jekyll
-alias k=kill
-alias m=mvim
-alias nn=npm
-alias r=ruby
-alias s=sass
-alias wh=which
-
-## others
-alias eh='sudo vim /etc/hosts'
-## `brew install hub`
-alias git=hub
-alias server='python -m SimpleHTTPServer'
 
 # pvm, play version manager
 . ~/dotfiles/pvm/pvm.sh
@@ -118,14 +103,6 @@ then
 
   # `brew info zsh-syntax-highlighting`
   source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-  alias o=open
-
-  alias b=brew
-  alias bcu="brew cleanup"
-  alias bod="brew outdated"
-  alias bud="brew update"
-  alias bug="brew upgrade"
 
   # Java 7
   [[ -f /usr/libexec/java_home ]] && export JAVA_HOME=`/usr/libexec/java_home -v 1.7`

@@ -1,0 +1,29 @@
+# `gem install rough`
+alias c=rougify
+
+alias d=direnv
+alias i=ifconfig
+alias j=jekyll
+alias k=kill
+alias m=mvim
+alias nn=npm
+alias r=ruby
+alias s=sass
+alias wh=which
+
+## others
+alias eh='sudo vim /etc/hosts'
+
+# `brew install hub`
+[[ -s $(which hub) ]] && alias git=hub
+
+alias server='python -m SimpleHTTPServer'
+
+if [[ `uname` == 'Darwin' ]]; then
+  alias b=brew
+  alias bcu="brew cleanup"
+  alias bod="brew outdated"
+  alias bud="brew update"
+  alias bug="brew upgrade"
+  alias o=open
+fi

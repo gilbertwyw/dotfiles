@@ -39,6 +39,9 @@ $ ln -s ~/dotfiles/fish/functions ~/.config/fish/functions
 # or, for Zsh
 $ ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
 
+# aliases
+$ ln -s ~/dotfiles/aliases ~/.aliases
+
 # Git
 $ ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
 $ ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
