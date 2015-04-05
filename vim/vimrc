@@ -239,7 +239,7 @@ nmap <F6> :Unite colorscheme -auto-preview<CR>
 " syntastic: error:
 "   your shell /usr/local/bin/fish doesn't use traditional UNIX syntax for redirections
 set shell=/bin/sh
-let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_aggregate_errors = 1
 " }}}
 " Plugin: tern_for_vim {{{
 let g:tern_show_argument_hints='on_hold'
