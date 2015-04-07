@@ -38,6 +38,7 @@ $ ln -s ~/dotfiles/fish/functions ~/.config/fish/functions
 
 # or, for Zsh
 $ ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
+$ ln -s ~/dotfiles/zsh ~/.zsh
 
 # aliases
 $ ln -s ~/dotfiles/aliases ~/.aliases
