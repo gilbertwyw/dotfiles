@@ -129,6 +129,8 @@ set shiftwidth=2
 " Mappings {{{
 cmap w!! w !sudo tee > /dev/null %
 
+nmap <F7> :silent only<CR>
+
 " jk is escape
 inoremap jk <Esc>
 
