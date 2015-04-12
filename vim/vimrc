@@ -114,8 +114,6 @@ set visualbell
 " toggle paste mode
 set pastetoggle=<F2>
 
-silent! colorscheme Tomorrow-Night
-
 let mapleader = "\<Space>"
 
 " Indentation {{{
