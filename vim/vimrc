@@ -25,6 +25,7 @@ Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/vim-asterisk'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-emoji'
 Plug 'kien/rainbow_parentheses.vim'

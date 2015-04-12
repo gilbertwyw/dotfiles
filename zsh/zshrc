@@ -86,6 +86,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export EDITOR=`which vim`
 
+# Setting ag as the default source for fzf
+export FZF_DEFAULT_COMMAND='ag -l -g ""'
+
 # https://github.com/zimbatm/direnv#zsh
 eval "$(direnv hook zsh)"
 
