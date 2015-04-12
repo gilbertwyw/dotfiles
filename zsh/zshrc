@@ -85,7 +85,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 . ~/dotfiles/pvm/pvm.sh
 
 export EDITOR=`which vim`
-eval "$(direnv hook $0)"
+
+# https://github.com/zimbatm/direnv#zsh
+eval "$(direnv hook zsh)"
 
 if [[ `uname` == 'Darwin' ]]
 then
