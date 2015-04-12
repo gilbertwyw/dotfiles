@@ -60,7 +60,7 @@ Plug 'tpope/vim-git'
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'sass'] }
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
-Plug 'jelera/vim-javascript-syntax'
+Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'maksimr/vim-jsbeautify'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm i' }
@@ -371,13 +371,6 @@ autocmd InsertLeave,TextChanged * if expand('%') != '' | update | endif
 
 " enable code folding by "vim-javascript-syntax'
 "au FileType javascript call JavaScriptFold()
-
-" copy from easy-motion
-"let g:EasyMotion_do_mapping = 0 " Disable default mappings
-
-" cut down key stroke for normal mode
-" but lose the capability for repeating the linewise character search
-"nnoremap ; :
 
 " bind K to grep word under cursor
 "nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
