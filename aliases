@@ -2,6 +2,7 @@
 alias c=rougify
 
 alias d=direnv
+alias e='$EDITOR'
 alias i=ifconfig
 alias j=jekyll
 alias k=kill
@@ -13,6 +14,7 @@ alias wh=which
 
 ## others
 alias eh='sudo vim /etc/hosts'
+alias hb='hub browse'
 
 # `brew install hub`
 [[ -s $(which hub) ]] && alias git=hub
