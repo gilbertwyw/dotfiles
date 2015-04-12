@@ -238,9 +238,8 @@ nnoremap <F4> :NumbersOnOff<CR>
 nmap <F6> :Unite colorscheme -auto-preview<CR>
 " }}}
 " Plugin: syntastic {{{
-" syntastic: error:
-"   your shell /usr/local/bin/fish doesn't use traditional UNIX syntax for redirections
-set shell=/bin/sh
+" :h syntastic-fish
+let g:syntastic_shell = '/bin/zsh'
 let g:syntastic_aggregate_errors = 1
 " }}}
 " Plugin: tern_for_vim {{{
