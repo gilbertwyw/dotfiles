@@ -234,7 +234,7 @@ nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F4> :NumbersOnOff<CR>
 " }}}
 " Plugin: unite-colorscheme {{{
-nmap <F6> :Unite colorscheme -auto-preview<CR>
+nmap <F6> :Unite colorscheme -auto-preview -start-insert<CR>
 " }}}
 " Plugin: syntastic {{{
 " :h syntastic-fish
