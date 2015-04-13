@@ -225,10 +225,6 @@ let g:EasyMotion_smartcase = 1
 map <leader>j <Plug>(easymotion-j)
 map <leader>k <Plug>(easymotion-k)
 " }}}
-" Plugin: NERDTree {{{
-" NERDTree mirror mode by default
-map <silent> <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
-" }}}
 " Plugin: numbers.vim {{{
 nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F4> :NumbersOnOff<CR>
@@ -348,7 +344,11 @@ augroup markdown " {{{2
 augroup END " }}}2
 augroup nerdtree " Plugin: NERDTree {{{2
   autocmd!
-  autocmd vimenter * if !argc() | NERDTree | endif
+  map <silent> <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
+  " open a NERDTree automatically when vim starts up if no files were specified
+  autocmd StdinReadPre * let s:std_in=1
+  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+  " close vim if the only window left open is a NERDTree
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 augroup END " }}}2
 augroup rainbow_parentheses " Plugin: rainbow_parentheses {{{2
