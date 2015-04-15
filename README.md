@@ -47,6 +47,9 @@ $ ln -s ~/dotfiles/aliases ~/.aliases
 $ ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
 $ ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
 
+# tmux
+$ ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+
 # Ruby
 $ ln -s ~/dotfiles/ruby/gemrc ~/.gemrc
 
