@@ -25,6 +25,8 @@ alias server='python -m SimpleHTTPServer'
 alias ngl='npm ls -g --depth=0'
 alias ngo='npm outdated -g'
 alias ngu='npm update -g'
+alias nh='npm home'
+alias nr='npm run'
 
 if [[ `uname` == 'Darwin' ]]; then
   alias b=brew
