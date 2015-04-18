@@ -33,7 +33,7 @@ Plug 'kshenoy/vim-signature'
 Plug 'myusuf3/numbers.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
 Plug 'szw/vim-g'
 Plug 'terryma/vim-multiple-cursors'
@@ -358,8 +358,9 @@ augroup nerdtree " Plugin: NERDTree {{{2
   autocmd!
   map <silent> <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
   " open a NERDTree automatically when vim starts up if no files were specified
-  autocmd StdinReadPre * let s:std_in=1
-  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+  "autocmd StdinReadPre * let s:std_in=1
+  "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
   " close vim if the only window left open is a NERDTree
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 augroup END " }}}2
