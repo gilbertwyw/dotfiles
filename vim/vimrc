@@ -22,6 +22,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/vim-asterisk'
@@ -175,13 +176,6 @@ endif
 " Tab {{{
 noremap <S-l> gt
 noremap <S-h> gT
-" }}}
-" Window {{{
-noremap <C-h> <C-w>h
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-" clash with Unite's redraw
-"noremap <C-l> <C-w>l
 " }}}
 " }}}
 " Search {{{
