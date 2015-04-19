@@ -129,6 +129,7 @@ set shiftwidth=2
 " Mappings {{{
 cmap w!! w !sudo tee > /dev/null %
 
+nmap <F5> :setlocal spell! spelllang=en_us<CR>
 nmap <F7> :silent only<CR>
 
 " jk is escape
@@ -149,19 +150,14 @@ inoremap ;j <C-O>:update<CR>
 nnoremap ;j :update<CR>
 
 " Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
+nnoremap <leader>ev :vsp $MYVIMRC<CR>
+nnoremap <leader>sv :so $MYVIMRC<CR>
 
 " Disable all arrow keys
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-
-map <F5> :setlocal spell! spelllang=en_us<CR>
-
-nnoremap <leader>ev :vsp $MYVIMRC<CR>
-nnoremap <leader>sv :so $MYVIMRC<CR>
 
 vnoremap Y "*y
 " In normal mode, do the same with the current line
