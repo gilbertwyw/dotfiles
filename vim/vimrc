@@ -22,7 +22,6 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/vim-asterisk'
@@ -73,6 +72,10 @@ Plug 'othree/html5.vim'
 " snippets {{{
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+" }}}
+" tmux {{{
+Plug 'benmills/vimux'
+Plug 'christoomey/vim-tmux-navigator'
 " }}}
 " Unite's deps {{{
 Plug 'Shougo/neomru.vim'
@@ -154,9 +157,9 @@ nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
 
 " Disable all arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
+noremap <Up>    <NOP>
+noremap <Down>  <NOP>
+noremap <Left>  <NOP>
 noremap <Right> <NOP>
 
 vnoremap Y "*y
@@ -326,6 +329,10 @@ augroup git " {{{2
   autocmd!
   " commit message
   autocmd FileType gitcommit setlocal spell textwidth=72
+augroup END " }}}2
+augroup tmux " {{{2
+  autocmd!
+  map <leader>vp :VimuxPromptCommand<CR>
 augroup END " }}}2
 augroup jsbeautify " Plugin: vim-jsbeautify {{{2
   autocmd!
