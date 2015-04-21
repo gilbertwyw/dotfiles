@@ -304,6 +304,8 @@ let g:vim_g_f_command = "Gf"
 " }}}
 " Plugin: vim-jsdoc {{{
 let g:jsdoc_allow_input_prompt = 1
+" reserve <C-l> for the mapping used by 'vim-tmux-navigator'
+let g:jsdoc_default_mapping    = 0
 " }}}
 " Autocommands {{{1
 "augroup emmet " Plugin: emmet-vim {{{2
