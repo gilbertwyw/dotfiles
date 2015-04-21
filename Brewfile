@@ -103,7 +103,7 @@ brew 'libyaml'
 brew 'lua'
 brew 'luajit'
 brew 'lzlib'
-brew 'macvim', args: ['with-luajit', 'override-system-vim']
+brew 'macvim', args: ['with-luajit']
 brew 'meld'
 brew 'mongodb'
 brew 'mysql'
@@ -158,6 +158,7 @@ brew 'ttfautohint'
 brew 'unixodbc'
 brew 'usbmuxd'
 brew 'v'
+brew 'vim', args: ['with-lua', 'with-luajit', 'override-system-vi']
 brew 'w3m'
 brew 'watch'
 brew 'wxmac'
