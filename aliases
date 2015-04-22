@@ -1,20 +1,20 @@
 # `gem install rough`
 alias c=rougify
-
 alias d=direnv
 alias e='$EDITOR'
 alias i=ifconfig
 alias j=jekyll
 alias k=kill
 alias m=mvim
-alias nn=npm
 alias r=ruby
 alias s=sass
-alias wh=which
+alias t=tmux
 
 ## others
 alias eh='sudo vim /etc/hosts'
 alias hb='hub browse'
+alias nn=npm
+alias wh=which
 
 # `brew install hub`
 [[ -s $(which hub) ]] && alias git=hub
