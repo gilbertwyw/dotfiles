@@ -9,17 +9,16 @@
 	quotepath = false
 	editor = vim -f
 	autocrlf = input
-	excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
 [push]
 	default = simple
 [help]
 	autocorrect = 1
 [alias]
-  cr = "!f() { git push origin @:refs/for/${1}; }; f"
+  cr = "!f() { git push origin @:refs/for/${1-master}; }; f"
   f  = "!f() { git fetch ${1-origin}; }; f"
-  nb = "!f() { git checkout -t origin/${1} -b ${2}; }; f"
-  rp = "!f() { git rebase -p origin/${1}; }; f"
-
+  nb = "!f() { git checkout -t origin/${2-master} -b ${1}; }; f"
+  rp = "!f() { git rebase -p origin/${1-master}; }; f"
 [filter "media"]
 	required = true
 	clean = git media clean %f
@@ -33,6 +32,8 @@
   branch = bold magenta
   remotebranch = blue
   tag = bold red
+[rebase]
+	autosquash = true
 [filter "lfs"]
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
