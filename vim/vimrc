@@ -154,7 +154,7 @@ inoremap ;j <C-O>:update<CR>
 nnoremap ;j :update<CR>
 
 " Quickly edit/reload the vimrc file
-nnoremap <leader>ev :vsp $MYVIMRC<CR>
+nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
 
 " Disable all arrow keys
@@ -352,7 +352,7 @@ augroup markdown " {{{2
   " force *.md as MarkDown, https://github.com/tpope/vim-markdown
   autocmd BufNewFile,BufReadPost *.md set filetype=markdown
   " turn on spell checking for markdown files
-  autocmd BufRead,BufNewFile *.md setlocal spell
+  "autocmd BufRead,BufNewFile *.md setlocal spell
 augroup END " }}}2
 augroup nerdtree " Plugin: NERDTree {{{2
   autocmd!
