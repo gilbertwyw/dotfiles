@@ -38,6 +38,7 @@ Thumbs.db
 
 # editor #
 ##########
+Session.vim
 *.sublime-project
 *.sublime-workspace
 *.swp
