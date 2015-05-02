@@ -22,11 +22,16 @@ alias wh=which
 alias server='python -m SimpleHTTPServer'
 
 # npm
+alias ngi='npm install -g'
 alias ngl='npm ls -g --depth=0'
 alias ngo='npm outdated -g'
 alias ngu='npm update -g'
+alias nis='npm install --save'
+alias nisd='npm install --save-dev'
 alias nh='npm home'
 alias nr='npm run'
+alias ns='npm start'
+alias nt='npm test'
 
 if [[ `uname` == 'Darwin' ]]; then
   alias b=brew
