@@ -76,7 +76,6 @@ source $ZSH/oh-my-zsh.sh
 # rbenv, https://github.com/sstephenson/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-
 ## `RBENV_GEMSETS="global" gem install --verbose rouge`
 
 # pvm, play version manager
@@ -88,9 +87,10 @@ export EDITOR=`which vim`
 # Setting ag as the default source for fzf
 export FZF_DEFAULT_COMMAND='ag --skip-vcs-ignores -l -g ""'
 
+export NODE_REPL_HISTORY_FILE=~/.iojs_repl_history
+
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
-
 
 # https://github.com/zimbatm/direnv#zsh
 eval "$(direnv hook zsh)"
