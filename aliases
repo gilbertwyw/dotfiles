@@ -1,5 +1,5 @@
-# `gem install rough`
-alias c=rougify
+# `brew tap jingweno/ccat && brew install ccat`
+alias c=ccat
 alias d=direnv
 alias e='$EDITOR'
 alias i=ifconfig
