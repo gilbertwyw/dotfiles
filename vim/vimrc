@@ -55,6 +55,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'ujihisa/unite-colorscheme'
 " }}}
 " Git {{{
+Plug 'low-ghost/nerdtree-fugitive'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'Xuyuanp/nerdtree-git-plugin'
