@@ -49,7 +49,7 @@ brew 'fontconfig'
 brew 'fontforge'
 brew 'freetype'
 brew 'freexl'
-brew 'fzf', args: ['HEAD']
+brew 'fzf'
 brew 'gdal'
 brew 'gdbm'
 brew 'gdk-pixbuf'
