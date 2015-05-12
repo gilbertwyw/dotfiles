@@ -9,7 +9,7 @@ alias r=ruby
 alias s=sass
 alias t=tmux
 
-## others
+alias bdd=boot2docker
 alias eh='sudo vim /etc/hosts'
 alias hb='hub browse'
 alias nn=npm
