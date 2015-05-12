@@ -5,7 +5,6 @@ alias e='$EDITOR'
 alias i=ifconfig
 alias j=jekyll
 alias k=kill
-alias m=mvim
 alias r=ruby
 alias s=sass
 alias t=tmux
