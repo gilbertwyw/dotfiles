@@ -1,0 +1,34 @@
+### Fluxible
+
+# Actions
+snippet ea "Export action"
+export ${1:default} function ${2}(context, payload, ${3:done}) {
+  $4
+}
+endsnippet
+
+# Addons
+snippet cts "connectToStores" b
+$1 = connectToStore($1, [$2], function(stores, props){
+  return {
+    $3
+  };
+});
+endsnippet
+
+snippet cs "createStore method"
+createStore({
+  storeName: '$1',
+  handlers: {
+    $2
+  },
+  dehydrate: function() {
+    return {
+      $3
+    };
+  },
+  rehydrate: function(state) {
+    $4
+  }
+});
+endsnippet

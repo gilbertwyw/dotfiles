@@ -6,15 +6,40 @@ snippet te "throw new Error"
 throw new Error($1);
 endsnippet
 
-snippet im "ES6 import" 
-import $1 from '$1$0'
-endsnippet
-
-snippet imb "ES6 import (object destruction)" 
-import {$1} from '$0'
-endsnippet
-
 snippet me "module.exports" b
-module.exports = $0;
+module.exports = $1;
 endsnippet
+
+### ES6 Module
+
+snippet ex "export (default)"
+export ${1:default} $2;
+endsnippet
+
+snippet ec "export (default) class"
+export ${1:default} class $2 {
+  $3
+};
+endsnippet
+
+snippet ef "export (default) function"
+export ${1:default} function($1) {
+  $2
+};
+endsnippet
+
+snippet im "import"
+import $1 from '${2:$1}';
+endsnippet
+
+snippet imb "import using object destruction"
+import {$1} from '$2';
+endsnippet
+
+### Linters
+
+snippet esl "ESLint comment" b
+/*${1:eslint} $2 */
+endsnippet
+
 
