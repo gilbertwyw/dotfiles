@@ -12,7 +12,7 @@ alias t=tmux
 alias bdd=boot2docker
 alias eh='sudo vim /etc/hosts'
 alias hb='hub browse'
-alias nn=npm
+alias vd=vimdiff
 alias wh=which
 
 # `brew install hub`
