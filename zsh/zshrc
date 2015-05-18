@@ -88,6 +88,7 @@ export EDITOR=`which vim`
 export FZF_DEFAULT_COMMAND='ag --skip-vcs-ignores -l -g ""'
 
 export NODE_REPL_HISTORY_FILE=~/.iojs_repl_history
+export NODE_REPL_HISTORY_SIZE=2000
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
