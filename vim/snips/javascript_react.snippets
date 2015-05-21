@@ -1,6 +1,14 @@
 # React.js
+
 snippet jsxc "@jsx"
 /** @jsx React.$1 */
+endsnippet
+
+# `react.createElement`
+snippet rtb "return ()"
+return (
+	$1
+);
 endsnippet
 
 snippet ct "contextTypes"
@@ -97,3 +105,13 @@ shouldComponentUpdate: function(nextProps, nextState) {
 }$2
 endsnippet
 
+# React Router
+snippet rh "<Route>"
+<Route handler={$1}> 
+	$2
+</Route>
+endsnippet
+
+snippet rhs "<Route />"
+<Route handler={$1} />
+endsnippet
