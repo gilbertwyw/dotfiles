@@ -40,3 +40,8 @@ if [[ `uname` == 'Darwin' ]]; then
   alias bug="brew upgrade"
   alias o=open
 fi
+
+# tarball everything except installed node modules; '.git' folder included if exists
+nodeball() {
+  tar -cv --exclude 'node_modules' -zf "$1.tar.gz" $1;
+}
