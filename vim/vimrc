@@ -46,6 +46,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 " }}}
 " colorscheme {{{
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'chriskempson/base16-vim'
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'daylerees/colour-schemes', { 'rtp': 'vim' }
