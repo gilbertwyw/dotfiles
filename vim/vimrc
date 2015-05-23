@@ -136,7 +136,8 @@ set shiftwidth=2
 " Mappings {{{
 cmap w!! w !sudo tee > /dev/null %
 
-nmap <F5> :setlocal spell! spelllang=en_us<CR>
+" covered by 'cos' (normal mode) from unimpaired
+"nmap <F5> :setlocal spell! spelllang=en_us<CR>
 nmap <F7> :silent only<CR>
 
 " jk is escape
