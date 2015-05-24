@@ -20,6 +20,7 @@
   f  = "!f() { git fetch ${1-origin}; }; f"
   nb = "!f() { git checkout -t origin/${2-master} -b ${1}; }; f"
   rp = "!f() { git rebase -p origin/${1-master}; }; f"
+	ctags = !.git/hooks/ctags
 [filter "media"]
 	required = true
 	clean = git media clean %f
@@ -39,3 +40,5 @@
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+[init]
+	templatedir = ~/.git_template

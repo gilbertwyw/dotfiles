@@ -45,7 +45,11 @@ $ ln -s ~/dotfiles/aliases ~/.aliases
 
 # Git
 $ ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
+$ ln -s ~/dotfiles/git/template ~/.git_template
 $ ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
+
+# Ctags
+$ ln -s ~/dotfiles/ctags ~/.ctags
 
 # tmux
 $ ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
