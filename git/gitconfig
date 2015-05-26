@@ -21,6 +21,7 @@
   nb = "!f() { git checkout -t origin/${2-master} -b ${1}; }; f"
   rp = "!f() { git rebase -p origin/${1-master}; }; f"
 	ctags = !.git/hooks/ctags
+  home = rev-parse --show-toplevel
 [filter "media"]
 	required = true
 	clean = git media clean %f
