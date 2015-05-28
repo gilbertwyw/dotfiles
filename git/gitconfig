@@ -48,3 +48,4 @@
 	templatedir = ~/.git_template
 [mergetool]
 	prompt = false
+	keepBackup = false
