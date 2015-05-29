@@ -323,6 +323,9 @@ elseif executable('pt')
   let g:unite_source_rec_async_command = 'pt --nocolor --nogroup -g .'
 endif
 " }}}
+" Plugin: vim-dispatch {{{
+nnoremap <F9> :Dispatch<CR>
+" }}}
 " Plugin: vim-easy-align {{{
 " Start interactive EasyAlign in visual mode
 vmap <Enter> <Plug>(EasyAlign)
