@@ -11,6 +11,7 @@ alias s=sass
 alias t=tmux
 
 alias bdd=boot2docker
+alias bddsh='$(boot2docker shellinit)'
 alias eh='sudo vim /etc/hosts'
 alias hb='hub browse'
 alias vd=vimdiff
