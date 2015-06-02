@@ -5,21 +5,23 @@ alias e='$EDITOR'
 alias i=ifconfig
 alias j=jekyll
 alias k=kill
+# alias provided by 'tmuxinator'
+alias m=mux
 alias n=npm
 alias r=ruby
 alias s=sass
-alias t=tmux
-alias tat='tmux new-session -As $(basename $PWD | tr . -)'
 
 alias bdd=boot2docker
 alias bddsh='$(boot2docker shellinit)'
 alias eh='sudo vim /etc/hosts'
 alias hb='hub browse'
+alias tat='tmux new-session -As $(basename $PWD | tr . -)'
 alias vd=vimdiff
 alias wh=which
 
 # `brew install hub`
-[[ -s $(which hub) ]] && alias git=hub
+#[[ -s $(which hub) ]] && alias git=hub
+alias git=hub
 
 alias server='python -m SimpleHTTPServer'
 
