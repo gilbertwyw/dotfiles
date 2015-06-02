@@ -1,4 +1,4 @@
-## Config Files
+# Config Files
 
 - [Git](http://git-scm.com/)
 - [Homebrew](http://brew.sh/)
@@ -11,14 +11,18 @@
 
 Pre-requisites:
 
-  - [Xcode](https://developer.apple.com/xcode/)
-  - [Homebrew](http://brew.sh/)
+- [Xcode](https://developer.apple.com/xcode/)
+- [Homebrew](http://brew.sh/)
 
 Optional:
 
-  - Terminal themes
-    - [dracula-theme](https://github.com/zenorocha/dracula-theme)
-    - [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme)
+- RubyGems:
+  - [mivok/markdownlint · GitHub](https://github.com/mivok/markdownlint)
+  - [brigade/scss-lint · GitHub](https://github.com/brigade/scss-lint)
+  - [tmuxinator/tmuxinator · GitHub](https://github.com/tmuxinator/tmuxinator)
+- Terminal themes:
+  - [dracula-theme](https://github.com/zenorocha/dracula-theme)
+  - [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme)
 
 ```
 # Backup existing rc files before proceeding
@@ -73,9 +77,11 @@ $ brew brewdle [--dry-run]
 ```
 
 ## New machine / Re-installation
+
 ```
 sudo xcodebuild -license
 ```
 
 ## Notes
+
 "pvm_ls:26: no matches found: default" will be gone after `pvm install <version>`
