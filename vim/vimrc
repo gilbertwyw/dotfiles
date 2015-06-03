@@ -324,6 +324,7 @@ elseif executable('pt')
 endif
 " }}}
 " Plugin: vim-dispatch {{{
+autocmd FileType html let b:dispatch = '!open %:p'
 nnoremap <F9> :Dispatch<CR>
 " }}}
 " Plugin: vim-easy-align {{{
