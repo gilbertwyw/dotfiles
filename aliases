@@ -13,6 +13,7 @@ alias s=sass
 
 alias bdd=boot2docker
 alias bddsh='$(boot2docker shellinit)'
+alias dcp=docker-compose #fig
 alias eh='sudo vim /etc/hosts'
 alias hb='hub browse'
 alias tat='tmux new-session -As $(basename $PWD | tr . -)'
