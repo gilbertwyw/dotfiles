@@ -36,6 +36,7 @@ Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
+Plug 'sjl/gundo.vim'
 Plug 'szw/vim-g'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tommcdo/vim-exchange'
@@ -230,6 +231,9 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " }}}
 " Plugin: fzf {{{
 nnoremap <silent> <C-p> :FZF<CR>
+" }}}
+" Plugin: gundo.vim {{{
+nnoremap <F5> :GundoToggle<CR>
 " }}}
 " Plugin: numbers.vim {{{
 nnoremap <F3> :NumbersToggle<CR>
