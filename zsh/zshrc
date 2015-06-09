@@ -72,10 +72,9 @@ setopt no_beep
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# rbenv, https://github.com/sstephenson/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-## `RBENV_GEMSETS="global" gem install --verbose rouge`
+# `brew info chruby`
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
 
 # pvm, play version manager
 . ~/dotfiles/pvm/pvm.sh
