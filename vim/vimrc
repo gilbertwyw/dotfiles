@@ -231,7 +231,7 @@ map <leader>k <Plug>(easymotion-k)
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " }}}
 " Plugin: fzf {{{
-nnoremap <silent> <C-p> :FZF<CR>
+nnoremap <silent> <C-p> :FZF --reverse<CR>
 " }}}
 " Plugin: gundo.vim {{{
 nnoremap <F5> :GundoToggle<CR>
