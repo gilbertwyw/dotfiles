@@ -55,9 +55,9 @@ Plug 'chriskempson/base16-vim'
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'daylerees/colour-schemes', { 'rtp': 'vim' }
 Plug 'flazz/vim-colorschemes'
+Plug 'godlygeek/csapprox'
 Plug 'google/vim-colorscheme-primary'
 Plug 'junegunn/seoul256.vim'
-Plug 'ujihisa/unite-colorscheme'
 " }}}
 " Git {{{
 Plug 'low-ghost/nerdtree-fugitive'
@@ -239,9 +239,6 @@ nnoremap <F5> :GundoToggle<CR>
 " Plugin: numbers.vim {{{
 nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F4> :NumbersOnOff<CR>
-" }}}
-" Plugin: unite-colorscheme {{{
-nmap <F6> :Unite colorscheme -auto-preview -start-insert<CR>
 " }}}
 " Plugin: syntastic {{{
 set statusline+=%#warningmsg#
@@ -440,6 +437,17 @@ autocmd InsertLeave,TextChanged * if expand('%') != '' | update | endif
 " bind K to grep word under cursor
 "nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " }}}
+
+" https://github.com/junegunn/fzf/wiki/Examples-(vim)#choose-color-scheme
+" with '--reverse'
+nnoremap <silent> <Leader>C :call fzf#run({
+\   'source':
+\     map(split(globpath(&rtp, "colors/*.vim"), "\n"),
+\         "substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')"),
+\   'sink':    'colo',
+\   'options': '+m --reverse',
+\   'left':    30
+\ })<CR>
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
