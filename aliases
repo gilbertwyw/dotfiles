@@ -1,6 +1,6 @@
 # `brew tap jingweno/ccat && brew install ccat`
 alias c=ccat
-alias d=direnv
+alias de=direnv
 alias e='$EDITOR'
 alias i=ifconfig
 alias j=jekyll
@@ -13,7 +13,10 @@ alias s=sass
 
 alias bdd=boot2docker
 alias bddsh='$(boot2docker shellinit)'
+alias d=docker
+alias dh='docker help'
 alias dcp=docker-compose #fig
+
 alias eh='sudo vim /etc/hosts'
 alias hb='hub browse'
 alias tat='tmux new-session -As $(basename $PWD | tr . -)'
