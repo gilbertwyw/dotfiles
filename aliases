@@ -46,7 +46,7 @@ if [[ `uname` == 'Darwin' ]]; then
   alias bcu="brew cleanup"
   alias bod="brew outdated"
   alias bud="brew update"
-  alias bug="brew upgrade"
+  alias bug="brew upgrade --all"
   alias o=open
   alias pwdc='pwd | pbcopy'
 fi
