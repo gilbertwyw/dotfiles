@@ -84,6 +84,7 @@ Plug 'honza/vim-snippets'
 " tmux {{{
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'edkolev/tmuxline.vim'
 " }}}
 " Unite's deps {{{
 Plug 'Shougo/neomru.vim'
@@ -283,6 +284,10 @@ nmap <leader>tb :TernDocBrowse<CR>
 nmap <leader>td :TernDef<CR>
 nmap <leader>tr :TernRefs<CR>
 nmap <leader>tR :TernRename<CR>
+" }}}
+" Plugin: tmuxline.vim {{{
+let g:tmuxline_theme = 'airline'
+let g:tmuxline_powerline_separators = 0
 " }}}
 " Plugin: UltiSnips {{{
 " to avoid conflict with YouCompleteMe
