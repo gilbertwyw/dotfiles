@@ -25,6 +25,8 @@
   # require `git init` in repo
   ctags = !.git/hooks/ctags
   home = rev-parse --show-toplevel
+  # require `gxargs`
+  bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | gxargs -r git branch -d; }; f"
 [filter "media"]
 	required = true
 	clean = git media clean %f
