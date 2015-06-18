@@ -1,4 +1,5 @@
 # `brew tap jingweno/ccat && brew install ccat`
+alias a=alias
 alias c=ccat
 alias de=direnv
 alias e='$EDITOR'
