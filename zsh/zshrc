@@ -76,9 +76,6 @@ setopt no_beep
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
-# pvm, play version manager
-. ~/dotfiles/pvm/pvm.sh
-
 export LC_ALL=$LANG
 
 export EDITOR=`which vim`

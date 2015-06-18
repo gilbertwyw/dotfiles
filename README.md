@@ -98,7 +98,3 @@ ln -s /usr/local/share/zsh/site-functions/async ~/.oh-my-zsh/custom/async.zsh
 ```
 sudo xcodebuild -license
 ```
-
-## Others
-
-"pvm_ls:26: no matches found: default" will be gone after `pvm install <version>`
