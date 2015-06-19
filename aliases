@@ -10,6 +10,7 @@ alias k=kill
 alias m=mux
 alias n=npm
 alias r=ruby
+alias rm=trash
 alias s=sass
 
 alias bdd=boot2docker
