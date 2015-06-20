@@ -143,8 +143,6 @@ set shiftwidth=2
 " Mappings {{{
 cmap w!! w !sudo tee > /dev/null %
 
-" covered by 'cos' (normal mode) from unimpaired
-"nmap <F5> :setlocal spell! spelllang=en_us<CR>
 nmap <F7> :silent only<CR>
 
 " jk is escape
@@ -408,8 +406,6 @@ augroup markdown " {{{2
   autocmd!
   " force *.md as MarkDown, https://github.com/tpope/vim-markdown
   autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-  " turn on spell checking for markdown files
-  "autocmd BufRead,BufNewFile *.md setlocal spell
 augroup END " }}}2
 augroup nerdtree " Plugin: NERDTree {{{2
   autocmd!
