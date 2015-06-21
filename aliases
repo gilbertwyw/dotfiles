@@ -3,6 +3,8 @@ alias a=alias
 alias c=ccat
 alias de=direnv
 alias e='$EDITOR'
+# brew info thefuck
+alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 alias i=ifconfig
 alias j=jekyll
 alias k=kill
