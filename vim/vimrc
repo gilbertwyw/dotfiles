@@ -87,6 +87,7 @@ Plug 'honza/vim-snippets'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'edkolev/tmuxline.vim'
+Plug 'wellle/tmux-complete.vim'
 " }}}
 " Unite's deps {{{
 Plug 'Shougo/neomru.vim'
@@ -284,6 +285,9 @@ nmap <leader>tb :TernDocBrowse<CR>
 nmap <leader>td :TernDef<CR>
 nmap <leader>tr :TernRefs<CR>
 nmap <leader>tR :TernRename<CR>
+" }}}
+" Plugin: tmux-complete.vim {{{
+let g:tmuxcomplete#trigger = 'omnifunc'
 " }}}
 " Plugin: tmuxline.vim {{{
 let g:tmuxline_theme = 'airline'
