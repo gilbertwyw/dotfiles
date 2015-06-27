@@ -59,6 +59,7 @@ Plug 'daylerees/colour-schemes', { 'rtp': 'vim' }
 Plug 'flazz/vim-colorschemes'
 Plug 'godlygeek/csapprox'
 Plug 'google/vim-colorscheme-primary'
+Plug 'itchyny/landscape.vim'
 Plug 'junegunn/seoul256.vim'
 " }}}
 " Git {{{
