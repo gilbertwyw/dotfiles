@@ -96,5 +96,7 @@ ln -s /usr/local/share/zsh/site-functions/async ~/.oh-my-zsh/custom/async.zsh
 ## New machine / Re-installation
 
 ```
+xcode-select --install
+
 sudo xcodebuild -license
 ```
