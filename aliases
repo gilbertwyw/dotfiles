@@ -1,7 +1,7 @@
 # `brew tap jingweno/ccat && brew install ccat`
 alias a=alias
 alias c=ccat
-alias de=direnv
+alias da='direnv allow'
 alias e='$EDITOR'
 # brew info thefuck
 alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
