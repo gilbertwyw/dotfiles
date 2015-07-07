@@ -108,6 +108,9 @@ set hidden
 
 set number
 
+" always show 5 lines above/below the cursor
+set scrolloff=5
+
 " turn off backup for now
 set nobackup
 set noswapfile
