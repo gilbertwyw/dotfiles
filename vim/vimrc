@@ -178,6 +178,11 @@ noremap <Down>  <NOP>
 noremap <Left>  <NOP>
 noremap <Right> <NOP>
 
+" http://vim-jp.org/blog/2015/06/30/visual-ctrl-a-ctrl-x.html
+" Patch 7.4.754
+"vnoremap <c-a> <c-a>gv
+"vnoremap <c-x> <c-x>gv
+
 vnoremap Y "*y
 " In normal mode, do the same with the current line
 nnoremap Y "*yy
