@@ -108,6 +108,10 @@ set hidden
 
 set number
 
+" more intuitive split
+set splitbelow
+set splitright
+
 " always show 5 lines above/below the cursor
 set scrolloff=5
 
