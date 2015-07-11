@@ -180,11 +180,11 @@ nnoremap ;j :update<CR>
 nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
 
-" Disable all arrow keys
-noremap <Up>    <NOP>
-noremap <Down>  <NOP>
-noremap <Left>  <NOP>
-noremap <Right> <NOP>
+" Resize window
+noremap <up>    <C-W>+
+noremap <down>  <C-W>-
+noremap <left>  3<C-W><
+noremap <right> 3<C-W>>
 
 " http://vim-jp.org/blog/2015/06/30/visual-ctrl-a-ctrl-x.html
 " Patch 7.4.754
