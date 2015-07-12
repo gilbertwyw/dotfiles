@@ -15,6 +15,7 @@ endif
 call plug#begin('~/.vim/plugged')
 " Plugins {{{
 " General {{{
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Raimondi/delimitMate'
 Plug 'Shougo/unite.vim'
