@@ -171,6 +171,8 @@ nnoremap k gk
 nnoremap ' `
 nnoremap ` '
 
+map <F6> :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
+
 " Part of the Right Hand system, http://reefpoints.dockyard.com/2013/09/11/vim-staying-on-home-row-via-map.html
 " in INSERT mode, save & back to INSERT mode
 inoremap ;j <C-O>:update<CR>
