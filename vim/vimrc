@@ -34,7 +34,6 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'kshenoy/vim-signature'
 Plug 'majutsushi/tagbar'
 Plug 'myusuf3/numbers.vim'
-Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
@@ -51,6 +50,7 @@ Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'wincent/ferret'
 " }}}
 " colorscheme {{{
 Plug 'NLKNguyen/papercolor-theme'
@@ -237,9 +237,6 @@ map z#  <Plug>(asterisk-z#)
 map gz# <Plug>(asterisk-gz#)
 " }}}2
 " }}}
-" Plugin: ag.vim {{{
-nnoremap <leader>g :Ag -i<space>
-" }}}
 " Plugin: EasyMotion {{{
 " Bi-directional 2-character search
 " `s{char}{char}{label}`
@@ -252,6 +249,9 @@ map <leader>k <Plug>(easymotion-k)
 " }}}
 " Plugin: editorconfig {{{
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+" }}}
+" Plugin: ferret {{{
+nmap <leader>x <Plug>(FerretAck)
 " }}}
 " Plugin: fzf {{{
 nnoremap <silent> <C-p> :FZF --cycle<CR>
