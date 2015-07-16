@@ -33,7 +33,6 @@ Plug 'junegunn/vim-emoji'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'kshenoy/vim-signature'
 Plug 'majutsushi/tagbar'
-Plug 'myusuf3/numbers.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
@@ -107,6 +106,8 @@ call plug#end()
 " Allow hidden buffers, don't limit to 1 file per window/split
 set hidden
 
+" enable hybrid line number mode
+set relativenumber
 set number
 
 " more intuitive split
@@ -258,10 +259,6 @@ nnoremap <silent> <C-p> :FZF --cycle<CR>
 " }}}
 " Plugin: gundo.vim {{{
 nnoremap <F5> :GundoToggle<CR>
-" }}}
-" Plugin: numbers.vim {{{
-nnoremap <F3> :NumbersToggle<CR>
-nnoremap <F4> :NumbersOnOff<CR>
 " }}}
 " Plugin: syntastic {{{
 set statusline+=%#warningmsg#
