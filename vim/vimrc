@@ -86,7 +86,6 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 " }}}
 " tmux {{{
-Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'edkolev/tmuxline.vim'
 Plug 'wellle/tmux-complete.vim'
@@ -413,10 +412,6 @@ augroup git " {{{2
   autocmd!
   " commit message
   autocmd FileType gitcommit setlocal spell textwidth=72
-augroup END " }}}2
-augroup tmux " {{{2
-  autocmd!
-  map <leader>vp :VimuxPromptCommand<CR>
 augroup END " }}}2
 augroup jsbeautify " Plugin: vim-jsbeautify {{{2
   autocmd!
