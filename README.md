@@ -93,6 +93,10 @@ ln -s /usr/local/share/zsh/site-functions/async ~/.oh-my-zsh/custom/async.zsh
 # make sure ZSH_THEME="pure" in ~/.zshrc
 ```
 
+### image.vim
+
+- [Requirements](https://github.com/ashisha/image.vim#requirements)
+
 ## New machine / Re-installation
 
 ```
