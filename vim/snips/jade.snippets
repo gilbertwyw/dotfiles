@@ -1,0 +1,45 @@
+snippet &a "&attributes()"
+&attributes($0)
+endsnippet
+
+snippet case "case statement (no default)"
+case $1
+  when $2
+    $0
+endsnippet
+snippet case: "case statement with colon (no default)"
+case $1
+  when: $2
+  $0
+endsnippet
+
+snippet each "each iteration"
+each val in $1
+  $0
+endsnippet
+snippet eachi "each iteration with index"
+each val, index in $1
+  $0
+endsnippet
+
+snippet input "input(type='')"
+input(type="$1"$0)
+endsnippet
+
+snippet mixin "mixin"
+mixin ${1:name}(${2:foo, ...rest})
+  $0
+endsnippet
+
+snippet si "string interpolation"
+#{${1:${VISUAL}}}$0
+endsnippet
+
+snippet script "script(src='')"
+script(src="$0")
+endsnippet
+
+snippet var "declare variable"
+- var $1 = $0
+endsnippet
+
