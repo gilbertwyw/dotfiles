@@ -1,4 +1,4 @@
-### Fluxible
+# Fluxible, http://fluxible.io/
 
 # Actions
 snippet ea "Export action"
@@ -8,14 +8,6 @@ export ${1:default} function ${2}(context, payload, ${3:done}) {
 endsnippet
 
 # Addons
-snippet cts "connectToStores" b
-$1 = connectToStore($1, [$2], function(stores, props){
-  return {
-    $3
-  };
-});
-endsnippet
-
 snippet cs "createStore method"
 createStore({
   storeName: '$1',
@@ -31,4 +23,30 @@ createStore({
     $4
   }
 });
+endsnippet
+
+snippet @cts "connectToStore decorator"
+@connectToStores([$1], (context, props) => ({
+  $2
+}))
+endsnippet
+snippet cts "connectToStores method"
+$1 = connectToStores($1, [$2], (context, props) => ({
+  return {
+    $3
+  };
+}));
+endsnippet
+
+snippet @pc "provideContext decorator"
+@provideContext({
+  $1
+});
+endsnippet
+snippet pc "provideContext method"
+provideContext(${1:Application}, ${2:{}});
+endsnippet
+
+snippet rs "registerStore(storeClass)"
+${1:app}.registerStore($2);
 endsnippet
