@@ -204,12 +204,6 @@ if has('macunix')
   nnoremap <leader>o :silent !open '%'<cr>
 endif
 " }}}
-" Navigation {{{
-" Tab {{{
-noremap <S-l> gt
-noremap <S-h> gT
-" }}}
-" }}}
 " Search {{{
 set hlsearch
 set ignorecase
