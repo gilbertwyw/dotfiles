@@ -182,6 +182,8 @@ nnoremap ;j :update<CR>
 nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
 
+nnoremap <leader>ft :set ft=
+
 " Resize window
 noremap <up>    <C-W>+
 noremap <down>  <C-W>-
