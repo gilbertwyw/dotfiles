@@ -57,8 +57,6 @@ Plug 'wincent/ferret'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'chriskempson/base16-vim'
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
-Plug 'daylerees/colour-schemes', { 'rtp': 'vim' }
-Plug 'flazz/vim-colorschemes'
 Plug 'godlygeek/csapprox'
 Plug 'google/vim-colorscheme-primary'
 Plug 'itchyny/landscape.vim'
