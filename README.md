@@ -97,6 +97,16 @@ ln -s /usr/local/share/zsh/site-functions/async ~/.oh-my-zsh/custom/async.zsh
 
 - [Requirements](https://github.com/ashisha/image.vim#requirements)
 
+## Neovim
+
+Use existing vim settings:
+
+```
+ln -s ~/.vimrc ~/.nvimrc
+ln -s ~/.vim ~/.nvim
+pip install [--user] neovim
+```
+
 ## New machine / Re-installation
 
 ```

@@ -25,10 +25,10 @@ alias dcp=docker-compose #fig
 
 alias dotsize='du -hs .* | gsort -h'
 
-alias eh='sudo vim /etc/hosts'
+alias eh='sudo $EDITOR /etc/hosts'
 alias hb='hub browse'
 alias tat='tmux new-session -As $(basename $PWD | tr . -)'
-alias vd=vimdiff
+alias vd=$EDITOR -d
 alias wh=which
 
 # `brew install hub`
