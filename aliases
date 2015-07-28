@@ -64,3 +64,7 @@ fi
 nodeball() {
   tar -cv --exclude 'node_modules' -zf "$1.tar.gz" $1;
 }
+
+google() {
+  open "http://www.google.com/search?q=$*";
+}
