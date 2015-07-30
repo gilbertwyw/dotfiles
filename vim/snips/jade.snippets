@@ -14,11 +14,11 @@ case $1
 endsnippet
 
 snippet each "each iteration"
-each val in $1
+each ${1:val} in $2
   $0
 endsnippet
 snippet eachi "each iteration with index"
-each val, index in $1
+each ${1:val}, ${2:index} in $3
   $0
 endsnippet
 
@@ -31,7 +31,7 @@ mixin ${1:name}(${2:foo, ...rest})
   $0
 endsnippet
 
-snippet si "string interpolation"
+snippet si "string interpolation" i
 #{${1:${VISUAL}}}$0
 endsnippet
 
