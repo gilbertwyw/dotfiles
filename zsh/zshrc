@@ -125,6 +125,9 @@ fi
 
 typeset -U path
 
+# brew install hub
+eval "$(hub alias -s)"
+
 # load custom executable functions
 for function in ~/.zsh/functions/*; do
   source $function

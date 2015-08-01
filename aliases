@@ -31,10 +31,6 @@ alias tat='tmux new-session -As $(basename $PWD | tr . -)'
 alias vd='$EDITOR -d'
 alias wh=which
 
-# `brew install hub`
-#[[ -s $(which hub) ]] && alias git=hub
-alias git=hub
-
 alias server='python -m SimpleHTTPServer'
 
 # npm
