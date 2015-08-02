@@ -55,12 +55,18 @@ Plug 'wincent/ferret'
 " }}}
 " colorscheme {{{
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/base16-vim'
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'godlygeek/csapprox'
 Plug 'google/vim-colorscheme-primary'
 Plug 'itchyny/landscape.vim'
+Plug 'jpo/vim-railscasts-theme'
+Plug 'jonathanfilip/vim-lucius'
 Plug 'junegunn/seoul256.vim'
+Plug 'morhetz/gruvbox'
+Plug 'nanotech/jellybeans.vim'
+Plug 'tomasr/molokai'
 " }}}
 " Git {{{
 Plug 'low-ghost/nerdtree-fugitive'
