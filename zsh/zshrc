@@ -82,7 +82,6 @@ export EDITOR=`which nvim`
 # Setting ag as the default source for fzf
 export FZF_DEFAULT_COMMAND='ag --skip-vcs-ignores -l -g ""'
 
-export NODE_REPL_HISTORY_FILE=~/.iojs_repl_history
 export NODE_REPL_HISTORY_SIZE=2000
 
 # aliases
