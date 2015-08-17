@@ -17,7 +17,6 @@ alias s=sass
 
 alias bdd=boot2docker
 alias bddsh='$(boot2docker shellinit)'
-alias d=docker
 alias dh='docker help'
 alias dcp=docker-compose #fig
 
