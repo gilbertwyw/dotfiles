@@ -5,8 +5,6 @@ alias cpwd='pwd | pbcopy'
 alias da='direnv allow'
 alias e='$EDITOR'
 alias eip='curl ifconfig.me'
-# brew info thefuck
-alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 alias i=ifconfig
 alias j=jekyll
 alias k=kill
