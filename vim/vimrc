@@ -103,6 +103,7 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " }}}
 " clojure & clojurescript {{{
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'venantius/vim-cljfmt', { 'for': 'clojure' }
 Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
 " }}}
 " }}}
