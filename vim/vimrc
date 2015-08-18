@@ -79,7 +79,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'sass'] }
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
-Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'maksimr/vim-jsbeautify'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm i' }
@@ -378,6 +378,17 @@ vmap <C-v> <Plug>(expand_region_shrink)
 " Plugin: vim-g {{{
 let g:vim_g_command = "Go"
 let g:vim_g_f_command = "Gf"
+" }}}
+" Plugin: vim-javascript {{{
+let g:javascript_conceal_function   = "ƒ"
+let g:javascript_conceal_null       = "ø"
+let g:javascript_conceal_this       = "@"
+let g:javascript_conceal_return     = "⇚"
+let g:javascript_conceal_undefined  = "¿"
+let g:javascript_conceal_NaN        = "ℕ"
+let g:javascript_conceal_prototype  = "¶"
+let g:javascript_conceal_static     = "•"
+let g:javascript_conceal_super      = "Ω"
 " }}}
 " Plugin: vim-jsdoc {{{
 let g:jsdoc_allow_input_prompt = 1
