@@ -29,6 +29,7 @@ Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/vim-asterisk'
+Plug 'janko-m/vim-test'
 Plug 'jpalardy/vim-slime'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'junegunn/vim-easy-align'
@@ -262,6 +263,38 @@ nnoremap <silent> <C-p> :FZF --cycle<CR>
 " Plugin: gundo.vim {{{
 nnoremap <F5> :GundoToggle<CR>
 " }}}
+" Plugin: quick-scope {{{
+" Only enable the quick-scope plugin's highlighting when using the
+" f/F/t/T movements
+" https://gist.github.com/cszentkiralyi/dc61ee28ab81d23a67aa
+function! Quick_scope_selective(movement)
+    let needs_disabling = 0
+    if !g:qs_enable
+        QuickScopeToggle
+        redraw
+        let needs_disabling = 1
+    endif
+
+    let letter = nr2char(getchar())
+
+    if needs_disabling
+        QuickScopeToggle
+    endif
+
+    return a:movement . letter
+endfunction
+
+let g:qs_enable = 0
+
+nnoremap <expr> <silent> f Quick_scope_selective('f')
+nnoremap <expr> <silent> F Quick_scope_selective('F')
+nnoremap <expr> <silent> t Quick_scope_selective('t')
+nnoremap <expr> <silent> T Quick_scope_selective('T')
+vnoremap <expr> <silent> f Quick_scope_selective('f')
+vnoremap <expr> <silent> F Quick_scope_selective('F')
+vnoremap <expr> <silent> t Quick_scope_selective('t')
+vnoremap <expr> <silent> T Quick_scope_selective('T')
+" }}}
 " Plugin: syntastic {{{
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -405,6 +438,14 @@ nnoremap [" :<C-U>call signature#mark#Goto("prev", "spot", "global")<CR>
 " Plugin: vim-slime {{{
 let g:slime_target = "tmux"
 " }}}
+" Plugin: vim-test {{{
+let test#strategy = "dispatch"
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>A :TestSuite<CR>
+nmap <silent> <leader>L :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+" }}}
 " Autocommands {{{1
 "augroup emmet " Plugin: emmet-vim {{{2
   "autocmd!
@@ -503,34 +544,4 @@ if has('nvim')
   let $FZF_DEFAULT_OPTS = $FZF_DEFAULT_OPTS.' --inline-info'
 endif
 
-" Only enable the quick-scope plugin's highlighting when using the
-" f/F/t/T movements
-" https://gist.github.com/cszentkiralyi/dc61ee28ab81d23a67aa
-function! Quick_scope_selective(movement)
-    let needs_disabling = 0
-    if !g:qs_enable
-        QuickScopeToggle
-        redraw
-        let needs_disabling = 1
-    endif
-
-    let letter = nr2char(getchar())
-
-    if needs_disabling
-        QuickScopeToggle
-    endif
-
-    return a:movement . letter
-endfunction
-
-let g:qs_enable = 0
-
-nnoremap <expr> <silent> f Quick_scope_selective('f')
-nnoremap <expr> <silent> F Quick_scope_selective('F')
-nnoremap <expr> <silent> t Quick_scope_selective('t')
-nnoremap <expr> <silent> T Quick_scope_selective('T')
-vnoremap <expr> <silent> f Quick_scope_selective('f')
-vnoremap <expr> <silent> F Quick_scope_selective('F')
-vnoremap <expr> <silent> t Quick_scope_selective('t')
-vnoremap <expr> <silent> T Quick_scope_selective('T')
 
