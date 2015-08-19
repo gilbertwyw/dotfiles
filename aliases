@@ -3,7 +3,7 @@ alias a=alias
 alias c=ccat
 alias cpwd='pwd | pbcopy'
 alias da='direnv allow'
-alias e='$EDITOR'
+alias e=vim
 alias eip='curl ifconfig.me'
 alias i=ifconfig
 alias j=jekyll
@@ -60,4 +60,15 @@ nodeball() {
 
 google() {
   open "http://www.google.com/search?q=$*";
+}
+
+# copy from: https://github.com/tpope/vim-obsession/issues/11#issue-19117942
+function vim() {
+  if test $# -gt 0; then
+    $EDITOR "$@"
+  elif test -f Session.vim; then
+    $EDITOR -S
+  else
+    $EDITOR -c Obsession
+  fi
 }
