@@ -67,6 +67,7 @@ Plug 'jonathanfilip/vim-lucius'
 Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
+Plug 'romainl/Apprentice'
 Plug 'tomasr/molokai'
 " }}}
 " Git {{{
