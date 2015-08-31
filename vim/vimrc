@@ -60,6 +60,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/base16-vim'
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
+Plug 'christophermca/meta5'
 Plug 'godlygeek/csapprox'
 Plug 'google/vim-colorscheme-primary'
 Plug 'itchyny/landscape.vim'
