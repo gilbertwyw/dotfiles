@@ -1,0 +1,21 @@
+snippet des "describe()" 
+describe('$1', function() {
+	$0
+});
+endsnippet
+
+snippet exp "expect" 
+expect($1)$0;
+endsnippet
+
+snippet it "it()"
+it('$1', function() {
+	$0
+});
+endsnippet
+
+snippet ita "it() - async version"
+it('$1', function(${2:done}) {
+	$0
+});
+endsnippet
