@@ -19,7 +19,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Raimondi/delimitMate'
 Plug 'Valloric/MatchTagAlways'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-rooter'
