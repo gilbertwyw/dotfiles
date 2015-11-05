@@ -21,7 +21,7 @@
   ec = config --global -e
   f  = "!f() { git fetch ${1-origin}; }; f"
   nb = "!f() { git checkout -t origin/${2-master} -b ${1}; }; f"
-  rp = "!f() { git rebase -p origin/${1-master}; }; f"
+  rp = "!f() { git rebase --autostash -p origin/${1-master}; }; f"
   # require `git init` in repo
   ctags = !.git/hooks/ctags
   # require `gxargs`
