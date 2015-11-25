@@ -269,6 +269,9 @@ nnoremap <silent> <C-p> :FZF --cycle<CR>
 " Plugin: gundo.vim {{{
 nnoremap <F5> :GundoToggle<CR>
 " }}}
+" Plugin: indentLine {{{
+let g:indentLine_conceallevel=0 
+" }}}
 " Plugin: quick-scope {{{
 " Only enable the quick-scope plugin's highlighting when using the
 " f/F/t/T movements
