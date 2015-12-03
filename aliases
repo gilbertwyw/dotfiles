@@ -39,6 +39,7 @@ alias nis='npm install --save'
 alias nisd='npm install --save-dev'
 alias nh='npm home'
 alias nr='npm run'
+alias nrs='npm run-script'
 alias ns='npm start'
 alias nt='npm test'
 
