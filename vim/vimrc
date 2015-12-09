@@ -420,6 +420,10 @@ endif
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 " }}}
+" Plugin: vim-fugitive {{{
+nmap <leader>gb :Gblame<cr>
+nmap <leader>gs :Gstatus<cr>
+" }}}
 " Plugin: vim-g {{{
 let g:vim_g_command = "Go"
 let g:vim_g_f_command = "Gf"
