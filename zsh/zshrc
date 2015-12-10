@@ -127,6 +127,9 @@ typeset -U path
 # brew install jenv
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
+# brew install pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
 # brew install hub
 eval "$(hub alias -s)"
 
