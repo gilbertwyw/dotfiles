@@ -87,6 +87,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'sass'] }
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
+Plug 'kewah/vim-cssfmt', { 'for': ['css', 'scss'] }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
@@ -270,7 +271,7 @@ nnoremap <silent> <C-p> :FZF --cycle<CR>
 nnoremap <F5> :GundoToggle<CR>
 " }}}
 " Plugin: indentLine {{{
-let g:indentLine_conceallevel=0 
+let g:indentLine_conceallevel=0
 " }}}
 " Plugin: quick-scope {{{
 " Only enable the quick-scope plugin's highlighting when using the
@@ -396,6 +397,11 @@ elseif executable('pt')
   let g:unite_source_rec_async_command = 'pt --nocolor --nogroup -g .'
 endif
 " }}}
+" Plugin: vim-cssfmt {{{
+" require `npm i -g cssmt`
+nnoremap <silent> <leader>cs :Cssfmt<CR>
+vnoremap <silent> <leader>cs :CssfmtVisual<CR>
+" }}}
 " Plugin: vim-dispatch {{{
 autocmd FileType html let b:dispatch = '!open %:p'
 nnoremap <F9> :Dispatch<CR>
@@ -491,7 +497,6 @@ augroup jsbeautify " Plugin: vim-jsbeautify {{{2
   autocmd!
   autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<CR>
   autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<CR>
-  autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<CR>
   autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<CR>
   autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<CR>
   autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<CR>
