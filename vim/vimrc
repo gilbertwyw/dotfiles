@@ -97,6 +97,7 @@ Plug 'mattn/emmet-vim'
 Plug 'millermedeiros/vim-esformatter', { 'for': 'javascript' }
 Plug 'mvolkmann/vim-js-arrow-function', { 'for': 'javascript' }
 Plug 'moll/vim-node'
+Plug 'mtscout6/syntastic-local-eslint.vim', { 'for': 'javascript' }
 Plug 'othree/html5.vim'
 " }}}
 " snippets {{{
@@ -312,14 +313,14 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_auto_loc_list = 1
 
 " :h syntastic-fish
 let g:syntastic_shell = '/bin/zsh'
 let g:syntastic_aggregate_errors = 0
-let g:syntastic_javascript_checkers = ['jscs', 'eslint']
+let g:syntastic_javascript_checkers = ['eslint']
+
+nnoremap <silent> <leader>sc :SyntasticCheck<CR>
 " }}}
 " Plugin: tagbar {{{
 nmap <F8> :TagbarToggle<CR>
