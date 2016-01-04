@@ -91,7 +91,7 @@ Plug 'kewah/vim-cssfmt', { 'for': ['css', 'scss'] }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-Plug 'maksimr/vim-jsbeautify'
+Plug 'maksimr/vim-jsbeautify', { 'for': ['html', 'json'] }
 Plug 'marijnh/tern_for_vim', { 'do': 'npm i' }
 Plug 'mattn/emmet-vim'
 Plug 'millermedeiros/vim-esformatter', { 'for': 'javascript' }
@@ -510,6 +510,8 @@ augroup jsbeautify " Plugin: vim-jsbeautify {{{2
   autocmd!
   autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<CR>
   autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<CR>
+  autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
+  autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
 augroup END
 " }}}2
 augroup markdown " {{{2
