@@ -357,6 +357,8 @@ let g:tmuxcomplete#trigger = 'omnifunc'
 " Plugin: tmuxline.vim {{{
 let g:tmuxline_theme = 'airline'
 let g:tmuxline_powerline_separators = 0
+" from 'vim-airline' to make the symbols look okay
+let g:airline_powerline_fonts = 1
 " }}}
 " Plugin: UltiSnips {{{
 " to avoid conflict with YouCompleteMe
