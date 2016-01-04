@@ -357,8 +357,6 @@ let g:tmuxcomplete#trigger = 'omnifunc'
 " Plugin: tmuxline.vim {{{
 let g:tmuxline_theme = 'airline'
 let g:tmuxline_powerline_separators = 0
-" from 'vim-airline' to make the symbols look okay
-let g:airline_powerline_fonts = 1
 " }}}
 " Plugin: UltiSnips {{{
 " to avoid conflict with YouCompleteMe
@@ -400,6 +398,13 @@ elseif executable('pt')
   " not ignoring .gitignore files
   let g:unite_source_rec_async_command = 'pt --nocolor --nogroup -g .'
 endif
+" }}}
+" Plugin: vim-airline {{{
+let g:airline#extensions#tabline#enabled = 1
+" display filename only
+let g:airline#extensions#tabline#fnamemod = ':t'
+" make symbols look okay
+let g:airline_powerline_fonts = 1
 " }}}
 " Plugin: vim-cssfmt {{{
 " require `npm i -g cssmt`
