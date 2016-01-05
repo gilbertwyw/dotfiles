@@ -4,8 +4,11 @@ snippet jsxc "@jsx"
 /** @jsx React.$1 */
 endsnippet
 
-# `react.createElement`
-snippet rtb "return ()"
+snippet rpt "React.PropTypes"
+React.PropTypes.$1
+endsnippet
+
+snippet rtb "return ()" b
 return (
 	$1
 );
@@ -13,7 +16,7 @@ endsnippet
 
 snippet ct "contextTypes"
 contextTypes: {
-  $1
+  $1: React.PropTypes.$2
 }
 endsnippet
 
