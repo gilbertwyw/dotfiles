@@ -31,7 +31,7 @@ Plug 'honza/dockerfile.vim'
 Plug 'janko-m/vim-test'
 Plug 'jpalardy/vim-slime'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
-Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'junegunn/vim-emoji'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'kshenoy/vim-signature'
@@ -413,10 +413,10 @@ autocmd FileType html let b:dispatch = '!open %:p'
 nnoremap <F9> :Dispatch<CR>
 " }}}
 " Plugin: vim-easy-align {{{
-" Start interactive EasyAlign in visual mode
-vmap <Enter> <Plug>(EasyAlign)
-" Start interactive EasyAlign with a Vim movement
-nmap <leader>a <Plug>(EasyAlign)
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ge <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ge <Plug>(EasyAlign)
 " }}}
 " Plugin: vim-emoji {{{
 " trigger by CTRL-X CTRL-U in INSERT mode with terminal vim
