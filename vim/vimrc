@@ -36,6 +36,7 @@ Plug 'junegunn/vim-emoji'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'kshenoy/vim-signature'
 Plug 'majutsushi/tagbar'
+Plug 'mhinz/vim-grepper'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
 Plug 'sjl/gundo.vim'
@@ -54,7 +55,6 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'unblevable/quick-scope'
-Plug 'wincent/ferret'
 " }}}
 " colorscheme {{{
 Plug 'NLKNguyen/papercolor-theme'
@@ -263,9 +263,6 @@ map <leader>k <Plug>(easymotion-k)
 " Plugin: editorconfig {{{
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " }}}
-" Plugin: ferret {{{
-nmap <leader>x <Plug>(FerretAck)
-" }}}
 " Plugin: fzf {{{
 nnoremap <silent> <C-p> :FZF --cycle<CR>
 " }}}
@@ -446,6 +443,12 @@ nmap <leader>gs :Gstatus<cr>
 " Plugin: vim-g {{{
 let g:vim_g_command = "Go"
 let g:vim_g_f_command = "Gf"
+" }}}
+" Plugin: vim-grepper {{{
+nnoremap <leader>ag :Grepper! -tool ag  -open -switch<cr>
+nnoremap <leader>* :Grepper! -tool ag -cword!<cr>
+nmap gs <plug>(GrepperOperator)
+xmap gs <plug>(GrepperOperator)
 " }}}
 " Plugin: vim-javascript {{{
 let g:javascript_conceal_function   = "ƒ"
