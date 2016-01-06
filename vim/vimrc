@@ -88,7 +88,7 @@ Plug 'tpope/vim-git'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " }}}
 " Front-End {{{
-Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'sass'] }
+Plug 'ap/vim-css-color', { 'for': ['css', 'scss'] }
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'hail2u/vim-css3-syntax'
 Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
