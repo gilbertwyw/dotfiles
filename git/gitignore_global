@@ -39,6 +39,7 @@ Thumbs.db
 # editor #
 ##########
 Session.vim
+.invrc # https://github.com/keith/investigate.vim#project-specific-settings
 *.sublime-project
 *.sublime-workspace
 *.swp
