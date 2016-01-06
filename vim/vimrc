@@ -428,9 +428,6 @@ elseif executable('pt')
 endif
 " }}}
 " Plugin: vim-airline {{{
-let g:airline#extensions#tabline#enabled = 1
-" display filename only
-let g:airline#extensions#tabline#fnamemod = ':t'
 " make symbols look okay
 let g:airline_powerline_fonts = 1
 " }}}
