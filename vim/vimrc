@@ -90,6 +90,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Front-End {{{
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'sass'] }
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
+Plug 'hail2u/vim-css3-syntax'
 Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
 Plug 'kewah/vim-cssfmt', { 'for': ['css', 'scss'] }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
@@ -411,6 +412,13 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 " make symbols look okay
 let g:airline_powerline_fonts = 1
+" }}}
+" Plugin: vim-css3-syntax {{{
+augroup vim-css3-syntax
+  autocmd!
+  " Plugin: vim-css3-syntax
+  autocmd FileType css setlocal iskeyword+=-
+augroup END
 " }}}
 " Plugin: vim-cssfmt {{{
 " require `npm i -g cssmt`
