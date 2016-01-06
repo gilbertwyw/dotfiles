@@ -314,6 +314,27 @@ vnoremap <expr> <silent> F Quick_scope_selective('F')
 vnoremap <expr> <silent> t Quick_scope_selective('t')
 vnoremap <expr> <silent> T Quick_scope_selective('T')
 " }}}
+" Plugin: nerdtree {{{
+augroup nerdtree
+  autocmd!
+  map <silent> <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
+  " open a NERDTree automatically when vim starts up if no files were specified
+  "autocmd StdinReadPre * let s:std_in=1
+  "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+  " close vim if the only window left open is a NERDTree
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+augroup END
+" }}}
+" Plugin: rainbow_parentheses.vim {{{
+augroup rainbow_parentheses.vim
+  autocmd!
+  autocmd VimEnter * RainbowParenthesesActivate
+  autocmd BufEnter * RainbowParenthesesLoadRound
+  autocmd BufEnter * RainbowParenthesesLoadSquare
+  autocmd BufEnter * RainbowParenthesesLoadBraces
+augroup END
+" }}}
 " Plugin: syntastic {{{
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -413,6 +434,17 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " make symbols look okay
 let g:airline_powerline_fonts = 1
 " }}}
+" Plugin: vim-coffee-script {{{
+augroup vim-coffeescript-script
+  autocmd!
+  autocmd FileType coffee setl foldmethod=indent nofoldenable
+  let coffee_compile_vert = 1
+  let coffee_watch_vert   = 1
+  autocmd FileType coffee noremap <buffer> <C-c>c :CoffeeCompile<cr>
+  autocmd FileType coffee noremap <buffer> <C-c>r :CoffeeRun<cr>
+  autocmd FileType coffee noremap <buffer> <C-c>w :CoffeeWatch<cr>
+augroup END
+" }}}
 " Plugin: vim-css3-syntax {{{
 augroup vim-css3-syntax
   autocmd!
@@ -444,6 +476,11 @@ silent! if emoji#available()
   let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
   let g:gitgutter_sign_modified_removed = emoji#for('collision')
 endif
+
+augroup vim-emoji
+  autocmd!
+  autocmd FileType markdown setlocal completefunc=emoji#complete
+augroup END
 " }}}
 " Plugin: vim-esformatter {{{
 nnoremap <silent> <leader>es :Esformatter<CR>
@@ -478,6 +515,15 @@ let g:javascript_conceal_prototype  = "¶"
 let g:javascript_conceal_static     = "•"
 let g:javascript_conceal_super      = "Ω"
 " }}}
+" Plugin: vim-jsbeautify {{{
+augroup vim-jsbeautify
+  autocmd!
+  autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<CR>
+  autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<CR>
+  autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
+  autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
+augroup END
+" }}}
 " Plugin: vim-jsdoc {{{
 let g:jsdoc_allow_input_prompt = 1
 " reserve <C-l> for the mapping used by 'vim-tmux-navigator'
@@ -502,25 +548,6 @@ nmap <silent> <leader>L :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 " }}}
 " Autocommands {{{1
-"augroup emmet " Plugin: emmet-vim {{{2
-  "autocmd!
-  "let g:user_emmet_install_global = 0
-  "autocmd FileType html,sass,scss,css EmmetInstall
-"augroup END " }}}2
-augroup emoji " Plugin: vim-emoji {{{2
-  autocmd!
-  autocmd FileType markdown setlocal completefunc=emoji#complete
-augroup END " }}}2
-augroup coffeescript " {{{2
-  autocmd!
-  "autocmd BufNewFile, BufReadPost * .coffee setl foldmethod=indent nofoldenable
-  autocmd FileType coffee setl foldmethod=indent nofoldenable
-  let coffee_compile_vert = 1
-  let coffee_watch_vert   = 1
-  autocmd FileType coffee noremap <buffer> <C-c>c :CoffeeCompile<cr>
-  autocmd FileType coffee noremap <buffer> <C-c>r :CoffeeRun<cr>
-  autocmd FileType coffee noremap <buffer> <C-c>w :CoffeeWatch<cr>
-augroup END " }}}2
 augroup docker " {{{2
   " reference: https://github.com/docker/docker/blob/master/contrib/syntax/vim/ftdetect/dockerfile.vim
   autocmd BufNewFile,BufRead [Dd]ockerfile,Dockerfile.* set filetype=dockerfile
@@ -530,35 +557,10 @@ augroup git " {{{2
   " commit message
   autocmd FileType gitcommit setlocal spell textwidth=72
 augroup END " }}}2
-augroup jsbeautify " Plugin: vim-jsbeautify {{{2
-  autocmd!
-  autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<CR>
-  autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<CR>
-  autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
-  autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
-augroup END
-" }}}2
 augroup markdown " {{{2
   autocmd!
   " force *.md as MarkDown, https://github.com/tpope/vim-markdown
   autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-augroup END " }}}2
-augroup nerdtree " Plugin: NERDTree {{{2
-  autocmd!
-  map <silent> <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
-  " open a NERDTree automatically when vim starts up if no files were specified
-  "autocmd StdinReadPre * let s:std_in=1
-  "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-  " close vim if the only window left open is a NERDTree
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-augroup END " }}}2
-augroup rainbow_parentheses " Plugin: rainbow_parentheses {{{2
-  autocmd!
-  autocmd VimEnter * RainbowParenthesesActivate
-  autocmd BufEnter * RainbowParenthesesLoadRound
-  autocmd BufEnter * RainbowParenthesesLoadSquare
-  autocmd BufEnter * RainbowParenthesesLoadBraces
 augroup END " }}}2
 " }}}1
 
