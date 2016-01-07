@@ -40,7 +40,7 @@ Thumbs.db
 ##########
 Session.vim
 # https://github.com/keith/investigate.vim#project-specific-settings
-.invrc 
+.invrc
 *.sublime-project
 *.sublime-workspace
 *.swp

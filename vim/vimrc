@@ -209,6 +209,8 @@ nnoremap <leader>sv :so $MYVIMRC<CR>
 
 nnoremap <leader>ft :set ft=
 
+nnoremap <leader>w :w<cr>
+
 " Resize window
 noremap <up>    <C-W>+
 noremap <down>  <C-W>-
