@@ -4,6 +4,12 @@ snippet jsxc "@jsx"
 /** @jsx React.$1 */
 endsnippet
 
+snippet pt: "propTypes: {}"
+propTypes: {
+	$1
+}$0
+endsnippet
+
 snippet rpt "React.PropTypes"
 React.PropTypes.$1
 endsnippet
@@ -53,9 +59,9 @@ getInitialState: function() {
 endsnippet
 
 snippet rcc "React.createClass"
-var $1 = React.createClass({
-	render: function(){
-		return ($2);
+React.createClass({
+	render() {
+		return ($1);
 	}
 });
 endsnippet
