@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
 " Plugins {{{
 " General {{{
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Raimondi/delimitMate'
 Plug 'Valloric/MatchTagAlways'
