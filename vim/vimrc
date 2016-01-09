@@ -34,6 +34,7 @@ Plug 'honza/dockerfile.vim'
 Plug 'janko-m/vim-test'
 Plug 'jpalardy/vim-slime'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'junegunn/vim-emoji'
@@ -115,11 +116,6 @@ Plug 'honza/vim-snippets'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'edkolev/tmuxline.vim'
 Plug 'wellle/tmux-complete.vim'
-" }}}
-" Unite & deps {{{
-Plug 'Shougo/neomru.vim'
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-Plug 'Shougo/unite.vim'
 " }}}
 " clojure & clojurescript {{{
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
@@ -275,6 +271,11 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " Plugin: fzf {{{
 nnoremap <silent> <C-p> :FZF --cycle<CR>
 " }}}
+" Plugin: fzf.vim {{{
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>C :Colors<CR>
+nnoremap <leader>f :Files<CR>
+" }}}
 " Plugin: gundo.vim {{{
 nnoremap <F5> :GundoToggle<CR>
 " }}}
@@ -374,39 +375,6 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsSnippetsDir="~/dotfiles/vim/snips/"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
-" }}}
-" Plugin: Unite {{{
-nnoremap <leader>b :<C-u>Unite buffer<CR>
-nnoremap <leader>f :<C-u>Unite file_mru buffer file<CR>
-
-" recursive file search, start insert automatically and using fuzzy file matching
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
-
-let g:unite_source_file_rec_max_cache_files = 0
-call unite#custom#source('file_rec,file_rec/async', 'max_candidates', 0)
-
-" search through yank history
-let g:unite_source_history_yank_enable = 1
-nnoremap <leader>y :<C-u>Unite history/yank<CR>
-
-if executable('ag')
-  " Use ag in unite grep source.
-  let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts =
-  \ '-i --line-numbers --nocolor --nogroup --hidden --ignore ' .
-  \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
-  let g:unite_source_grep_recursive_opt = ''
-  let g:unite_source_rec_async_command =
-  \ 'ag --follow --nocolor --nogroup --hidden -g ""'
-elseif executable('pt')
-  let g:unite_source_grep_command = 'pt'
-  let g:unite_source_grep_default_opts = '--nogroup --nocolor'
-  let g:unite_source_grep_recursive_opt = ''
-  let g:unite_source_grep_encoding = 'utf-8'
-  " not ignoring .gitignore files
-  let g:unite_source_rec_async_command = 'pt --nocolor --nogroup -g .'
-endif
 " }}}
 " Plugin: vim-airline {{{
 " make symbols look okay
@@ -553,17 +521,6 @@ autocmd InsertLeave,TextChanged * if expand('%') != '' | update | endif
 " bind K to grep word under cursor
 "nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " }}}
-
-" https://github.com/junegunn/fzf/wiki/Examples-(vim)#choose-color-scheme
-" with '--reverse'
-nnoremap <silent> <Leader>C :call fzf#run({
-\   'source':
-\     map(split(globpath(&rtp, "colors/*.vim"), "\n"),
-\         "substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')"),
-\   'sink':    'colo',
-\   'options': '+m --reverse',
-\   'left':    30
-\ })<CR>
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
