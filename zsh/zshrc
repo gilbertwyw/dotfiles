@@ -1,144 +1,98 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+BREW_PREFIX=$(brew --prefix)
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="pure"
+# brew install antigen; brew list antigen
+source $BREW_PREFIX/Cellar/antigen/1/share/antigen.zsh
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Load the oh-my-zsh's library
+antigen use oh-my-zsh
 
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
+antigen bundle git
+antigen bundle brew-cask
 
-# Uncomment this to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-completions src
 
-# Uncomment to change how often before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
+# https://github.com/sindresorhus/pure#antigen
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
 
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want to disable command autocorrection
-# DISABLE_CORRECTION="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment following line if you want to  shown in the command execution time stamp
-# in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
-# yyyy-mm-dd
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew-cask)
+antigen apply
 
 fpath=(
-  /usr/local/share/zsh-completions
-  /usr/local/share/zsh/site-functions
+  $BREW_PREFIX/share/zsh/site-functions
   $fpath
 )
 
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-setopt no_beep
-
-# # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# `brew info chruby`
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
-
-export LC_ALL=$LANG
-
-export EDITOR=`which nvim`
-# Setting ag as the default source for fzf
-export FZF_DEFAULT_COMMAND='ag --skip-vcs-ignores -l -g ""'
-
-export NODE_REPL_HISTORY_SIZE=2000
-
-# aliases
-[[ -f ~/.aliases ]] && source ~/.aliases
-
-# https://github.com/zimbatm/direnv#zsh
-eval "$(direnv hook zsh)"
-
-if [[ `uname` == 'Darwin' ]]
-then
-  path=(
-    ~/bin
-    /usr/local/bin
-    /usr/local/sbin
-    # `brew info coreutils`
-    /usr/local/opt/coreutils/libexec/gnubin
-    $path
-  )
-
-  # `brew info z`
-  . `brew --prefix`/etc/profile.d/z.sh
-
-  # `brew info zsh-syntax-highlighting`
-  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-  # Java 7
-  [[ -f /usr/libexec/java_home ]] && export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
-
-  # `brew info nvm`; after `mkdir ~/.nvm`
-  export NVM_DIR=~/.nvm
-  source $(brew --prefix nvm)/nvm.sh
-
+manpath=(
   # `brew info coreutils`
-  # intentionally place after 'nvm', otherwise some part of MANPATH will be missing
-  manpath=(
-    /usr/local/opt/coreutils/libexec/gnuman
-    $manpath
-  )
-fi
+  $BREW_PREFIX/opt/coreutils/libexec/gnuman
+  $manpath
+)
+
+path=(
+  ~/bin
+  $BREW_PREFIX/bin
+  $BREW_PREFIX/sbin
+  # `brew info coreutils`
+  $BREW_PREFIX/opt/coreutils/libexec/gnubin
+  $path
+)
 
 typeset -U path
 
-# brew install jenv
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+setopt no_beep
 
-# brew install pyenv
+export LC_ALL=$LANG
+
+if which nvim > /dev/null; then
+  export EDITOR=`which nvim`
+else
+  export EDITOR=`which vim`
+fi
+
+# default: 1000
+export NODE_REPL_HISTORY_SIZE=2000
+
+# `brew info nvm`; after `mkdir ~/.nvm`
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+# `brew info chruby`
+source $BREW_PREFIX/opt/chruby/share/chruby/chruby.sh
+source $BREW_PREFIX/opt/chruby/share/chruby/auto.sh
+
+# `brew install jenv`
+if which jenv > /dev/null; then
+  eval "$(jenv init -)";
+
+  [[ -f /usr/libexec/java_home ]] && export JAVA_HOME=`/usr/libexec/java_home -v $(jenv version-name)`
+fi
+
+# `brew install pyenv`
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
-# brew install hub
-eval "$(hub alias -s)"
+# `brew install direnv`, https://github.com/zimbatm/direnv#zsh
+eval "$(direnv hook zsh)"
+
+# `brew install fzf`
+# based on `$BREW_PREFIX/Cellar/fzf/<version>/install`
+if [ -f ~/.fzf.zsh ]; then
+  source ~/.fzf.zsh
+
+  # set 'ag' as the default source for 'fzf'
+  export FZF_DEFAULT_COMMAND='ag --skip-vcs-ignores -l -g ""'
+fi
+
+# `brew info z`
+. `brew --prefix`/etc/profile.d/z.sh
+
+# aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
 
 # load custom executable functions
 for function in ~/.zsh/functions/*; do
   source $function
 done
 
-# generated by `/usr/local/Cellar/fzf/<version>/install`
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
+# iTerm
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh

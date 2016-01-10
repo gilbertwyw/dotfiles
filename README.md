@@ -3,8 +3,8 @@
 - [Git](http://git-scm.com/)
 - [Homebrew](http://brew.sh/)
 - [Ruby](https://www.ruby-lang.org)
-- [Zsh](http://www.zsh.org/) & [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-- [fish](http://fishshell.com/)
+- [Zsh](http://www.zsh.org/) + [Antigen](https://zsh-users/antigen)
+- [fish](http://fishshell.com/) (Not actively maintained)
 - [vim](http://www.vim.org/) & [MacVim](https://code.google.com/p/macvim/)
 
 ## Set Up
@@ -24,6 +24,10 @@
 
 - [chriskempson/tomorrow-theme · GitHub](https://github.com/chriskempson/tomorrow-theme)
 - [zenorocha/dracula-theme · GitHub](https://github.com/zenorocha/dracula-theme)
+
+### Pure, ZSH prompt (Optional)
+
+- [sindresorhus/pure · GitHub](https://github.com/sindresorhus/pure)
 
 Steps:
 
@@ -79,27 +83,9 @@ brew brewdle [--dry-run]
 
 ```
 
-### Pure, ZSH prompt
-
-- [sindresorhus/pure · GitHub](https://github.com/sindresorhus/pure)
-
-```
-npm i -g pure-prompt
-
-# https://github.com/sindresorhus/pure#oh-my-zsh
-ln -s /usr/local/share/zsh/site-functions/prompt_pure_setup ~/.oh-my-zsh/custom/pure.zsh-theme
-ln -s /usr/local/share/zsh/site-functions/async ~/.oh-my-zsh/custom/async.zsh
-
-# make sure ZSH_THEME="pure" in ~/.zshrc
-```
-
-### image.vim
-
-- [Requirements](https://github.com/ashisha/image.vim#requirements)
-
 ## Neovim
 
-Use existing vim settings:
+To use settings from Vim:
 
 ```
 ln -s ~/.vimrc ~/.nvimrc

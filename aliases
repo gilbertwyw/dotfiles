@@ -1,36 +1,33 @@
-# `brew tap jingweno/ccat && brew install ccat`
 alias a=alias
+# `brew tap jingweno/ccat && brew install ccat`
 alias c=ccat
-alias cpwd='pwd | pbcopy'
 alias da='direnv allow'
 alias e=vim
 alias eip='curl ifconfig.me'
 alias i=ifconfig
 alias j=jekyll
 alias k=kill
-# alias provided by 'tmuxinator'
-alias m=mux
-alias n=npm
 alias r=ruby
 alias rm=trash
 alias s=sass
 
-alias bdd=boot2docker
-alias bddsh='$(boot2docker shellinit)'
-alias dh='docker help'
-alias dcp=docker-compose #fig
-
 alias dotsize='du -hs .* | gsort -h'
-
 alias eh='sudo $EDITOR /etc/hosts'
-alias hb='hub browse'
-alias tat='tmux new-session -As $(basename $PWD | tr . -)'
+alias server='python -m SimpleHTTPServer'
 alias vd='$EDITOR -d'
 alias wh=which
 
-alias server='python -m SimpleHTTPServer'
+##########
+#  Tmux  #
+##########
+alias tat='tmux new-session -As $(basename $PWD | tr . -)'
+# From 'tmuxinator' gem
+alias m=mux
 
-# npm
+#########
+#  npm  #
+#########
+alias n=npm
 alias ngi='npm install -g'
 alias ngl='npm ls -g --depth=0'
 alias ngo='npm outdated -g'
@@ -43,33 +40,26 @@ alias nrs='npm run-script'
 alias ns='npm start'
 alias nt='npm test'
 
-if [[ `uname` == 'Darwin' ]]; then
-  alias b=brew
-  alias bcu="brew cleanup"
-  alias bod="brew outdated"
-  alias bud="brew update"
-  alias bug="brew upgrade --all"
-  alias o=open
-  alias pwdc='pwd | pbcopy'
-fi
+############
+#  Docker  #
+############
+alias dk=docker
+alias dm=docker-machine
+# think `fig`
+alias f=docker-compose
 
-# tarball everything except installed node modules; '.git' folder included if exists
-# caveat: have to run this in the same directory as the target
-nodeball() {
-  tar -cv --exclude 'node_modules' -zf "$1.tar.gz" $1;
-}
+# `brew install hub`
+eval "$(hub alias -s)"
+alias hb='hub browse'
 
-google() {
-  open "http://www.google.com/search?q=$*";
-}
+#########
+#  OSX  #
+#########
+alias b=brew
+alias bcu="brew cleanup"
+alias bod="brew outdated"
+alias bud="brew update"
+alias bug="brew upgrade --all"
+alias o=open
+alias pwdc='pwd | pbcopy'
 
-# copy from: https://github.com/tpope/vim-obsession/issues/11#issue-19117942
-function vim() {
-  if test $# -gt 0; then
-    $EDITOR "$@"
-  elif test -f Session.vim; then
-    $EDITOR -S
-  else
-    $EDITOR -c Obsession
-  fi
-}
