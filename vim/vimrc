@@ -67,7 +67,6 @@ Plug 'unblevable/quick-scope'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
-Plug 'christophermca/meta5'
 Plug 'gilgigilgil/anderson.vim'
 Plug 'godlygeek/csapprox'
 Plug 'google/vim-colorscheme-primary'
