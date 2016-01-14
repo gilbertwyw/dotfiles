@@ -445,8 +445,8 @@ let g:vim_g_command = "Go"
 let g:vim_g_f_command = "Gf"
 " }}}
 " Plugin: vim-grepper {{{
-nnoremap <leader>ag :Grepper! -tool ag  -open -switch<cr>
-nnoremap <leader>* :Grepper! -tool ag -cword!<cr>
+nnoremap <leader>ag :Grepper -tool ag<cr>
+nnoremap <leader>* :Grepper -tool ag -cword!<cr>
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 " }}}
