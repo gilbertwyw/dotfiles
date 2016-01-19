@@ -4,26 +4,50 @@ snippet jsxc "@jsx"
 /** @jsx React.$1 */
 endsnippet
 
-snippet pt: "propTypes: {}"
+snippet pt "propTypes"
 propTypes: {
 	$1
-}$0
+}${0:,}
+endsnippet
+
+snippet spt "static propTypes"
+propTypes: {
+	$1: ${2:React.}PropTypes.$0
+};
 endsnippet
 
 snippet rpt "React.PropTypes"
-React.PropTypes.$1
+${1:React.}PropTypes.$0
 endsnippet
 
 snippet rtb "return ()" b
 return (
-	$1
+	$0
 );
 endsnippet
 
 snippet ct "contextTypes"
 contextTypes: {
-  $1: React.PropTypes.$2
+  $1: ${2:React}.PropTypes.$0
 }
+endsnippet
+
+snippet sct "static contextTypes" b
+static contextTypes = {
+	$1: $0
+};
+endsnippet
+
+snippet gcc "getChildConext"
+getChildContext() {
+	return {
+		$1
+	}
+}${0:,}
+endsnippet
+
+snippet tc. "this.context."
+this.context.$0
 endsnippet
 
 snippet tp. "this.props" w
@@ -38,23 +62,35 @@ snippet ts. "this.state" w
 this.state.$1
 endsnippet
 
+snippet trs "this.replaceState"
+this.replaceState({$1});
+endsnippet
+
 snippet tss "this.setState"
 this.setState({$1});
 endsnippet
 
-snippet gis "getDefaultProps"
-getDefaultProps: function() {
+snippet gdp "getDefaultProps"
+getDefaultProps() {
 	return {
     $1
   };
-}
+}${0:,}
 endsnippet
 
 snippet gis "getInitialState"
-getInitialState: function() {
+getInitialState() {
 	return {
     $1
   };
+}${0:,}
+endsnippet
+
+snippet rcom "React.Componet" 
+class $1 extends ${2:React.}Component { 
+	render () {
+		$0	
+	}
 }
 endsnippet
 
@@ -78,49 +114,46 @@ endsnippet
 snippet cwrp "componentWillReceiveProps"
 componentWillReceiveProps: function(nextProps) {
 	$1
-}$2
+}${0:,}
 endsnippet
 
 snippet cdm "componentDidMount"
 componentDidMount: function() {
 	$1
-}$2
+}${0:,}
 endsnippet
+
 snippet cwm "componentWillMount"
 componentWillMount: function() {
 	$1
-}$2
+}${0:,}
 endsnippet
+
 snippet cwum "componentWillUnmount"
 componentWillUnmount: function() {
 	$1
-}$2
+}${0:,}
 endsnippet
 
 snippet cdu "componentDidUpdate"
 componentDidUpdate: function(prevProps, prevState) {
 	$1
-}$2
+}${0:,}
 endsnippet
+
 snippet cwu "componentWillUpdate"
 componentWillUpdate: function() {
 	$1
-}$2
+}${0:,}
 endsnippet
 
 snippet scu "shouldComponentUpdate"
 shouldComponentUpdate: function(nextProps, nextState) {
 	$1
-}$2
+}${0:,}
 endsnippet
 
 # React Router
-snippet rh "<Route>"
-<Route handler={$1}> 
-	$2
-</Route>
-endsnippet
-
-snippet rhs "<Route />"
-<Route handler={$1} />
+snippet rrc "<Route />"
+<Route component={$1} path="$2" $0 />
 endsnippet
