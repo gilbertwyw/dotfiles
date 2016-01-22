@@ -12,11 +12,19 @@ antigen bundle brew-cask
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions src
 
+antigen bundle tarruda/zsh-autosuggestions
+
 # https://github.com/sindresorhus/pure#antigen
 antigen bundle mafredri/zsh-async
 antigen bundle sindresorhus/pure
 
 antigen apply
+
+# https://github.com/tarruda/zsh-autosuggestions
+zle-line-init() {
+    zle autosuggest-start
+}
+zle -N zle-line-init
 
 manpath=(
   # `brew info coreutils`
