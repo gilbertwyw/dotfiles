@@ -223,6 +223,10 @@ vnoremap Y "*y
 " In normal mode, do the same with the current line
 nnoremap Y "*yy
 
+" Visual shifting (does not exit Visual mode)
+vnoremap < <gv
+vnoremap > >gv
+
 if s:darwin
   " try to open the current file in default application
   nnoremap <leader>o :silent !open '%'<cr>
