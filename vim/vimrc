@@ -220,8 +220,8 @@ vnoremap <c-a> <c-a>gv
 vnoremap <c-x> <c-x>gv
 
 vnoremap Y "*y
-" In normal mode, do the same with the current line
-nnoremap Y "*yy
+" Yank from the cursor to the end of the line, to be consistent with C and D.
+nnoremap Y "*y$
 
 " Visual shifting (does not exit Visual mode)
 vnoremap < <gv
