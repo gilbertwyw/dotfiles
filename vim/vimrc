@@ -224,8 +224,12 @@ vnoremap Y "*y
 nnoremap Y "*y$
 
 " Visual shifting (does not exit Visual mode)
-vnoremap < <gv
 vnoremap > >gv
+vnoremap < <gv
+
+" Map tab to indent in visual mode
+vmap <Tab> >gv
+vmap <S-Tab> <gv
 
 " Learn the following 2 from Damian Conway
 " 1) exchange 'S' for:
