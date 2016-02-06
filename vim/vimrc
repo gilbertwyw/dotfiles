@@ -308,6 +308,7 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 " Plugin: nerdtree {{{
 augroup nerdtree
   autocmd!
+  let g:NERDTreeHijackNetrw = 0
   map <silent> <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
   " open a NERDTree automatically when vim starts up if no files were specified
   "autocmd StdinReadPre * let s:std_in=1
