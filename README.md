@@ -88,8 +88,8 @@ brew brewdle [--dry-run]
 To use settings from Vim:
 
 ```
-ln -s ~/.vimrc ~/.nvimrc
-ln -s ~/.vim ~/.nvim
+ln -s ~/.vim ~/.config/nvim
+ln -s ~/.vimrc ~/.config/nvim/init.vim
 pip install [--user] neovim
 ```
 
