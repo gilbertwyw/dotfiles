@@ -78,11 +78,18 @@ brew brewdle [--dry-run]
 
 ## Neovim
 
-To use settings from Vim:
+- [Homebrew version](https://github.com/neovim/homebrew-neovim/blob/master/README.md)
+- [vim-plug setup](https://github.com/junegunn/vim-plug#neovim)
+
+To use the same configuration as Vim:
 
 ```
+# '.vim/' may not exist (e.g., new machine), open Vim first
+#'.config/' may not exist, `mkdir ~/.config`
 ln -s ~/.vim ~/.config/nvim
+
 ln -s ~/.vimrc ~/.config/nvim/init.vim
+
 pip install [--user] neovim
 ```
 
