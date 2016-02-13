@@ -49,8 +49,6 @@ ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
 # Ctags
 ln -s ~/dotfiles/ctags ~/.ctags
 
-# tmux
-ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 
 # Others
 ln -s ~/dotfiles/agignore ~/.agignore
@@ -98,6 +96,17 @@ echo "ruby-<version>" > ~/.ruby-version
 ln -s ~/dotfiles/ruby/gemrc ~/.gemrc
 gem install mdl scss_lint tmuxinator
 
+```
+
+## tmux
+
+```
+brew install tmux
+
+ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+
+# provided that Tmuxinator has been installed
+mux new [arbitrary name] 
 ```
 
 ## New machine / Re-installation
