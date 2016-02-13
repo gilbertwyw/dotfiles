@@ -4,7 +4,6 @@
 - [Homebrew](http://brew.sh/)
 - [Ruby](https://www.ruby-lang.org)
 - [Zsh](http://www.zsh.org/) + [Antigen](https://zsh-users/antigen)
-- [fish](http://fishshell.com/) (Not actively maintained)
 - [vim](http://www.vim.org/) & [MacVim](https://code.google.com/p/macvim/)
 
 ## Set Up
@@ -41,13 +40,7 @@ git clone --recursive https://github.com/gilbertwyw/dotfiles.git
 ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
 
-# fish shell
-brew install fish
-# then follow the instruction in `brew info fish`
-ln -s ~/dotfiles/fish/config.fish ~/.config/fish/config.fish
-ln -s ~/dotfiles/fish/functions ~/.config/fish/functions
-
-# or, for Zsh
+# Zsh
 ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
 ln -s ~/dotfiles/zsh ~/.zsh
 
