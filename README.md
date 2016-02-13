@@ -1,45 +1,30 @@
-# Config Files
+# Setup
 
-- [Git](http://git-scm.com/)
-- [Homebrew](http://brew.sh/)
-- [Ruby](https://www.ruby-lang.org)
-- [Zsh](http://www.zsh.org/) + [Antigen](https://zsh-users/antigen)
-- [vim](http://www.vim.org/) & [MacVim](https://code.google.com/p/macvim/)
+## Pre-requisites
 
-## Set Up
-
-### Pre-requisites
-
-- [Xcode](https://developer.apple.com/xcode/)
 - [Homebrew](http://brew.sh/)
 
-### Terminal themes (optional)
+Regarding "Github API Rate limit exceeded":
 
-- [chriskempson/tomorrow-theme · GitHub](https://github.com/chriskempson/tomorrow-theme)
-- [zenorocha/dracula-theme · GitHub](https://github.com/zenorocha/dracula-theme)
+```
+brew intall direnv
+echo "export HOMEBREW_GITHUB_API_TOKEN=<token>" > ~/.envrc
+```
 
-### Pure, ZSH prompt (Optional)
+## Zsh
 
-- [sindresorhus/pure · GitHub](https://github.com/sindresorhus/pure)
-
-Steps:
+- [Antigen](https://zsh-users/antigen)
 
 ```
 # Backup existing rc files before proceeding
 
 cd
-git clone --recursive https://github.com/gilbertwyw/dotfiles.git
-
-# vim
-ln -s ~/dotfiles/vim/vimrc ~/.vimrc
-ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
-
-# Zsh
+git clone https://github.com/gilbertwyw/dotfiles.git
 
 ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
 ln -s ~/dotfiles/zsh ~/.zsh
 
-brew install zsh
+brew install zsh antigen
 
 # require admin rights
 echo '/usr/local/bin/zsh' >> /etc/shells
@@ -48,27 +33,21 @@ chsh -s /usr/local/bin/zsh
 
 # aliases
 ln -s ~/dotfiles/aliases ~/.aliases
+```
 
-# Git
+## Git
+
+```
+brew install git
+
 ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
 ln -s ~/dotfiles/git/template ~/.git_template
 ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
-
-# Ctags
-ln -s ~/dotfiles/ctags ~/.ctags
-
-# Others
-ln -s ~/dotfiles/agignore ~/.agignore
-ln -s ~/dotfiles/editorconfig ~/.editorconfig
-
-# Install all Homebrew formulae listed in Brewfile
-brew tap homebrew/brewdler
-cd dotfiles/
-brew brewdle [--dry-run]
-
 ```
 
 ## Java
+
+- [jenv](https://github.com/gcuisinier/jenv)
 
 ```
 brew install jenv
@@ -77,24 +56,10 @@ brew cask install java
 jenv add `/usr/libexec/java_home`
 ```
 
-## Neovim
-
-- [Homebrew version](https://github.com/neovim/homebrew-neovim/blob/master/README.md)
-- [vim-plug setup](https://github.com/junegunn/vim-plug#neovim)
-
-To use the same configuration as Vim:
-
-```
-# '.vim/' may not exist (e.g., new machine), open Vim first
-#'.config/' may not exist, `mkdir ~/.config`
-ln -s ~/.vim ~/.config/nvim
-
-ln -s ~/.vimrc ~/.config/nvim/init.vim
-
-pip install [--user] neovim
-```
-
 ## Ruby
+
+- [chruby](https://github.com/postmodern/chruby)
+- [ruby-install](https://github.com/postmodern/ruby-install)
 
 ### RubyGems
 
@@ -111,7 +76,6 @@ echo "ruby-<version>" > ~/.ruby-version
 
 ln -s ~/dotfiles/ruby/gemrc ~/.gemrc
 gem install mdl scss_lint tmuxinator
-
 ```
 
 ## tmux
@@ -122,10 +86,73 @@ brew install tmux
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 
 # provided that Tmuxinator has been installed
-mux new [arbitrary name] 
+mux new [arbitrary name]
 ```
 
-## New machine / Re-installation
+## Vim
+
+```
+brew install vim --overrides-system-vi --with-lua --with-luajit
+
+ln -s ~/dotfiles/vim/vimrc ~/.vimrc
+ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
+```
+
+### Neovim 
+
+- [Homebrew version](https://github.com/neovim/homebrew-neovim/blob/master/README.md)
+- [vim-plug setup](https://github.com/junegunn/vim-plug#neovim)
+
+To use the same configuration as Vim:
+
+```
+# '.vim/' may not exist (e.g., new machine), open Vim first
+#'.config/' may not exist, `mkdir ~/.config`
+ln -s ~/.vim ~/.config/nvim
+
+ln -s ~/.vimrc ~/.config/nvim/init.vim
+
+brew install python
+pip install [--user] neovim
+```
+
+## Miscs.
+
+- [quick-look-plugins](https://github.com/sindresorhus/quick-look-plugins#install-all)
+
+```
+# Ag
+brew install ag
+ln -s ~/dotfiles/agignore ~/.agignore
+
+# Ctags
+brew install ctags
+ln -s ~/dotfiles/ctags ~/.ctags
+
+# EditorConfig, http://editorconfig.org/
+brew install editorconfig
+ln -s ~/dotfiles/editorconfig ~/.editorconfig
+
+# Brew Bundle, https://github.com/Homebrew/homebrew-bundle
+brew tap homebrew/brewdler
+cd dotfiles/
+brew brewdle [--dry-run]
+```
+
+### Terminal themes
+
+- [chriskempson/tomorrow-theme · GitHub](https://github.com/chriskempson/tomorrow-theme)
+- [zenorocha/dracula-theme · GitHub](https://github.com/zenorocha/dracula-theme)
+
+### Typefaces
+
+- [Hack](https://github.com/chrissimpkins/Hack#os-x)
+
+### ZSH prompt
+
+- [sindresorhus/pure · GitHub](https://github.com/sindresorhus/pure)
+
+### Xcode
 
 ```
 xcode-select --install
