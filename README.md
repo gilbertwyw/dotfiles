@@ -61,10 +61,6 @@ ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 # Ruby
 ln -s ~/dotfiles/ruby/gemrc ~/.gemrc
 
-# SSH
-mkdir ~/.ssh
-ln -s  ~/dotfiles/ssh/config ~/.ssh/config
-
 # Others
 ln -s ~/dotfiles/agignore ~/.agignore
 ln -s ~/dotfiles/editorconfig ~/.editorconfig
