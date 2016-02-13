@@ -27,7 +27,7 @@ alias m=mux
 #########
 #  npm  #
 #########
-alias n=npm
+alias nn=npm
 alias ngi='npm install -g'
 alias ngl='npm ls -g --depth=0'
 alias ngo='npm outdated -g'

@@ -48,10 +48,6 @@ fi
 # default: 1000
 export NODE_REPL_HISTORY_SIZE=2000
 
-# `brew info nvm`; after `mkdir ~/.nvm`
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
 # `brew info chruby`
 source $BREW_PREFIX/opt/chruby/share/chruby/chruby.sh
 source $BREW_PREFIX/opt/chruby/share/chruby/auto.sh
