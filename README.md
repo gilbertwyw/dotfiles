@@ -35,8 +35,16 @@ ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
 
 # Zsh
+
 ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
 ln -s ~/dotfiles/zsh ~/.zsh
+
+brew install zsh
+
+# require admin rights
+echo '/usr/local/bin/zsh' >> /etc/shells
+
+chsh -s /usr/local/bin/zsh
 
 # aliases
 ln -s ~/dotfiles/aliases ~/.aliases
@@ -48,7 +56,6 @@ ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
 
 # Ctags
 ln -s ~/dotfiles/ctags ~/.ctags
-
 
 # Others
 ln -s ~/dotfiles/agignore ~/.agignore
