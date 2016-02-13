@@ -13,12 +13,6 @@
 - [Xcode](https://developer.apple.com/xcode/)
 - [Homebrew](http://brew.sh/)
 
-### RubyGems
-
-- [mivok/markdownlint · GitHub](https://github.com/mivok/markdownlint)
-- [brigade/scss-lint · GitHub](https://github.com/brigade/scss-lint)
-- [tmuxinator/tmuxinator · GitHub](https://github.com/tmuxinator/tmuxinator)
-
 ### Terminal themes (optional)
 
 - [chriskempson/tomorrow-theme · GitHub](https://github.com/chriskempson/tomorrow-theme)
@@ -58,9 +52,6 @@ ln -s ~/dotfiles/ctags ~/.ctags
 # tmux
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 
-# Ruby
-ln -s ~/dotfiles/ruby/gemrc ~/.gemrc
-
 # Others
 ln -s ~/dotfiles/agignore ~/.agignore
 ln -s ~/dotfiles/editorconfig ~/.editorconfig
@@ -87,6 +78,26 @@ ln -s ~/.vim ~/.config/nvim
 ln -s ~/.vimrc ~/.config/nvim/init.vim
 
 pip install [--user] neovim
+```
+
+## Ruby
+
+### RubyGems
+
+- [brigade/scss-lint · GitHub](https://github.com/brigade/scss-lint)
+- [mivok/markdownlint · GitHub](https://github.com/mivok/markdownlint)
+- [tmuxinator/tmuxinator · GitHub](https://github.com/tmuxinator/tmuxinator)
+
+```
+brew install chruby ruby-installer
+ruby-installer ruby && chruby ruby
+
+# if 'auto-switching' feature is enabled
+echo "ruby-<version>" > ~/.ruby-version
+
+ln -s ~/dotfiles/ruby/gemrc ~/.gemrc
+gem install mdl scss_lint tmuxinator
+
 ```
 
 ## New machine / Re-installation
