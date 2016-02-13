@@ -53,11 +53,7 @@ source $BREW_PREFIX/opt/chruby/share/chruby/chruby.sh
 source $BREW_PREFIX/opt/chruby/share/chruby/auto.sh
 
 # `brew install jenv`
-if which jenv > /dev/null; then
-  eval "$(jenv init -)";
-
-  [[ -f /usr/libexec/java_home ]] && export JAVA_HOME=`/usr/libexec/java_home -v $(jenv version-name)`
-fi
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 # `brew install pyenv`
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi

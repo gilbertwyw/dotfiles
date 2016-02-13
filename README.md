@@ -61,6 +61,15 @@ brew brewdle [--dry-run]
 
 ```
 
+## Java
+
+```
+brew install jenv
+brew cask install java
+
+jenv add `/usr/libexec/java_home`
+```
+
 ## Neovim
 
 - [Homebrew version](https://github.com/neovim/homebrew-neovim/blob/master/README.md)
