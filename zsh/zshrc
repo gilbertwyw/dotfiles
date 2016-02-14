@@ -7,6 +7,7 @@ source $BREW_PREFIX/Cellar/antigen/1/share/antigen.zsh
 antigen use oh-my-zsh
 
 antigen bundle git
+antigen bundle brew
 antigen bundle brew-cask
 antigen bundle web-search
 

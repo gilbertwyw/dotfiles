@@ -56,9 +56,6 @@ alias hb='hub browse'
 #  OSX  #
 #########
 alias b=brew
-alias bcu="brew cleanup"
-alias bod="brew outdated"
-alias bud="brew update"
 alias bug="brew upgrade --all"
 alias o=open
 alias pwdc='pwd | pbcopy'
