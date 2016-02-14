@@ -4,10 +4,6 @@ nodeball() {
   tar -cv --exclude 'node_modules' -zf "$1.tar.gz" $1;
 }
 
-google() {
-  open "http://www.google.com/search?q=$*";
-}
-
 # copy from: https://github.com/tpope/vim-obsession/issues/11#issue-19117942
 function vim() {
   if test $# -gt 0; then
