@@ -39,6 +39,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'junegunn/vim-emoji'
+Plug 'kannokanno/previm'
 Plug 'keith/investigate.vim'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'kshenoy/vim-signature'
@@ -320,6 +321,9 @@ augroup END
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+" }}}
+" Plugin: previm {{{
+nnoremap <silent> <leader>pv :PrevimOpen<CR>
 " }}}
 " Plugin: quick-scope {{{
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
