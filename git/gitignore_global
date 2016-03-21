@@ -48,6 +48,7 @@ Session.vim
 # others #
 ##########
 .envrc
+.tern-port
 .tern-project
 .agignore
 .rbenv-gemsets
