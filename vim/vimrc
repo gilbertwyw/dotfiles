@@ -126,6 +126,9 @@ Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
 Plug 'venantius/vim-cljfmt', { 'for': 'clojure' }
 " }}}
+" Elixir {{{
+Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
+" }}}
 " }}}
 call plug#end()
 " }}}
