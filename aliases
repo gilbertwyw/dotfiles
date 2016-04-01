@@ -29,6 +29,7 @@ alias m=mux
 #########
 alias nn=npm
 alias nne='PATH="$(npm bin)":"$PATH"'
+alias nns='npm search'
 alias ngi='npm install -g'
 alias ngl='npm ls -g --depth=0'
 alias ngo='npm outdated -g'
