@@ -21,6 +21,7 @@ echo "export HOMEBREW_GITHUB_API_TOKEN=<token>" > ~/.envrc
 cd
 git clone https://github.com/gilbertwyw/dotfiles.git
 
+ln -s ~/dotfiles/zsh/zshenv ~/.zshenv
 ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
 ln -s ~/dotfiles/zsh ~/.zsh
 

@@ -1,0 +1,18 @@
+export PATH="/usr/local/bin:$PATH"
+
+export LC_ALL=$LANG
+
+if which nvim > /dev/null; then
+  export EDITOR=`which nvim`
+else
+  export EDITOR=`which vim`
+fi
+
+# default: 1000
+export NODE_REPL_HISTORY_SIZE=2000
+
+# set 'ag' as the default source for 'fzf'
+export FZF_DEFAULT_COMMAND='ag --skip-vcs-ignores -l -g ""'
+
+# `brew info coreutils`
+export MANPATH="/usr/local/coreutils/libexec/gnuman:$MANPATH"
