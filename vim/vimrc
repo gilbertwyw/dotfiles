@@ -129,6 +129,9 @@ Plug 'venantius/vim-cljfmt', { 'for': 'clojure' }
 " Elixir {{{
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 " }}}
+" Elm {{{
+Plug 'ElmCast/elm-vim', { 'for': ['elm'] }
+" }}}
 " }}}
 call plug#end()
 " }}}
