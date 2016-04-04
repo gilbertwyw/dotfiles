@@ -62,3 +62,8 @@ alias bug="brew upgrade --all"
 alias o=open
 alias pwdc='pwd | pbcopy'
 
+####################
+#  Gloabl Aliases  #
+####################
+alias -g FF='| fzf'
+alias -g L='| less'
