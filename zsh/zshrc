@@ -39,7 +39,7 @@ source /usr/local/opt/chruby/share/chruby/auto.sh
 # `brew install jenv`
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
-# `brew install Wpyenv`
+# `brew install pyenv`
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # `brew install direnv`, https://github.com/zimbatm/direnv#zsh
