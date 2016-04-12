@@ -384,13 +384,9 @@ let g:tagbar_type_markdown = {
 \ }
 " }}}
 " Plugin: tern_for_vim {{{
+let maplocalleader=","
+let g:tern_map_keys=1
 let g:tern_show_argument_hints='on_hold'
-nmap <leader>tD :TernDoc<CR>
-nmap <leader>tb :TernDocBrowse<CR>
-nmap <leader>td :TernDef<CR>
-nmap <leader>tr :TernRefs<CR>
-nmap <leader>tR :TernRename<CR>
-nmap <leader>tt :TernType<CR>
 " }}}
 " Plugin: tmuxline.vim {{{
 let g:tmuxline_theme = 'airline'
