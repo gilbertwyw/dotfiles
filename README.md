@@ -60,6 +60,15 @@ brew cask install java
 jenv add `/usr/libexec/java_home`
 ```
 
+## Node.js
+
+- [n-install](https://github.com/mklement0/n-install)
+
+```
+# will prompt before continue
+curl -L http://git.io/n-install | bash
+```
+
 ## Ruby
 
 - [chruby](https://github.com/postmodern/chruby)
