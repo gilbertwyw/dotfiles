@@ -69,8 +69,8 @@ jenv add `/usr/libexec/java_home`
 - [tmuxinator/tmuxinator · GitHub](https://github.com/tmuxinator/tmuxinator)
 
 ```
-brew install chruby ruby-installer
-ruby-installer ruby && chruby ruby
+brew install chruby ruby-install
+ruby-install ruby && chruby ruby
 
 # if 'auto-switching' feature is enabled
 echo "ruby-<version>" > ~/.ruby-version
