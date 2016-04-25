@@ -1,13 +1,15 @@
 # Setup
 
-## Pre-requisites
+## Prerequisites
 
 - [Homebrew](http://brew.sh/)
+- [Homebrew Cask](https://caskroom.github.io/)
 
 Regarding "Github API Rate limit exceeded":
 
 ```
-brew intall direnv
+brew install direnv hub trash
+
 echo "export HOMEBREW_GITHUB_API_TOKEN=<token>" > ~/.envrc
 ```
 
