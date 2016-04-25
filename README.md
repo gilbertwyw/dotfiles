@@ -56,6 +56,7 @@ ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
 brew install jenv
 brew cask install java
 
+# After '.zshrc' is loaded
 jenv add `/usr/libexec/java_home`
 ```
 
