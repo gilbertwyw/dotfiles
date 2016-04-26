@@ -8,7 +8,7 @@
 Regarding "Github API Rate limit exceeded":
 
 ```
-brew install direnv hub trash
+brew install ccat direnv hub trash
 
 echo "export HOMEBREW_GITHUB_API_TOKEN=<token>" > ~/.envrc
 ```
