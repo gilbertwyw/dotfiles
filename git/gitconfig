@@ -25,6 +25,8 @@
   ctags = !.git/hooks/ctags
   # require `gxargs`
   bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | gxargs -r git branch -d; }; f"
+  # git flow
+  ffs = "!f() { git flow feature start $1; }; f"
 [filter "media"]
 	required = true
 	clean = git media clean %f
