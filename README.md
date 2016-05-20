@@ -13,16 +13,20 @@ brew install ccat direnv hub trash
 echo "export HOMEBREW_GITHUB_API_TOKEN=<token>" > ~/.envrc
 ```
 
+The commands in the following sections are assumed to be run after:
+
+```
+cd
+git clone https://github.com/gilbertwyw/dotfiles.git
+```
+
+NB: Backup existing rc files before proceeding
+
 ## Zsh
 
 - [Antigen](https://zsh-users/antigen)
 
 ```
-# Backup existing rc files before proceeding
-
-cd
-git clone https://github.com/gilbertwyw/dotfiles.git
-
 ln -s ~/dotfiles/zsh/zshenv ~/.zshenv
 ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
 ln -s ~/dotfiles/zsh ~/.zsh
@@ -37,6 +41,9 @@ chsh -s /usr/local/bin/zsh
 # aliases
 ln -s ~/dotfiles/aliases ~/.aliases
 ```
+## fzf
+
+Run `brew install fzf ` and follow the instruction from `brew info fzf`.
 
 ## Git
 
@@ -81,7 +88,7 @@ curl -L http://git.io/n-install | bash
 - [tmuxinator/tmuxinator · GitHub](https://github.com/tmuxinator/tmuxinator)
 
 ```
-brew install chruby ruby-install
+brew install chruby ruby-install bundler
 ruby-install ruby && chruby ruby
 
 # if 'auto-switching' feature is enabled
@@ -110,6 +117,8 @@ brew install vim --overrides-system-vi --with-lua --with-luajit
 ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
 ```
+
+Then run `:PlugInstall` in Vim
 
 ### Neovim 
 
