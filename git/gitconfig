@@ -20,7 +20,6 @@
   cr = "!f() { git push origin @:refs/for/${1-master}; }; f"
   ec = config --global -e
   nb = "!f() { git checkout -t origin/${2-master} -b ${1}; }; f"
-  rp = "!f() { git rebase --autostash -p origin/${1-master}; }; f"
   # require `git init` in repo
   ctags = !.git/hooks/ctags
   # require `gxargs`
