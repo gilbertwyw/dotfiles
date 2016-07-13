@@ -554,5 +554,8 @@ if has('nvim')
 
   " save screen estate
   let $FZF_DEFAULT_OPTS = $FZF_DEFAULT_OPTS.' --inline-info'
+
+  " https://github.com/christoomey/vim-tmux-navigator#it-doesnt-work-in-neovim-specifically-c-h
+  nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 endif
 
