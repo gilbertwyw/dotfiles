@@ -521,6 +521,9 @@ augroup git " {{{2
   " commit message
   autocmd FileType gitcommit setlocal spell textwidth=72
 augroup END " }}}2
+augroup json " {{{2
+  au BufRead,BufNewFile .bowerrc setlocal ft=json
+augroup END " }}} 2
 augroup markdown " {{{2
   autocmd!
   " force *.md as MarkDown, https://github.com/tpope/vim-markdown
