@@ -1,5 +1,5 @@
 # brew install antigen; brew list antigen
-source /usr/local/Cellar/antigen/1/share/antigen.zsh
+source $(brew --prefix)/share/antigen.zsh
 
 # Load the oh-my-zsh's library
 antigen use oh-my-zsh
