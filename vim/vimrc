@@ -290,6 +290,8 @@ map <leader>k <Plug>(easymotion-k)
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " }}}
 " Plugin: fzf {{{
+let g:fzf_files_options =
+  \ '--preview "(highlight -O ansi {} || cat {}) 2> /dev/null | head -'.&lines.'"'
 nnoremap <silent> <C-p> :FZF --cycle<CR>
 " }}}
 " Plugin: fzf.vim {{{
