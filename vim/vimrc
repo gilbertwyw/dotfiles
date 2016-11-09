@@ -448,6 +448,7 @@ silent! if emoji#available()
   let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
   let g:gitgutter_sign_modified_removed = emoji#for('collision')
 endif
+" }}}
 " Plugin: vim-esformatter {{{
 nnoremap <silent> <leader>es :Esformatter<CR>
 vnoremap <silent> <leader>es :EsformatterVisual<CR>
@@ -466,7 +467,6 @@ let g:vim_g_f_command = "Gf"
 " }}}
 " Plugin: vim-grepper {{{
 nnoremap <leader>ag :Grepper -tool ag -highlight<cr>
-nnoremap <leader>* :Grepper -tool ag -cword -noprompt<cr>
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 " }}}
