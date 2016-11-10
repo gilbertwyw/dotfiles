@@ -66,6 +66,10 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tyru/open-browser.vim'
 Plug 'unblevable/quick-scope'
 " }}}
+" vim-operator-flashy {{{
+Plug 'kana/vim-operator-user'
+Plug 'haya14busa/vim-operator-flashy'
+" }}}
 " colorscheme {{{
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'altercation/vim-colors-solarized'
@@ -497,6 +501,10 @@ let g:jsdoc_default_mapping    = 0
 " }}}
 " Plugin: vim-jsx {{{
 let g:jsx_ext_required = 0
+" }}}
+" Plugin: vim-operator-flashy {{{
+map y <Plug>(operator-flashy)
+nmap Y <Plug>(operator-flashy)$
 " }}}
 " Plugin: vim-signature {{{
 nnoremap ]" :<C-U>call signature#mark#Goto("next", "spot", "global")<CR>
