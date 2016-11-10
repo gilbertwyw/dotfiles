@@ -104,7 +104,6 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
 Plug 'kewah/vim-stylefmt', { 'for': ['css', 'scss'] }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'maksimr/vim-jsbeautify', { 'for': ['html', 'json'] }
 Plug 'marijnh/tern_for_vim', { 'do': 'npm i' }
@@ -498,9 +497,6 @@ augroup END
 let g:jsdoc_allow_input_prompt = 1
 " reserve <C-l> for the mapping used by 'vim-tmux-navigator'
 let g:jsdoc_default_mapping    = 0
-" }}}
-" Plugin: vim-jsx {{{
-let g:jsx_ext_required = 0
 " }}}
 " Plugin: vim-operator-flashy {{{
 map y <Plug>(operator-flashy)
