@@ -23,7 +23,7 @@ The commands in the following sections are assumed to be run after:
 
 ```
 cd
-git clone https://github.com/gilbertwyw/dotfiles.git
+git clone --recursive https://github.com/gilbertwyw/dotfiles.git
 ```
 
 NB: Backup existing rc files before proceeding
@@ -109,10 +109,13 @@ gem install mdl scss_lint tmuxinator
 ```
 brew install tmux
 
-ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/tmux ~/.tmux
+
+<prefix> + I # to install any tmux plugins
 
 # provided that Tmuxinator has been installed
-mux new [arbitrary name]
+tmuxinator new [arbitrary name]
 ```
 
 ## Vim
