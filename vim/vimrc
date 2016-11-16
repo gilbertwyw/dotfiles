@@ -522,6 +522,9 @@ nmap <silent> <leader>L :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 " }}}
 " Autocommands {{{1
+augroup ag " {{{2
+  autocmd BufNewFile,BufReadPost .agignore setlocal commentstring=#\ %s
+augroup END " }}} 2
 augroup docker " {{{2
   " reference: https://github.com/docker/docker/blob/master/contrib/syntax/vim/ftdetect/dockerfile.vim
   autocmd BufNewFile,BufRead [Dd]ockerfile,Dockerfile.* set filetype=dockerfile
