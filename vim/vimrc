@@ -44,7 +44,7 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'kshenoy/vim-signature'
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-grepper'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'sjl/gundo.vim'
 Plug 'szw/vim-g'
@@ -320,6 +320,7 @@ augroup nerdtree
   autocmd!
   let g:NERDTreeHijackNetrw = 0
   map <silent> <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
+  map <silent> <leader>nf :NERDTreeFind<CR>
   " open a NERDTree automatically when vim starts up if no files were specified
   "autocmd StdinReadPre * let s:std_in=1
   "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
