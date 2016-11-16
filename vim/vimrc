@@ -303,6 +303,7 @@ nnoremap <silent> <C-p> :FZF --cycle<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>C :Colors<CR>
 nnoremap <leader>f :Files<CR>
+nnoremap <leader>m :Marks<CR>
 " }}}
 " Plugin: gundo.vim {{{
 nnoremap <F5> :GundoToggle<CR>
