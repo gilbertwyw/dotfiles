@@ -12,7 +12,7 @@ fi
 export NODE_REPL_HISTORY_SIZE=2000
 
 # set 'ag' as the default source for 'fzf'
-export FZF_DEFAULT_COMMAND='ag --skip-vcs-ignores -l -g ""'
+export FZF_DEFAULT_COMMAND='ag --skip-vcs-ignores -g ""'
 
 # `brew info coreutils`
 export MANPATH="/usr/local/coreutils/libexec/gnuman:$MANPATH"
