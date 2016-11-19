@@ -157,7 +157,9 @@ brew install ag
 ln -s ~/dotfiles/agignore ~/.agignore
 
 # Ctags
-brew install ctags
+brew tap universal-ctags/universal-ctags
+brew install --HEAD universal-ctags
+
 ln -s ~/dotfiles/ctags ~/.ctags
 
 # EditorConfig, http://editorconfig.org/
