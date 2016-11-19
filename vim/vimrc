@@ -25,7 +25,6 @@ Plug 'Raimondi/delimitMate'
 Plug 'Valloric/MatchTagAlways'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
 Plug 'Yggdroot/indentLine'
-Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-rooter'
 Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
@@ -90,6 +89,7 @@ Plug 'w0ng/vim-hybrid'
 Plug 'zenorocha/dracula-theme', { 'rtp': 'vim' }
 " }}}
 " Git {{{
+Plug 'airblade/vim-gitgutter'
 Plug 'low-ghost/nerdtree-fugitive'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
