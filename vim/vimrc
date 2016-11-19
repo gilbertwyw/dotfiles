@@ -216,8 +216,6 @@ nnoremap ;j :update<CR>
 nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
 
-nnoremap <leader>ft :set ft=
-
 nnoremap <leader>w :w<cr>
 
 " Resize window
@@ -303,11 +301,13 @@ let g:fzf_files_options =
 nnoremap <silent> <C-p> :FZF --cycle<CR>
 " }}}
 " Plugin: fzf.vim {{{
-nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>C :Colors<CR>
-nnoremap <leader>ct :Tags<CR>
-nnoremap <leader>f :Files<CR>
-nnoremap <leader>m :Marks<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>f :Filetypes<CR>
+nnoremap <leader>ft :Filetypes<CR>
+nnoremap <leader>nm :Maps<CR>
+nnoremap <leader>s :Snippets<CR>
+nnoremap <leader>t :Tags<CR>
 " }}}
 " Plugin: gundo.vim {{{
 nnoremap <F5> :GundoToggle<CR>
@@ -519,11 +519,11 @@ let g:slime_target = "tmux"
 " }}}
 " Plugin: vim-test {{{
 let test#strategy = "dispatch"
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>A :TestSuite<CR>
-nmap <silent> <leader>L :TestLast<CR>
-nmap <silent> <leader>g :TestVisit<CR>
+nmap <silent> <leader>tn :TestNearest<CR>
+nmap <silent> <leader>tf :TestFile<CR>
+nmap <silent> <leader>ts :TestSuite<CR>
+nmap <silent> <leader>tl :TestLast<CR>
+nmap <silent> <leader>tv :TestVisit<CR>
 " }}}
 " Autocommands {{{1
 augroup ag " {{{2
