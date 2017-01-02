@@ -2,11 +2,7 @@ export PATH="/usr/local/bin:$PATH"
 
 export LC_ALL=$LANG
 
-if which nvim > /dev/null; then
-  export EDITOR=`which nvim`
-else
-  export EDITOR=`which vim`
-fi
+export EDITOR=`which vim`
 
 # default: 1000
 export NODE_REPL_HISTORY_SIZE=2000
