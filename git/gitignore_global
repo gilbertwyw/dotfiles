@@ -41,6 +41,8 @@ Thumbs.db
 Session.vim
 # https://github.com/keith/investigate.vim#project-specific-settings
 .invrc
+# esformatter, https://github.com/millermedeiros/esformatter/blob/master/doc/config.md#configuration
+.esformatter
 *.sublime-project
 *.sublime-workspace
 *.swp
