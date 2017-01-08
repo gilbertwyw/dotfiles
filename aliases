@@ -21,8 +21,6 @@ alias wh=which
 #  Tmux  #
 ##########
 alias tat='tmux new-session -As $(basename $PWD | tr . -)'
-# From 'tmuxinator' gem
-alias m=mux
 
 #########
 #  npm  #
@@ -58,7 +56,6 @@ alias hb='hub browse'
 #  OSX  #
 #########
 alias b=brew
-alias bug="brew upgrade --all"
 alias o=open
 alias pwdc='pwd | pbcopy'
 
