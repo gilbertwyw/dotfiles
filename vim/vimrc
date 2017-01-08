@@ -316,6 +316,9 @@ nnoremap <F5> :GundoToggle<CR>
 let g:indentLine_conceallevel=0
 " }}}
 " Plugin: investigate.vim {{{
+if has('python3')
+  let g:gundo_prefer_python3 = 1
+endif
 if s:darwin
   let g:investigate_use_dash=1
 endif
