@@ -125,6 +125,8 @@ brew install vim --overrides-system-vi --with-lua --with-luajit
 
 ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
+
+ln -s ~/dotfiles/vim/git-commit-editor ~/.git-commit-editor
 ```
 
 Then run `:PlugInstall` in Vim
