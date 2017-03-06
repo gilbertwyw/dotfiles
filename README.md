@@ -106,6 +106,8 @@ gem install mdl scss_lint tmuxinator
 
 ## tmux
 
+NB: Make sure `<prefix>` is not used for other shortcut.
+
 ```
 brew install tmux
 
