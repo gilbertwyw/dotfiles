@@ -94,7 +94,7 @@ curl -L http://git.io/n-install | bash
 - [tmuxinator/tmuxinator · GitHub](https://github.com/tmuxinator/tmuxinator)
 
 ```
-brew install chruby ruby-install bundler
+brew install chruby ruby-install
 ruby-install ruby && chruby ruby
 
 # if 'auto-switching' feature is enabled
