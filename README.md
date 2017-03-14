@@ -123,6 +123,8 @@ tmuxinator new [arbitrary name]
 ## Vim
 
 ```
+# https://github.com/Valloric/YouCompleteMe#installation
+brew install cmake
 brew install vim --overrides-system-vi --with-lua --with-luajit
 
 ln -s ~/dotfiles/vim/vimrc ~/.vimrc
