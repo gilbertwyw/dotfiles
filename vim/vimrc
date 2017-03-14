@@ -248,6 +248,9 @@ nmap <expr>  M  ':%s/' . @/ . '//g<LEFT><LEFT>'
 
 noremap <silent> <F4> :let @+=expand("%:p")<CR>
 
+" add filetype
+nnoremap gaf :set ft+=.
+
 if s:darwin
   " try to open the current file in default application
   nnoremap <leader>o :silent !open '%'<cr>
@@ -540,6 +543,10 @@ augroup git " {{{2
   " commit message
   autocmd FileType gitcommit setlocal spell textwidth=72
 augroup END " }}}2
+augroup javascript " {{{2 
+  " for '/tpope/vim-commentary' on JSX 
+  au FileType javascript.jsx setlocal commentstring={/*\ %s\ */}
+augroup END " }}} 2
 augroup json " {{{2
   au BufRead,BufNewFile .bowerrc setlocal ft=json
 augroup END " }}} 2
