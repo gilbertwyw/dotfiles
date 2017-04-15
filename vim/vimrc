@@ -42,6 +42,7 @@ Plug 'keith/investigate.vim'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'kshenoy/vim-signature'
 Plug 'mhinz/vim-grepper'
+Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'sjl/gundo.vim'
@@ -103,13 +104,10 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
 Plug 'hail2u/vim-css3-syntax'
 Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
-Plug 'kewah/vim-stylefmt', { 'for': ['css', 'scss'] }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-Plug 'maksimr/vim-jsbeautify', { 'for': ['html', 'json'] }
 Plug 'marijnh/tern_for_vim', { 'do': 'npm i' }
 Plug 'mattn/emmet-vim'
-Plug 'millermedeiros/vim-esformatter', { 'for': 'javascript' }
 Plug 'mvolkmann/vim-js-arrow-function', { 'for': 'javascript' }
 Plug 'moll/vim-node'
 Plug 'mtscout6/syntastic-local-eslint.vim', { 'for': 'javascript' }
@@ -325,6 +323,12 @@ if s:darwin
   let g:investigate_use_dash=1
 endif
 " }}}
+" Plugin: neoformat {{{
+" https://github.com/sbdchd/neoformat#supported-filetypes
+autocmd BufWritePre *.js Neoformat
+nnoremap <silent> <leader>gq :Neoformat<CR>
+vnoremap <silent> <leader>gq :Neoformat<CR>
+" }}}
 " Plugin: nerdtree {{{
 augroup nerdtree
   autocmd!
@@ -440,11 +444,6 @@ augroup vim-css3-syntax
   autocmd FileType css setlocal iskeyword+=-
 augroup END
 " }}}
-" Plugin: vim-stylefmt {{{
-" require `npm i -g stylefmt`
-nnoremap <silent> <leader>cs :Stylefmt<CR>
-vnoremap <silent> <leader>cs :StylefmtVisual<CR>
-" }}}
 " Plugin: vim-dispatch {{{
 autocmd FileType html let b:dispatch = '!open %:p'
 nnoremap <F9> :Dispatch<CR>
@@ -464,10 +463,6 @@ silent! if emoji#available()
   let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
   let g:gitgutter_sign_modified_removed = emoji#for('collision')
 endif
-" }}}
-" Plugin: vim-esformatter {{{
-nnoremap <silent> <leader>es :Esformatter<CR>
-vnoremap <silent> <leader>es :EsformatterVisual<CR>
 " }}}
 " Plugin: vim-expand-region {{{
 vmap v <Plug>(expand_region_expand)
@@ -492,15 +487,6 @@ let g:javascript_conceal_NaN        = "ℕ"
 let g:javascript_conceal_prototype  = "¶"
 let g:javascript_conceal_static     = "•"
 let g:javascript_conceal_super      = "Ω"
-" }}}
-" Plugin: vim-jsbeautify {{{
-augroup vim-jsbeautify
-  autocmd!
-  autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<CR>
-  autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<CR>
-  autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
-  autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
-augroup END
 " }}}
 " Plugin: vim-jsdoc {{{
 let g:jsdoc_allow_input_prompt = 1
