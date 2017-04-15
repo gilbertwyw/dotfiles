@@ -133,7 +133,7 @@ ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
 ln -s ~/dotfiles/vim/git-commit-editor ~/.git-commit-editor
 ```
 
-Then run `:PlugInstall` in Vim
+Then run `vim +PlugInstall +qall` in Vim
 
 ### Neovim 
 
