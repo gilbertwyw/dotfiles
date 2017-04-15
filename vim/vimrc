@@ -477,10 +477,6 @@ vmap <C-v> <Plug>(expand_region_shrink)
 nmap <leader>gb :Gblame<cr>
 nmap <leader>gs :Gstatus<cr>
 " }}}
-" Plugin: vim-g {{{
-let g:vim_g_command = "Go"
-let g:vim_g_f_command = "Gf"
-" }}}
 " Plugin: vim-grepper {{{
 nnoremap <leader>ag :Grepper -tool ag -highlight<cr>
 nmap gs <plug>(GrepperOperator)
