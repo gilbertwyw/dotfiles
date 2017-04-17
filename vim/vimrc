@@ -250,6 +250,10 @@ noremap <silent> <F4> :let @+=expand("%:p")<CR>
 " add filetype
 nnoremap gaf :set ft+=.
 
+" search will center on the line it's found in.
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
 if s:darwin
   " try to open the current file in default application
   nnoremap <leader>o :silent !open '%'<cr>
