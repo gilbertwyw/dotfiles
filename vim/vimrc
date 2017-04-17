@@ -402,7 +402,7 @@ let g:tagbar_type_markdown = {
 \ }
 " }}}
 " Plugin: tern_for_vim {{{
-let maplocalleader=","
+let maplocalleader=','
 let g:tern_map_keys=1
 let g:tern_show_argument_hints='on_hold'
 " }}}
@@ -417,10 +417,10 @@ let g:tmuxline_powerline_separators = 0
 " Plugin: UltiSnips {{{
 " to avoid conflict with YouCompleteMe
 set rtp+=~/dotfiles/vim/
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsSnippetsDir="~/dotfiles/vim/snips/"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
+let g:UltiSnipsEditSplit='vertical'
+let g:UltiSnipsExpandTrigger='<c-j>'
+let g:UltiSnipsSnippetsDir='~/dotfiles/vim/snips/'
+let g:UltiSnipsSnippetDirectories=['UltiSnips', 'snips']
 " }}}
 " Plugin: vim-airline {{{
 " make symbols look okay
@@ -478,15 +478,15 @@ nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 " }}}
 " Plugin: vim-javascript {{{
-let g:javascript_conceal_function   = "ƒ"
-let g:javascript_conceal_null       = "ø"
-let g:javascript_conceal_this       = "@"
-let g:javascript_conceal_return     = "⇚"
-let g:javascript_conceal_undefined  = "¿"
-let g:javascript_conceal_NaN        = "ℕ"
-let g:javascript_conceal_prototype  = "¶"
-let g:javascript_conceal_static     = "•"
-let g:javascript_conceal_super      = "Ω"
+let g:javascript_conceal_function   = 'ƒ'
+let g:javascript_conceal_null       = 'ø'
+let g:javascript_conceal_this       = '@'
+let g:javascript_conceal_return     = '⇚'
+let g:javascript_conceal_undefined  = '¿'
+let g:javascript_conceal_NaN        = 'ℕ'
+let g:javascript_conceal_prototype  = '¶'
+let g:javascript_conceal_static     = '•'
+let g:javascript_conceal_super      = 'Ω'
 " }}}
 " Plugin: vim-jsdoc {{{
 let g:jsdoc_allow_input_prompt = 1
@@ -502,10 +502,10 @@ nnoremap ]" :<C-U>call signature#mark#Goto("next", "spot", "global")<CR>
 nnoremap [" :<C-U>call signature#mark#Goto("prev", "spot", "global")<CR>
 " }}}
 " Plugin: vim-slime {{{
-let g:slime_target = "tmux"
+let g:slime_target = 'tmux'
 " }}}
 " Plugin: vim-test {{{
-let test#strategy = "dispatch"
+let test#strategy = 'dispatch'
 nmap <silent> <leader>tn :TestNearest<CR>
 nmap <silent> <leader>tf :TestFile<CR>
 nmap <silent> <leader>ts :TestSuite<CR>
@@ -546,7 +546,7 @@ augroup END " }}}2
 autocmd InsertLeave,TextChanged * if expand('%') != '' | update | endif
 
 " Local config
-if filereadable($HOME . "/.vimrc.local")
+if filereadable($HOME . '/.vimrc.local')
   source ~/.vimrc.local
 endif
 
