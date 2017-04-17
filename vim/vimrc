@@ -63,6 +63,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tyru/open-browser.vim'
 Plug 'unblevable/quick-scope'
+Plug 'wellle/targets.vim'
 " }}}
 " vim-operator-flashy {{{
 Plug 'kana/vim-operator-user'
