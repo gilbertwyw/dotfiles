@@ -45,7 +45,6 @@ Plug 'kshenoy/vim-signature'
 Plug 'mhinz/vim-grepper'
 Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
 Plug 'sjl/gundo.vim'
 Plug 'terryma/vim-expand-region'
 Plug 'terryma/vim-multiple-cursors'
@@ -64,6 +63,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tyru/open-browser.vim'
 Plug 'unblevable/quick-scope'
 Plug 'wellle/targets.vim'
+Plug 'w0rp/ale'
 " }}}
 " vim-operator-flashy {{{
 Plug 'kana/vim-operator-user'
@@ -112,7 +112,6 @@ Plug 'marijnh/tern_for_vim', { 'do': 'npm i' }
 Plug 'mattn/emmet-vim'
 Plug 'mvolkmann/vim-js-arrow-function', { 'for': 'javascript' }
 Plug 'moll/vim-node'
-Plug 'mtscout6/syntastic-local-eslint.vim', { 'for': 'javascript' }
 Plug 'othree/html5.vim'
 " }}}
 " snippets {{{
@@ -288,6 +287,12 @@ map z#  <Plug>(asterisk-z#)
 map gz# <Plug>(asterisk-gz#)
 " }}}2
 " }}}
+" Plugin: ale {{{
+" https://github.com/w0rp/ale#5v-how-can-i-change-the-format-for-echo-messages
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+" }}}
 " Plugin: EasyMotion {{{
 " Bi-directional 2-character search
 " `s{char}{char}{label}`
@@ -374,21 +379,6 @@ augroup scss-syntax.vim
   autocmd!
   autocmd FileType scss setlocal iskeyword+=-
 augroup END
-" }}}
-" Plugin: syntastic {{{
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-
-" :h syntastic-fish
-let g:syntastic_shell = '/bin/zsh'
-let g:syntastic_aggregate_errors = 0
-let g:syntastic_javascript_checkers = ['eslint']
-
-nnoremap <silent> <leader>sc :SyntasticCheck<CR>
 " }}}
 " Plugin: tagbar {{{
 nmap <F8> :TagbarToggle<CR>
