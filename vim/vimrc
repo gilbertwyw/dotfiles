@@ -550,15 +550,6 @@ augroup END " }}}2
 " Auto-save a file when you leave insert mode
 autocmd InsertLeave,TextChanged * if expand('%') != '' | update | endif
 
-" Temporarily disabled {{{
-" cut down key stroke for normal mode
-" but lose the capability for repeating the linewise character search
-"nnoremap ; :
-
-" bind K to grep word under cursor
-"nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
-" }}}
-
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
