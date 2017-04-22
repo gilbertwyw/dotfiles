@@ -539,10 +539,10 @@ augroup git " {{{2
 augroup END " }}}2
 augroup javascript " {{{2 
   " for '/tpope/vim-commentary' on JSX 
-  au FileType javascript.jsx setlocal commentstring={/*\ %s\ */}
+  autocmd FileType javascript.jsx setlocal commentstring={/*\ %s\ */}
 augroup END " }}} 2
 augroup json " {{{2
-  au BufRead,BufNewFile .bowerrc setlocal ft=json
+  autocmd BufRead,BufNewFile .bowerrc setlocal ft=json
 augroup END " }}} 2
 augroup markdown " {{{2
   autocmd!
@@ -574,5 +574,5 @@ if has('nvim')
 endif
 
 let g:xml_syntax_folding=1
-au FileType xml setlocal foldmethod=syntax
+autocmd FileType xml setlocal foldmethod=syntax
 
