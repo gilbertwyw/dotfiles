@@ -254,6 +254,9 @@ nnoremap gaf :set ft+=.
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
+" vv to generate new vertical split
+nnoremap <silent> vv <C-w>v
+
 if s:darwin
   " try to open the current file in default application
   nnoremap <leader>o :silent !open '%'<cr>
