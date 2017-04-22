@@ -317,7 +317,6 @@ nnoremap <silent> <C-p> :FZF --cycle<CR>
 " Plugin: fzf.vim {{{
 nnoremap <leader>C :Colors<CR>
 nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>f :Filetypes<CR>
 nnoremap <leader>ft :Filetypes<CR>
 nnoremap <leader>nm :Maps<CR>
 nnoremap <leader>s :Snippets<CR>
