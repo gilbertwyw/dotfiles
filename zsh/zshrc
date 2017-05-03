@@ -17,6 +17,8 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle mafredri/zsh-async
 antigen bundle sindresorhus/pure
 
+antigen bundle desyncr/auto-ls
+
 antigen apply
 
 setopt no_beep
