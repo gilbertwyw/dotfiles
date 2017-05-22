@@ -76,6 +76,8 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+" requires 'pangloss/vim-javascript'
+Plug 'MaxMEllon/vim-jsx-pretty'
 " }}}
 " colorscheme {{{
 Plug 'NLKNguyen/papercolor-theme'
