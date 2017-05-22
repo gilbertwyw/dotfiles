@@ -69,6 +69,14 @@ Plug 'w0rp/ale'
 Plug 'kana/vim-operator-user'
 Plug 'haya14busa/vim-operator-flashy'
 " }}}
+" syntax {{{
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
+Plug 'hail2u/vim-css3-syntax'
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+" }}}
 " colorscheme {{{
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'altercation/vim-colors-solarized'
@@ -102,17 +110,11 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " }}}
 " Front-End {{{
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss'] }
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
-Plug 'hail2u/vim-css3-syntax'
 Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'marijnh/tern_for_vim', { 'do': 'npm i' }
 Plug 'mattn/emmet-vim'
 Plug 'mvolkmann/vim-js-arrow-function', { 'for': 'javascript' }
 Plug 'moll/vim-node'
-Plug 'othree/html5.vim'
 " }}}
 " snippets {{{
 Plug 'SirVer/ultisnips'
