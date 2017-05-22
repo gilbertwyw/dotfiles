@@ -89,7 +89,7 @@ Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
 Plug 'romainl/Apprentice'
 Plug 'tomasr/molokai'
-Plug 'zenorocha/dracula-theme', { 'rtp': 'vim' }
+Plug 'dracula/vim', { 'as': 'dracula-vim' }
 " }}}
 " Ctags {{{
 Plug 'ludovicchabant/vim-gutentags'
