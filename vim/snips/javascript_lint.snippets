@@ -1,10 +1,18 @@
-snippet edl "eslint-disable-line"
+snippet el "eslint"
+/* eslint $0 */
+endsnippet
+
+snippet eldl "eslint-disable-line, //"
 // eslint-disable-line $0
 endsnippet
 
-snippet edb "eslint disable block"
-/* eslint-disable $1*/
+snippet eldb "eslint disable block"
+/* eslint-disable $1 */
 ${VISUAL}$0
-/* eslint-enable $1$2*/
+/* eslint-enable $1$2 */
+endsnippet
+
+snippet ele "eslint env"
+/* eslint-env $0 */
 endsnippet
 
