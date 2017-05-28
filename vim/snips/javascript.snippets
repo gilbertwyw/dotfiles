@@ -6,28 +6,6 @@ snippet te "throw new Error"
 throw new Error($1);
 endsnippet
 
-### ES6 Module
-
-snippet ex "export (default)"
-export ${1:default} $2;
-endsnippet
-
-snippet ec "export (default) class"
-export ${1:default} class $2 {
-  $3
-};
-endsnippet
-
-snippet ef "export (default) function"
-export ${1:default} function($1) {
-  $2
-};
-endsnippet
-
-snippet im "import"
-import $1 from '${2:$1}';
-endsnippet
-
 ### CJS
 
 snippet req "CJS require" 
