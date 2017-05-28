@@ -1,37 +1,7 @@
-# React.js
-
-snippet jsxc "@jsx"
-/** @jsx React.$1 */
-endsnippet
-
-snippet ct "contextTypes"
-contextTypes: {
-	$1: ${2:React}.PropTypes.$0
-}
-endsnippet
-
 snippet sct "static contextTypes" b
 static contextTypes = {
-	$1: $0
+	$1: PropTypes.$0
 };
-endsnippet
-
-snippet pt "propTypes"
-propTypes: {
-	$1:${2:React.}PropTypes.$3
-}${0:,}
-endsnippet
-
-snippet spt "static propTypes"
-static propTypes = {
-	$1: ${2:React.}PropTypes.$0
-};
-endsnippet
-
-snippet rtb "return ()" b
-return (
-	$0
-);
 endsnippet
 
 snippet gcc "getChildConext"
@@ -46,37 +16,26 @@ snippet tc. "this.context."
 this.context.$0
 endsnippet
 
-snippet tp. "this.props" w
-this.props.$0
-endsnippet
-
 snippet tr. "this.refs" w
 this.refs.$0
 endsnippet
 
-snippet ts. "this.state" w
-this.state.$0
+snippet ctor2 "React constructor" 
+constructor(props${1:, context}) {
+	super(props$1);
+	$0
+}
 endsnippet
 
-snippet trs "this.replaceState"
-this.replaceState({$0});
-endsnippet
-
-snippet tss "this.setState"
-this.setState({$0});
-endsnippet
+######################
+#  createReactClass  #
+######################
 
 snippet gdp "getDefaultProps"
 getDefaultProps() {
 	return {
 		$1
 	};
-}${0:,}
-endsnippet
-
-snippet sdp "static defaultProps"
-static defaultProps = {
-	$1
 }${0:,}
 endsnippet
 
@@ -88,86 +47,11 @@ getInitialState() {
 }${0:,}
 endsnippet
 
-snippet rct "React constructor" 
-constructor(props${1:, context}) {
-	super(props$1);
-	$0
-}
-endsnippet
-
-snippet rcom "React.Componet" 
-class $1 extends ${2:React.}Component { 
-	render () {
-		$0	
-	}
-}
-endsnippet
-
-snippet rcc "React.createClass"
-React.createClass({
-	render() {
-		return ($1);
-	}
-});
-endsnippet
-
-snippet rrc "React.renderComponent"
-React.renderComponent(
-	$1,
-	${2:document.getElementById("$3")};
-);
-endsnippet
-
-#######################
-#  Lifecycle methods  #
-#######################
-snippet cwrp "componentWillReceiveProps"
-componentWillReceiveProps: function(nextProps) {
-	$1
-}${0:,}
-endsnippet
-
-snippet cdm "componentDidMount"
-componentDidMount: function() {
-	$1
-}${0:,}
-endsnippet
-
-snippet cwm "componentWillMount"
-componentWillMount: function() {
-	$1
-}${0:,}
-endsnippet
-
-snippet cwum "componentWillUnmount"
-componentWillUnmount: function() {
-	$1
-}${0:,}
-endsnippet
-
-snippet cdu "componentDidUpdate"
-componentDidUpdate: function(prevProps, prevState) {
-	$1
-}${0:,}
-endsnippet
-
-snippet cwu "componentWillUpdate"
-componentWillUpdate: function() {
-	$1
-}${0:,}
-endsnippet
-
-snippet scu "shouldComponentUpdate"
-shouldComponentUpdate: function(nextProps, nextState) {
-	$1
-}${0:,}
-endsnippet
-
 ################
 #  Properties  #
 ################
 snippet cn "className"
-className=
+className="$1"
 endsnippet
 
 ##################
