@@ -107,6 +107,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'low-ghost/nerdtree-fugitive'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
+Plug 'tpope/vim-rhubarb'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " }}}
 " Front-End {{{
