@@ -46,6 +46,7 @@ Session.vim
 *.sublime-project
 *.sublime-workspace
 *.swp
+.lvimrc
 
 # others #
 ##########

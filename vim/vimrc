@@ -28,6 +28,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-rooter'
 Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'embear/vim-localvimrc'
 Plug 'flowtype/vim-flow'
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/vim-asterisk'
@@ -492,6 +493,10 @@ let g:jsdoc_allow_input_prompt = 1
 " reserve <C-l> for the mapping used by 'vim-tmux-navigator'
 let g:jsdoc_default_mapping    = 0
 " }}}
+" Plugin: vim-localvimrc {{{
+" https://github.com/embear/vim-localvimrc#the-glocalvimrc_persistent-setting
+let g:localvimrc_persistent=1
+" }}}
 " Plugin: vim-operator-flashy {{{
 map y <Plug>(operator-flashy)
 nmap Y <Plug>(operator-flashy)$
@@ -552,11 +557,6 @@ augroup END " }}}2
 
 " Auto-save a file when you leave insert mode
 autocmd InsertLeave,TextChanged * if expand('%') != '' | update | endif
-
-" Local config
-if filereadable($HOME . '/.vimrc.local')
-  source ~/.vimrc.local
-endif
 
 if has('nvim')
   " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
