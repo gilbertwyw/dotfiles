@@ -6,6 +6,12 @@ set nocompatible
 " otherwise NERDTree shows strange character instead of arrows
 set encoding=utf-8
 
+" use true color 
+" : CTRL-v + ESC
+set t_8f=[38;2;%lu;%lu;%lum
+set t_8b=[48;2;%lu;%lu;%lum
+set termguicolors
+
 " Plugin: vim-plug {{{
 "https://github.com/junegunn/vim-plug/wiki/faq#automatic-installation
 if empty(glob('~/.vim/autoload/plug.vim'))
