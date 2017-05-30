@@ -2,6 +2,7 @@
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
+zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
 zplug "plugins/brew", from:oh-my-zsh
 zplug "plugins/brew-cask", from:oh-my-zsh
 zplug "plugins/common-aliases", from:oh-my-zsh
@@ -28,7 +29,6 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
-setopt emacs
 setopt no_beep
 
 path=(
