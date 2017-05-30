@@ -1,25 +1,32 @@
-# brew install antigen; brew list antigen
-source $(brew --prefix)/share/antigen/antigen.zsh
+# brew info zplug
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
 
-# Load the oh-my-zsh's library
-antigen use oh-my-zsh
+zplug "plugins/brew", from:oh-my-zsh
+zplug "plugins/brew-cask", from:oh-my-zsh
+zplug "plugins/common-aliases", from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
 
-antigen bundle brew
-antigen bundle brew-cask
-antigen bundle common-aliases
-antigen bundle git
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-autosuggestions
+# https://github.com/sindresorhus/pure#zplug
+zplug "mafredri/zsh-async"
+zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 
-# https://github.com/sindresorhus/pure#antigen
-antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure
+zplug "desyncr/auto-ls"
 
-antigen bundle desyncr/auto-ls
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+	printf "Install? [y/N]: "
+	if read -q; then
+		echo; zplug install
+	fi
+fi
 
-antigen apply
+# Then, source plugins and add commands to $PATH
+zplug load
 
 setopt no_beep
 
