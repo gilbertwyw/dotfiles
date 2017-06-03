@@ -88,11 +88,9 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 " }}}
 " colorscheme {{{
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'itchyny/landscape.vim'
 Plug 'junegunn/seoul256.vim'
-Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
 Plug 'romainl/Apprentice'
 Plug 'tomasr/molokai'
