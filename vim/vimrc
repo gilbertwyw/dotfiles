@@ -28,8 +28,8 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Raimondi/delimitMate'
+Plug 'Shougo/neocomplete.vim'
 Plug 'Valloric/MatchTagAlways'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-rooter'
 Plug 'bling/vim-airline'
@@ -347,6 +347,17 @@ autocmd BufWritePre *.js Neoformat
 nnoremap <silent> <leader>gq :Neoformat<CR>
 vnoremap <silent> <leader>gq :Neoformat<CR>
 " }}}
+" Plugin: neocomplete.vim {{{
+" https://github.com/Shougo/neocomplete.vim#configuration-examples
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+"}}}
 " Plugin: nerdtree {{{
 augroup nerdtree
   autocmd!
@@ -414,18 +425,16 @@ let g:tern_map_keys=1
 let g:tern_show_argument_hints='on_hold'
 " }}}
 " Plugin: tmux-complete.vim {{{
-" integrate with YCM, trigger via <c-x><c-o>
-let g:tmuxcomplete#trigger = 'omnifunc'
+" https://github.com/wellle/tmux-complete.vim#settings
+let g:tmuxcomplete#trigger = ''
 " }}}
 " Plugin: tmuxline.vim {{{
 let g:tmuxline_theme = 'airline'
 let g:tmuxline_powerline_separators = 0
 " }}}
 " Plugin: UltiSnips {{{
-" to avoid conflict with YouCompleteMe
 set rtp+=~/dotfiles/vim/
 let g:UltiSnipsEditSplit='vertical'
-let g:UltiSnipsExpandTrigger='<c-j>'
 let g:UltiSnipsSnippetsDir='~/dotfiles/vim/snips/'
 let g:UltiSnipsSnippetDirectories=['UltiSnips', 'snips']
 " }}}
