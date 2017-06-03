@@ -219,10 +219,10 @@ nnoremap <leader>sv :so $MYVIMRC<CR>
 nnoremap <leader>w :w<cr>
 
 " Resize window
-noremap <up>    <C-W>+
-noremap <down>  <C-W>-
-noremap <left>  3<C-W><
-noremap <right> 3<C-W>>
+nnoremap <Left> :vertical resize +2<CR>
+nnoremap <Right> :vertical resize -2<CR>
+nnoremap <Up> :resize -2<CR>
+nnoremap <Down> :resize +2<CR>
 
 " http://vim-jp.org/blog/2015/06/30/visual-ctrl-a-ctrl-x.html
 " not work on Neovim yet
