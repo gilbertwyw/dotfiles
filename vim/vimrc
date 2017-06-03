@@ -201,6 +201,10 @@ vnoremap K :m '<-2<CR>gv=gv
 " jk is escape
 inoremap jk <Esc>
 
+" make last typed word uppercase
+inoremap <Plug>UpCase <Esc>hgUaweA
+imap ;u <Plug>UpCase
+
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
