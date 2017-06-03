@@ -163,9 +163,6 @@ set noswapfile
 " change the terminal's title
 set title
 
-" highlight current line
-set cursorline
-
 if (exists('+colorcolumn'))
   set colorcolumn=80
 endif
