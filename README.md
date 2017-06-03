@@ -122,10 +122,9 @@ tmuxinator new [arbitrary name]
 
 ## Vim
 
-```
-# https://github.com/Valloric/YouCompleteMe#installation
-brew install cmake
-brew install vim --overrides-system-vi --with-lua --with-luajit
+```sh
+# for 'neocomplete'
+brew install vim --with-lua
 
 ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
