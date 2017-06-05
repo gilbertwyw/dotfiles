@@ -159,7 +159,7 @@ pip install [--user] neovim
 ```
 # Ag
 brew install ag
-ln -s ~/dotfiles/agignore ~/.agignore
+ln -s ~/dotfiles/ignore ~/.ignore
 
 # Ctags
 brew tap universal-ctags/universal-ctags
