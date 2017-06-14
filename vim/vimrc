@@ -573,9 +573,6 @@ augroup markdown " {{{2
 augroup END " }}}2
 " }}}1
 
-" Auto-save a file when you leave insert mode
-autocmd InsertLeave,TextChanged * if expand('%') != '' | update | endif
-
 if has('nvim')
   " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
