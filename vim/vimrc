@@ -255,6 +255,8 @@ nnoremap gaf :set ft+=.
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
+nnoremap <silent> <leader>lo :lopen<CR>
+
 if s:darwin
   " try to open the current file in default application
   nnoremap <leader>o :silent !open '%'<cr>
