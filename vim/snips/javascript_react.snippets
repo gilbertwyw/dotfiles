@@ -1,3 +1,15 @@
+snippet ref "Component ref callback"
+ref={${1:view} => { this.$1 = $1; }}
+endsnippet
+
+snippet && "&& (JSX)"
+{ $1 && $2 }
+endsnippet
+
+snippet ?: "Ternary expression (JSX)"
+{ $1 ? $2 : $3 }
+endsnippet
+
 snippet sct "static contextTypes" b
 static contextTypes = {
 	$1: PropTypes.$0
