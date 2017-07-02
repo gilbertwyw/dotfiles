@@ -47,6 +47,7 @@ Session.vim
 *.sublime-workspace
 *.swp
 .lvimrc
+.projections.json
 
 # others #
 ##########
