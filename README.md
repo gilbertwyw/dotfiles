@@ -61,18 +61,6 @@ ln -s ~/dotfiles/git/template ~/.git_template
 ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
 ```
 
-## Java
-
-- [jenv](https://github.com/gcuisinier/jenv)
-
-```
-brew install jenv
-brew cask install java
-
-# After '.zshrc' is loaded
-jenv add `/usr/libexec/java_home`
-```
-
 ## Node.js
 
 - [n-install](https://github.com/mklement0/n-install)

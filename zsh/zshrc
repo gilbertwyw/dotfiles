@@ -50,9 +50,6 @@ typeset -U path
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
-# `brew install jenv`
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
-
 # `brew install pyenv`
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
