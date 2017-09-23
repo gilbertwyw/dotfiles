@@ -173,9 +173,6 @@ endif
 " flashing instead of beeping
 set visualbell
 
-" toggle paste mode
-set pastetoggle=<F2>
-
 let mapleader = "\<Space>"
 
 " Indentation {{{
