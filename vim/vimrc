@@ -323,7 +323,7 @@ nnoremap <leader>s :Snippets<CR>
 nnoremap <leader>t :Tags<CR>
 " }}}
 " Plugin: gundo.vim {{{
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <leader>u :GundoToggle<CR>
 " }}}
 " Plugin: indentLine {{{
 let g:indentLine_conceallevel=0
