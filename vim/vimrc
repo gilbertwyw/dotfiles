@@ -6,12 +6,133 @@ set nocompatible
 " otherwise NERDTree shows strange character instead of arrows
 set encoding=utf-8
 
-" use true color 
+" Allow hidden buffers, don't limit to 1 file per window/split
+set hidden
+
+" enable hybrid line number mode
+set relativenumber
+set number
+
+" more intuitive split
+set splitbelow
+set splitright
+
+" turn off backup for now
+set nobackup
+set noswapfile
+
+" change the terminal's title
+set title
+
+if (exists('+colorcolumn'))
+  set colorcolumn=80
+endif
+
+" enable mouse in all modes
+if has('mouse')
+  set mouse=a
+endif
+
+" flashing instead of beeping
+set visualbell
+
+let mapleader = "\<Space>"
+
+" True color {{{
 " : CTRL-v + ESC
 set t_8f=[38;2;%lu;%lu;%lum
 set t_8b=[48;2;%lu;%lu;%lum
 set termguicolors
+" }}}
+" Indentation {{{
+" use soft tab
+set expandtab
+" number of visual spaces per TAB
+set tabstop=2
+" number of space to use for autoindenting
+set shiftwidth=2
+" }}}
+" Mappings {{{
+cmap w!! w !sudo tee > /dev/null %
 
+" select whatever's just been pasted
+nnoremap gV `[V`]
+
+" Move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+" jk is escape
+inoremap jk <Esc>
+
+" make last typed word uppercase
+inoremap <Plug>UpCase <Esc>hgUaweA
+imap ;u <Plug>UpCase
+
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+
+" swap the jump keys
+nnoremap ' `
+nnoremap ` '
+
+" Quickly edit/reload the vimrc file
+nnoremap <leader>ev :e $MYVIMRC<CR>
+nnoremap <leader>sv :so $MYVIMRC<CR>
+
+nnoremap <leader>w :w<cr>
+
+" Resize window
+nnoremap <Left> :vertical resize +2<CR>
+nnoremap <Right> :vertical resize -2<CR>
+nnoremap <Up> :resize -2<CR>
+nnoremap <Down> :resize +2<CR>
+
+" http://vim-jp.org/blog/2015/06/30/visual-ctrl-a-ctrl-x.html
+" not work on Neovim yet
+vnoremap <c-a> <c-a>gv
+vnoremap <c-x> <c-x>gv
+
+vnoremap Y "*y
+" Yank from the cursor to the end of the line, to be consistent with C and D.
+nnoremap Y "*y$
+
+" Visual shifting (does not exit Visual mode)
+vnoremap > >gv
+vnoremap < <gv
+
+" Map tab to indent in visual mode
+vmap <Tab> >gv
+vmap <S-Tab> <gv
+
+" Learn the following 2 from Damian Conway
+" 1) exchange 'S' for:
+nmap  S  :%s//g<LEFT><LEFT>
+" 2) exchange 'M' for:
+nmap <expr>  M  ':%s/' . @/ . '//g<LEFT><LEFT>'
+
+noremap <silent> <F4> :let @+=expand("%:p")<CR>
+
+" add filetype
+nnoremap gaf :set ft+=.
+
+" search will center on the line it's found in.
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+nnoremap <silent> <leader>lo :lopen<CR>
+
+if s:darwin
+  " try to open the current file in default application
+  nnoremap <leader>o :silent !open '%'<cr>
+endif
+" }}}
+" Search {{{
+set hlsearch
+set ignorecase
+set smartcase
+" }}}
 " Plugin: vim-plug {{{
 "https://github.com/junegunn/vim-plug/wiki/faq#automatic-installation
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -142,151 +263,6 @@ Plug 'ElmCast/elm-vim', { 'for': ['elm'] }
 " }}}
 call plug#end()
 " }}}
-
-" Allow hidden buffers, don't limit to 1 file per window/split
-set hidden
-
-" enable hybrid line number mode
-set relativenumber
-set number
-
-" more intuitive split
-set splitbelow
-set splitright
-
-" turn off backup for now
-set nobackup
-set noswapfile
-
-" change the terminal's title
-set title
-
-if (exists('+colorcolumn'))
-  set colorcolumn=80
-endif
-
-" enable mouse in all modes
-if has('mouse')
-  set mouse=a
-endif
-
-" flashing instead of beeping
-set visualbell
-
-let mapleader = "\<Space>"
-
-" Indentation {{{
-" use soft tab
-set expandtab
-" number of visual spaces per TAB
-set tabstop=2
-" number of space to use for autoindenting
-set shiftwidth=2
-" }}}
-" Mappings {{{
-cmap w!! w !sudo tee > /dev/null %
-
-" select whatever's just been pasted
-nnoremap gV `[V`]
-
-" Move visual block
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
-
-" jk is escape
-inoremap jk <Esc>
-
-" make last typed word uppercase
-inoremap <Plug>UpCase <Esc>hgUaweA
-imap ;u <Plug>UpCase
-
-" move vertically by visual line
-nnoremap j gj
-nnoremap k gk
-
-" swap the jump keys
-nnoremap ' `
-nnoremap ` '
-
-" Quickly edit/reload the vimrc file
-nnoremap <leader>ev :e $MYVIMRC<CR>
-nnoremap <leader>sv :so $MYVIMRC<CR>
-
-nnoremap <leader>w :w<cr>
-
-" Resize window
-nnoremap <Left> :vertical resize +2<CR>
-nnoremap <Right> :vertical resize -2<CR>
-nnoremap <Up> :resize -2<CR>
-nnoremap <Down> :resize +2<CR>
-
-" http://vim-jp.org/blog/2015/06/30/visual-ctrl-a-ctrl-x.html
-" not work on Neovim yet
-vnoremap <c-a> <c-a>gv
-vnoremap <c-x> <c-x>gv
-
-vnoremap Y "*y
-" Yank from the cursor to the end of the line, to be consistent with C and D.
-nnoremap Y "*y$
-
-" Visual shifting (does not exit Visual mode)
-vnoremap > >gv
-vnoremap < <gv
-
-" Map tab to indent in visual mode
-vmap <Tab> >gv
-vmap <S-Tab> <gv
-
-" Learn the following 2 from Damian Conway
-" 1) exchange 'S' for:
-nmap  S  :%s//g<LEFT><LEFT>
-" 2) exchange 'M' for:
-nmap <expr>  M  ':%s/' . @/ . '//g<LEFT><LEFT>'
-
-noremap <silent> <F4> :let @+=expand("%:p")<CR>
-
-" add filetype
-nnoremap gaf :set ft+=.
-
-" search will center on the line it's found in.
-nnoremap n nzzzv
-nnoremap N Nzzzv
-
-nnoremap <silent> <leader>lo :lopen<CR>
-
-if s:darwin
-  " try to open the current file in default application
-  nnoremap <leader>o :silent !open '%'<cr>
-endif
-" }}}
-" Search {{{
-set hlsearch
-set ignorecase
-set smartcase
-" Plugin: incsearch {{{2
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-" turns 'hlsearch' off automatically after searching-related motions
-let g:incsearch#auto_nohlsearch = 1
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
-" }}}2
-" Plugin: vim-asterisk {{{2
-map *   <Plug>(asterisk-*)
-map #   <Plug>(asterisk-#)
-map g*  <Plug>(asterisk-g*)
-map g#  <Plug>(asterisk-g#)
-map z*  <Plug>(asterisk-z*)
-map gz* <Plug>(asterisk-gz*)
-map z#  <Plug>(asterisk-z#)
-map gz# <Plug>(asterisk-gz#)
-" }}}2
-" }}}
 " Plugin: ale {{{
 " https://github.com/w0rp/ale#5v-how-can-i-change-the-format-for-echo-messages
 let g:ale_echo_msg_error_str = 'E'
@@ -321,6 +297,19 @@ nnoremap <leader>t :Tags<CR>
 " }}}
 " Plugin: gundo.vim {{{
 nnoremap <leader>u :GundoToggle<CR>
+" }}}
+" Plugin: incsearch {{{
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+" turns 'hlsearch' off automatically after searching-related motions
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 " }}}
 " Plugin: indentLine {{{
 let g:indentLine_conceallevel=0
@@ -433,6 +422,16 @@ let g:UltiSnipsSnippetDirectories=['UltiSnips', 'snips']
 " Plugin: vim-airline {{{
 " make symbols look okay
 let g:airline_powerline_fonts = 1
+" }}}
+" Plugin: vim-asterisk {{{
+map *   <Plug>(asterisk-*)
+map #   <Plug>(asterisk-#)
+map g*  <Plug>(asterisk-g*)
+map g#  <Plug>(asterisk-g#)
+map z*  <Plug>(asterisk-z*)
+map gz* <Plug>(asterisk-gz*)
+map z#  <Plug>(asterisk-z#)
+map gz# <Plug>(asterisk-gz#)
 " }}}
 " Plugin: vim-coffee-script {{{
 augroup vim-coffeescript-script
@@ -576,6 +575,10 @@ augroup markdown " {{{2
   " highlight markdown fenced code syntax 
   let g:markdown_fenced_languages = ['html', 'json', 'python', 'scss', 'sh', 'sql', 'yaml']
 augroup END " }}}2
+augroup xml " {{{2
+  let g:xml_syntax_folding=1
+  autocmd FileType xml setlocal foldmethod=syntax
+augroup END " }}} 2
 " }}}1
 " Use persistent history {{{
 let s:undo_dir = $TMPDIR . '.vim-undo-dir'
@@ -587,7 +590,7 @@ endif
 let &undodir = s:undo_dir
 set undofile
 " }}}
-
+" Neovim-specific {{{
 if has('nvim')
   " save screen estate
   let $FZF_DEFAULT_OPTS = $FZF_DEFAULT_OPTS.' --inline-info'
@@ -595,7 +598,6 @@ if has('nvim')
   " https://github.com/christoomey/vim-tmux-navigator#it-doesnt-work-in-neovim-specifically-c-h
   nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 endif
+" }}}
 
-let g:xml_syntax_folding=1
-autocmd FileType xml setlocal foldmethod=syntax
 
