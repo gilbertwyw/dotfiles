@@ -557,9 +557,16 @@ map <Leader>vi :VimuxInspectRunner<CR>
 " }}}
 " Autocommands {{{1
 augroup ag " {{{2
+  autocmd!
   autocmd BufNewFile,BufReadPost .agignore setlocal commentstring=#\ %s
 augroup END " }}} 2
+augroup autoSaveAndRead " {{{2
+  autocmd! 
+  autocmd TextChanged,InsertLeave,FocusLost * silent! wall 
+  autocmd CursorHold * silent! checktime
+augroup END " }}} 2
 augroup docker " {{{2
+  autocmd!
   " reference: https://github.com/docker/docker/blob/master/contrib/syntax/vim/ftdetect/dockerfile.vim
   autocmd BufNewFile,BufRead [Dd]ockerfile,Dockerfile.* set filetype=dockerfile
 augroup END " }}}2
@@ -568,24 +575,26 @@ augroup git " {{{2
   " commit message
   autocmd FileType gitcommit setlocal spell textwidth=72
 augroup END " }}}2
-augroup javascript " {{{2 
-  " for '/tpope/vim-commentary' on JSX 
+augroup javascript " {{{2
+  autocmd!
+  " for '/tpope/vim-commentary' on JSX
   autocmd FileType javascript.jsx setlocal commentstring={/*\ %s\ */}
 augroup END " }}} 2
 augroup json " {{{2
+  autocmd!
   autocmd BufRead,BufNewFile .bowerrc setlocal ft=json
 augroup END " }}} 2
 augroup markdown " {{{2
   autocmd!
   " force *.md as MarkDown, https://github.com/tpope/vim-markdown
   autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-  
-  " highlight markdown fenced code syntax 
+  " highlight markdown fenced code syntax
   let g:markdown_fenced_languages = ['html', 'json', 'python', 'scss', 'sh', 'sql', 'yaml']
 augroup END " }}}2
 augroup xml " {{{2
-  let g:xml_syntax_folding=1
+  autocmd!
   autocmd FileType xml setlocal foldmethod=syntax
+  let g:xml_syntax_folding=1
 augroup END " }}} 2
 " }}}1
 " Use persistent history {{{
