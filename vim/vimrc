@@ -149,7 +149,6 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Raimondi/delimitMate'
-Plug 'Shougo/neocomplete.vim'
 Plug 'Valloric/MatchTagAlways'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-rooter'
@@ -261,6 +260,11 @@ Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 Plug 'ElmCast/elm-vim', { 'for': ['elm'] }
 " }}}
 " }}}
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/neocomplete.vim'
+endif
 call plug#end()
 " }}}
 " Plugin: ale {{{
@@ -597,6 +601,9 @@ if has('nvim')
 
   " https://github.com/christoomey/vim-tmux-navigator#it-doesnt-work-in-neovim-specifically-c-h
   nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
+
+  " https://github.com/Shougo/deoplete.nvim#installation
+  let g:deoplete#enable_at_startup = 1
 endif
 " }}}
 
