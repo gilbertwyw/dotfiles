@@ -327,8 +327,12 @@ if s:darwin
 endif
 " }}}
 " Plugin: neoformat {{{
-" https://github.com/sbdchd/neoformat#supported-filetypes
-autocmd BufWritePre *.js Neoformat
+augroup neoformat
+  autocmd!
+  " https://github.com/sbdchd/neoformat#supported-filetypes
+  " https://github.com/sbdchd/neoformat#managing-undo-history
+ autocmd BufWritePre * undojoin | Neoformat
+augroup END
 nnoremap <silent> <leader>gq :Neoformat<CR>
 vnoremap <silent> <leader>gq :Neoformat<CR>
 " }}}
