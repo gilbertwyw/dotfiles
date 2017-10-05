@@ -35,7 +35,6 @@ zplug load
 setopt no_beep
 
 path=(
-  ~/bin
   /usr/local/bin
   /usr/local/sbin
   # `brew info coreutils`
