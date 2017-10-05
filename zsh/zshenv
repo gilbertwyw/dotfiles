@@ -12,3 +12,4 @@ export FZF_DEFAULT_COMMAND='ag --skip-vcs-ignores -g ""'
 
 # `brew info coreutils`
 export MANPATH="/usr/local/coreutils/libexec/gnuman:$MANPATH"
+

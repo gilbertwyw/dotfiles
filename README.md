@@ -70,6 +70,18 @@ ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
 curl -L http://git.io/n-install | bash
 ```
 
+## Python
+
+```
+mkdir -p ~/.pip
+ln -s ~/dotfiles/python/pip.conf ~/.pip/pip.conf
+```
+
+```
+brew install pyenv
+pyenv install <version>
+```
+
 ## Ruby
 
 - [chruby](https://github.com/postmodern/chruby)
@@ -136,7 +148,6 @@ ln -s ~/.vim ~/.config/nvim
 
 ln -s ~/.vimrc ~/.config/nvim/init.vim
 
-brew install python
 pip install [--user] neovim
 ```
 
