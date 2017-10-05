@@ -1,3 +1,7 @@
+snippet ael "AddEventListner"
+$1.addEventListener('$2', $3);
+endsnippet
+
 snippet si "setInterval"
 setInterval($1, $2);
 endsnippet
@@ -10,4 +14,11 @@ endsnippet
 
 snippet req "CJS require" 
 $0 = require('$1');
+endsnippet
+
+# co, https://github.com/tj/co
+snippet co "co*"
+co(function* $1() {
+	$0
+}).catch(${2:err} => ${3:{$4}});
 endsnippet

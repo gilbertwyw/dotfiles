@@ -1,5 +1,5 @@
 snippet des "describe()" 
-describe('$1', function() {
+describe('$1', () => {
 	$0
 });
 endsnippet
@@ -9,13 +9,7 @@ expect($1)$0;
 endsnippet
 
 snippet it "it()"
-it('$1', function() {
-	$0
-});
-endsnippet
-
-snippet ita "it() - async version"
-it('$1', function(${2:done}) {
+it('$1', (${2:done}) => {
 	$0
 });
 endsnippet
