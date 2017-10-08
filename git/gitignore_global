@@ -55,6 +55,7 @@ Session.vim
 .tern-port
 .tern-project
 .agignore
+.ignore
 .rbenv-gemsets
 .ruby-version
 .ctags
