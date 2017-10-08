@@ -30,14 +30,14 @@ NB: Backup existing rc files before proceeding
 
 ## Zsh
 
-- [Antigen](https://zsh-users/antigen)
+- [zplug](https://github.com/zplug/zplug)
 
 ```
 ln -s ~/dotfiles/zsh/zshenv ~/.zshenv
 ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
 ln -s ~/dotfiles/zsh ~/.zsh
 
-brew install zsh antigen
+brew install zsh zplug
 
 # require admin rights
 echo '/usr/local/bin/zsh' >> /etc/shells
