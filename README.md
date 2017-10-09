@@ -7,13 +7,13 @@
 
 To prevent incompatibility issue caused by Mac's own version of `sed`:
 
-```
+```sh
 brew install gnu-sed --with-default-names
 ```
 
 Regarding "Github API Rate limit exceeded":
 
-```
+```sh
 brew install ccat direnv hub trash
 
 echo "export HOMEBREW_GITHUB_API_TOKEN=<token>" > ~/.envrc
@@ -21,7 +21,7 @@ echo "export HOMEBREW_GITHUB_API_TOKEN=<token>" > ~/.envrc
 
 The commands in the following sections are assumed to be run after:
 
-```
+```sh
 cd
 git clone --recursive https://github.com/gilbertwyw/dotfiles.git
 ```
@@ -32,7 +32,7 @@ NB: Backup existing rc files before proceeding
 
 - [zplug](https://github.com/zplug/zplug)
 
-```
+```sh
 ln -s ~/dotfiles/zsh/zshenv ~/.zshenv
 ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
 ln -s ~/dotfiles/zsh ~/.zsh
@@ -47,13 +47,14 @@ chsh -s /usr/local/bin/zsh
 # aliases
 ln -s ~/dotfiles/aliases ~/.aliases
 ```
+
 ## fzf
 
 Run `brew install fzf ` and follow the instruction from `brew info fzf`.
 
 ## Git
 
-```
+```sh
 brew install git
 
 ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
@@ -65,19 +66,19 @@ ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
 
 - [n-install](https://github.com/mklement0/n-install)
 
-```
+```sh
 # will prompt before continue
 curl -L http://git.io/n-install | bash
 ```
 
 ## Python
 
-```
+```sh
 mkdir -p ~/.pip
 ln -s ~/dotfiles/python/pip.conf ~/.pip/pip.conf
 ```
 
-```
+```sh
 brew install pyenv
 pyenv install <version>
 ```
@@ -93,7 +94,7 @@ pyenv install <version>
 - [mivok/markdownlint · GitHub](https://github.com/mivok/markdownlint)
 - [tmuxinator/tmuxinator · GitHub](https://github.com/tmuxinator/tmuxinator)
 
-```
+```sh
 brew install chruby ruby-install
 ruby-install ruby && chruby ruby
 
@@ -108,7 +109,7 @@ gem install mdl scss_lint tmuxinator
 
 NB: Make sure `<prefix>` is not used for other shortcut.
 
-```
+```sh
 brew install tmux
 
 ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
@@ -141,7 +142,7 @@ Then run `vim +PlugInstall +qall` in Vim
 
 To use the same configuration as Vim:
 
-```
+```sh
 # '.vim/' may not exist (e.g., new machine), open Vim first
 #'.config/' may not exist, `mkdir ~/.config`
 ln -s ~/.vim ~/.config/nvim
@@ -155,7 +156,7 @@ pip install [--user] neovim
 
 - [quick-look-plugins](https://github.com/sindresorhus/quick-look-plugins#install-all)
 
-```
+```sh
 # Ag
 brew install ag
 ln -s ~/dotfiles/ignore ~/.ignore
@@ -191,7 +192,7 @@ brew brewdle [--dry-run]
 
 ### Xcode
 
-```
+```sh
 xcode-select --install
 
 sudo xcodebuild -license
