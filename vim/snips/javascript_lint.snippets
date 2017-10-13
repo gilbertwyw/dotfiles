@@ -1,3 +1,7 @@
+snippet cg "/* global */"
+/* global $0 */
+endsnippet
+
 snippet el "eslint"
 /* eslint $0 */
 endsnippet
@@ -6,13 +10,17 @@ snippet eldl "eslint-disable-line, //"
 // eslint-disable-line $0
 endsnippet
 
-snippet eldb "eslint disable block"
+snippet eldb "eslint-disable block"
 /* eslint-disable $1 */
 ${VISUAL}$0
 /* eslint-enable $1$2 */
 endsnippet
 
-snippet ele "eslint env"
+snippet eldn "eslint-disable-next-line, //"
+// eslint-disable-next-line $0
+endsnippet
+
+snippet ele "eslint-env"
 /* eslint-env $0 */
 endsnippet
 
