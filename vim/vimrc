@@ -264,7 +264,9 @@ Plug 'ElmCast/elm-vim', { 'for': ['elm'] }
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
-  Plug 'Shougo/neocomplete.vim'
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
 endif
 call plug#end()
 " }}}
@@ -273,6 +275,10 @@ call plug#end()
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+" }}}
+" Plugin: deoplete.nvim {{{
+" https://github.com/Shougo/deoplete.nvim#installation
+let g:deoplete#enable_at_startup = 1
 " }}}
 " Plugin: EasyMotion {{{
 " Bi-directional 2-character search
@@ -337,17 +343,6 @@ augroup END
 nnoremap <silent> <leader>gq :Neoformat<CR>
 vnoremap <silent> <leader>gq :Neoformat<CR>
 " }}}
-" Plugin: neocomplete.vim {{{
-" https://github.com/Shougo/neocomplete.vim#configuration-examples
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-"}}}
 " Plugin: nerdtree {{{
 augroup nerdtree
   autocmd!
@@ -513,21 +508,6 @@ let g:jsdoc_default_mapping    = 0
 " https://github.com/embear/vim-localvimrc#the-glocalvimrc_persistent-setting
 let g:localvimrc_persistent=1
 " }}}
-" Plugin: vim-multiple-cursors {{{
-" Called once right before you start selecting multiple cursors
-function! Multiple_cursors_before()
-  if exists(':NeoCompleteLock')==2
-    exe 'NeoCompleteLock'
-  endif
-endfunction
-
-" Called once only when the multiple selection is canceled (default <Esc>)
-function! Multiple_cursors_after()
-  if exists(':NeoCompleteUnlock')==2
-    exe 'NeoCompleteUnlock'
-  endif
-endfunction
-" }}}
 " Plugin: vim-operator-flashy {{{
 map y <Plug>(operator-flashy)
 nmap Y <Plug>(operator-flashy)$
@@ -616,8 +596,6 @@ if has('nvim')
   " https://github.com/christoomey/vim-tmux-navigator#it-doesnt-work-in-neovim-specifically-c-h
   nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 
-  " https://github.com/Shougo/deoplete.nvim#installation
-  let g:deoplete#enable_at_startup = 1
 endif
 " }}}
 
