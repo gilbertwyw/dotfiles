@@ -162,7 +162,8 @@ Plug 'honza/dockerfile.vim'
 Plug 'janko-m/vim-test'
 Plug 'jpalardy/vim-slime'
 " Use installed 'fzf' from Homebrew 
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug '/usr/local/opt/fzf' 
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'junegunn/vim-emoji'
 Plug 'kannokanno/previm'
