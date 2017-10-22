@@ -125,7 +125,7 @@ tmuxinator new [arbitrary name]
 
 ```sh
 # for 'neocomplete'
-brew install vim --with-lua
+brew install vim --with-lua --with-python3
 
 ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
