@@ -55,7 +55,7 @@ Run `brew install fzf ` and follow the instruction from `brew info fzf`.
 ## Git
 
 ```sh
-brew install git
+brew install git git-lfs
 
 ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
 ln -s ~/dotfiles/git/template ~/.git_template
