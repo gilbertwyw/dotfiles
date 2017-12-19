@@ -282,8 +282,8 @@ let g:deoplete#enable_at_startup = 1
 " }}}
 " Plugin: EasyMotion {{{
 " Bi-directional 2-character search
-" `s{char}{char}{label}`
-nmap s <Plug>(easymotion-s2)
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
 " Turn on case sensitive feature
 let g:EasyMotion_smartcase = 1
 " JK motions: Line motions
