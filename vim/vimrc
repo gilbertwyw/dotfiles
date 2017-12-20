@@ -428,6 +428,7 @@ let g:UltiSnipsSnippetDirectories=['UltiSnips', 'snips']
 let g:airline_powerline_fonts = 1
 " }}}
 " Plugin: vim-asterisk {{{
+let g:asterisk#keeppos = 1
 map *   <Plug>(asterisk-*)
 map #   <Plug>(asterisk-#)
 map g*  <Plug>(asterisk-g*)
