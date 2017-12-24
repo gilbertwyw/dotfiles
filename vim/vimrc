@@ -201,7 +201,6 @@ Plug 'haya14busa/vim-operator-flashy'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
 Plug 'hail2u/vim-css3-syntax'
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 " requires 'pangloss/vim-javascript'
@@ -385,16 +384,6 @@ augroup END
 " }}}
 " Plugin: tagbar {{{
 nmap <F8> :TagbarToggle<CR>
-let g:tagbar_type_coffee = {
-    \ 'ctagstype' : 'coffee',
-    \ 'kinds'     : [
-        \ 'c:classes',
-        \ 'm:methods',
-        \ 'f:functions',
-        \ 'v:variables',
-        \ 'f:fields',
-    \ ]
-\ }
 let g:tagbar_type_markdown = {
     \ 'ctagstype' : 'markdown',
     \ 'kinds' : [
@@ -437,17 +426,6 @@ map z*  <Plug>(asterisk-z*)
 map gz* <Plug>(asterisk-gz*)
 map z#  <Plug>(asterisk-z#)
 map gz# <Plug>(asterisk-gz#)
-" }}}
-" Plugin: vim-coffee-script {{{
-augroup vim-coffeescript-script
-  autocmd!
-  autocmd FileType coffee setl foldmethod=indent nofoldenable
-  let coffee_compile_vert = 1
-  let coffee_watch_vert   = 1
-  autocmd FileType coffee noremap <buffer> <C-c>c :CoffeeCompile<cr>
-  autocmd FileType coffee noremap <buffer> <C-c>r :CoffeeRun<cr>
-  autocmd FileType coffee noremap <buffer> <C-c>w :CoffeeWatch<cr>
-augroup END
 " }}}
 " Plugin: vim-css3-syntax {{{
 augroup vim-css3-syntax
