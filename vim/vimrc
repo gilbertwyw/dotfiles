@@ -301,6 +301,7 @@ nnoremap <silent> <C-p> :FZF --cycle<CR>
 nnoremap <leader>C :Colors<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>ft :Filetypes<CR>
+nnoremap <leader>gf :GFiles<CR>
 nnoremap <leader>nm :Maps<CR>
 nnoremap <leader>s :Snippets<CR>
 nnoremap <leader>t :Tags<CR>
