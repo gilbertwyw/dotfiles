@@ -81,6 +81,9 @@ ln -s ~/dotfiles/python/pip.conf ~/.pip/pip.conf
 ```sh
 brew install pyenv
 pyenv install <version>
+
+# for vim "tagbar" plugin
+pip install markdown2ctags
 ```
 
 ## Ruby
