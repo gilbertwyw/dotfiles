@@ -114,10 +114,6 @@ if s:darwin
 endif
 " }}}2
 " Visual {{{2
-" Move visual block
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
-
 " http://vim-jp.org/blog/2015/06/30/visual-ctrl-a-ctrl-x.html
 " not work on Neovim yet
 vnoremap <c-a> <c-a>gv
