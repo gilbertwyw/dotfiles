@@ -124,10 +124,6 @@ vnoremap Y "*y
 " Visual shifting (does not exit Visual mode)
 vnoremap > >gv
 vnoremap < <gv
-
-" Map tab to indent in visual mode
-vmap <Tab> >gv
-vmap <S-Tab> <gv
 " }}}2
 " }}}1
 " Search {{{
