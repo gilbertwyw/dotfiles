@@ -52,26 +52,28 @@ set tabstop=2
 " number of space to use for autoindenting
 set shiftwidth=2
 " }}}
-" Mappings {{{
+" Mappings {{{1
+" Command-line {{{2
 cmap w!! w !sudo tee > /dev/null %
-
-" select whatever's just been pasted
-nnoremap gV `[V`]
-
-" Move visual block
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
-
+" }}}2
+" Insert {{{2
 " jk is escape
 inoremap jk <Esc>
 
 " make last typed word uppercase
 inoremap <Plug>UpCase <Esc>hgUaweA
 imap ;u <Plug>UpCase
+" }}}2
+" Normal {{{2
+" select whatever's just been pasted
+nnoremap gV `[V`]
 
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+
+" Toggle fold at current position
+nnoremap <Tab> za
 
 " swap the jump keys
 nnoremap ' `
@@ -88,21 +90,6 @@ nnoremap <Left> :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
 nnoremap <Up> :resize -2<CR>
 nnoremap <Down> :resize +2<CR>
-
-" http://vim-jp.org/blog/2015/06/30/visual-ctrl-a-ctrl-x.html
-" not work on Neovim yet
-vnoremap <c-a> <c-a>gv
-vnoremap <c-x> <c-x>gv
-
-vnoremap Y "*y
-
-" Visual shifting (does not exit Visual mode)
-vnoremap > >gv
-vnoremap < <gv
-
-" Map tab to indent in visual mode
-vmap <Tab> >gv
-vmap <S-Tab> <gv
 
 " Learn the following 2 from Damian Conway
 " 1) exchange 'S' for:
@@ -125,7 +112,28 @@ if s:darwin
   " try to open the current file in default application
   nnoremap <leader>o :silent !open '%'<cr>
 endif
-" }}}
+" }}}2
+" Visual {{{2
+" Move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+" http://vim-jp.org/blog/2015/06/30/visual-ctrl-a-ctrl-x.html
+" not work on Neovim yet
+vnoremap <c-a> <c-a>gv
+vnoremap <c-x> <c-x>gv
+
+vnoremap Y "*y
+
+" Visual shifting (does not exit Visual mode)
+vnoremap > >gv
+vnoremap < <gv
+
+" Map tab to indent in visual mode
+vmap <Tab> >gv
+vmap <S-Tab> <gv
+" }}}2
+" }}}1
 " Search {{{
 set hlsearch
 set ignorecase
@@ -159,8 +167,8 @@ Plug 'haya14busa/vim-asterisk'
 Plug 'honza/dockerfile.vim'
 Plug 'janko-m/vim-test'
 Plug 'jpalardy/vim-slime'
-" Use installed 'fzf' from Homebrew 
-Plug '/usr/local/opt/fzf' 
+" Use installed 'fzf' from Homebrew
+Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'junegunn/vim-emoji'
@@ -336,7 +344,7 @@ augroup neoformat
   autocmd!
   " https://github.com/sbdchd/neoformat#supported-filetypes
   " https://github.com/sbdchd/neoformat#managing-undo-history
- autocmd BufWritePre * undojoin | Neoformat
+  autocmd BufWritePre * undojoin | Neoformat
 augroup END
 nnoremap <silent> <leader>gq :Neoformat<CR>
 vnoremap <silent> <leader>gq :Neoformat<CR>
@@ -526,8 +534,8 @@ augroup ag " {{{2
   autocmd BufNewFile,BufReadPost .agignore setlocal commentstring=#\ %s
 augroup END " }}} 2
 augroup autoSaveAndRead " {{{2
-  autocmd! 
-  autocmd TextChanged,InsertLeave,FocusLost * silent! wall 
+  autocmd!
+  autocmd TextChanged,InsertLeave,FocusLost * silent! wall
   autocmd CursorHold * silent! checktime
 augroup END " }}} 2
 augroup docker " {{{2
