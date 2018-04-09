@@ -244,12 +244,6 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'wellle/tmux-complete.vim'
 " }}}
-" clojure & clojurescript {{{
-Plug 'guns/vim-sexp', { 'for': 'clojure' }
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
-Plug 'venantius/vim-cljfmt', { 'for': 'clojure' }
-" }}}
 " Elixir {{{
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 " }}}
