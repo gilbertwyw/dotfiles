@@ -249,6 +249,9 @@ Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 " Elm {{{
 Plug 'ElmCast/elm-vim', { 'for': ['elm'] }
 " }}}
+" Go {{{
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" }}}
 " }}}
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -452,6 +455,43 @@ vmap <C-v> <Plug>(expand_region_shrink)
 " Plugin: vim-fugitive {{{
 nmap <leader>gb :Gblame<cr>
 nmap <leader>gs :Gstatus<cr>
+" }}}
+" Plugin: vim-go {{{
+" instead of invoking :GoImports manually
+" let g:go_fmt_command = "goimports"
+" :GoInfo
+let g:go_auto_type_info = 1
+" :GoSameIds
+let g:go_auto_sameids = 1
+
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
+augroup go
+  autocmd!
+  autocmd FileType go setlocal updatetime=800
+  " :GoBuild
+  " autocmd FileType go nmap <leader>gob <Plug>(go-build)
+  autocmd FileType go nmap <leader>gob :<C-u>call <SID>build_go_files()<CR>
+  autocmd FileType go nmap <leader>gor <Plug>(go-run)
+  autocmd FileType go nmap <leader>got <Plug>(go-test)
+  " :GoCoverageToggle
+  autocmd FileType go nmap <Leader>goc <Plug>(go-coverage-toggle)
+  " opens the alternate file
+  autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+  autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+  autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+  autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+  " :GoInfo
+  " autocmd FileType go nmap <Leader>goi <Plug>(go-info)
+augroup END
 " }}}
 " Plugin: vim-grepper {{{
 if executable('ag')
