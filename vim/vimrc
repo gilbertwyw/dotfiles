@@ -261,10 +261,13 @@ endif
 call plug#end()
 " }}}
 " Plugin: ale {{{
-" https://github.com/w0rp/ale#5v-how-can-i-change-the-format-for-echo-messages
+" https://github.com/w0rp/ale#5vii-how-can-i-change-the-format-for-echo-messages
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+" https://github.com/w0rp/ale#5ix-how-can-i-navigate-between-errors-quickly
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " }}}
 " Plugin: deoplete.nvim {{{
 " https://github.com/Shougo/deoplete.nvim#installation
