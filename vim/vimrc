@@ -463,7 +463,9 @@ nmap <leader>gb :Gblame<cr>
 nmap <leader>gs :Gstatus<cr>
 " }}}
 " Plugin: vim-grepper {{{
-nnoremap <leader>ag :Grepper -tool ag -highlight<cr>
+if executable('ag')
+  nnoremap <leader>ag :Grepper -tool ag -highlight<cr>
+endif
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 " }}}
