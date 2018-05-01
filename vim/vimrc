@@ -5,6 +5,7 @@ let s:darwin = has('mac')
 set nocompatible
 " otherwise NERDTree shows strange character instead of arrows
 set encoding=utf-8
+scriptencoding utf-8
 
 " Allow hidden buffers, don't limit to 1 file per window/split
 set hidden
