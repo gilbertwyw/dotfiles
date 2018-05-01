@@ -165,7 +165,6 @@ Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'junegunn/vim-emoji'
 Plug 'kannokanno/previm'
 Plug 'keith/investigate.vim'
-Plug 'kien/rainbow_parentheses.vim'
 Plug 'kshenoy/vim-signature'
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 Plug 'sbdchd/neoformat'
@@ -360,15 +359,6 @@ nnoremap <silent> <leader>pv :PrevimOpen<CR>
 " }}}
 " Plugin: quick-scope {{{
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-" }}}
-" Plugin: rainbow_parentheses.vim {{{
-augroup rainbow_parentheses.vim
-  autocmd!
-  autocmd VimEnter * RainbowParenthesesActivate
-  autocmd BufEnter * RainbowParenthesesLoadRound
-  autocmd BufEnter * RainbowParenthesesLoadSquare
-  autocmd BufEnter * RainbowParenthesesLoadBraces
-augroup END
 " }}}
 " Plugin: scss-syntax.vim {{{
 augroup scss-syntax.vim
