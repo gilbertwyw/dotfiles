@@ -496,6 +496,8 @@ augroup END
 " Plugin: vim-grepper {{{
 if executable('ag')
   nnoremap <leader>ag :Grepper -tool ag -highlight<cr>
+  " Search for the word under the cursor
+  nnoremap <Leader>* :Grepper -tool ag -cword -noprompt<CR>
 endif
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
