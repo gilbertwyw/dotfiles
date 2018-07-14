@@ -296,11 +296,14 @@ let g:fzf_files_options =
 nnoremap <silent> <C-p> :FZF --cycle<CR>
 " }}}
 " Plugin: fzf.vim {{{
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
 nnoremap <leader>C :Colors<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>ft :Filetypes<CR>
 nnoremap <leader>gf :GFiles<CR>
-nnoremap <leader>nm :Maps<CR>
 nnoremap <leader>s :Snippets<CR>
 nnoremap <leader>t :Tags<CR>
 " }}}
