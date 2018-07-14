@@ -268,8 +268,10 @@ let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 " https://github.com/w0rp/ale#5ix-how-can-i-navigate-between-errors-quickly
-nmap <silent> <leader>ap <Plug>(ale_previous_wrap)
-nmap <silent> <leader>an <Plug>(ale_next_wrap)
+nmap <silent> [W <Plug>(ale_first)
+nmap <silent> [w <Plug>(ale_previous_wrap)
+nmap <silent> ]w <Plug>(ale_next_wrap)
+nmap <silent> ]W <Plug>(ale_last)
 " }}}
 " Plugin: deoplete.nvim {{{
 " https://github.com/Shougo/deoplete.nvim#installation
