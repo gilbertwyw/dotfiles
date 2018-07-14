@@ -306,6 +306,12 @@ nnoremap <leader>ft :Filetypes<CR>
 nnoremap <leader>gf :GFiles<CR>
 nnoremap <leader>s :Snippets<CR>
 nnoremap <leader>t :Tags<CR>
+
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
 " }}}
 " Plugin: gundo.vim {{{
 nnoremap <leader>u :GundoToggle<CR>
