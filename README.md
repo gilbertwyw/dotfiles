@@ -64,11 +64,14 @@ ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
 
 ## Node.js
 
-- [n-install](https://github.com/mklement0/n-install)
+Recommend: [Using a dedicated OpenPGP keyring](https://github.com/asdf-vm/asdf-nodejs#using-a-dedicated-openpgp-keyring)
 
 ```sh
-# will prompt before continue
-curl -L http://git.io/n-install | bash
+ln -s ~/dotfiles/nodejs/default-npm-packages ~/.default-npm-packages
+
+asdf plugin-add nodejs
+asdf install nodejs <version>
+asdf global nodejs <version>
 ```
 
 ## Python
@@ -88,24 +91,13 @@ pip install markdown2ctags
 
 ## Ruby
 
-- [chruby](https://github.com/postmodern/chruby)
-- [ruby-install](https://github.com/postmodern/ruby-install)
-
-### RubyGems
-
-- [brigade/scss-lint · GitHub](https://github.com/brigade/scss-lint)
-- [mivok/markdownlint · GitHub](https://github.com/mivok/markdownlint)
-- [tmuxinator/tmuxinator · GitHub](https://github.com/tmuxinator/tmuxinator)
-
 ```sh
-brew install chruby ruby-install
-ruby-install ruby && chruby ruby
-
-# if 'auto-switching' feature is enabled
-echo "ruby-<version>" > ~/.ruby-version
-
+ln -s ~/dotfiles/ruby/default-gems ~/.default-gems
 ln -s ~/dotfiles/ruby/gemrc ~/.gemrc
-gem install mdl scss_lint tmuxinator
+
+asdf plugin-add ruby
+asdf install ruby <version>
+asdf global ruby <version>
 ```
 
 ## tmux

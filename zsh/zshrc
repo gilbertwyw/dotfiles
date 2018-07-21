@@ -18,9 +18,6 @@ zplug denysdovhan/spaceship-zsh-theme, use:spaceship.zsh, from:github, as:theme
 
 zplug "desyncr/auto-ls"
 
-# https://github.com/lukechilds/zsh-nvm#lazy-loading
-export NVM_LAZY_LOAD=true
-zplug "lukechilds/zsh-nvm"
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
 	printf "Install? [y/N]: "
@@ -43,10 +40,6 @@ path=(
 )
 
 typeset -U path
-
-# `brew info chruby`
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
 
 # `brew install direnv`, https://github.com/zimbatm/direnv#zsh
 eval "$(direnv hook zsh)"
@@ -72,3 +65,7 @@ test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_in
 if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi
 
 # zprof
+
+# https://github.com/asdf-vm/asdf#setup 
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
