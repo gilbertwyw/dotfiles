@@ -1,19 +1,19 @@
 alias a=alias
+alias b=brew
 # `brew tap jingweno/ccat && brew install ccat`
 alias c=ccat
-alias da='direnv allow'
 alias e=vim
 alias eip='curl ifconfig.me'
 alias i=ifconfig
 alias j=jekyll
 alias k=kill
+alias n=npm
 alias r=ruby
-alias rm=trash
 alias s=sass
 
 alias dotsize='du -hs .* | gsort -h'
 alias eh='sudo $EDITOR /etc/hosts'
-alias server='python -m SimpleHTTPServer'
+alias rm=trash
 alias vd='$EDITOR -d'
 alias wh=which
 
@@ -25,28 +25,9 @@ alias tat='tmux new-session -As $(basename $PWD | tr . -)'
 #########
 #  npm  #
 #########
-alias nn=npm
-alias nne='PATH="$(npm bin)":"$PATH"'
-alias nns='npm search'
 alias ngi='npm install -g'
 alias ngl='npm ls -g --depth=0'
 alias ngo='npm outdated -g'
-alias ngu='npm update -g'
-alias nis='npm install --save'
-alias nisd='npm install --save-dev'
-alias nh='npm home'
-alias nr='npm run'
-alias nrs='npm run-script'
-alias ns='npm start'
-alias nt='npm test'
-
-############
-#  Docker  #
-############
-alias dk=docker
-alias dm=docker-machine
-# think `fig`
-alias f=docker-compose
 
 # `brew install hub`
 eval "$(hub alias -s)"
@@ -55,7 +36,6 @@ alias hb='hub browse'
 #########
 #  OSX  #
 #########
-alias b=brew
 alias o=open
 alias pwdc='pwd | pbcopy'
 
