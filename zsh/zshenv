@@ -1,3 +1,5 @@
+# To make all entries of `locale` use "en_US.UTF-8"
+export LANG=en_US.UTF-8
 export LC_ALL=$LANG
 
 export EDITOR=`which vim`
