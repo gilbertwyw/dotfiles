@@ -1,5 +1,3 @@
-export PATH="/usr/local/bin:$PATH"
-
 export LC_ALL=$LANG
 
 export EDITOR=`which vim`
@@ -13,5 +11,3 @@ export FZF_DEFAULT_COMMAND='ag --skip-vcs-ignores -g ""'
 # `brew info coreutils`
 export MANPATH="/usr/local/coreutils/libexec/gnuman:$MANPATH"
 
-# https://golang.org/doc/code.html#GOPATH
-export PATH=$PATH:$(go env GOPATH)/bin

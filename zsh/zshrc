@@ -36,6 +36,8 @@ path=(
   /usr/local/sbin
   # `brew info coreutils`
   /usr/local/opt/coreutils/libexec/gnubin
+  # https://golang.org/doc/code.html#GOPATH
+  $(go env GOPATH)/bin
   $path
 )
 
