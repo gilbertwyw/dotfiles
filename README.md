@@ -62,6 +62,10 @@ ln -s ~/dotfiles/git/template ~/.git_template
 ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
 ```
 
+## asdf
+
+Follow the step for Zsh here: https://github.com/asdf-vm/asdf#setup
+
 ## Node.js
 
 Recommend: [Using a dedicated OpenPGP keyring](https://github.com/asdf-vm/asdf-nodejs#using-a-dedicated-openpgp-keyring)
@@ -90,6 +94,9 @@ asdf global python <version>
 
 # for vim "tagbar" plugin
 pip install markdown2ctags
+
+# optional; recreate shims for installed packages
+asdf reshim python <version>
 ```
 
 ## Ruby
