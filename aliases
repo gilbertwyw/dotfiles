@@ -1,5 +1,4 @@
 alias a=alias
-alias b=brew
 # `brew tap jingweno/ccat && brew install ccat`
 alias c=ccat
 alias e=vim
@@ -15,7 +14,7 @@ alias dotsize='du -hs .* | gsort -h'
 alias eh='sudo $EDITOR /etc/hosts'
 alias rm=trash
 alias vd='$EDITOR -d'
-alias wh=which
+alias wh='which -a'
 
 ##########
 #  Tmux  #
@@ -36,6 +35,7 @@ alias hb='hub browse'
 #########
 #  OSX  #
 #########
+alias b=brew
 alias o=open
 alias pwdc='pwd | pbcopy'
 
