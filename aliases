@@ -1,6 +1,6 @@
 alias a=alias
-# `brew tap jingweno/ccat && brew install ccat`
-alias c=ccat
+# `brew install bat`
+alias c=bat
 alias e=vim
 alias eip='curl ifconfig.me'
 alias i=ifconfig

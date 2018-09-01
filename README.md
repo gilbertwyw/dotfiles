@@ -14,7 +14,7 @@ brew install gnu-sed --with-default-names
 Regarding "Github API Rate limit exceeded":
 
 ```sh
-brew install ccat direnv hub trash
+brew install bat direnv hub trash
 
 echo "export HOMEBREW_GITHUB_API_TOKEN=<token>" > ~/.envrc
 ```
