@@ -207,6 +207,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'itchyny/landscape.vim'
 Plug 'junegunn/seoul256.vim'
+Plug 'lifepillar/vim-solarized8'
 Plug 'nanotech/jellybeans.vim'
 Plug 'romainl/Apprentice'
 Plug 'tomasr/molokai'
