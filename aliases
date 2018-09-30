@@ -10,6 +10,7 @@ alias n=npm
 alias r=ruby
 alias s=sass
 alias y=yarn
+alias u=unrar
 
 alias dotsize='du -hs .* | gsort -h'
 alias eh='sudo $EDITOR /etc/hosts'
