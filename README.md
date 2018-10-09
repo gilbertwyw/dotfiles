@@ -68,14 +68,11 @@ Follow the step for Zsh here: https://github.com/asdf-vm/asdf#setup
 
 ## Node.js
 
-Recommend: [Using a dedicated OpenPGP keyring](https://github.com/asdf-vm/asdf-nodejs#using-a-dedicated-openpgp-keyring)
+- [n-install](https://github.com/mklement0/n-install)
 
 ```sh
-ln -s ~/dotfiles/nodejs/default-npm-packages ~/.default-npm-packages
-
-asdf plugin-add nodejs
-asdf install nodejs <version>
-asdf global nodejs <version>
+# will prompt before continue
+curl -L http://git.io/n-install | bash
 ```
 
 ## Python
@@ -98,13 +95,24 @@ asdf reshim python <version>
 
 ## Ruby
 
-```sh
-ln -s ~/dotfiles/ruby/default-gems ~/.default-gems
-ln -s ~/dotfiles/ruby/gemrc ~/.gemrc
+- [chruby](https://github.com/postmodern/chruby)
+- [ruby-install](https://github.com/postmodern/ruby-install)
 
-asdf plugin-add ruby
-asdf install ruby <version>
-asdf global ruby <version>
+### RubyGems
+
+- [brigade/scss-lint · GitHub](https://github.com/brigade/scss-lint)
+- [mivok/markdownlint · GitHub](https://github.com/mivok/markdownlint)
+- [tmuxinator/tmuxinator · GitHub](https://github.com/tmuxinator/tmuxinator)
+
+```sh
+brew install chruby ruby-install
+ruby-install ruby && chruby ruby
+
+# if 'auto-switching' feature is enabled
+echo "ruby-<version>" > ~/.ruby-version
+
+ln -s ~/dotfiles/ruby/gemrc ~/.gemrc
+gem install mdl scss_lint tmuxinator
 ```
 
 ## tmux

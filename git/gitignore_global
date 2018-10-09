@@ -61,5 +61,3 @@ Session.vim
 .ctags
 .notags
 tags*
-# asdf
-.tool-versions
