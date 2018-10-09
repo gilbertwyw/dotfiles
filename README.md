@@ -73,7 +73,6 @@ Recommend: [Using a dedicated OpenPGP keyring](https://github.com/asdf-vm/asdf-n
 ```sh
 ln -s ~/dotfiles/nodejs/default-npm-packages ~/.default-npm-packages
 
-# https://github.com/asdf-vm/asdf-nodejs
 asdf plugin-add nodejs
 asdf install nodejs <version>
 asdf global nodejs <version>
@@ -87,10 +86,8 @@ ln -s ~/dotfiles/python/pip.conf ~/.pip/pip.conf
 ```
 
 ```sh
-# https://github.com/tuvistavie/asdf-python
-asdf plugin-add python
-asdf install python <version>
-asdf global python <version>
+brew install pyenv
+pyenv install <version>
 
 # for vim "tagbar" plugin
 pip install markdown2ctags
@@ -105,7 +102,6 @@ asdf reshim python <version>
 ln -s ~/dotfiles/ruby/default-gems ~/.default-gems
 ln -s ~/dotfiles/ruby/gemrc ~/.gemrc
 
-# https://github.com/asdf-vm/asdf-ruby
 asdf plugin-add ruby
 asdf install ruby <version>
 asdf global ruby <version>
