@@ -1,0 +1,16 @@
+snippet lex "Lambda exports"
+module.exports.$1 = $0
+endsnippet
+
+snippet lfn "AWS Lambda function"
+function (event, context, callback) {
+  $0
+}
+endsnippet
+
+snippet lafn "AWS Lambda function (arrow)"
+(event, context, callback) => {
+  $0
+}
+endsnippet
+
