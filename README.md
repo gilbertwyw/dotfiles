@@ -64,13 +64,14 @@ ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
 
 ## Node.js
 
-- [n-install](https://github.com/mklement0/n-install)
+- [fnm](https://github.com/Schniz/fnm`)
 
 ```sh
-# will prompt before continue
-curl -L http://git.io/n-install | bash
-```
+curl https://raw.githubusercontent.com/Schniz/fnm/master/.ci/install.sh | bash -s -- --skip-shell
 
+# ~/.zshrc
+eval "`fnm env --multi --use-on-cd`"
+```
 ## Python
 
 ```sh
