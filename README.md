@@ -62,10 +62,6 @@ ln -s ~/dotfiles/git/template ~/.git_template
 ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
 ```
 
-## asdf
-
-Follow the step for Zsh here: https://github.com/asdf-vm/asdf#setup
-
 ## Node.js
 
 - [n-install](https://github.com/mklement0/n-install)
@@ -85,9 +81,6 @@ ln -s ~/dotfiles/python/pip.conf ~/.pip/pip.conf
 ```sh
 # for vim "tagbar" plugin
 pip install markdown2ctags
-
-# optional; recreate shims for installed packages
-asdf reshim python <version>
 ```
 
 ## Ruby
