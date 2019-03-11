@@ -36,28 +36,35 @@
 ehthumbs.db
 Thumbs.db
 
-# editor #
-##########
-Session.vim
-# https://github.com/keith/investigate.vim#project-specific-settings
-.invrc
-# esformatter, https://github.com/millermedeiros/esformatter/blob/master/doc/config.md#configuration
-.esformatter
-*.sublime-project
-*.sublime-workspace
+#  Vim  #
+#########
 *.swp
 .lvimrc
 .projections.json
+Session.vim
+# https://github.com/keith/investigate.vim#project-specific-settings
+.invrc
+
+#  node.js  #
+#############
+.node-version
+.nvmrc
+
+#  https://github.com/ternjs/tern  #
+####################################
+.tern-port
+.tern-project
+
+#  Ruby  #
+##########
+.rbenv-gemsets
+.ruby-version
 
 # others #
 ##########
 .envrc
-.tern-port
-.tern-project
 .agignore
 .ignore
-.rbenv-gemsets
-.ruby-version
 .ctags
 .notags
 tags*
