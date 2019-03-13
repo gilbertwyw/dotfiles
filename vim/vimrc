@@ -88,8 +88,6 @@ nnoremap ` '
 nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>sv :so $MYVIMRC<CR>
 
-nnoremap <leader>w :w<cr>
-
 " Resize window
 nnoremap <Left> :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
