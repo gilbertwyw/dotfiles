@@ -37,6 +37,9 @@ endif
 " flashing instead of beeping
 set visualbell
 
+" instead of manually yank to '*' register
+set clipboard+=unnamed
+
 let mapleader = "\<Space>"
 
 " True color {{{
@@ -119,8 +122,6 @@ endif
 " http://vim-jp.org/blog/2015/06/30/visual-ctrl-a-ctrl-x.html
 vnoremap <c-a> <c-a>gv
 vnoremap <c-x> <c-x>gv
-
-vnoremap Y "*y
 
 " Visual shifting (does not exit Visual mode)
 vnoremap > >gv
