@@ -227,6 +227,7 @@ Plug 'majutsushi/tagbar'
 " Git {{{
 Plug 'airblade/vim-gitgutter'
 Plug 'low-ghost/nerdtree-fugitive'
+Plug 'rhysd/git-messenger.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-rhubarb'
