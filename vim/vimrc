@@ -40,6 +40,9 @@ set visualbell
 " instead of manually yank to '*' register
 set clipboard+=unnamed
 
+set undodir=~/.vim/undodir
+set undofile
+
 let mapleader = "\<Space>"
 
 " True color {{{
@@ -616,16 +619,6 @@ augroup xml " {{{2
   let g:xml_syntax_folding=1
 augroup END " }}} 2
 " }}}1
-" Use persistent history {{{
-let s:undo_dir = $TMPDIR . '.vim-undo-dir'
-
-if !isdirectory(s:undo_dir)
-  call mkdir(s:undo_dir, '', 0700)
-endif
-
-let &undodir = s:undo_dir
-set undofile
-" }}}
 " Neovim-specific {{{
 if has('nvim')
   " save screen estate
