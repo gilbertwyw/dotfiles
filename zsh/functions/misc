@@ -5,7 +5,7 @@ nodeball() {
 }
 
 # copy from: https://github.com/tpope/vim-obsession/issues/11#issue-19117942
-function vim() {
+function v() {
   if test $# -gt 0; then
     $EDITOR "$@"
   elif test -f Session.vim; then
