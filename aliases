@@ -38,10 +38,10 @@ alias hb='hub browse'
 #########
 alias b=brew
 alias o=open
-alias pwdc='pwd | pbcopy'
 
 ####################
 #  Gloabl Aliases  #
 ####################
 alias -g FF='| fzf'
 alias -g L='| less'
+alias -g CC='| pbcopy'
