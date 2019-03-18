@@ -275,10 +275,12 @@ Plug 'wellle/tmux-complete.vim'
 call plug#end()
 " }}}
 " Plugin: ale {{{
+" https://github.com/w0rp/ale#5ii-how-can-i-keep-the-sign-gutter-open
+let g:ale_sign_column_always   = 1
 " https://github.com/w0rp/ale#5vii-how-can-i-change-the-format-for-echo-messages
-let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_error_str   = 'E'
 let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_echo_msg_format      = '[%linter%] %s [%severity%]'
 " https://github.com/w0rp/ale#5ix-how-can-i-navigate-between-errors-quickly
 nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous_wrap)
