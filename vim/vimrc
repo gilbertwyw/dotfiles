@@ -253,7 +253,6 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " JavaScript {{{
 Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
 Plug 'marijnh/tern_for_vim', { 'do': 'npm i' }
-Plug 'moll/vim-node'
 Plug 'mvolkmann/vim-js-arrow-function', { 'for': 'javascript' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 " requires 'pangloss/vim-javascript'
