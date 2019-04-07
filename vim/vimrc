@@ -305,7 +305,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " Plugin: fzf {{{
 let g:fzf_files_options =
   \ '--preview "(highlight -O ansi {} || cat {}) 2> /dev/null | head -'.&lines.'"'
-nnoremap <silent> <C-p> :FZF --cycle<CR>
+nnoremap <silent> <C-p> :Files<CR>
 " }}}
 " Plugin: fzf.vim {{{
 nmap <leader><tab> <plug>(fzf-maps-n)
