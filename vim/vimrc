@@ -211,15 +211,15 @@ Plug 'haya14busa/vim-operator-flashy'
 " Color schemes {{{
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'ajh17/Spacegray.vim'
+Plug 'ayu-theme/ayu-vim'
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'cocopon/iceberg.vim'
-Plug 'dracula/vim', { 'as': 'dracula-vim' }
-Plug 'itchyny/landscape.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'haishanh/night-owl.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'mhartington/oceanic-next'
 Plug 'nanotech/jellybeans.vim'
-Plug 'romainl/Apprentice'
 Plug 'tomasr/molokai'
 " }}}
 " Ctags {{{
