@@ -2,7 +2,7 @@
 export LANG=en_US.UTF-8
 export LC_ALL=$LANG
 
-export EDITOR=`which nvim`
+export EDITOR=nvim
 
 # set 'ag' as the default source for 'fzf'
 export FZF_DEFAULT_COMMAND='ag --skip-vcs-ignores -g ""'
