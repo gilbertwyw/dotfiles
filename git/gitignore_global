@@ -50,11 +50,6 @@ Session.vim
 .node-version
 .nvmrc
 
-#  https://github.com/ternjs/tern  #
-####################################
-.tern-port
-.tern-project
-
 #  Ruby  #
 ##########
 .rbenv-gemsets

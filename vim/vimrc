@@ -252,7 +252,6 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " }}}
 " JavaScript {{{
 Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
-Plug 'marijnh/tern_for_vim', { 'do': 'npm i' }
 Plug 'mvolkmann/vim-js-arrow-function', { 'for': 'javascript' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 " requires 'pangloss/vim-javascript'
@@ -414,11 +413,6 @@ let g:tagbar_type_markdown = {
     \ },
     \ 'sort': 0,
 \ }
-" }}}
-" Plugin: tern_for_vim {{{
-let maplocalleader=','
-let g:tern_map_keys=1
-let g:tern_show_argument_hints='on_hold'
 " }}}
 " Plugin: tmux-complete.vim {{{
 " https://github.com/wellle/tmux-complete.vim#settings
