@@ -79,10 +79,6 @@ nnoremap gV `[V`]
 nnoremap j gj
 nnoremap k gk
 
-" Toggle fold at current position
-" breaks <C-i>?
-nnoremap <Tab> za
-
 " swap the jump keys
 nnoremap ' `
 nnoremap ` '
