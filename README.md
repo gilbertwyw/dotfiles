@@ -124,23 +124,26 @@ tmuxinator new [arbitrary name]
 
 ## Vim
 
+- [vim-plug](https://github.com/junegunn/vim-plug#vim)
+
 ```sh
 # for 'deoplete.nvim'
 brew install vim --with-lua --with-python3
-pip3 install neovim
 
-ln -s ~/dotfiles/vim/vimrc ~/.vimrc
-ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
+ln -s ~/dotfiles/vim ~/.vim
 
-ln -s ~/dotfiles/vim/git-commit-editor ~/.git-commit-editor
+vim +PlugInstall +qall
 ```
 
-Then run `vim +PlugInstall +qall` in Vim
+### Neovim
 
-### Neovim 
+- [vim-plug](https://github.com/junegunn/vim-plug#neovim)
 
-- [Homebrew version](https://github.com/neovim/homebrew-neovim/blob/master/README.md)
-- [vim-plug setup](https://github.com/junegunn/vim-plug#neovim)
+```sh
+pip[3] install [--user] pynvim
+npm i -g neovim
+gem install neovim
+```
 
 To use the same configuration as Vim:
 
@@ -149,9 +152,9 @@ To use the same configuration as Vim:
 #'.config/' may not exist, `mkdir ~/.config`
 ln -s ~/.vim ~/.config/nvim
 
-ln -s ~/.vimrc ~/.config/nvim/init.vim
+ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
 
-pip install [--user] neovim
+nvim +PlugInstall +UpdateRemotePlugins +qa
 ```
 
 ## Miscs.
