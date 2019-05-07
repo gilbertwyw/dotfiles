@@ -165,7 +165,6 @@ Plug 'kshenoy/vim-signature'
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 Plug 'othree/html5.vim'
-Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdtree'
 Plug 'sjl/gundo.vim'
 Plug 'terryma/vim-expand-region'
@@ -351,16 +350,6 @@ let g:indentLine_conceallevel=0
 if s:darwin
   let g:investigate_use_dash=1
 endif
-" }}}
-" Plugin: neoformat {{{
-augroup neoformat
-  autocmd!
-  " https://github.com/sbdchd/neoformat#supported-filetypes
-  " https://github.com/sbdchd/neoformat#managing-undo-history
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
-nnoremap <silent> <leader>gq :Neoformat<CR>
-vnoremap <silent> <leader>gq :Neoformat<CR>
 " }}}
 " Plugin: nerdtree {{{
 augroup nerdtree
