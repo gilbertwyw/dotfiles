@@ -147,6 +147,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'Valloric/MatchTagAlways'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-rooter'
+Plug 'andymass/vim-matchup'
 Plug 'bling/vim-airline'
 Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
 Plug 'editorconfig/editorconfig-vim'
