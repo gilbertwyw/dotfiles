@@ -355,7 +355,9 @@ endif
 " Plugin: nerdtree {{{
 augroup nerdtree
   autocmd!
-  let g:NERDTreeHijackNetrw = 0
+  let NERDTreeAutoDeleteBuffer = 1
+  let NERDTreeMinimalUI        = 1
+  let g:NERDTreeHijackNetrw    = 0
   map <silent> <leader>nt :NERDTreeToggle<CR> :NERDTreeMirror<CR>
   map <silent> <leader>nf :NERDTreeFind<CR>
   " open a NERDTree automatically when vim starts up if no files were specified
