@@ -3,12 +3,7 @@ alias a=alias
 alias c=bat
 alias eip='curl ifconfig.me'
 alias i=ifconfig
-alias j=jekyll
 alias k=kill
-alias n=npm
-alias r=ruby
-alias s=sass
-alias y=yarn
 alias u=unrar
 
 alias dotsize='du -hs .* | gsort -h'
