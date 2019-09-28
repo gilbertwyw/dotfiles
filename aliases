@@ -28,7 +28,7 @@ alias ngi='npm install -g'
 alias ngl='npm ls -g --depth=0'
 alias ngo='npm outdated -g'
 
-# `brew install hub`
+# brew install hub
 eval "$(hub alias -s)"
 alias hb='hub browse'
 
