@@ -3,7 +3,6 @@
 ## Prerequisites
 
 - [Homebrew](http://brew.sh/)
-- [Homebrew Cask](https://caskroom.github.io/)
 
 To prevent incompatibility issue caused by Mac's own version of `sed`:
 
