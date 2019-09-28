@@ -61,17 +61,6 @@ ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
 ln -s ~/dotfiles/git/template ~/.git_template
 ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
 ```
-
-## Node.js
-
-- [fnm](https://github.com/Schniz/fnm`)
-
-```sh
-curl https://raw.githubusercontent.com/Schniz/fnm/master/.ci/install.sh | bash -s -- --skip-shell
-
-# ~/.zshrc
-eval "`fnm env --multi --use-on-cd`"
-```
 ## Python
 
 ```sh
