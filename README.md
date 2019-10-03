@@ -168,6 +168,12 @@ cd dotfiles/
 brew brewdle [--dry-run]
 ```
 
+### [kitty](https://sw.kovidgoyal.net/kitty/index.html)
+
+```sh
+ln -s ~/dotfiles/config/kitty ~/.config/kitty
+```
+
 ### Terminal themes
 
 - [chriskempson/tomorrow-theme · GitHub](https://github.com/chriskempson/tomorrow-theme)
