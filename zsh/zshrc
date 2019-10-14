@@ -45,8 +45,10 @@ path=(
 typeset -U path
 
 # `brew info chruby`
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
+if [[ -f /usr/local/opt/chruby/share/chruby/chruby.sh && -f /usr/local/opt/chruby/share/chruby/auto.sh ]]; then
+  source /usr/local/opt/chruby/share/chruby/chruby.sh
+  source /usr/local/opt/chruby/share/chruby/auto.sh
+fi
 
 # `brew install direnv`, https://github.com/zimbatm/direnv#zsh
 eval "$(direnv hook zsh)"
