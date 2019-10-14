@@ -145,6 +145,8 @@ pip install [--user] neovim
 
 ## Miscs.
 
+- [kitty](https://sw.kovidgoyal.net/kitty/index.html)
+- [pgcli](https://www.pgcli.com/)
 - [quick-look-plugins](https://github.com/sindresorhus/quick-look-plugins#install-all)
 
 ```sh
@@ -166,12 +168,6 @@ ln -s ~/dotfiles/editorconfig ~/.editorconfig
 brew tap homebrew/brewdler
 cd dotfiles/
 brew brewdle [--dry-run]
-```
-
-### [kitty](https://sw.kovidgoyal.net/kitty/index.html)
-
-```sh
-ln -s ~/dotfiles/config/kitty ~/.config/kitty
 ```
 
 ### Terminal themes
