@@ -28,14 +28,15 @@ NB: Backup existing rc files before proceeding
 
 ## Zsh
 
-- [zplug](https://github.com/zplug/zplug)
+- [Antibody](https://getantibody.github.io/)
 
 ```sh
+brew install zsh antibody
+
+ln -s ~/dotfiles/zsh/zsh_plugins.txt ~/.zsh_plugins.txt
 ln -s ~/dotfiles/zsh/zshenv ~/.zshenv
 ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
 ln -s ~/dotfiles/zsh ~/.zsh
-
-brew install zsh zplug
 
 # require admin rights
 echo '/usr/local/bin/zsh' >> /etc/shells
