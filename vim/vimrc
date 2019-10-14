@@ -151,7 +151,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-rooter'
 Plug 'andymass/vim-matchup'
 Plug 'bling/vim-airline'
-Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'embear/vim-localvimrc'
 Plug 'haya14busa/incsearch.vim'
@@ -238,12 +237,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss'] }
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'hail2u/vim-css3-syntax'
-" }}}
-" Elixir {{{
-Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
-" }}}
-" Elm {{{
-Plug 'ElmCast/elm-vim', { 'for': ['elm'] }
 " }}}
 " Go {{{
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
