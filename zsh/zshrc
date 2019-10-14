@@ -52,7 +52,7 @@ source /usr/local/opt/chruby/share/chruby/auto.sh
 eval "$(direnv hook zsh)"
 
 # `brew info z`
-. `brew --prefix`/etc/profile.d/z.sh
+. /usr/local/etc/profile.d/z.sh
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
