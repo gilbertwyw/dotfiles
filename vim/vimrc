@@ -1,5 +1,3 @@
-" vim:fdm=marker
-
 let s:darwin = has('mac')
 
 set nocompatible
@@ -164,11 +162,12 @@ Plug 'junegunn/vim-emoji'
 Plug 'kannokanno/previm'
 Plug 'keith/investigate.vim'
 Plug 'kshenoy/vim-signature'
-Plug 'machakann/vim-swap'
+" Plug 'machakann/vim-swap'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 Plug 'othree/html5.vim'
+" Plug 'Shougo/echodoc.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-expand-region'
 Plug 'tommcdo/vim-exchange'
@@ -240,6 +239,8 @@ Plug 'hail2u/vim-css3-syntax'
 " }}}
 " Go {{{
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" https://github.com/deoplete-plugins/deoplete-go#4-install-plugin-and-build-ujson-module
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 " }}}
 " JavaScript {{{
 Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
@@ -362,17 +363,8 @@ let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 " }}}
-" Plugin: previm {{{
-nnoremap <silent> <leader>pv :PrevimOpen<CR>
-" }}}
 " Plugin: quick-scope {{{
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-" }}}
-" Plugin: scss-syntax.vim {{{
-augroup scss-syntax.vim
-  autocmd!
-  autocmd FileType scss setlocal iskeyword+=-
-augroup END
 " }}}
 " Plugin: tagbar {{{
 nmap <F8> :TagbarToggle<CR>
@@ -423,15 +415,7 @@ map gz* <Plug>(asterisk-gz*)
 map z#  <Plug>(asterisk-z#)
 map gz# <Plug>(asterisk-gz#)
 " }}}
-" Plugin: vim-css3-syntax {{{
-augroup vim-css3-syntax
-  autocmd!
-  " Plugin: vim-css3-syntax
-  autocmd FileType css setlocal iskeyword+=-
-augroup END
-" }}}
 " Plugin: vim-dispatch {{{
-autocmd FileType html let b:dispatch = '!open %:p'
 nnoremap <F9> :Dispatch<CR>
 " }}}
 " Plugin: vim-easy-align {{{
@@ -458,43 +442,6 @@ vmap <C-v> <Plug>(expand_region_shrink)
 nmap <leader>gb :Gblame<cr>
 nmap <leader>gs :Gstatus<cr>
 " }}}
-" Plugin: vim-go {{{
-" instead of invoking :GoImports manually
-" let g:go_fmt_command = "goimports"
-" :GoInfo
-let g:go_auto_type_info = 1
-" :GoSameIds
-let g:go_auto_sameids = 1
-
-" run :GoBuild or :GoTestCompile based on the go file
-function! s:build_go_files()
-  let l:file = expand('%')
-  if l:file =~# '^\f\+_test\.go$'
-    call go#test#Test(0, 1)
-  elseif l:file =~# '^\f\+\.go$'
-    call go#cmd#Build(0)
-  endif
-endfunction
-
-augroup go
-  autocmd!
-  autocmd FileType go setlocal updatetime=800
-  " :GoBuild
-  " autocmd FileType go nmap <leader>gob <Plug>(go-build)
-  autocmd FileType go nmap <leader>gob :<C-u>call <SID>build_go_files()<CR>
-  autocmd FileType go nmap <leader>gor <Plug>(go-run)
-  autocmd FileType go nmap <leader>got <Plug>(go-test)
-  " :GoCoverageToggle
-  autocmd FileType go nmap <Leader>goc <Plug>(go-coverage-toggle)
-  " opens the alternate file
-  autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
-  autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
-  autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
-  autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
-  " :GoInfo
-  " autocmd FileType go nmap <Leader>goi <Plug>(go-info)
-augroup END
-" }}}
 " Plugin: vim-grepper {{{
 if executable('ag')
   nnoremap <leader>ag :Grepper -tool ag -highlight<cr>
@@ -503,22 +450,6 @@ if executable('ag')
 endif
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
-" }}}
-" Plugin: vim-javascript {{{
-let g:javascript_conceal_function   = 'ƒ'
-let g:javascript_conceal_null       = 'ø'
-let g:javascript_conceal_this       = '@'
-let g:javascript_conceal_return     = '⇚'
-let g:javascript_conceal_undefined  = '¿'
-let g:javascript_conceal_NaN        = 'ℕ'
-let g:javascript_conceal_prototype  = '¶'
-let g:javascript_conceal_static     = '•'
-let g:javascript_conceal_super      = 'Ω'
-" }}}
-" Plugin: vim-jsdoc {{{
-let g:jsdoc_allow_input_prompt = 1
-" reserve <C-l> for the mapping used by 'vim-tmux-navigator'
-let g:jsdoc_default_mapping    = 0
 " }}}
 " Plugin: vim-localvimrc {{{
 " https://github.com/embear/vim-localvimrc#the-glocalvimrc_persistent-setting
@@ -552,45 +483,10 @@ map <Leader>vl :VimuxRunLastCommand<CR>
 map <Leader>vi :VimuxInspectRunner<CR>
 " }}}
 " Autocommands {{{1
-augroup ag " {{{2
-  autocmd!
-  autocmd BufNewFile,BufReadPost .agignore setlocal commentstring=#\ %s
-augroup END " }}} 2
 augroup autoSaveAndRead " {{{2
   autocmd!
   autocmd TextChanged,InsertLeave,FocusLost * silent! wall
   autocmd CursorHold * silent! checktime
-augroup END " }}} 2
-augroup docker " {{{2
-  autocmd!
-  " reference: https://github.com/docker/docker/blob/master/contrib/syntax/vim/ftdetect/dockerfile.vim
-  autocmd BufNewFile,BufRead [Dd]ockerfile,Dockerfile.* set filetype=dockerfile
-augroup END " }}}2
-augroup git " {{{2
-  autocmd!
-  " commit message
-  autocmd FileType gitcommit setlocal spell textwidth=72
-augroup END " }}}2
-augroup javascript " {{{2
-  autocmd!
-  " for '/tpope/vim-commentary' on JSX
-  autocmd FileType javascript.jsx setlocal commentstring={/*\ %s\ */}
-augroup END " }}} 2
-augroup json " {{{2
-  autocmd!
-  autocmd BufRead,BufNewFile .bowerrc setlocal ft=json
-augroup END " }}} 2
-augroup markdown " {{{2
-  autocmd!
-  " force *.md as MarkDown, https://github.com/tpope/vim-markdown
-  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-  " highlight markdown fenced code syntax
-  let g:markdown_fenced_languages = ['html', 'json', 'python', 'scss', 'sh', 'sql', 'yaml']
-augroup END " }}}2
-augroup xml " {{{2
-  autocmd!
-  autocmd FileType xml setlocal foldmethod=syntax
-  let g:xml_syntax_folding=1
 augroup END " }}} 2
 " }}}1
 " Neovim-specific {{{
