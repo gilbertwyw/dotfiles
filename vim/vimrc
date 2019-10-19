@@ -312,7 +312,8 @@ nnoremap <leader>bt      :BTags<CR>
 nnoremap <leader>cl      :Colors<CR>
 nnoremap <leader>cm      :Commands<CR>
 nnoremap <leader>ft      :Filetypes<CR>
-nnoremap <leader>gf      :GFiles<CR>
+nnoremap <leader>gf      :GFiles?<CR>
+nnoremap <leader>gF      :GFiles<CR>
 nnoremap <leader>m       :Marks<CR>
 nnoremap <leader>sp      :Snippets<CR>
 nnoremap <leader>tg      :Tags<CR>
