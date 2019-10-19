@@ -438,6 +438,7 @@ vmap <C-v> <Plug>(expand_region_shrink)
 " }}}
 " Plugin: vim-fugitive {{{
 nmap <leader>gb :Gblame<cr>
+nmap <leader>gl :Glog %<cr>
 nmap <leader>gs :Gstatus<cr>
 " }}}
 " Plugin: vim-grepper {{{
