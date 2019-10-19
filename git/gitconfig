@@ -17,13 +17,9 @@
 [help]
 	autocorrect = 1
 [alias]
-  cr = "!f() { git push origin @:refs/for/${1-master}; }; f"
   ec = config --global -e
-  nb = "!f() { git checkout -t origin/${2-master} -b ${1}; }; f"
   # require `git init` in repo
   ctags = !.git/hooks/ctags
-  # require `gxargs`
-  bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | gxargs -r git branch -d; }; f"
   # git flow
   ffs = "!f() { git flow feature start $1; }; f"
 [filter "media"]
