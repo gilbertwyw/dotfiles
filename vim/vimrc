@@ -47,7 +47,8 @@ if has('persistent_undo')
   set undofile
 endif
 
-let mapleader = "\<Space>"
+let mapleader      = "\<Space>"
+let maplocalleader = ','
 
 " True color {{{
 " : CTRL-v + ESC

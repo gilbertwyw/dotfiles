@@ -4,4 +4,4 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 let g:markdown_fenced_languages = ['html', 'json', 'python', 'scss', 'sh', 'sql', 'yaml']
 
 " https://github.com/previm/previm 
-nnoremap <silent> <leader>pv :PrevimOpen<CR>
+nnoremap <silent> <localleader>p :PrevimOpen<CR>
