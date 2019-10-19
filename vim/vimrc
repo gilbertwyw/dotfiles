@@ -38,8 +38,12 @@ set visualbell
 " instead of manually yank to '*' register
 set clipboard+=unnamed
 
-if has("persistent_undo")
-  set undodir=~/.vim/undodir
+if has('persistent_undo')
+  let s:undoDir = $HOME . '/.vim/undodir'
+  if !isdirectory(s:undoDir)
+    call mkdir(s:undoDir, '', 0700)
+  endif
+  let &undodir=s:undoDir
   set undofile
 endif
 
