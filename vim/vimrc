@@ -305,17 +305,18 @@ nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 
-nnoremap <leader>bf :Buffers<CR>
-nnoremap <leader>bc :BCommits<CR>
-nnoremap <leader>bl :BLines<CR>
-nnoremap <leader>bt :BTags<CR>
-nnoremap <leader>cl :Colors<CR>
-nnoremap <leader>cm :Commands<CR>
-nnoremap <leader>ft :Filetypes<CR>
-nnoremap <leader>gf :GFiles<CR>
-nnoremap <leader>m  :Marks<CR>
-nnoremap <leader>sp :Snippets<CR>
-nnoremap <leader>tg :Tags<CR>
+nnoremap <leader>bf      :Buffers<CR>
+nnoremap <leader>bc      :BCommits<CR>
+nnoremap <leader>bl      :BLines<CR>
+nnoremap <leader>bt      :BTags<CR>
+nnoremap <leader>cl      :Colors<CR>
+nnoremap <leader>cm      :Commands<CR>
+nnoremap <leader>ft      :Filetypes<CR>
+nnoremap <leader>gf      :GFiles<CR>
+nnoremap <leader>m       :Marks<CR>
+nnoremap <leader>sp      :Snippets<CR>
+nnoremap <leader>tg      :Tags<CR>
+nnoremap <localleader>ht :Helptags<CR>
 
 " Insert mode completion
 imap <c-x><c-k> <plug>(fzf-complete-word)
