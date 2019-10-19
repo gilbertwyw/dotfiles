@@ -168,6 +168,7 @@ Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 Plug 'othree/html5.vim'
+Plug 'rhysd/clever-f.vim'
 " Plug 'Shougo/echodoc.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-expand-region'
@@ -184,7 +185,6 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tyru/open-browser.vim'
-Plug 'unblevable/quick-scope'
 Plug 'wellle/targets.vim'
 Plug 'w0rp/ale'
 " deoplete.nvim {{{
@@ -364,9 +364,6 @@ augroup END
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
-" }}}
-" Plugin: quick-scope {{{
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 " }}}
 " Plugin: tagbar {{{
 nmap <F8> :TagbarToggle<CR>
