@@ -104,10 +104,6 @@ noremap <silent> <F4> :let @+=expand("%:p")<CR>
 " add filetype
 nnoremap gaf :set ft+=.
 
-" search will center on the line it's found in.
-nnoremap n nzzzv
-nnoremap N Nzzzv
-
 nnoremap <silent> <leader>lo :lopen<CR>
 
 if s:darwin
@@ -327,8 +323,8 @@ map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 " turns 'hlsearch' off automatically after searching-related motions
 let g:incsearch#auto_nohlsearch = 1
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
+map n  <Plug>(incsearch-nohl-n)zzzv
+map N  <Plug>(incsearch-nohl-N)zzzv
 map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
