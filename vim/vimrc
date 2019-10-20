@@ -316,8 +316,8 @@ nnoremap <leader>gf      :GFiles?<CR>
 nnoremap <leader>gF      :GFiles<CR>
 nnoremap <leader>m       :Marks<CR>
 nnoremap <leader>sp      :Snippets<CR>
-nnoremap <leader>tg      :Tags<CR>
 nnoremap <localleader>ht :Helptags<CR>
+nnoremap <localleader>t  :Tags<CR>
 
 " Insert mode completion
 imap <c-x><c-k> <plug>(fzf-complete-word)
