@@ -319,6 +319,9 @@ nnoremap <leader>sp      :Snippets<CR>
 nnoremap <localleader>ht :Helptags<CR>
 nnoremap <localleader>t  :Tags<CR>
 
+" files under same directory
+nnoremap <silent> <Leader>. :Files <C-r>=expand("%:h")<CR>/<CR>
+
 " Insert mode completion
 imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-f> <plug>(fzf-complete-path)
