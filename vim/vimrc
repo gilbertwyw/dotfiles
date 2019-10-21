@@ -81,8 +81,8 @@ imap ;u <Plug>UpCase
 nnoremap gV `[V`]
 
 " move vertically by visual line
-nnoremap j gj
-nnoremap k gk
+nnoremap <expr> j v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj'
+nnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
 
 " swap the jump keys
 nnoremap ' `
