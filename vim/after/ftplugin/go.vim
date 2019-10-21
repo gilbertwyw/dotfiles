@@ -1,10 +1,6 @@
 " writes the content of the file automatically if you call :make
 set autowrite
 
-map <C-n> :cnext<CR>
-map <C-m> :cprevious<CR>
-nnoremap <leader>a :cclose<CR>
-
 " vim-go {{{
 " :GoSameIds, identifier highlighting
 let g:go_auto_sameids        = 1
