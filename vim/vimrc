@@ -164,7 +164,7 @@ Plug 'junegunn/vim-emoji'
 Plug 'kannokanno/previm'
 Plug 'keith/investigate.vim'
 Plug 'kshenoy/vim-signature'
-" Plug 'machakann/vim-swap'
+Plug 'machakann/vim-swap'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
@@ -470,6 +470,14 @@ nnoremap [" :<C-U>call signature#mark#Goto("prev", "spot", "global")<CR>
 " }}}
 " Plugin: vim-slime {{{
 let g:slime_target = 'tmux'
+" }}}
+" Plugin: vim-swap {{{
+let g:swap_no_default_key_mappings = 1
+
+nmap g< <Plug>(swap-prev)
+nmap g> <Plug>(swap-next)
+nmap <localleader>gs <Plug>(swap-interactive)
+xmap <localleader>gs <Plug>(swap-interactive)
 " }}}
 " Plugin: vim-test {{{
 nmap <silent> <leader>tn :TestNearest<CR>
