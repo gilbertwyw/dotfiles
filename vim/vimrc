@@ -199,8 +199,7 @@ endif
 " }}}
 " fzf.vim {{{
 " Use installed 'fzf' from Homebrew
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 " }}}
 " vim-operator-flashy {{{
 Plug 'kana/vim-operator-user'
