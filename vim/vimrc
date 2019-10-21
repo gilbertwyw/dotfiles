@@ -217,7 +217,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'mhartington/oceanic-next'
 Plug 'nanotech/jellybeans.vim'
-Plug 'tomasr/molokai'
+Plug 'rakr/vim-one'
 " }}}
 " Ctags {{{
 Plug 'ludovicchabant/vim-gutentags'
