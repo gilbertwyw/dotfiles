@@ -5,8 +5,8 @@ set autowrite
 " :GoSameIds, identifier highlighting
 let g:go_auto_sameids        = 1
 
-" :GoInfo, <Plug>(go-info)
-let g:go_auto_type_info      = 1
+" not use preview window
+let g:go_doc_popup_window    = 1
 
 " instead of invoking :GoImports manually
 " might be slow on very large codebases
