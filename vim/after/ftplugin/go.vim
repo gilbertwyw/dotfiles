@@ -16,11 +16,11 @@ let g:go_metalinter_autosave = 1
 
 " mappings {{{2
 " :GoBuild
-nmap <leader>gob :<C-u>call <SID>build_go_files()<CR>
-nmap <leader>gor <Plug>(go-run)
-nmap <leader>got <Plug>(go-test)
+nmap <localleader>gb :<C-u>call <SID>build_go_files()<CR>
+nmap <localleader>gr <Plug>(go-run)
+nmap <localleader>gt <Plug>(go-test)
 " :GoCoverageToggle
-nmap <Leader>goc <Plug>(go-coverage-toggle)
+nmap <localleader>gc <Plug>(go-coverage-toggle)
 
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
