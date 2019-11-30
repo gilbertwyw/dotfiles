@@ -504,6 +504,9 @@ augroup END " }}} 2
 " }}}1
 " Neovim-specific {{{
 if has('nvim')
+  set inccommand=split
+  set pumblend=20
+
   " save screen estate
   let $FZF_DEFAULT_OPTS = $FZF_DEFAULT_OPTS.' --inline-info'
 endif
