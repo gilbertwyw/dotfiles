@@ -17,6 +17,7 @@ let g:go_metalinter_autosave = 1
 " mappings {{{2
 " :GoBuild
 nmap <localleader>gb :<C-u>call <SID>build_go_files()<CR>
+nmap <localleader>gd <Plug>(go-doc-browser)
 nmap <localleader>gr <Plug>(go-run)
 nmap <localleader>gt <Plug>(go-test)
 " :GoCoverageToggle
