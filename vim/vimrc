@@ -169,6 +169,7 @@ Plug 'mbbill/undotree'
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 Plug 'othree/html5.vim'
 Plug 'rhysd/clever-f.vim'
+Plug 'ryanoasis/vim-devicons'
 " Plug 'Shougo/echodoc.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-expand-region'
