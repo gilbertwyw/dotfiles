@@ -452,8 +452,14 @@ nmap <leader>gs :Gstatus<cr>
 " Plugin: vim-grepper {{{
 if executable('ag')
   nnoremap <leader>ag :Grepper -tool ag -highlight<cr>
+endif
+if executable('rg')
+  " -highlight does not work when passing extra option(s) 
+  " https://github.com/mhinz/vim-grepper/wiki/Using-the-commands
+  nnoremap <leader>ss :Grepper -tool rg -highlight<cr>
+  nnoremap <leader>sb :Grepper -tool rg -buffers -highlight<cr>
   " Search for the word under the cursor
-  nnoremap <Leader>* :Grepper -tool ag -cword -noprompt<CR>
+  nnoremap <Leader>sw :Grepper -tool rg -cword -noprompt<cr>
 endif
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
