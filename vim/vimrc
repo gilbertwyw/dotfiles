@@ -316,8 +316,8 @@ nnoremap <leader>ft      :Filetypes<CR>
 nnoremap <leader>gf      :GFiles?<CR>
 nnoremap <leader>gF      :GFiles<CR>
 nnoremap <leader>m       :Marks<CR>
-nnoremap <leader>sp      :Snippets<CR>
 nnoremap <localleader>ht :Helptags<CR>
+nnoremap <localleader>s  :Snippets<CR>
 nnoremap <localleader>t  :Tags<CR>
 
 " files under same directory
