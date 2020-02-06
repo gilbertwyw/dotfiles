@@ -170,7 +170,7 @@ Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 Plug 'othree/html5.vim'
 Plug 'rhysd/clever-f.vim'
 Plug 'ryanoasis/vim-devicons'
-" Plug 'Shougo/echodoc.vim'
+Plug 'Shougo/echodoc.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-expand-region'
 Plug 'tommcdo/vim-exchange'
@@ -292,6 +292,15 @@ let g:EasyMotion_smartcase = 1
 " JK motions: Line motions
 map <leader>j <Plug>(easymotion-j)
 map <leader>k <Plug>(easymotion-k)
+" }}}
+" Plugin: echodoc.vim {{{
+let g:echodoc#enable_at_startup = 1
+if has('nvim')
+  let g:echodoc#type = 'floating'
+endif
+if !has('nvim')
+  let g:echodoc#type = 'popup'
+endif
 " }}}
 " Plugin: editorconfig {{{
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
