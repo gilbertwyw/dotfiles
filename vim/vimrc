@@ -89,8 +89,8 @@ nnoremap ' `
 nnoremap ` '
 
 " Quickly edit/reload the vimrc file
-nnoremap <leader>ev :e $MYVIMRC<CR>
-nnoremap <leader>sv :so $MYVIMRC<CR>
+nnoremap <leader>re :e $MYVIMRC<CR>
+nnoremap <leader>rr :so $MYVIMRC<CR>
 
 " Resize window
 nnoremap <Left> :vertical resize +2<CR>
