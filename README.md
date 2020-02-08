@@ -154,8 +154,6 @@ gem install neovim
 - [quick-look-plugins](https://github.com/sindresorhus/quick-look-plugins#install-all)
 
 ```sh
-# Ag
-brew install ag
 ln -s ~/dotfiles/ignore ~/.ignore
 
 # Ctags

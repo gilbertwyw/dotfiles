@@ -459,9 +459,6 @@ nmap <leader>gl :Glog %<cr>
 nmap <leader>gs :Gstatus<cr>
 " }}}
 " Plugin: vim-grepper {{{
-if executable('ag')
-  nnoremap <leader>ag :Grepper -tool ag -highlight<cr>
-endif
 if executable('rg')
   " -highlight does not work when passing extra option(s) 
   " https://github.com/mhinz/vim-grepper/wiki/Using-the-commands
