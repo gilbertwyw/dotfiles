@@ -27,17 +27,20 @@ fi
 
 typeset -U path
 
-# `brew info chruby`
-if [[ -f /usr/local/opt/chruby/share/chruby/chruby.sh && -f /usr/local/opt/chruby/share/chruby/auto.sh ]]; then
+# brew info chruby
+if type chruby &>/dev/null; then
   source /usr/local/opt/chruby/share/chruby/chruby.sh
   source /usr/local/opt/chruby/share/chruby/auto.sh
 fi
 
-# `brew install direnv`, https://github.com/zimbatm/direnv#zsh
-eval "$(direnv hook zsh)"
 
-# `brew info z`
-. /usr/local/etc/profile.d/z.sh
+# brew install direnv, https://github.com/zimbatm/direnv#zsh
+if type direnv &>/dev/null; then
+  eval "$(direnv hook zsh)"
+fi
+
+# brew info z
+[[ -f /usr/local/etc/profile.d/z.sh ]] && source /usr/local/etc/profile.d/z.sh
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
