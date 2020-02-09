@@ -1,9 +1,3 @@
-# tarball everything except installed node modules; '.git' folder included if exists
-# caveat: have to run this in the same directory as the target
-nodeball() {
-  tar -cv --exclude 'node_modules' -zf "$1.tar.gz" $1;
-}
-
 # copy from: https://github.com/tpope/vim-obsession/issues/11#issue-19117942
 function v() {
   if test $# -gt 0; then
