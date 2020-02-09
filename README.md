@@ -172,19 +172,6 @@ cd dotfiles/
 brew brewdle [--dry-run]
 ```
 
-### Terminal themes
-
-- [chriskempson/tomorrow-theme · GitHub](https://github.com/chriskempson/tomorrow-theme)
-- [zenorocha/dracula-theme · GitHub](https://github.com/zenorocha/dracula-theme)
-
-### Typefaces
-
-- [Hack](https://github.com/chrissimpkins/Hack#os-x)
-
-### ZSH prompt
-
-- [sindresorhus/pure · GitHub](https://github.com/sindresorhus/pure)
-
 ### Xcode
 
 ```sh
