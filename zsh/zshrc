@@ -12,14 +12,18 @@ fi
 setopt no_beep
 
 path=(
+  $HOME/bin
   /usr/local/bin
   /usr/local/sbin
-  # `brew info coreutils`
-  /usr/local/opt/coreutils/libexec/gnubin
-  # https://golang.org/doc/code.html#GOPATH
-  $(go env GOPATH)/bin
   $path
 )
+
+# brew info coreutils
+[[ -f /usr/local/opt/coreutils/libexec/gnubin ]] && path=("/usr/local/opt/coreutils/libexec/gnubin" $path)
+
+if type go &>/dev/null; then
+  path=($(go env GOPATH)/bin $path)
+fi
 
 typeset -U path
 
