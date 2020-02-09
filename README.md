@@ -118,7 +118,7 @@ tmuxinator new [arbitrary name]
 
 ```sh
 # for 'deoplete.nvim'
-brew install vim --with-lua --with-python3
+brew install vim
 
 ln -s ~/dotfiles/vim ~/.vim
 
