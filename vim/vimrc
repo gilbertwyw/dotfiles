@@ -172,7 +172,6 @@ Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 Plug 'othree/html5.vim'
 Plug 'rhysd/clever-f.vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'Shougo/echodoc.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-expand-region'
 Plug 'tommcdo/vim-exchange'
@@ -200,6 +199,14 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
+" }}}
+" LSP {{{ 
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+" configuration
+Plug 'mattn/vim-lsp-settings'
+" autocompletion
+Plug 'lighttiger2505/deoplete-vim-lsp'
 " }}}
 " fzf.vim {{{
 " Use installed 'fzf' from Homebrew
@@ -243,9 +250,7 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'hail2u/vim-css3-syntax'
 " }}}
 " Go {{{
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-" https://github.com/deoplete-plugins/deoplete-go#4-install-plugin-and-build-ujson-module
-Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'arp242/gopher.vim'
 " }}}
 " JavaScript {{{
 Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
@@ -294,15 +299,6 @@ let g:EasyMotion_smartcase = 1
 " JK motions: Line motions
 map <leader>j <Plug>(easymotion-j)
 map <leader>k <Plug>(easymotion-k)
-" }}}
-" Plugin: echodoc.vim {{{
-let g:echodoc#enable_at_startup = 1
-if has('nvim')
-  let g:echodoc#type = 'floating'
-endif
-if !has('nvim')
-  let g:echodoc#type = 'popup'
-endif
 " }}}
 " Plugin: editorconfig {{{
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
@@ -475,6 +471,26 @@ xmap gs <plug>(GrepperOperator)
 " Plugin: vim-localvimrc {{{
 " https://github.com/embear/vim-localvimrc#the-glocalvimrc_persistent-setting
 let g:localvimrc_persistent=1
+" }}}
+" Plugin: vim-lsp {{{
+let g:lsp_highlight_references_enabled = 1
+
+function! s:on_lsp_buffer_enabled() abort
+  " setlocal omnifunc=lsp#complete
+  " setlocal signcolumn=yes
+  nmap <buffer> gd <plug>(lsp-definition)
+  nmap <buffer> <f2> <plug>(lsp-rename)
+  nmap <buffer> gR <plug>(lsp-references)
+  " defintion
+  nmap <buffer> K <plug>(lsp-hover)
+  " LspImplementation
+  nmap <buffer> <leader>li <plug>(lsp-implementation)
+endfunction
+augroup lsp_install
+  au!
+  " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+  autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
 " }}}
 " Plugin: vim-operator-flashy {{{
 map y <Plug>(operator-flashy)
