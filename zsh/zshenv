@@ -10,3 +10,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # `brew info coreutils`
 export MANPATH="/usr/local/coreutils/libexec/gnuman:$MANPATH"
+
+# brew install ripgrep
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgreprc"

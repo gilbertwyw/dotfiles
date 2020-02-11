@@ -152,8 +152,11 @@ gem install neovim
 - [kitty](https://sw.kovidgoyal.net/kitty/index.html)
 - [pgcli](https://www.pgcli.com/)
 - [quick-look-plugins](https://github.com/sindresorhus/quick-look-plugins#install-all)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 ```sh
+ln -s ~/dotfiles/config ~/.config/ripgreprc
+
 ln -s ~/dotfiles/ignore ~/.ignore
 
 # Ctags
