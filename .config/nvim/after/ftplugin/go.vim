@@ -1,3 +1,3 @@
-nmap <localleader>gb <ESC>:Dispatch go build<cr>
-nmap <localleader>gr <ESC>:Dispatch go run %<cr>
-nmap <localleader>gt <ESC>:Dispatch go test<cr>
+nmap <leader>db <ESC>:Dispatch go build<cr>
+nmap <leader>dr <ESC>:Dispatch go run %<cr>
+nmap <leader>dt <ESC>:Dispatch go test<cr>

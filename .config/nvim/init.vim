@@ -188,21 +188,13 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'voldikss/vim-floaterm'
 Plug 'wellle/targets.vim'
 Plug 'w0rp/ale'
-" deoplete.nvim {{{
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-" }}}
 " LSP {{{
-Plug 'prabirshrestha/vim-lsp'
-" configuration
-Plug 'mattn/vim-lsp-settings'
-" autocompletion
-Plug 'lighttiger2505/deoplete-vim-lsp'
+if has('nvim')
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'nvim-lua/completion-nvim'
+  Plug 'hrsh7th/vim-vsnip'
+  Plug 'hrsh7th/vim-vsnip-integ'
+endif
 " }}}
 " fzf.vim {{{
 " Use installed 'fzf' from Homebrew
@@ -278,9 +270,22 @@ nmap <silent> [w <Plug>(ale_previous_wrap)
 nmap <silent> ]w <Plug>(ale_next_wrap)
 nmap <silent> ]W <Plug>(ale_last)
 " }}}
-" Plugin: deoplete.nvim {{{
-" https://github.com/Shougo/deoplete.nvim#installation
-let g:deoplete#enable_at_startup = 1
+" Plugin: completion-nvim {{{
+if has('nvim')
+  " let g:completion_enable_snippet = ['UltiSnips','vim-vsnip']
+  let g:completion_enable_snippet = 'UltiSnips'
+
+  " https://github.com/nvim-lua/completion-nvim#recommended-setting
+  " Use <Tab> and <S-Tab> to navigate through popup menu
+  inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+  inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+  " Set completeopt to have a better completion experience
+  set completeopt=menuone,noinsert,noselect
+
+  " Avoid showing message extra message when using completion
+  set shortmess+=c
+endif
 " }}}
 " Plugin: editorconfig {{{
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
@@ -393,16 +398,17 @@ let g:tmuxline_powerline_separators = 0
 " }}}
 " Plugin: UltiSnips {{{
 set rtp+=~/dotfiles/vim/
-let g:UltiSnipsEditSplit='vertical'
-let g:UltiSnipsSnippetsDir='~/dotfiles/vim/snips/'
-let g:UltiSnipsSnippetDirectories=['UltiSnips', 'snips']
+let g:UltiSnipsExpandTrigger      = "<C-e>"
+let g:UltiSnipsEditSplit          = 'vertical'
+let g:UltiSnipsSnippetsDir        = '~/dotfiles/vim/snips/'
+let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'snips']
 " }}}
 " Plugin: undotree {{{
 nnoremap <F5> :UndotreeToggle<cr>
 " }}}
 " Plugin: vim-airline {{{
 " make symbols look okay
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts            = 1
 let g:airline#extensions#tabline#enabled = 1
 " }}}
 " Plugin: vim-easy-align {{{
@@ -453,28 +459,6 @@ xmap gs <plug>(GrepperOperator)
 " Plugin: vim-localvimrc {{{
 " https://github.com/embear/vim-localvimrc#the-glocalvimrc_persistent-setting
 let g:localvimrc_persistent=1
-" }}}
-" Plugin: vim-lsp {{{
-let g:lsp_highlight_references_enabled = 1
-
-function! s:on_lsp_buffer_enabled() abort
-  " setlocal omnifunc=lsp#complete
-  " setlocal signcolumn=yes
-  if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-  nmap <buffer> gd              <plug>(lsp-definition)
-  nmap <buffer> K               <plug>(lsp-hover)
-  nmap <buffer> <localleader>gi <plug>(lsp-implementation)
-  nmap <buffer> ]g              <Plug>(lsp-next-diagnostic)
-  nmap <buffer> [g              <Plug>(lsp-previous-diagnostic)
-  nmap <buffer> <localleader>gr <plug>(lsp-references)
-  nmap <buffer> <f2>            <plug>(lsp-rename)
-  nmap <buffer> <localleader>gt <plug>(lsp-type-definition)
-endfunction
-augroup lsp_install
-  au!
-  " call s:on_lsp_buffer_enabled only for languages that has the server registered.
-  autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-augroup END
 " }}}
 " Plugin: vim-hexokinase {{{
 nnoremap <leader>ct :HexokinaseToggle<CR>
@@ -532,5 +516,7 @@ augroup END " }}} 2
 if has('nvim')
   set inccommand=split
   set pumblend=20
+
+  lua require('lsp_config')
 endif
 " }}}
