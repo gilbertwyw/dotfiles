@@ -39,6 +39,11 @@ if type direnv &>/dev/null; then
   eval "$(direnv hook zsh)"
 fi
 
+# brew install starship
+if type starship &>/dev/null; then
+  eval "$(starship init zsh)"
+fi
+
 # brew info z
 [[ -f /usr/local/etc/profile.d/z.sh ]] && source /usr/local/etc/profile.d/z.sh
 
