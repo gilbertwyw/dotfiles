@@ -7,7 +7,7 @@
 To prevent incompatibility issue caused by Mac's own version of `sed`:
 
 ```sh
-brew install gnu-sed --with-default-names
+brew install gnu-sed
 ```
 
 Regarding "Github API Rate limit exceeded":
@@ -157,7 +157,7 @@ gem install neovim
 - [youtube-dl](https://github.com/ytdl-org/youtube-dl)
 
 ```sh
-ln -s ~/dotfiles/config ~/.config/ripgreprc
+ln -s ~/dotfiles/config/ripgreprc ~/.config
 
 ln -s ~/dotfiles/config/starship.toml ~/.config
 
@@ -166,8 +166,7 @@ ln -s ~/dotfiles/config/youtube-dl ~/.config
 ln -s ~/dotfiles/ignore ~/.ignore
 
 # Ctags
-brew tap universal-ctags/universal-ctags
-brew install --HEAD universal-ctags
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
 ln -s ~/dotfiles/ctags ~/.ctags
 
