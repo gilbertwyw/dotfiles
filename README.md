@@ -104,9 +104,6 @@ NB: Make sure `<prefix>` is not used for other shortcut.
 brew install tmux
 
 ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/tmux ~/.tmux
-
-<prefix> + I # to install any tmux plugins
 
 # provided that Tmuxinator has been installed
 tmuxinator new [arbitrary name]
