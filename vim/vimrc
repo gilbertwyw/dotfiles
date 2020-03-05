@@ -111,8 +111,6 @@ noremap <silent> <F4> :let @+=expand("%:p")<CR>
 " add filetype
 nnoremap gaf :set ft+=.
 
-nnoremap <silent> <leader>lo :lopen<CR>
-
 nnoremap S :%s//g<Left><Left>
 
 if s:darwin
@@ -151,6 +149,7 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Raimondi/delimitMate'
 Plug 'Valloric/MatchTagAlways', { 'for': ['xml', 'html'] }
+Plug 'Valloric/ListToggle'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-rooter'
 Plug 'andymass/vim-matchup'
@@ -486,7 +485,7 @@ function! s:on_lsp_buffer_enabled() abort
   " defintion
   nmap <buffer> K <plug>(lsp-hover)
   " LspImplementation
-  nmap <buffer> <leader>li <plug>(lsp-implementation)
+  nmap <buffer> gD <plug>(lsp-implementation)
 endfunction
 augroup lsp_install
   au!
