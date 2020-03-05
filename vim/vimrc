@@ -150,7 +150,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Raimondi/delimitMate'
-Plug 'Valloric/MatchTagAlways'
+Plug 'Valloric/MatchTagAlways', { 'for': ['xml', 'html'] }
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-rooter'
 Plug 'andymass/vim-matchup'
@@ -168,13 +168,13 @@ Plug 'kannokanno/previm'
 Plug 'keith/investigate.vim'
 Plug 'kshenoy/vim-signature'
 Plug 'machakann/vim-swap'
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim', { 'for': [ 'html', 'css' ] }
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
-Plug 'othree/html5.vim'
+Plug 'othree/html5.vim', { 'for': [ 'html', 'svg' ] }
 Plug 'rhysd/clever-f.vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'terryma/vim-expand-region'
 Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-commentary'
