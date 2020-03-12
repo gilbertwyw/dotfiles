@@ -315,7 +315,7 @@ nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 
-nnoremap <leader>bf      :Buffers<CR>
+nnoremap <leader>bb      :Buffers<CR>
 nnoremap <leader>bc      :BCommits<CR>
 nnoremap <leader>bl      :BLines<CR>
 nnoremap <leader>bt      :BTags<CR>
@@ -366,7 +366,7 @@ augroup nerdtree
   let NERDTreeAutoDeleteBuffer = 1
   let NERDTreeMinimalUI        = 1
   let g:NERDTreeHijackNetrw    = 0
-  map <silent> <leader>nt :NERDTreeToggle<CR> :NERDTreeMirror<CR>
+  map <silent> <leader>nn :NERDTreeToggle<CR> :NERDTreeMirror<CR>
   map <silent> <leader>nf :NERDTreeFind<CR>
   " open a NERDTree automatically when vim starts up if no files were specified
   "autocmd StdinReadPre * let s:std_in=1
