@@ -174,7 +174,7 @@ Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 Plug 'othree/html5.vim', { 'for': [ 'html', 'svg' ] }
 Plug 'rhysd/clever-f.vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeFind', 'NERDTreeToggle'] }
 Plug 'terryma/vim-expand-region'
 Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-commentary'
