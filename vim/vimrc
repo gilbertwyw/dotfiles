@@ -148,6 +148,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Raimondi/delimitMate'
+Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'Valloric/MatchTagAlways', { 'for': ['xml', 'html'] }
 Plug 'Valloric/ListToggle'
 Plug 'Yggdroot/indentLine'
@@ -247,7 +248,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " }}}
 " Languages {{{
 " CSS {{{
-Plug 'ap/vim-css-color', { 'for': ['css', 'scss'] }
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'hail2u/vim-css3-syntax'
 " }}}
@@ -493,6 +493,9 @@ augroup lsp_install
   " call s:on_lsp_buffer_enabled only for languages that has the server registered.
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+" }}}
+" Plugin: vim-hexokinase {{{
+nnoremap <leader>ct :HexokinaseToggle<CR>
 " }}}
 " Plugin: vim-operator-flashy {{{
 map y <Plug>(operator-flashy)
