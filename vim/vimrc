@@ -430,9 +430,6 @@ map gz* <Plug>(asterisk-gz*)
 map z#  <Plug>(asterisk-z#)
 map gz# <Plug>(asterisk-gz#)
 " }}}
-" Plugin: vim-dispatch {{{
-nnoremap <F9> :Dispatch<CR>
-" }}}
 " Plugin: vim-easy-align {{{
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap gaa <Plug>(EasyAlign)
