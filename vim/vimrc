@@ -168,6 +168,7 @@ Plug 'junegunn/vim-emoji'
 Plug 'kannokanno/previm'
 Plug 'keith/investigate.vim'
 Plug 'kshenoy/vim-signature'
+Plug 'machakann/vim-highlightedyank'
 Plug 'machakann/vim-swap'
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'css' ] }
 Plug 'mbbill/undotree'
@@ -214,10 +215,6 @@ Plug 'lighttiger2505/deoplete-vim-lsp'
 " fzf.vim {{{
 " Use installed 'fzf' from Homebrew
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-" }}}
-" vim-operator-flashy {{{
-Plug 'kana/vim-operator-user'
-Plug 'haya14busa/vim-operator-flashy'
 " }}}
 " Color schemes {{{
 Plug 'NLKNguyen/papercolor-theme'
@@ -493,10 +490,6 @@ augroup END
 " }}}
 " Plugin: vim-hexokinase {{{
 nnoremap <leader>ct :HexokinaseToggle<CR>
-" }}}
-" Plugin: vim-operator-flashy {{{
-map y <Plug>(operator-flashy)
-nmap Y <Plug>(operator-flashy)$
 " }}}
 " Plugin: vim-signature {{{
 nnoremap ]" :<C-U>call signature#mark#Goto("next", "spot", "global")<CR>
