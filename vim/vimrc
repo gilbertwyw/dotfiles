@@ -205,7 +205,6 @@ else
 endif
 " }}}
 " LSP {{{ 
-Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 " configuration
 Plug 'mattn/vim-lsp-settings'
