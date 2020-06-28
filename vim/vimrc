@@ -250,7 +250,10 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'arp242/gopher.vim'
 " }}}
 " JavaScript {{{
-Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
+Plug 'heavenshell/vim-jsdoc', { 
+  \ 'for': ['javascript', 'javascript.jsx','typescript'], 
+  \ 'do': 'make install'
+\}
 Plug 'mvolkmann/vim-js-arrow-function', { 'for': 'javascript' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 " requires 'pangloss/vim-javascript'
