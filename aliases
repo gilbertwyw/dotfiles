@@ -38,6 +38,11 @@ alias hb='hub browse'
 alias b=brew
 alias o=open
 
+############
+#  Suffix  #
+############
+alias -s go=$EDITOR
+
 ####################
 #  Gloabl Aliases  #
 ####################
