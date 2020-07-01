@@ -43,9 +43,9 @@ alias o=open
 ############
 alias -s go=$EDITOR
 
-####################
-#  Gloabl Aliases  #
-####################
+############
+#  Global  #
+############
 alias -g FF='| fzf'
 alias -g L='| less'
 alias -g CC='| pbcopy'
