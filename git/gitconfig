@@ -51,3 +51,5 @@
 	keepBackup = false
 [commit]
 	verbose = true
+[pull]
+	rebase = false
