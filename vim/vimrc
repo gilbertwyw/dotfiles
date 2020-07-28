@@ -165,6 +165,7 @@ Plug 'jpalardy/vim-slime'
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'junegunn/vim-emoji'
+Plug 'justinmk/vim-dirvish'
 Plug 'kannokanno/previm'
 Plug 'keith/investigate.vim'
 Plug 'kshenoy/vim-signature'
