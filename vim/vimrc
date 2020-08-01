@@ -106,8 +106,6 @@ nmap  S  :%s//g<LEFT><LEFT>
 " 2) exchange 'M' for:
 " nmap <expr>  M  ':%s/' . @/ . '//g<LEFT><LEFT>'
 
-noremap <silent> <F4> :let @+=expand("%:p")<CR>
-
 " add filetype
 nnoremap gaf :set ft+=.
 
