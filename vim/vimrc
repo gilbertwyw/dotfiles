@@ -324,7 +324,7 @@ nnoremap <leader>gF      :GFiles<CR>
 nnoremap <leader>m       :Marks<CR>
 nnoremap <localleader>ht :Helptags<CR>
 nnoremap <localleader>s  :Snippets<CR>
-nnoremap <localleader>t  :Tags<CR>
+nnoremap <localleader>tt :Tags<CR>
 
 " files under same directory
 nnoremap <silent> <Leader>. :Files <C-r>=expand("%:h")<CR>/<CR>
@@ -379,7 +379,7 @@ nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 " }}}
 " Plugin: tagbar {{{
-nmap <F8> :TagbarToggle<CR>
+nmap <localleader>tb :TagbarToggle<CR>
 let g:tagbar_type_markdown = {
     \ 'ctagstype': 'markdown',
     \ 'ctagsbin' : 'markdown2ctags',
