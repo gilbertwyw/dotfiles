@@ -5,7 +5,7 @@ alias c=bat
 alias d=ddgr
 alias eip='curl ifconfig.me'
 alias i=ifconfig
-alias k=kill
+alias k=kubectl
 alias m=man
 # brew install googler
 alias s=googler
