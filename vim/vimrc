@@ -484,14 +484,14 @@ function! s:on_lsp_buffer_enabled() abort
   " setlocal omnifunc=lsp#complete
   " setlocal signcolumn=yes
   if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-  nmap <buffer> gd <plug>(lsp-definition)
-  nmap <buffer> <f2> <plug>(lsp-rename)
-  nmap <buffer> gR <plug>(lsp-references)
-  nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
-  nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
-  nmap <buffer> K <plug>(lsp-hover)
-  " LspImplementation
-  nmap <buffer> gD <plug>(lsp-implementation)
+  nmap <buffer> gd              <plug>(lsp-definition)
+  nmap <buffer> K               <plug>(lsp-hover)
+  nmap <buffer> <localleader>gi <plug>(lsp-implementation)
+  nmap <buffer> ]g              <Plug>(lsp-next-diagnostic)
+  nmap <buffer> [g              <Plug>(lsp-previous-diagnostic)
+  nmap <buffer> <localleader>gr <plug>(lsp-references)
+  nmap <buffer> <f2>            <plug>(lsp-rename)
+  nmap <buffer> <localleader>gt <plug>(lsp-type-definition)
 endfunction
 augroup lsp_install
   au!
