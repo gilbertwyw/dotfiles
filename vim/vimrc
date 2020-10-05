@@ -493,8 +493,8 @@ augroup END
 nnoremap <leader>ct :HexokinaseToggle<CR>
 " }}}
 " Plugin: vim-sneak {{{
-let g:sneak#label = 1
-
+let g:sneak#s_next = 1
+let g:sneak#label  = 1
 " These mappings do not invoke label-mode
 map f <Plug>Sneak_f
 map F <Plug>Sneak_F
