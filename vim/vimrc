@@ -150,6 +150,7 @@ Plug 'Valloric/ListToggle'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-rooter'
 Plug 'andymass/vim-matchup'
+Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'bling/vim-airline'
 Plug 'chrisbra/unicode.vim'
 Plug 'editorconfig/editorconfig-vim'
@@ -290,6 +291,11 @@ let g:deoplete#enable_at_startup = 1
 " }}}
 " Plugin: editorconfig {{{
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+" }}}
+" Plugin: FixCursorHold.nvim {{{
+" in millisecond, used for both CursorHold and CursorHoldI,
+" use updatetime instead if not defined
+let g:cursorhold_updatetime = 100
 " }}}
 " Plugin: fzf {{{
 command! -bang -nargs=? -complete=dir Files
