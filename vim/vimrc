@@ -143,7 +143,6 @@ command! PU PlugUpdate | PlugUpgrade
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'Raimondi/delimitMate'
 Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'Valloric/MatchTagAlways', { 'for': ['xml', 'html'] }
