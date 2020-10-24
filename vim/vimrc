@@ -397,6 +397,7 @@ nnoremap <F5> :UndotreeToggle<cr>
 " Plugin: vim-airline {{{
 " make symbols look okay
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 " }}}
 " Plugin: vim-easy-align {{{
 " Start interactive EasyAlign in visual mode (e.g. vipga)
