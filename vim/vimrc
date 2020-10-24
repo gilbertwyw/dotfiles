@@ -309,10 +309,10 @@ omap <leader><tab> <plug>(fzf-maps-o)
 
 nnoremap <leader>bb      :Buffers<CR>
 nnoremap <leader>bc      :BCommits<CR>
-nnoremap //              :BLines<CR>
+nnoremap <leader>bl      :BLines<CR>
 nnoremap <leader>bt      :BTags<CR>
 nnoremap <leader>cl      :Colors<CR>
-nnoremap ::              :Commands<CR>
+nnoremap <leader>cm      :Commands<CR>
 nnoremap <leader>ft      :Filetypes<CR>
 nnoremap <leader>gf      :GFiles?<CR>
 nnoremap <leader>gF      :GFiles<CR>
