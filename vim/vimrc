@@ -503,6 +503,9 @@ nmap <silent> <leader>ts :TestSuite<CR>
 nmap <silent> <leader>tl :TestLast<CR>
 nmap <silent> <leader>tv :TestVisit<CR>
 " }}}
+" Plugin: vim-tmux-navigator {{{
+let g:tmux_navigator_disable_when_zoomed = 1
+" }}}
 " Plugin: vimux {{{
 " horizontal is vertical here
 let g:VimuxOrientation = 'h'
