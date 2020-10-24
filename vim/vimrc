@@ -297,11 +297,6 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " use updatetime instead if not defined
 let g:cursorhold_updatetime = 100
 " }}}
-" Plugin: fzf {{{
-command! -bang -nargs=? -complete=dir Files
-    \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
-nnoremap <silent> <C-p> :Files<CR>
-" }}}
 " Plugin: fzf.vim {{{
 nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
@@ -313,6 +308,9 @@ nnoremap <leader>bl      :BLines<CR>
 nnoremap <leader>bt      :BTags<CR>
 nnoremap <leader>cl      :Colors<CR>
 nnoremap <leader>cm      :Commands<CR>
+nnoremap <leader><Space> :Files<CR>
+" files under same directory
+nnoremap <Leader>ff      :Files <C-r>=expand("%:h")<CR>/<CR>
 nnoremap <leader>ft      :Filetypes<CR>
 nnoremap <leader>gf      :GFiles?<CR>
 nnoremap <leader>gF      :GFiles<CR>
@@ -320,9 +318,6 @@ nnoremap <leader>m       :Marks<CR>
 nnoremap <localleader>ht :Helptags<CR>
 nnoremap <localleader>s  :Snippets<CR>
 nnoremap <localleader>tt :Tags<CR>
-
-" files under same directory
-nnoremap <silent> <Leader>. :Files <C-r>=expand("%:h")<CR>/<CR>
 
 " Insert mode completion
 imap <c-x><c-k> <plug>(fzf-complete-word)
