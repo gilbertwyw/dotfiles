@@ -172,6 +172,7 @@ Plug 'machakann/vim-swap'
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'css' ] }
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
+Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
 Plug 'othree/html5.vim', { 'for': [ 'html', 'svg' ] }
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeFind', 'NERDTreeToggle'] }
