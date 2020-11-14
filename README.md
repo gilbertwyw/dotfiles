@@ -82,6 +82,9 @@ nvim +PlugInstall +UpdateRemotePlugins +qa
 
 # in nvim
 :checkhealth
+
+# share config between Neovim and vim
+ln -s ~/.config/nvim/init.vim ~/.vimrc
 ```
 
 ## Miscs.
