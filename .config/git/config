@@ -9,7 +9,6 @@
 	conflictstyle = diff3
 [core]
 	quotepath = false
-	editor = vim -f
 	autocrlf = input
   excludesfile = ~/.config/git/gitignore_global
 [push]
