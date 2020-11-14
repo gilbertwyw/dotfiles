@@ -1,6 +1,0 @@
-set guifont=Source\ Code\ Pro:h16
-
-" Local config
-if filereadable($HOME . "/.gvimrc.local")
-  source ~/.gvimrc.local
-endif
