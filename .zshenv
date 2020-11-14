@@ -1,3 +1,5 @@
+export ZDOTDIR=$HOME/.config/zsh
+
 # To make all entries of `locale` use "en_US.UTF-8"
 export LANG=en_US.UTF-8
 export LC_ALL=$LANG

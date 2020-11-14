@@ -11,7 +11,7 @@
 	quotepath = false
 	editor = vim -f
 	autocrlf = input
-  excludesfile = ~/.gitignore_global
+  excludesfile = ~/.config/git/gitignore_global
 [push]
 	default = simple
 [help]
@@ -45,7 +45,7 @@
 	required = true
 	process = git-lfs filter-process
 [init]
-	templatedir = ~/.git_template
+	templatedir = ~/.config/git/git_template
 [mergetool]
 	prompt = false
 	keepBackup = false

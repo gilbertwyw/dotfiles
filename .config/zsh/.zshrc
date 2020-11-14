@@ -3,7 +3,7 @@
 # brew install antibody
 source <(antibody init)
 export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
-antibody bundle < ~/.zsh_plugins.txt
+antibody bundle < $ZDOTDIR/zsh_plugins.txt
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -51,7 +51,7 @@ fi
 [[ -f ~/.aliases ]] && source ~/.aliases
 
 # load custom executable functions
-for function in ~/.zsh/functions/*; do
+for function in $ZDOTDIR/functions/*; do
   source $function
 done
 

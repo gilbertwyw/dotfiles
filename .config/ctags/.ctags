@@ -3,3 +3,4 @@
 --exclude=log
 --recurse=yes
 --tag-relative=yes
+
