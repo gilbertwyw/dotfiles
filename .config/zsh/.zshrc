@@ -11,6 +11,9 @@ fi
 
 setopt no_beep
 
+# Do not write a duplicate event to the history file.
+setopt HIST_SAVE_NO_DUPS         
+
 path=(
   $HOME/bin
   /usr/local/bin
