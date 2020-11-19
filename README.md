@@ -39,7 +39,7 @@ Run `brew install fzf ` and follow the instruction from `brew info fzf`.
 ## Git
 
 ```sh
-brew install git git-lfs
+brew install git git-delta git-lfs
 ```
 ## Python
 

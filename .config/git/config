@@ -11,6 +11,9 @@
 	quotepath = false
 	autocrlf = input
   excludesfile = ~/.config/git/gitignore_global
+	pager = delta
+[interactive]
+  diffFilter = delta --color-only
 [push]
 	default = simple
 [help]
@@ -52,3 +55,5 @@
 	verbose = true
 [pull]
 	rebase = false
+[delta]
+  features = side-by-side
