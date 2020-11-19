@@ -106,3 +106,4 @@ zsdoc/data
 # End of https://www.toptal.com/developers/gitignore/api/vim,zsh,tags,macos,direnv
 
 .config/**/log
+.lvimrc
