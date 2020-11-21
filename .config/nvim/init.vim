@@ -1,7 +1,6 @@
 let s:darwin = has('mac')
 
 set nocompatible
-" otherwise NERDTree shows strange character instead of arrows
 set encoding=utf-8
 scriptencoding utf-8
 
@@ -162,6 +161,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'kannokanno/previm'
 Plug 'keith/investigate.vim'
 Plug 'kshenoy/vim-signature'
+Plug 'lambdalisue/fern.vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'machakann/vim-swap'
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'css' ] }
@@ -170,7 +170,6 @@ Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
 Plug 'othree/html5.vim', { 'for': [ 'html', 'svg' ] }
 Plug 'ryanoasis/vim-devicons'
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeFind', 'NERDTreeToggle'] }
 Plug 'terryma/vim-expand-region'
 Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-commentary'
@@ -198,7 +197,7 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 " }}}
-" LSP {{{ 
+" LSP {{{
 Plug 'prabirshrestha/vim-lsp'
 " configuration
 Plug 'mattn/vim-lsp-settings'
@@ -229,12 +228,10 @@ Plug 'majutsushi/tagbar'
 " }}}
 " Git {{{
 Plug 'airblade/vim-gitgutter'
-Plug 'low-ghost/nerdtree-fugitive'
 Plug 'rhysd/git-messenger.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-rhubarb'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 " }}}
 " Languages {{{
 " CSS {{{
@@ -245,8 +242,8 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'arp242/gopher.vim'
 " }}}
 " JavaScript {{{
-Plug 'heavenshell/vim-jsdoc', { 
-  \ 'for': ['javascript', 'javascript.jsx','typescript'], 
+Plug 'heavenshell/vim-jsdoc', {
+  \ 'for': ['javascript', 'javascript.jsx','typescript'],
   \ 'do': 'make install'
 \}
 Plug 'mvolkmann/vim-js-arrow-function', { 'for': 'javascript' }
@@ -293,6 +290,40 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " use updatetime instead if not defined
 let g:cursorhold_updatetime = 100
 " }}}
+" Plugin: fern.vim {{{
+noremap <silent> <leader>fd :Fern . -drawer -reveal=% -toggle<CR>
+
+" https://github.com/lambdalisue/fern.vim/wiki/Tips#define-nerdtree-like-mappings
+function! s:init_fern() abort
+  " Define NERDTree like mappings
+  nmap <buffer> o <Plug>(fern-action-open:edit)
+  nmap <buffer> go <Plug>(fern-action-open:edit)<C-w>p
+  nmap <buffer> t <Plug>(fern-action-open:tabedit)
+  nmap <buffer> T <Plug>(fern-action-open:tabedit)gT
+  nmap <buffer> i <Plug>(fern-action-open:split)
+  nmap <buffer> gi <Plug>(fern-action-open:split)<C-w>p
+  nmap <buffer> s <Plug>(fern-action-open:vsplit)
+  nmap <buffer> gs <Plug>(fern-action-open:vsplit)<C-w>p
+  nmap <buffer> ma <Plug>(fern-action-new-path)
+  nmap <buffer> P gg
+
+  nmap <buffer> C <Plug>(fern-action-enter)
+  nmap <buffer> u <Plug>(fern-action-leave)
+  nmap <buffer> r <Plug>(fern-action-reload)
+  nmap <buffer> R gg<Plug>(fern-action-reload)<C-o>
+  nmap <buffer> cd <Plug>(fern-action-cd)
+  nmap <buffer> CD gg<Plug>(fern-action-cd)<C-o>
+
+  nmap <buffer> I <Plug>(fern-action-hide-toggle)
+
+  nmap <buffer> q :<C-u>quit<CR>
+endfunction
+
+augroup fern-custom
+  autocmd! *
+  autocmd FileType fern call s:init_fern()
+augroup END
+" }}}
 " Plugin: fzf.vim {{{
 nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
@@ -329,22 +360,6 @@ let g:indentLine_setConceal = 0
 if s:darwin
   let g:investigate_use_dash=1
 endif
-" }}}
-" Plugin: nerdtree {{{
-augroup nerdtree
-  autocmd!
-  let NERDTreeAutoDeleteBuffer = 1
-  let NERDTreeMinimalUI        = 1
-  let g:NERDTreeHijackNetrw    = 0
-  map <silent> <leader>nn :NERDTreeToggle<CR> :NERDTreeMirror<CR>
-  map <silent> <leader>nf :NERDTreeFind<CR>
-  " open a NERDTree automatically when vim starts up if no files were specified
-  "autocmd StdinReadPre * let s:std_in=1
-  "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-  " close vim if the only window left open is a NERDTree
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-augroup END
 " }}}
 " Plugin: open-browser.vim {{{
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
@@ -425,7 +440,7 @@ nmap <leader>gs :Gstatus<cr>
 " }}}
 " Plugin: vim-grepper {{{
 if executable('rg')
-  " -highlight does not work when passing extra option(s) 
+  " -highlight does not work when passing extra option(s)
   " https://github.com/mhinz/vim-grepper/wiki/Using-the-commands
   nnoremap <leader>ss :Grepper -tool rg -highlight<cr>
   nnoremap <leader>sb :Grepper -tool rg -buffers -highlight<cr>
