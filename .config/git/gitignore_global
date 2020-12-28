@@ -107,3 +107,4 @@ zsdoc/data
 
 .config/**/log
 .lvimrc
+.zsh_history
