@@ -9,6 +9,9 @@ set cursorline
 " Allow hidden buffers, don't limit to 1 file per window/split
 set hidden
 
+" do not redraw screen in the middle of a macro
+set lazyredraw
+
 " enable hybrid line number mode
 set relativenumber
 set number
