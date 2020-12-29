@@ -39,3 +39,12 @@ lspconfig.gopls.setup {
     },
   },
 }
+
+lspconfig.dartls.setup{
+  on_attach = custom_lsp_attach,
+}
+
+lspconfig.tsserver.setup{
+  on_attach = custom_lsp_attach,
+}
+
