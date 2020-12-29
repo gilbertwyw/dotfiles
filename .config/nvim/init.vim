@@ -76,6 +76,9 @@ cmap w!! w !sudo tee > /dev/null %
 " jk is escape
 inoremap jk <Esc>
 
+" mark at the point you are typing after leaving insert mode
+inoremap ;1 <c-o>ma
+
 " make last typed word uppercase
 inoremap <Plug>UpCase <Esc>hgUaweA
 imap ;u <Plug>UpCase
