@@ -398,10 +398,6 @@ let g:tagbar_type_markdown = {
 " https://github.com/wellle/tmux-complete.vim#settings
 let g:tmuxcomplete#trigger = ''
 " }}}
-" Plugin: tmuxline.vim {{{
-let g:tmuxline_theme = 'airline'
-let g:tmuxline_powerline_separators = 0
-" }}}
 " Plugin: UltiSnips {{{
 set rtp+=~/dotfiles/vim/
 let g:UltiSnipsExpandTrigger      = "<C-e>"
