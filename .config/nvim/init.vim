@@ -54,12 +54,6 @@ endif
 let mapleader      = "\<Space>"
 let maplocalleader = ','
 
-" True color {{{
-" : CTRL-v + ESC
-set t_8f=[38;2;%lu;%lu;%lum
-set t_8b=[48;2;%lu;%lu;%lum
-set termguicolors
-" }}}
 " Indentation {{{
 " use soft tab
 set expandtab
@@ -209,15 +203,14 @@ Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 " Color schemes {{{
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'ajh17/Spacegray.vim'
-Plug 'ayu-theme/ayu-vim'
-Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
+Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'cocopon/iceberg.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'ghifarit53/tokyonight-vim'
 Plug 'haishanh/night-owl.vim'
+Plug 'joshdick/onedark.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'lifepillar/vim-solarized8'
-Plug 'mhartington/oceanic-next'
-Plug 'nanotech/jellybeans.vim'
 Plug 'rakr/vim-one'
 " }}}
 " Ctags {{{
@@ -521,4 +514,12 @@ if has('nvim')
 
   lua require('lsp_config')
 endif
+" }}}
+" True color {{{
+" : CTRL-v + ESC
+set t_8f=[38;2;%lu;%lu;%lum
+set t_8b=[48;2;%lu;%lu;%lum
+set termguicolors
+
+colorscheme tokyonight
 " }}}
