@@ -159,7 +159,6 @@ Plug 'justinmk/vim-dirvish'
 Plug 'junegunn/vim-slash'
 Plug 'justinmk/vim-sneak'
 Plug 'kannokanno/previm'
-Plug 'keith/investigate.vim'
 Plug 'kshenoy/vim-signature'
 Plug 'lambdalisue/fern.vim'
 Plug 'machakann/vim-highlightedyank'
@@ -359,11 +358,6 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 " Plugin: indentLine {{{
 let g:indentLine_faster     = 1
 let g:indentLine_setConceal = 0
-" }}}
-" Plugin: investigate.vim {{{
-if s:darwin
-  let g:investigate_use_dash=1
-endif
 " }}}
 " Plugin: open-browser.vim {{{
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
