@@ -1,9 +1,34 @@
 # zmodload zsh/zprof
 
-# brew install antibody
-source <(antibody init)
-export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
-antibody bundle < $ZDOTDIR/zsh_plugins.txt
+# brew info zplug
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
+zplug "plugins/brew", from:oh-my-zsh
+zplug "plugins/common-aliases", from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
+
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
+
+zplug "desyncr/auto-ls"
+zplug "caarlos0/zsh-mkc" 
+zplug "djui/alias-tips" 
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+	printf "Install? [y/N]: "
+	if read -q; then
+		echo; zplug install
+	fi
+fi
+
+# Then, source plugins and add commands to $PATH
+zplug load
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH

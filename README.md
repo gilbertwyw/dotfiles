@@ -22,11 +22,10 @@ stow -v [-n] .
 
 ## Zsh
 
-- [Antibody](https://getantibody.github.io/)
-
+- [zplug](https://github.com/zplug/zplug)
 
 ```sh
-brew install zsh antibody
+brew install zsh zplug
 
 echo '/usr/local/bin/zsh' >> /etc/shells
 chsh -s /usr/local/bin/zsh
