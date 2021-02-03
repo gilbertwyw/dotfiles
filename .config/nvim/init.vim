@@ -161,6 +161,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'kannokanno/previm'
 Plug 'kshenoy/vim-signature'
 Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/fern-renderer-devicons.vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'machakann/vim-swap'
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'css' ] }
@@ -326,6 +327,9 @@ augroup fern-custom
   autocmd! *
   autocmd FileType fern call s:init_fern()
 augroup END
+" }}}
+" Plugin: fern-renderer-devicons.vim {{{
+let g:fern#renderer = "devicons"
 " }}}
 " Plugin: fzf.vim {{{
 nmap <leader><tab> <plug>(fzf-maps-n)
