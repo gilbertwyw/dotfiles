@@ -16,7 +16,6 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
 
 zplug "desyncr/auto-ls"
-zplug "caarlos0/zsh-mkc" 
 zplug "djui/alias-tips" 
 
 # Install plugins if there are plugins that have not been installed
