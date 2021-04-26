@@ -206,7 +206,7 @@ Plug 'ajh17/Spacegray.vim'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'cocopon/iceberg.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'ghifarit53/tokyonight-vim'
+Plug 'folke/tokyonight.nvim'
 Plug 'haishanh/night-owl.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'junegunn/seoul256.vim'
@@ -388,6 +388,10 @@ let g:tagbar_type_markdown = {
 " Plugin: tmux-complete.vim {{{
 " https://github.com/wellle/tmux-complete.vim#settings
 let g:tmuxcomplete#trigger = ''
+" }}}
+" Plugin: tokyonight.nvim {{{
+let g:tokyonight_style = "night"
+let g:tokyonight_sidebars = [ "qf", "terminal" ]
 " }}}
 " Plugin: UltiSnips {{{
 set rtp+=~/dotfiles/vim/
