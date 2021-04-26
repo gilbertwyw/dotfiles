@@ -229,9 +229,6 @@ Plug 'tpope/vim-rhubarb'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'hail2u/vim-css3-syntax'
 " }}}
-" Go {{{
-Plug 'arp242/gopher.vim'
-" }}}
 " JavaScript {{{
 Plug 'heavenshell/vim-jsdoc', {
   \ 'for': ['javascript', 'javascript.jsx','typescript'],
