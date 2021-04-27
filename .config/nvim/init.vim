@@ -138,6 +138,7 @@ call plug#begin('~/.vim/plugged')
 if has('nvim')
   Plug 'antoinemadec/FixCursorHold.nvim'
   Plug 'folke/tokyonight.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
   " LSP {{{
   Plug 'hrsh7th/vim-vsnip'
@@ -516,6 +517,7 @@ if has('nvim')
   set pumblend=20
 
   lua require('lsp_config')
+  lua require('treesitter')
 endif
 " }}}
 " True color {{{
