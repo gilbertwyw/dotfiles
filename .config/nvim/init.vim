@@ -240,9 +240,6 @@ Plug 'heavenshell/vim-jsdoc', {
   \ 'do': 'make install'
 \}
 Plug 'mvolkmann/vim-js-arrow-function', { 'for': 'javascript' }
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-" requires 'pangloss/vim-javascript'
-Plug 'MaxMEllon/vim-jsx-pretty'
 " }}}
 " }}}
 " Snippets {{{
