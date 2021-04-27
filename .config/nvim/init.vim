@@ -135,6 +135,17 @@ command! PU PlugUpdate | PlugUpgrade
 
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
+if has('nvim')
+  Plug 'antoinemadec/FixCursorHold.nvim'
+  Plug 'folke/tokyonight.nvim'
+  Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
+  " LSP {{{
+  Plug 'hrsh7th/vim-vsnip'
+  Plug 'hrsh7th/vim-vsnip-integ'
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'nvim-lua/completion-nvim'
+  " }}}
+endif
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
@@ -143,7 +154,6 @@ Plug 'Valloric/ListToggle'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-rooter'
 Plug 'andymass/vim-matchup'
-Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'bling/vim-airline'
 Plug 'chrisbra/unicode.vim'
 Plug 'dart-lang/dart-vim-plugin'
@@ -167,7 +177,6 @@ Plug 'machakann/vim-swap'
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'css' ] }
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
-Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
 Plug 'othree/html5.vim', { 'for': [ 'html', 'svg' ] }
 Plug 'psliwka/vim-smoothie'
 Plug 'ryanoasis/vim-devicons'
@@ -189,14 +198,6 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'voldikss/vim-floaterm'
 Plug 'wellle/targets.vim'
 Plug 'w0rp/ale'
-" LSP {{{
-if has('nvim')
-  Plug 'neovim/nvim-lspconfig'
-  Plug 'nvim-lua/completion-nvim'
-  Plug 'hrsh7th/vim-vsnip'
-  Plug 'hrsh7th/vim-vsnip-integ'
-endif
-" }}}
 " fzf.vim {{{
 " Use installed 'fzf' from Homebrew
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -207,7 +208,6 @@ Plug 'ajh17/Spacegray.vim'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'cocopon/iceberg.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'folke/tokyonight.nvim'
 Plug 'haishanh/night-owl.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'junegunn/seoul256.vim'
