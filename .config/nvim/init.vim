@@ -434,9 +434,9 @@ let g:floaterm_keymap_toggle = '<localleader>ft'
 nnoremap <localleader>fs :FloatermSend<Space>
 " }}}
 " Plugin: vim-fugitive {{{
-nmap <leader>gb :Gblame<cr>
+nmap <leader>gb :Git blame<cr>
 nmap <leader>gl :Glog %<cr>
-nmap <leader>gs :Gstatus<cr>
+nmap <leader>gs :Git<cr>
 " }}}
 " Plugin: vim-grepper {{{
 if executable('rg')
