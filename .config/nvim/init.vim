@@ -169,6 +169,7 @@ Plug 'mbbill/undotree'
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
 Plug 'othree/html5.vim', { 'for': [ 'html', 'svg' ] }
+Plug 'psliwka/vim-smoothie'
 Plug 'ryanoasis/vim-devicons'
 Plug 'terryma/vim-expand-region'
 Plug 'tommcdo/vim-exchange'
