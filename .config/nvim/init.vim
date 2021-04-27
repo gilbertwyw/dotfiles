@@ -170,8 +170,6 @@ Plug 'junegunn/vim-slash'
 Plug 'justinmk/vim-sneak'
 Plug 'kannokanno/previm'
 Plug 'kshenoy/vim-signature'
-Plug 'lambdalisue/fern.vim'
-Plug 'lambdalisue/fern-renderer-devicons.vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'machakann/vim-swap'
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'css' ] }
@@ -198,6 +196,11 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'voldikss/vim-floaterm'
 Plug 'wellle/targets.vim'
 Plug 'w0rp/ale'
+" fern {{{
+Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+Plug 'lambdalisue/nerdfont.vim'
+" }}}
 " fzf.vim {{{
 " Use installed 'fzf' from Homebrew
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -326,8 +329,8 @@ augroup fern-custom
   autocmd FileType fern call s:init_fern()
 augroup END
 " }}}
-" Plugin: fern-renderer-devicons.vim {{{
-let g:fern#renderer = "devicons"
+" Plugin: fern-renderer-nerdfont.vim {{{
+let g:fern#renderer = "nerdfont"
 " }}}
 " Plugin: fzf.vim {{{
 nmap <leader><tab> <plug>(fzf-maps-n)
