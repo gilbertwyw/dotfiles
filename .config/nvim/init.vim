@@ -256,6 +256,7 @@ Plug 'wellle/tmux-complete.vim'
 call plug#end()
 " }}}
 " Plugin: ale {{{
+let g:ale_disable_lsp = 1
 " https://github.com/w0rp/ale#5ii-how-can-i-keep-the-sign-gutter-open
 let g:ale_sign_column_always   = 1
 " https://github.com/w0rp/ale#5vii-how-can-i-change-the-format-for-echo-messages
