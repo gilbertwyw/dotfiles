@@ -177,7 +177,6 @@ Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 Plug 'othree/html5.vim', { 'for': [ 'html', 'svg' ] }
 Plug 'psliwka/vim-smoothie'
 Plug 'ryanoasis/vim-devicons'
-Plug 'terryma/vim-expand-region'
 Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'
