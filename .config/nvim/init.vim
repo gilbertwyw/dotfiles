@@ -141,8 +141,6 @@ if has('nvim')
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
   " LSP {{{
-  Plug 'hrsh7th/vim-vsnip'
-  Plug 'hrsh7th/vim-vsnip-integ'
   Plug 'neovim/nvim-lspconfig'
   Plug 'nvim-lua/completion-nvim'
   " }}}
@@ -271,7 +269,6 @@ nmap <silent> ]W <Plug>(ale_last)
 " }}}
 " Plugin: completion-nvim {{{
 if has('nvim')
-  " let g:completion_enable_snippet = ['UltiSnips','vim-vsnip']
   let g:completion_enable_snippet = 'UltiSnips'
 
   " https://github.com/nvim-lua/completion-nvim#recommended-setting
