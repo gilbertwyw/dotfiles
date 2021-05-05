@@ -228,7 +228,6 @@ Plug 'tpope/vim-rhubarb'
 " }}}
 " Languages {{{
 " CSS {{{
-Plug 'cakebaker/scss-syntax.vim'
 Plug 'hail2u/vim-css3-syntax'
 " }}}
 " JavaScript {{{
