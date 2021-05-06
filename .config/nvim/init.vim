@@ -279,6 +279,8 @@ if has('nvim')
 
   " Avoid showing message extra message when using completion
   set shortmess+=c
+
+  autocmd BufEnter * lua require'completion'.on_attach()
 endif
 " }}}
 " Plugin: editorconfig {{{

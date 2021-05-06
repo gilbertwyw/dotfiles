@@ -32,8 +32,6 @@ local on_attach = function(client, bufnr)
   elseif client.resolved_capabilities.document_range_formatting then
     buf_set_keymap("n", "<LocalLeader>gf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
   end
-
-  require('completion').on_attach()
 end
 
 local servers = { "dartls", "tsserver" }
