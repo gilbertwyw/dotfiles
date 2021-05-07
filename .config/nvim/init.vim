@@ -247,7 +247,6 @@ Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'edkolev/tmuxline.vim'
 Plug 'tmux-plugins/vim-tmux'
-Plug 'wellle/tmux-complete.vim'
 " }}}
 call plug#end()
 " }}}
