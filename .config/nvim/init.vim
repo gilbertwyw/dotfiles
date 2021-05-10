@@ -161,7 +161,6 @@ Plug 'embear/vim-localvimrc'
 Plug 'hashivim/vim-terraform'
 Plug 'janko-m/vim-test'
 Plug 'jpalardy/vim-slime'
-Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'junegunn/vim-emoji'
 Plug 'justinmk/vim-dirvish'
