@@ -226,9 +226,6 @@ Plug 'tpope/vim-git'
 Plug 'tpope/vim-rhubarb'
 " }}}
 " Languages {{{
-" CSS {{{
-Plug 'hail2u/vim-css3-syntax'
-" }}}
 " JavaScript {{{
 Plug 'heavenshell/vim-jsdoc', {
   \ 'for': ['javascript', 'javascript.jsx','typescript'],
