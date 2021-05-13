@@ -144,6 +144,11 @@ if has('nvim')
   Plug 'neovim/nvim-lspconfig'
   Plug 'nvim-lua/completion-nvim'
   " }}}
+  " Telescope {{{
+  Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+  " }}}
 endif
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
@@ -329,20 +334,11 @@ omap <leader><tab> <plug>(fzf-maps-o)
 
 nnoremap <leader>bb      :Buffers<CR>
 nnoremap <leader>bc      :BCommits<CR>
-nnoremap <leader>bl      :BLines<CR>
-nnoremap <leader>bt      :BTags<CR>
-nnoremap <leader>cl      :Colors<CR>
 nnoremap <leader>cm      :Commands<CR>
 nnoremap <leader><Space> :Files<CR>
 " files under same directory
 nnoremap <Leader>ff      :Files <C-r>=expand("%:h")<CR>/<CR>
-nnoremap <leader>ft      :Filetypes<CR>
-nnoremap <leader>gf      :GFiles?<CR>
-nnoremap <leader>gF      :GFiles<CR>
-nnoremap <leader>m       :Marks<CR>
-nnoremap <localleader>ht :Helptags<CR>
 nnoremap <localleader>s  :Snippets<CR>
-nnoremap <localleader>tt :Tags<CR>
 
 " Insert mode completion
 imap <c-x><c-k> <plug>(fzf-complete-word)
@@ -375,6 +371,21 @@ let g:tagbar_type_markdown = {
     \ },
     \ 'sort': 0,
 \ }
+" }}}
+" Plugin: telescope.nvim {{{
+nnoremap <localleader>,  :Telescope builtin<CR>
+
+nnoremap <leader>/       :Telescope search_history<CR>
+nnoremap <leader>bl      :Telescope current_buffer_fuzzy_find<CR>
+nnoremap <leader>bt      :Telescope current_buffer_tags<CR>
+nnoremap <leader>cl      :Telescope colorscheme<CR>
+nnoremap <leader>ft      :Telescope filetypes<CR>
+nnoremap <leader>gf      :Telescope git_files<CR>
+nnoremap <leader>gs      :Telescope git_status<CR>
+nnoremap <leader>m       :Telescope marks<CR>
+nnoremap <leader>km      :Telescope keymaps<CR>
+nnoremap <localleader>ht :Telescope help_tags<CR>
+nnoremap <localleader>tt :Telescope tags<CR>
 " }}}
 " Plugin: tmux-complete.vim {{{
 " https://github.com/wellle/tmux-complete.vim#settings
@@ -430,7 +441,7 @@ nnoremap <localleader>fs :FloatermSend<Space>
 " Plugin: vim-fugitive {{{
 nmap <leader>gb :Git blame<cr>
 nmap <leader>gl :Glog %<cr>
-nmap <leader>gs :Git<cr>
+nmap <leader>gg :Git<cr>
 " }}}
 " Plugin: vim-grepper {{{
 if executable('rg')
