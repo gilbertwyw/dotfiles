@@ -222,14 +222,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-rhubarb'
 " }}}
-" Languages {{{
 " JavaScript {{{
 Plug 'heavenshell/vim-jsdoc', {
   \ 'for': ['javascript', 'javascript.jsx','typescript'],
   \ 'do': 'make install'
 \}
-Plug 'mvolkmann/vim-js-arrow-function', { 'for': 'javascript' }
-" }}}
 " }}}
 " Snippets {{{
 Plug 'SirVer/ultisnips'
