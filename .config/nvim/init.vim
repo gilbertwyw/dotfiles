@@ -205,16 +205,11 @@ Plug 'lambdalisue/nerdfont.vim'
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 " }}}
 " Color schemes {{{
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'ajh17/Spacegray.vim'
 Plug 'bluz71/vim-nightfly-guicolors'
-Plug 'cocopon/iceberg.vim'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'fenetikm/falcon'
 Plug 'haishanh/night-owl.vim'
 Plug 'joshdick/onedark.vim'
-Plug 'junegunn/seoul256.vim'
-Plug 'lifepillar/vim-solarized8'
-Plug 'rakr/vim-one'
+Plug 'mhartington/oceanic-next'
 " }}}
 " Ctags {{{
 Plug 'ludovicchabant/vim-gutentags'
