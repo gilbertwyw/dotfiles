@@ -177,7 +177,6 @@ Plug 'machakann/vim-swap'
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'css' ] }
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
-Plug 'othree/html5.vim', { 'for': [ 'html', 'svg' ] }
 Plug 'psliwka/vim-smoothie'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tommcdo/vim-exchange'
