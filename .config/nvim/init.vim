@@ -334,8 +334,6 @@ omap <leader><tab> <plug>(fzf-maps-o)
 
 nnoremap <leader>bb      :Buffers<CR>
 nnoremap <leader>bc      :BCommits<CR>
-nnoremap <leader>cm      :Commands<CR>
-nnoremap <leader><Space> :Files<CR>
 " files under same directory
 nnoremap <Leader>ff      :Files <C-r>=expand("%:h")<CR>/<CR>
 nnoremap <localleader>s  :Snippets<CR>
@@ -376,14 +374,16 @@ let g:tagbar_type_markdown = {
 nnoremap <localleader>,  :Telescope builtin<CR>
 
 nnoremap <leader>/       :Telescope search_history<CR>
+nnoremap <leader><space> :Telescope find_files find_command=fd,--type,f,--hidden,--follow,--exclude,.git<CR>
 nnoremap <leader>bl      :Telescope current_buffer_fuzzy_find<CR>
 nnoremap <leader>bt      :Telescope current_buffer_tags<CR>
 nnoremap <leader>cl      :Telescope colorscheme<CR>
+nnoremap <leader>cm      :Telescope commands<CR>
 nnoremap <leader>ft      :Telescope filetypes<CR>
 nnoremap <leader>gf      :Telescope git_files<CR>
 nnoremap <leader>gs      :Telescope git_status<CR>
-nnoremap <leader>m       :Telescope marks<CR>
 nnoremap <leader>km      :Telescope keymaps<CR>
+nnoremap <leader>m       :Telescope marks<CR>
 nnoremap <localleader>ht :Telescope help_tags<CR>
 nnoremap <localleader>tt :Telescope tags<CR>
 " }}}
