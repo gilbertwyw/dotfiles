@@ -364,7 +364,7 @@ let g:tagbar_type_markdown = {
 nnoremap <localleader>,  :Telescope builtin<CR>
 
 nnoremap <leader>/       :Telescope search_history<CR>
-nnoremap <leader><space> :Telescope find_files find_command=fd,--type,f,--hidden,--follow,--exclude,.git<CR>
+nnoremap <leader><space> :Telescope find_files find_command=fd,--color,never,--type,f,--hidden,--follow,--exclude,.git<CR>
 nnoremap <leader>bl      :Telescope current_buffer_fuzzy_find<CR>
 nnoremap <leader>bt      :Telescope current_buffer_tags<CR>
 nnoremap <leader>cl      :Telescope colorscheme<CR>
