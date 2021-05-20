@@ -163,7 +163,6 @@ Plug 'chrisbra/unicode.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'embear/vim-localvimrc'
 Plug 'hashivim/vim-terraform'
-Plug 'janko-m/vim-test'
 Plug 'jpalardy/vim-slime'
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'junegunn/vim-emoji'
@@ -474,13 +473,6 @@ nmap g< <Plug>(swap-prev)
 nmap g> <Plug>(swap-next)
 nmap <localleader>gs <Plug>(swap-interactive)
 xmap <localleader>gs <Plug>(swap-interactive)
-" }}}
-" Plugin: vim-test {{{
-nmap <silent> <leader>tn :TestNearest<CR>
-nmap <silent> <leader>tf :TestFile<CR>
-nmap <silent> <leader>ts :TestSuite<CR>
-nmap <silent> <leader>tl :TestLast<CR>
-nmap <silent> <leader>tv :TestVisit<CR>
 " }}}
 " Plugin: vim-tmux-navigator {{{
 let g:tmux_navigator_disable_when_zoomed = 1
