@@ -232,7 +232,6 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 " }}}
 " Tmux {{{
-Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'edkolev/tmuxline.vim'
 Plug 'tmux-plugins/vim-tmux'
@@ -476,15 +475,6 @@ xmap <localleader>gs <Plug>(swap-interactive)
 " }}}
 " Plugin: vim-tmux-navigator {{{
 let g:tmux_navigator_disable_when_zoomed = 1
-" }}}
-" Plugin: vimux {{{
-" horizontal is vertical here
-let g:VimuxOrientation = 'h'
-" in percentage
-let g:VimuxHeight = '40'
-map <Leader>vp :VimuxPromptCommand<CR>
-map <Leader>vl :VimuxRunLastCommand<CR>
-map <Leader>vi :VimuxInspectRunner<CR>
 " }}}
 " Autocommands {{{1
 augroup autoSaveAndRead " {{{2
