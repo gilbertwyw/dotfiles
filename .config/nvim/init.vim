@@ -191,7 +191,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tyru/open-browser.vim'
 Plug 'vim-scripts/ReplaceWithRegister'
-Plug 'voldikss/vim-floaterm'
 Plug 'wellle/targets.vim'
 Plug 'w0rp/ale'
 " fern {{{
@@ -417,14 +416,6 @@ endif
 " Plugin: vim-expand-region {{{
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
-" }}}
-" Plugin: vim-floaterm {{{
-let g:floaterm_keymap_new    = '<localleader>ff'
-let g:floaterm_keymap_next   = '<localleader>fn'
-let g:floaterm_keymap_prev   = '<localleader>fp'
-let g:floaterm_keymap_toggle = '<localleader>ft'
-
-nnoremap <localleader>fs :FloatermSend<Space>
 " }}}
 " Plugin: vim-fugitive {{{
 nmap <leader>gb :Git blame<cr>
