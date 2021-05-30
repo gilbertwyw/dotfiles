@@ -138,11 +138,11 @@ call plug#begin('~/.vim/plugged')
 if has('nvim')
   Plug 'antoinemadec/FixCursorHold.nvim'
   Plug 'folke/tokyonight.nvim'
+  Plug 'hrsh7th/nvim-compe'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
   " LSP {{{
   Plug 'neovim/nvim-lspconfig'
-  Plug 'nvim-lua/completion-nvim'
   " }}}
   " Telescope {{{
   Plug 'nvim-lua/popup.nvim'
@@ -251,24 +251,6 @@ nmap <silent> [w <Plug>(ale_previous_wrap)
 nmap <silent> ]w <Plug>(ale_next_wrap)
 nmap <silent> ]W <Plug>(ale_last)
 " }}}
-" Plugin: completion-nvim {{{
-if has('nvim')
-  let g:completion_enable_snippet = 'UltiSnips'
-
-  " https://github.com/nvim-lua/completion-nvim#recommended-setting
-  " Use <Tab> and <S-Tab> to navigate through popup menu
-  inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-  inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-  " Set completeopt to have a better completion experience
-  set completeopt=menuone,noinsert,noselect
-
-  " Avoid showing message extra message when using completion
-  set shortmess+=c
-
-  autocmd BufEnter * lua require'completion'.on_attach()
-endif
-" }}}
 " Plugin: editorconfig {{{
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " }}}
@@ -334,6 +316,34 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 " Plugin: indentLine {{{
 let g:indentLine_faster     = 1
 let g:indentLine_setConceal = 0
+" }}}
+" Plugin: nvim-compe {{{
+if has('nvim')
+  set completeopt=menuone,noselect
+
+  let g:compe = {}
+  let g:compe.enabled = v:true
+  let g:compe.autocomplete = v:true
+  let g:compe.debug = v:false
+  let g:compe.min_length = 1
+  let g:compe.preselect = 'enable'
+  let g:compe.throttle_time = 80
+  let g:compe.source_timeout = 200
+  let g:compe.incomplete_delay = 400
+  let g:compe.max_abbr_width = 100
+  let g:compe.max_kind_width = 100
+  let g:compe.max_menu_width = 100
+  let g:compe.documentation = v:true
+
+  let g:compe.source = {}
+  let g:compe.source.path = v:true
+  let g:compe.source.buffer = v:true
+  let g:compe.source.calc = v:true
+  let g:compe.source.nvim_lsp = v:true
+  let g:compe.source.nvim_lua = v:true
+  let g:compe.source.vsnip = v:true
+  let g:compe.source.ultisnips = v:true
+endif
 " }}}
 " Plugin: open-browser.vim {{{
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
