@@ -140,6 +140,7 @@ if has('nvim')
   Plug 'folke/tokyonight.nvim'
   Plug 'hrsh7th/nvim-compe'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'nvim-treesitter/playground'
   Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
   " LSP {{{
   Plug 'neovim/nvim-lspconfig'
@@ -502,6 +503,11 @@ augroup END " }}} 2
 if has('nvim')
   set inccommand=split
   set pumblend=20
+
+  " Treesitter playground {{{
+  nnoremap <leader>ph :TSHighlightCapturesUnderCursor<CR>
+  nnoremap <leader>pt :TSPlaygroundToggle<CR>
+  " }}}
 
   lua require('lsp_config')
   lua require('treesitter')
