@@ -148,6 +148,10 @@ if has('nvim')
   Plug 'hrsh7th/vim-vsnip'
   " }}}
   " }}}
+  " statusline {{{
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'hoob3rt/lualine.nvim'
+  " }}}
   " Telescope {{{
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
@@ -162,7 +166,6 @@ Plug 'Valloric/ListToggle'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-rooter'
 Plug 'andymass/vim-matchup'
-Plug 'bling/vim-airline'
 Plug 'chrisbra/unicode.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'embear/vim-localvimrc'
@@ -181,7 +184,6 @@ Plug 'mattn/emmet-vim', { 'for': [ 'html', 'css' ] }
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 Plug 'psliwka/vim-smoothie'
-Plug 'ryanoasis/vim-devicons'
 Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'
@@ -236,7 +238,6 @@ Plug 'honza/vim-snippets'
 " }}}
 " Tmux {{{
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'edkolev/tmuxline.vim'
 Plug 'tmux-plugins/vim-tmux'
 " }}}
 call plug#end()
@@ -506,6 +507,7 @@ if has('nvim')
 
   lua require('lsp_config')
   lua require('treesitter')
+  lua require('statusline')
 endif
 " }}}
 " True color {{{
