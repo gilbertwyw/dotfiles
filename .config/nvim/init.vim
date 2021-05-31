@@ -143,6 +143,10 @@ if has('nvim')
   Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
   " LSP {{{
   Plug 'neovim/nvim-lspconfig'
+  " Snippets {{{
+  Plug 'rafamadriz/friendly-snippets'
+  Plug 'hrsh7th/vim-vsnip'
+  " }}}
   " }}}
   " Telescope {{{
   Plug 'nvim-lua/popup.nvim'
@@ -465,6 +469,17 @@ noremap <plug>(slash-after) zz
 " }}}
 " Plugin: vim-slime {{{
 let g:slime_target = 'tmux'
+" }}}
+" Plugin: vim-vsnip {{{
+" https://github.com/hrsh7th/vim-vsnip#2-setting
+if has('nvim')
+  " Expand
+  imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+  smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+  " Expand or jump
+  imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+  smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+endif 
 " }}}
 " Plugin: vim-swap {{{
 let g:swap_no_default_key_mappings = 1
