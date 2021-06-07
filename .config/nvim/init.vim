@@ -305,8 +305,6 @@ nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 
-nnoremap <leader>bb      :Buffers<CR>
-nnoremap <leader>bc      :BCommits<CR>
 " files under same directory
 nnoremap <Leader>ff      :Files <C-r>=expand("%:h")<CR>/<CR>
 nnoremap <localleader>s  :Snippets<CR>
@@ -376,6 +374,8 @@ nnoremap <localleader>,  :Telescope builtin<CR>
 
 nnoremap <leader>/       :Telescope search_history<CR>
 nnoremap <leader><space> :Telescope find_files find_command=fd,--color,never,--type,f,--hidden,--follow,--exclude,.git<CR>
+nnoremap <leader>bb      :Telescope buffers<CR>
+nnoremap <leader>bc      :Telescope git_bcommits<CR>
 nnoremap <leader>bl      :Telescope current_buffer_fuzzy_find<CR>
 nnoremap <leader>bt      :Telescope current_buffer_tags<CR>
 nnoremap <leader>cl      :Telescope colorscheme<CR>
