@@ -385,6 +385,8 @@ nnoremap <leader>gf      :Telescope git_files<CR>
 nnoremap <leader>gs      :Telescope git_status<CR>
 nnoremap <leader>km      :Telescope keymaps<CR>
 nnoremap <leader>m       :Telescope marks<CR>
+nnoremap <leader>ss      :Telescope live_grep<CR>
+nnoremap <leader>sw      :Telescope grep_string<CR>
 nnoremap <localleader>ht :Telescope help_tags<CR>
 nnoremap <localleader>tt :Telescope tags<CR>
 " }}}
@@ -438,12 +440,9 @@ nmap <leader>gg :Git<cr>
 " }}}
 " Plugin: vim-grepper {{{
 if executable('rg')
-  " -highlight does not work when passing extra option(s)
   " https://github.com/mhinz/vim-grepper/wiki/Using-the-commands
-  nnoremap <leader>ss :Grepper -tool rg -highlight<cr>
+  " -highlight does not work when passing extra option(s)
   nnoremap <leader>sb :Grepper -tool rg -buffers -highlight<cr>
-  " Search for the word under the cursor
-  nnoremap <Leader>sw :Grepper -tool rg -cword -noprompt<cr>
 endif
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
