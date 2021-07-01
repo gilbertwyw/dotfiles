@@ -203,8 +203,8 @@ Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/nerdfont.vim'
 " }}}
 " fzf.vim {{{
-" Use installed 'fzf' from Homebrew
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 " }}}
 " Color schemes {{{
 Plug 'bluz71/vim-nightfly-guicolors'
