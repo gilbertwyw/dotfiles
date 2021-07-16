@@ -1,2 +1,2 @@
 set spell
-nmap <leader>p :Glow<CR>
+noremap <leader>p :Glow<CR>
