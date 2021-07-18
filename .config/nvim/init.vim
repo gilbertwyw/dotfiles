@@ -338,6 +338,7 @@ if has('nvim')
   let g:compe.preselect = 'enable'
   let g:compe.throttle_time = 80
   let g:compe.source_timeout = 200
+  let g:compe.resolve_timeout = 800
   let g:compe.incomplete_delay = 400
   let g:compe.max_abbr_width = 100
   let g:compe.max_kind_width = 100
@@ -352,6 +353,8 @@ if has('nvim')
   let g:compe.source.nvim_lua = v:true
   let g:compe.source.vsnip = v:true
   let g:compe.source.ultisnips = v:true
+  let g:compe.source.luasnip = v:true
+  let g:compe.source.emoji = v:true
 endif
 " }}}
 " Plugin: open-browser.vim {{{
