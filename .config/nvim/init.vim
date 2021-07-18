@@ -182,7 +182,6 @@ Plug 'justinmk/vim-dirvish'
 Plug 'junegunn/vim-slash'
 Plug 'justinmk/vim-sneak'
 Plug 'kshenoy/vim-signature'
-Plug 'machakann/vim-highlightedyank'
 Plug 'machakann/vim-swap'
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'css' ] }
 Plug 'mbbill/undotree'
@@ -508,6 +507,12 @@ augroup autoSaveAndRead " {{{2
   autocmd TextChanged,InsertLeave,FocusLost * silent! wall
   autocmd CursorHold * silent! checktime
 augroup END " }}} 2
+if has('nvim')
+  augroup highlightOnYank " {{{2
+    autocmd!
+    autocmd TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch", timeout=150, on_visual=true}
+  augroup END " }}} 2
+endif
 " }}}1
 " Neovim-specific {{{
 if has('nvim')
