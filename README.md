@@ -84,6 +84,9 @@ nvim +PlugInstall +UpdateRemotePlugins +qa
 
 # share config between Neovim and vim
 ln -s ~/.config/nvim/init.vim ~/.vimrc
+
+# to satisfy `:checkhealth provider`
+pip[3] install --user neovim
 ```
 
 ## Miscs.
