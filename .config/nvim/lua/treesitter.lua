@@ -1,12 +1,14 @@
 require'nvim-treesitter.configs'.setup {
   -- https://github.com/nvim-treesitter/nvim-treesitter#modules
   ensure_installed = {
+    "bash",
     "css",
-    "dart",
     "go",
+    "hcl",
     "html",
     "javascript",
     "json",
+    "python",
     "typescript",
     "yaml",
   },
