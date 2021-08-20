@@ -148,7 +148,7 @@ if has('nvim')
   Plug 'hrsh7th/nvim-compe'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-treesitter/playground'
-  Plug 'npxbr/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
+  Plug 'ellisonleao/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
   " LSP {{{
   Plug 'neovim/nvim-lspconfig'
   " Snippets {{{
