@@ -10,6 +10,7 @@ require'nvim-treesitter.configs'.setup {
     "json",
     "python",
     "typescript",
+    "vim",
     "yaml",
   },
   highlight = {
