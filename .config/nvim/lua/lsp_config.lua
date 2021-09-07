@@ -34,9 +34,13 @@ local on_attach = function(client, bufnr)
   end
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
 local servers = { "bashls", "terraformls", "tsserver" }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
+    capabilities = capabilities,
     on_attach = on_attach,
     flags = {
       debounce_text_changes = 150,
@@ -47,6 +51,7 @@ end
 -- https://github.com/neovim/nvim-lspconfig#gopls
 -- https://github.com/golang/tools/blob/master/gopls/doc/vim.md#custom-configuration
 nvim_lsp.gopls.setup {
+  capabilities = capabilities,
   on_attach = on_attach,
   settings = {
     -- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
