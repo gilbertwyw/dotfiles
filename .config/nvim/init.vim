@@ -458,9 +458,6 @@ let g:slime_target = 'tmux'
 " Plugin: vim-vsnip {{{
 " https://github.com/hrsh7th/vim-vsnip#2-setting
 if has('nvim')
-  " Expand
-  imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
-  smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
   " Expand or jump
   imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
   smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
