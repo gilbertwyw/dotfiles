@@ -148,11 +148,19 @@ if has('nvim')
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-treesitter/playground'
   Plug 'ellisonleao/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
+  " nvim-cmp {{{
+  Plug 'hrsh7th/nvim-cmp'
+  Plug 'hrsh7th/cmp-buffer'
+  Plug 'hrsh7th/cmp-path'
+  Plug 'hrsh7th/cmp-vsnip'
+  Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+  " }}}
   " LSP {{{
   Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/cmp-nvim-lsp'
   " Snippets {{{
-  Plug 'rafamadriz/friendly-snippets'
   Plug 'hrsh7th/vim-vsnip'
+  Plug 'rafamadriz/friendly-snippets'
   " }}}
   " }}}
   " Telescope {{{
@@ -492,6 +500,7 @@ if has('nvim')
   nnoremap <leader>pt :TSPlaygroundToggle<CR>
   " }}}
 
+  lua require('nvim_cmp')
   lua require('lsp_config')
   lua require('treesitter')
 endif
