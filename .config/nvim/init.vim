@@ -277,7 +277,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 let g:cursorhold_updatetime = 100
 " }}}
 " Plugin: fern.vim {{{
-noremap <silent> <leader>fd :Fern . -drawer -reveal=% -toggle<CR>
+noremap <silent> <leader>td :Fern . -drawer -reveal=% -toggle<CR>
 
 " https://github.com/lambdalisue/fern.vim/wiki/Tips#define-nerdtree-like-mappings
 function! s:init_fern() abort
@@ -332,13 +332,17 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 let g:indentLine_faster     = 1
 let g:indentLine_setConceal = 0
 " }}}
+" ListToggle {{{
+let g:lt_location_list_toggle_map = '<leader>tl'
+let g:lt_quickfix_list_toggle_map = '<leader>tq'
+" }}}
 " Plugin: open-browser.vim {{{
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 " }}}
 " Plugin: tagbar {{{
-nmap <localleader>tb :TagbarToggle<CR>
+nmap <leader>tt :TagbarToggle<CR>
 let g:tagbar_type_markdown = {
     \ 'ctagstype': 'markdown',
     \ 'ctagsbin' : 'markdown2ctags',
@@ -389,7 +393,7 @@ let g:UltiSnipsSnippetsDir        = '~/dotfiles/vim/snips/'
 let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'snips']
 " }}}
 " Plugin: undotree {{{
-nnoremap <F5> :UndotreeToggle<cr>
+nnoremap <leader>tu :UndotreeToggle<cr>
 " }}}
 " Plugin: vim-airline {{{
 " make symbols look okay
@@ -494,7 +498,7 @@ if has('nvim')
 
   " Treesitter playground {{{
   nnoremap <leader>ph :TSHighlightCapturesUnderCursor<CR>
-  nnoremap <leader>pt :TSPlaygroundToggle<CR>
+  nnoremap <leader>tp :TSPlaygroundToggle<CR>
   " }}}
 
   lua require('nvim_cmp')
