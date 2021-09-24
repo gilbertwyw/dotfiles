@@ -158,6 +158,7 @@ if has('nvim')
   " LSP {{{
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'simrat39/symbols-outline.nvim'
   " Snippets {{{
   Plug 'hrsh7th/vim-vsnip'
   Plug 'rafamadriz/friendly-snippets'
@@ -340,6 +341,9 @@ let g:lt_quickfix_list_toggle_map = '<leader>tq'
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+" }}}
+" symbols-outline.nvim {{{
+nnoremap <leader>ts :SymbolsOutline<cr>
 " }}}
 " Plugin: tagbar {{{
 nmap <leader>tt :TagbarToggle<CR>
