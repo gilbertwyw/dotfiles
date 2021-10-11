@@ -213,6 +213,7 @@ Plug 'wellle/targets.vim'
 Plug 'w0rp/ale'
 " fern {{{
 Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/fern-bookmark.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/nerdfont.vim'
 " }}}
@@ -310,6 +311,9 @@ augroup fern-custom
   autocmd! *
   autocmd FileType fern call s:init_fern()
 augroup END
+" }}}
+" Plugin: fern-bokmark.vim {{{
+nnoremap <leader>tb :Fern bookmark:///<cr>
 " }}}
 " Plugin: fern-renderer-nerdfont.vim {{{
 let g:fern#renderer = "nerdfont"
