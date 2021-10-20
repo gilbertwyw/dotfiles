@@ -37,7 +37,7 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-local servers = { "bashls", "terraformls", "tsserver" }
+local servers = { "ansiblels", "bashls", "terraformls", "tsserver" }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     capabilities = capabilities,
