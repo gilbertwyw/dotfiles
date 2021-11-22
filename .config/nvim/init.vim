@@ -78,6 +78,9 @@ inoremap <Plug>UpCase <Esc>hgUaweA
 imap ;u <Plug>UpCase
 " }}}2
 " Normal {{{2
+" join line without moving the cursor
+nnoremap J mzJ`z
+
 " select whatever's just been pasted
 nnoremap gV `[V`]
 
