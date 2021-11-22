@@ -15,7 +15,6 @@ alias dotsize='du -hs .* | gsort -h'
 alias eh='sudo $EDITOR /etc/hosts'
 alias rm=trash
 alias vd='$EDITOR -d'
-alias wh='which -a'
 
 ##########
 #  Tmux  #
