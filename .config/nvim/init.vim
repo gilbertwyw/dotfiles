@@ -67,6 +67,12 @@ set shiftwidth=2
 cmap w!! w !sudo tee > /dev/null %
 " }}}2
 " Insert {{{2
+" undo break points
+inoremap ! !<c-g>u
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ? ?<c-g>u
+
 " jk is escape
 inoremap jk <Esc>
 
