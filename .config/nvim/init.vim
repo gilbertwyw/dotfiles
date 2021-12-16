@@ -379,6 +379,7 @@ let g:tagbar_type_markdown = {
 " Plugin: telescope.nvim {{{
 nnoremap <localleader>,  :Telescope builtin<CR>
 
+nnoremap <leader>.       :Telescope resume<CR>
 nnoremap <leader>/       :Telescope search_history<CR>
 nnoremap <leader><space> :Telescope find_files find_command=fd,--color,never,--type,f,--hidden,--follow,--exclude,.git<CR>
 nnoremap <leader>bb      :Telescope buffers<CR>
