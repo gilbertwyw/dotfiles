@@ -388,6 +388,7 @@ nnoremap <leader>bl      :Telescope current_buffer_fuzzy_find<CR>
 nnoremap <leader>bt      :Telescope current_buffer_tags<CR>
 nnoremap <leader>cl      :Telescope colorscheme<CR>
 nnoremap <leader>cm      :Telescope commands<CR>
+nnoremap <leader>fr      :Telescope oldfiles<CR>
 nnoremap <leader>ft      :Telescope filetypes<CR>
 nnoremap <leader>gf      :Telescope git_files<CR>
 nnoremap <leader>gs      :Telescope git_status<CR>
@@ -484,7 +485,7 @@ if has('nvim')
   " Expand or jump
   imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
   smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
-endif 
+endif
 " }}}
 " Plugin: vim-swap {{{
 let g:swap_no_default_key_mappings = 1
