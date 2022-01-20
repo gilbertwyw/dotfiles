@@ -8,3 +8,14 @@ function v() {
     $EDITOR -c Obsession
   fi
 }
+
+function jump_after_first_word () {
+    local words
+    words=(${(z)BUFFER})
+
+    if (( ${#words} <= 1 )) ; then
+        CURSOR=${#BUFFER}
+    else
+        CURSOR=${#${words[1]}}+1
+    fi
+}
