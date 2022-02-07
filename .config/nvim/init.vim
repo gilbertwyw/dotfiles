@@ -110,14 +110,12 @@ nnoremap <Down> :resize +2<CR>
 
 " Learn the following 2 from Damian Conway
 " 1) exchange 'S' for:
-nmap  S  :%s//g<LEFT><LEFT>
+nnoremap S :%s//g<Left><Left>
 " 2) exchange 'M' for:
 " nmap <expr>  M  ':%s/' . @/ . '//g<LEFT><LEFT>'
 
 " add filetype
 nnoremap gaf :set ft+=.
-
-nnoremap S :%s//g<Left><Left>
 
 if s:darwin
   " try to open the current file in default application
