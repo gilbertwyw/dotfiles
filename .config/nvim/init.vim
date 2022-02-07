@@ -156,7 +156,7 @@ if has('nvim')
   Plug 'folke/tokyonight.nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-treesitter/playground'
-  Plug 'ellisonleao/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
+  Plug 'ellisonleao/glow.nvim'
   " nvim-cmp {{{
   Plug 'hrsh7th/nvim-cmp'
   Plug 'hrsh7th/cmp-buffer'
