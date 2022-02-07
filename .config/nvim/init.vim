@@ -150,7 +150,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 " Plugins {{{
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 if has('nvim')
   Plug 'antoinemadec/FixCursorHold.nvim'
   Plug 'folke/tokyonight.nvim'
