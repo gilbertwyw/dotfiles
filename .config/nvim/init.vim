@@ -108,6 +108,9 @@ nnoremap <Right> :vertical resize -2<CR>
 nnoremap <Up> :resize -2<CR>
 nnoremap <Down> :resize +2<CR>
 
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
 " Learn the following 2 from Damian Conway
 " 1) exchange 'S' for:
 nnoremap S :%s//g<Left><Left>
@@ -194,7 +197,6 @@ Plug 'jpalardy/vim-slime'
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'junegunn/vim-emoji'
 Plug 'justinmk/vim-dirvish'
-Plug 'junegunn/vim-slash'
 Plug 'justinmk/vim-sneak'
 Plug 'kshenoy/vim-signature'
 Plug 'machakann/vim-swap'
