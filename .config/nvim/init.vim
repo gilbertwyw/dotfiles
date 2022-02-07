@@ -170,6 +170,7 @@ if has('nvim')
   " LSP {{{
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'onsails/lspkind-nvim'
   Plug 'simrat39/symbols-outline.nvim'
   " Snippets {{{
   Plug 'hrsh7th/vim-vsnip'
