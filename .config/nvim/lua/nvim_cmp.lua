@@ -5,6 +5,7 @@ cmp.setup({
   sources = {
     -- order matters
     { name = 'nvim_lsp' },
+    { name = 'nvim_lua' },
     { name = 'ultisnips' },
     { name = 'vsnip' },
     { name = 'buffer' },
