@@ -155,6 +155,7 @@ call plug#begin()
 if has('nvim')
   Plug 'antoinemadec/FixCursorHold.nvim'
   Plug 'folke/tokyonight.nvim'
+  Plug 'numToStr/Comment.nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-treesitter/playground'
   Plug 'ellisonleao/glow.nvim'
@@ -209,7 +210,6 @@ Plug 'psliwka/vim-smoothie'
 Plug 'romgrk/nvim-treesitter-context'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tommcdo/vim-exchange'
-Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-dispatch'
@@ -522,6 +522,8 @@ if has('nvim')
   nnoremap <leader>ph :TSHighlightCapturesUnderCursor<CR>
   nnoremap <leader>tp :TSPlaygroundToggle<CR>
   " }}}
+
+  lua require('Comment').setup()
 
   lua require('nvim_cmp')
   lua require('lsp_config')
