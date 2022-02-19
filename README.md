@@ -6,7 +6,7 @@
 - [GNU Stow](https://www.gnu.org/software/stow/)
 
 ```sh
-brew install bat ddgr direnv fd go googler hub ripgrep stow trash universal-ctags z
+brew install bat ddgr direnv fd go ripgrep stow trash universal-ctags z
 
 # Regarding "Github API Rate limit exceeded"
 echo "export HOMEBREW_GITHUB_API_TOKEN=<token>" > ~/.envrc
