@@ -206,6 +206,7 @@ Plug 'machakann/vim-swap'
 Plug 'mattn/emmet-vim', { 'for': [ 'html', 'css' ] }
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
+Plug 'pearofducks/ansible-vim'
 Plug 'psliwka/vim-smoothie'
 Plug 'romgrk/nvim-treesitter-context'
 Plug 'ryanoasis/vim-devicons'
