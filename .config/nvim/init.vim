@@ -182,6 +182,7 @@ if has('nvim')
   " Telescope {{{
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
+  Plug 'nvim-telescope/telescope-file-browser.nvim'
   " }}}
 endif
 Plug 'AndrewRadev/splitjoin.vim'
@@ -380,6 +381,7 @@ let g:tagbar_type_markdown = {
 " }}}
 " Plugin: telescope.nvim {{{
 nnoremap <localleader>,  :Telescope builtin<CR>
+nnoremap <localleader>fb :Telescope file_browser<CR>
 
 nnoremap <leader>.       :Telescope resume<CR>
 nnoremap <leader>/       :Telescope search_history<CR>
@@ -514,6 +516,7 @@ if has('nvim')
   " }}}
 
   lua require('Comment').setup()
+  lua require('telescope').load_extension('file_browser')
 
   lua require('gitsigns_nvim')
   lua require('nvim_cmp')
