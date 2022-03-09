@@ -155,6 +155,7 @@ call plug#begin()
 if has('nvim')
   Plug 'antoinemadec/FixCursorHold.nvim'
   Plug 'folke/tokyonight.nvim'
+  Plug 'lewis6991/gitsigns.nvim'
   Plug 'numToStr/Comment.nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-treesitter/playground'
@@ -198,7 +199,6 @@ Plug 'embear/vim-localvimrc'
 Plug 'hashivim/vim-terraform'
 Plug 'jpalardy/vim-slime'
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
-Plug 'junegunn/vim-emoji'
 Plug 'justinmk/vim-dirvish'
 Plug 'justinmk/vim-sneak'
 Plug 'kshenoy/vim-signature'
@@ -246,7 +246,6 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 " }}}
 " Git {{{
-Plug 'airblade/vim-gitgutter'
 Plug 'rhysd/git-messenger.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
@@ -429,16 +428,6 @@ xmap gaa <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap gaa <Plug>(EasyAlign)
 " }}}
-" Plugin: vim-emoji {{{
-" trigger by CTRL-X CTRL-U in INSERT mode with terminal vim
-" Using Emojis as Git Gutter symbols, work only with terminal vim(?)
-silent! if emoji#available()
-  let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
-  let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
-  let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
-  let g:gitgutter_sign_modified_removed = emoji#for('collision')
-endif
-" }}}
 " Plugin: vim-expand-region {{{
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
@@ -526,6 +515,7 @@ if has('nvim')
 
   lua require('Comment').setup()
 
+  lua require('gitsigns_nvim')
   lua require('nvim_cmp')
   lua require('lsp_config')
   lua require('treesitter')
