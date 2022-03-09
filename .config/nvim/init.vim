@@ -291,7 +291,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 let g:cursorhold_updatetime = 100
 " }}}
 " Plugin: fern.vim {{{
-noremap <silent> <leader>td :Fern . -drawer -reveal=% -toggle<CR>
+noremap <silent> <leader>fd :Fern . -drawer -reveal=% -toggle<CR>
 
 " https://github.com/lambdalisue/fern.vim/wiki/Tips#define-nerdtree-like-mappings
 function! s:init_fern() abort
@@ -325,7 +325,7 @@ augroup fern-custom
 augroup END
 " }}}
 " Plugin: fern-bokmark.vim {{{
-nnoremap <leader>tb :Fern bookmark:///<cr>
+nnoremap <leader>fb :Fern bookmark:///<cr>
 " }}}
 " Plugin: fern-renderer-nerdfont.vim {{{
 let g:fern#renderer = "nerdfont"
