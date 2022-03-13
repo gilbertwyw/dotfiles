@@ -183,6 +183,7 @@ if has('nvim')
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-file-browser.nvim'
+  Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
   " }}}
 endif
 Plug 'AndrewRadev/splitjoin.vim'
@@ -517,11 +518,11 @@ if has('nvim')
   " }}}
 
   lua require('Comment').setup()
-  lua require('telescope').load_extension('file_browser')
 
   lua require('gitsigns_nvim')
   lua require('nvim_cmp')
   lua require('lsp_config')
+  lua require('telescope_nvim')
   lua require('treesitter')
 endif
 " }}}
