@@ -337,8 +337,6 @@ nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 
-" files under same directory
-nnoremap <Leader>ff      :Files <C-r>=expand("%:h")<CR>/<CR>
 nnoremap <localleader>s  :Snippets<CR>
 
 " Insert mode completion
@@ -383,7 +381,7 @@ let g:tagbar_type_markdown = {
 " Plugin: telescope.nvim {{{
 nnoremap <localleader>,  :Telescope builtin<CR>
 nnoremap <localleader>fb :Telescope file_browser<CR>
-nnoremap <localleader>ff :Telescope file_browser path=%:p:h <CR>
+nnoremap <leader>ff      :Telescope file_browser path=%:p:h <CR>
 
 nnoremap <leader>.       :Telescope resume<CR>
 nnoremap <leader>/       :Telescope search_history<CR>
