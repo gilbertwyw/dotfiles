@@ -396,6 +396,7 @@ nnoremap <leader>gf      :Telescope git_files<CR>
 nnoremap <leader>gs      :Telescope git_status<CR>
 nnoremap <leader>km      :Telescope keymaps<CR>
 nnoremap <leader>m       :Telescope marks<CR>
+nnoremap <leader>sp      :Telescope live_grep<CR>
 nnoremap <localleader>ht :Telescope help_tags<CR>
 nnoremap <localleader>tt :Telescope tags<CR>
 " }}}
