@@ -159,7 +159,7 @@ if has('nvim')
   Plug 'numToStr/Comment.nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-treesitter/playground'
-  Plug 'ellisonleao/glow.nvim'
+  Plug 'ellisonleao/glow.nvim', {'branch': 'main'}
   " nvim-cmp {{{
   Plug 'hrsh7th/nvim-cmp'
   Plug 'hrsh7th/cmp-buffer'
