@@ -1,4 +1,3 @@
-let s:darwin = has('mac')
 
 set nocompatible
 set encoding=utf-8
@@ -120,10 +119,6 @@ nnoremap S :%s//g<Left><Left>
 " add filetype
 nnoremap gaf :set ft+=.
 
-if s:darwin
-  " try to open the current file in default application
-  nnoremap <leader>o :silent !open '%'<cr>
-endif
 " }}}2
 " Visual {{{2
 " http://vim-jp.org/blog/2015/06/30/visual-ctrl-a-ctrl-x.html
