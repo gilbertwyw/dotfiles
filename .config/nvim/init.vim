@@ -179,6 +179,7 @@ if has('nvim')
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-file-browser.nvim'
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+  Plug 'nvim-telescope/telescope-project.nvim'
   " }}}
 endif
 Plug 'AndrewRadev/splitjoin.vim'
@@ -372,6 +373,8 @@ let g:tagbar_type_markdown = {
 \ }
 " }}}
 " Plugin: telescope.nvim {{{
+nnoremap <C-p>           :lua require'telescope'.extensions.project.project{display_type = 'full'}<CR>
+
 nnoremap <localleader>,  :Telescope builtin<CR>
 nnoremap <localleader>fb :Telescope file_browser<CR>
 nnoremap <leader>ff      :Telescope file_browser path=%:p:h <CR>
