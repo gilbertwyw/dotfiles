@@ -108,3 +108,6 @@ zsdoc/data
 .config/**/log
 .lvimrc
 .zsh_history
+
+# packer.nvim
+.config/nvim/plugin/packer_compiled.lua

@@ -73,7 +73,6 @@ brew install tmux
 
 ## Neovim
 
-- [vim-plug](https://github.com/junegunn/vim-plug#neovim)
 - [Following HEAD](https://github.com/neovim/neovim/wiki/Installing-Neovim#homebrew-on-macos-or-linux)
 
 ```sh
