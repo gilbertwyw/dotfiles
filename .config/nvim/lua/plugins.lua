@@ -317,23 +317,18 @@ return require('packer').startup({
 
     -- file explorer
     use {
-      'lambdalisue/fern.vim',
+      'kyazdani42/nvim-tree.lua',
+      requires = {
+        'kyazdani42/nvim-web-devicons', -- optional, for file icons
+      },
       config = function()
-        vim.keymap.set('n', '<leader>fd', ':Fern . -drawer -reveal=% -toggle<cr>')
+        require("nvim-tree").setup()
+
+        vim.keymap.set('n', '<leader>fd', ':NvimTreeFindFileToggle<cr>')
+        vim.keymap.set("n", "<localleader>bn", require("nvim-tree.marks.navigation").next)
+        vim.keymap.set("n", "<localleader>bp", require("nvim-tree.marks.navigation").prev)
+        vim.keymap.set("n", "<localleader>bs", require("nvim-tree.marks.navigation").select)
       end
-    }
-    use { 'lambdalisue/fern-bookmark.vim',
-      config = function()
-        local opts = { noremap = true, silent = true }
-        vim.keymap.set('n', '<leader>fb', ':Fern bookmark:///<CR>', opts)
-      end,
-      after = 'fern.vim' }
-    use {
-      'lambdalisue/fern-renderer-nerdfont.vim',
-      requires = { 'lambdalisue/nerdfont.vim' },
-      config = function()
-        vim.g['fern#renderer'] = "nerdfont"
-      end,
     }
 
     -- git
