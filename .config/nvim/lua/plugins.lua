@@ -9,6 +9,13 @@ end
 -- required for bootstrapping when packer. repo and compiled file do not exist
 vim.cmd [[packadd packer.nvim]]
 
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  augroup end
+]])
+
 return require('packer').startup({
   config = { max_jobs = 16 },
   function(use)
@@ -40,8 +47,8 @@ return require('packer').startup({
         telescope.load_extension('project')
 
         vim.keymap.set('n', '<C-p>', ":lua require'telescope'.extensions.project.project{display_type = 'full'}<cr>")
-        vim.keymap.set('n', '<localleader>', ':Telescope builtin<cr>')
-        vim.keymap.set('n', '<localleader>fb', ':Telescope file_browser<cr>')
+        vim.keymap.set('n', '<localleader>,', ':Telescope builtin<cr>')
+        vim.keymap.set('n', '<leader>fb', ':Telescope file_browser<cr>')
         vim.keymap.set('n', '<leader>ff', ':Telescope file_browser path=%:p:h <cr>')
         vim.keymap.set('n', '<leader>.', ':Telescope resume<cr>')
         vim.keymap.set('n', '<leader>/', ':Telescope search_history<cr>')
