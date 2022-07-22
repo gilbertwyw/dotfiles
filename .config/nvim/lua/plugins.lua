@@ -295,25 +295,6 @@ return require('packer').startup({
     }
     use 'honza/vim-snippets'
 
-    -- fzf
-    use {
-      'junegunn/fzf.vim',
-      requires = {
-        { 'junegunn/fzf', run = ':call fzf#install()' },
-      },
-      config = function()
-        vim.keymap.set('n', '<leader><tab>', '<plug>(fzf-maps-n)', { noremap = false })
-        vim.keymap.set('x', '<leader><tab>', '<plug>(fzf-maps-x)', { noremap = false })
-        vim.keymap.set('o', '<leader><tab>', '<plug>(fzf-maps-o)', { noremap = false })
-
-        vim.keymap.set('n', '<localleader>s', ':Snippets<cr>')
-
-        -- Insert mode completion
-        vim.keymap.set('i', '<c-x><c-k>', '<plug>(fzf-complete-word)', { noremap = false })
-        vim.keymap.set('i', '<c-x><c-l>', '<plug>(fzf-complete-line)', { noremap = false })
-      end
-    }
-
     -- comment
     use {
       'numToStr/Comment.nvim',
