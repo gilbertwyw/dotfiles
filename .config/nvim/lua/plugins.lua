@@ -405,7 +405,10 @@ return require('packer').startup({
     use {
       'ellisonleao/glow.nvim',
       opt = true,
-      ft = { 'markdown' }
+      ft = { 'markdown' },
+      config = function ()
+        vim.keymap.set('n', '<leader>p', ':Glow<cr>')
+      end
     }
 
     -- search
