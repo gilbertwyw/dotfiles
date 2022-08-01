@@ -32,6 +32,7 @@ o.clipboard:append('unnamed')
 o.visualbell = true
 
 -- indentation
+o.smartindent = true
 -- use soft tab
 o.expandtab = true
 -- number of space to use for autoindenting
