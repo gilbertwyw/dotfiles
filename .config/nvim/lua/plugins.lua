@@ -157,39 +157,39 @@ return require('packer').startup({
         vim.lsp.set_log_level("debug")
 
         local opts = { noremap = true, silent = true }
-        vim.keymap.set('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
-        vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
-        vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
-        vim.keymap.set('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
+        vim.keymap.set('n', '<space>e', 'vim.diagnostic.open_float()', opts)
+        vim.keymap.set('n', '[d', 'vim.diagnostic.goto_prev()', opts)
+        vim.keymap.set('n', ']d', 'vim.diagnostic.goto_next()', opts)
+        vim.keymap.set('n', '<space>q', 'vim.diagnostic.setloclist()', opts)
 
         local on_attach = function(client, bufnr)
           -- See `:help omnifunc` and `:help ins-completion` for more information.
           -- Enable completion triggered by <c-x><c-o>
           vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-          local bufopts = { noremap = true, silent = true, buffer = bufnr }
-
           -- Mappings.
           -- See `:help vim.lsp.*` for documentation on any of the below functions
-          vim.keymap.set('n', '<LocalLeader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', bufopts)
-          vim.keymap.set('n', '<LocalLeader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', bufopts)
-          vim.keymap.set('n', '<LocalLeader>gt', '<cmd>lua vim.lsp.buf.type_definition()<CR>', bufopts)
-          vim.keymap.set('n', '<LocalLeader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', bufopts)
-          vim.keymap.set('n', '<LocalLeader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', bufopts)
-          vim.keymap.set('n', '<LocalLeader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>'
-            ,
-            bufopts)
-          vim.keymap.set('n', '<LocalLeader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', bufopts)
-          vim.keymap.set('n', '<c-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', bufopts)
-          vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', bufopts)
-          vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', bufopts)
-          vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', bufopts)
-          vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', bufopts)
-          vim.keymap.set('n', 'gK', '<cmd>lua vim.lsp.buf.signature_help()<CR>', bufopts)
+          local bufopts = { noremap = true, silent = true, buffer = bufnr }
+
+          vim.keymap.set('n', '<LocalLeader>ca', vim.lsp.buf.code_action, bufopts)
+          vim.keymap.set('n', '<LocalLeader>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+          vim.keymap.set('n', '<LocalLeader>gt', vim.lsp.buf.type_definition, bufopts)
+          vim.keymap.set('n', '<LocalLeader>rn', vim.lsp.buf.rename, bufopts)
+          vim.keymap.set('n', '<LocalLeader>wa', vim.lsp.buf.add_workspace_folder, bufopts)
+          vim.keymap.set('n', '<LocalLeader>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
+          vim.keymap.set('n', '<LocalLeader>wl', function()
+            print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+          end, bufopts)
+          vim.keymap.set('n', '<c-]>', vim.lsp.buf.definition, bufopts)
+          vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+          vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
+          vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
+          vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+          vim.keymap.set('n', 'gK', vim.lsp.buf.signature_help, bufopts)
 
           -- TODO assess
-          vim.keymap.set('n', '<LocalLeader>ws', '<cmd>lua vim.lsp.buf.workspace_symbol()<CR>', bufopts)
-          vim.keymap.set('n', 'g0', '<cmd>lua vim.lsp.buf.document_symbol()<CR>', bufopts)
+          vim.keymap.set('n', '<LocalLeader>ws', vim.lsp.buf.workspace_symbol, bufopts)
+          vim.keymap.set('n', 'g0', vim.lsp.buf.document_symbol, bufopts)
         end
 
         local lspconfig = require('lspconfig')
