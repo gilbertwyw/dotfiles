@@ -94,7 +94,7 @@ return require('packer').startup({
         local lspkind = require('lspkind')
 
         cmp.setup({
-          sources = {
+          sources = cmp.config.sources({
             -- order matters
             { name = 'nvim_lsp' },
             { name = 'nvim_lua' },
@@ -103,7 +103,7 @@ return require('packer').startup({
             { name = 'path' },
             -- TODO keyword_length option
             { name = 'buffer' },
-          },
+          }),
           formatting = {
             format = lspkind.cmp_format({
               with_text = true,
