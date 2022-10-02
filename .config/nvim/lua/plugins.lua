@@ -165,7 +165,7 @@ return require('packer').startup({
           local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
           vim.keymap.set('n', '<LocalLeader>ca', vim.lsp.buf.code_action, bufopts)
-          vim.keymap.set('n', '<LocalLeader>f',  vim.lsp.buf.formatting, bufopts)
+          vim.keymap.set('n', '<LocalLeader>f', function() vim.lsp.buf.format { async = true } end, bufopts)
           vim.keymap.set('n', '<LocalLeader>gt', vim.lsp.buf.type_definition, bufopts)
           vim.keymap.set('n', '<LocalLeader>rn', vim.lsp.buf.rename, bufopts)
           vim.keymap.set('n', '<LocalLeader>wa', vim.lsp.buf.add_workspace_folder, bufopts)
