@@ -18,7 +18,7 @@ o.lazyredraw = true
 o.number = true
 o.relativenumber = true
 
---more intuitive split
+-- more intuitive split
 o.splitbelow = true
 o.splitright = true
 
@@ -54,9 +54,9 @@ vim.g.maplocalleader = ','
 
 -- Autocommands
 local grpopts = { clear = true }
-local hlgroup = vim.api.nvim_create_augroup("highlight_on_yank", grpopts)
+
 vim.api.nvim_create_autocmd('TextYankPost', {
-  group = hlgroup,
+  group = vim.api.nvim_create_augroup("highlight_on_yank", grpopts),
   pattern = '*',
   callback = function()
     vim.highlight.on_yank { higroup = "IncSearch", timeout = 150, on_visual = true }
@@ -64,6 +64,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 local autosaveandreadgroup = vim.api.nvim_create_augroup("auto_save_and_read", grpopts)
+
 vim.api.nvim_create_autocmd({ 'CursorHold' }, {
   group = autosaveandreadgroup,
   pattern = '*',
