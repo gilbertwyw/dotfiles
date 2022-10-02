@@ -460,8 +460,7 @@ return require('packer').startup({
     use { 'andymass/vim-matchup', event = 'VimEnter' }
     use { 'bling/vim-airline', config = function()
       -- make symbols look okay
-      vim.g.airline_powerline_fonts               = 1
-      vim.g['airline#extensions#tabline#enabled'] = 1
+      vim.g.airline_powerline_fonts = 1
     end
     }
     use 'chrisbra/unicode.vim'
