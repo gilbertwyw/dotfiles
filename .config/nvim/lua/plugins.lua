@@ -424,12 +424,6 @@ return require('packer').startup({
         vim.keymap.set({ 'n', 'x' }, 'gs', '<Plug>(GrepperOperator)')
       end
     }
-    use {
-      'junegunn/vim-slash',
-      config = function()
-        vim.keymap.set('n', 'zz', '<Plug>(slash-after)')
-      end
-    }
 
     -- filetypes
     use 'hashivim/vim-terraform'
