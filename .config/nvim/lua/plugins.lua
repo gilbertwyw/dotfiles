@@ -409,7 +409,6 @@ return require('packer').startup({
     -- search
     use {
       'mhinz/vim-grepper',
-      cmd = { 'Grepper' },
       config = function()
         if vim.fn.executable('rg') == 1 then
           -- -highlight does not work when passing extra option(s)
@@ -421,7 +420,7 @@ return require('packer').startup({
           vim.keymap.set('n', '<leader>sw', ':Grepper -tool rg -cword -noprompt<cr>')
         end
 
-        vim.keymap.set({ 'n', 'x' }, 'gs', '<Plug>(GrepperOperator)')
+        vim.keymap.set({ 'n', 'v', 'x' }, 'gs', '<Plug>(GrepperOperator)')
       end
     }
 
