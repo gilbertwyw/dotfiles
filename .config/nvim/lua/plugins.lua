@@ -62,6 +62,7 @@ return require('packer').startup({
         vim.keymap.set('n', '<leader>sp', ':Telescope live_grep<cr>')
         vim.keymap.set('n', '<localleader>ht', ':Telescope help_tags<cr>')
         vim.keymap.set('n', '<localleader>tt', ':Telescope tags<cr>')
+        vim.keymap.set('n', 'gs', ':Telescope grep_string<cr>')
       end
     }
 
@@ -403,24 +404,6 @@ return require('packer').startup({
       ft = { 'markdown' },
       config = function ()
         vim.keymap.set('n', '<leader>p', ':Glow<cr>')
-      end
-    }
-
-    -- search
-    use {
-      'mhinz/vim-grepper',
-      config = function()
-        if vim.fn.executable('rg') == 1 then
-          -- -highlight does not work when passing extra option(s)
-          -- https://github.com/mhinz/vim-grepper/wiki/Using-the-commands
-          vim.keymap.set('n', '<leader>sb', ':Grepper -tool rg -buffers -highlight<cr>')
-          vim.keymap.set('n', '<leader>ss', ':Grepper -tool rg -highlight<cr>')
-
-          -- Search for the word under the cursor
-          vim.keymap.set('n', '<leader>sw', ':Grepper -tool rg -cword -noprompt<cr>')
-        end
-
-        vim.keymap.set({ 'n', 'v', 'x' }, 'gs', '<Plug>(GrepperOperator)')
       end
     }
 
