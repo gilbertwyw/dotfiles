@@ -252,6 +252,7 @@ return require('packer').startup({
             "go",
             "hcl",
             "html",
+            "help",
             "javascript",
             "json",
             "lua",
