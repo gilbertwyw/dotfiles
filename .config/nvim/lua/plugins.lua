@@ -15,6 +15,11 @@ require('packer').startup({
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    use { 'lewis6991/impatient.nvim',
+      config = function()
+        require('impatient').enable_profile()
+      end
+    }
 
     -- telescope
     use {
