@@ -232,13 +232,6 @@ require('packer').startup({
         }
       end
     }
-    use {
-      'simrat39/symbols-outline.nvim',
-      after = 'nvim-lspconfig',
-      config = function()
-        vim.keymap.set('n', '<leader>ts', ':SymbolsOutline<cr>')
-      end
-    }
 
     -- treesitter
     use {
