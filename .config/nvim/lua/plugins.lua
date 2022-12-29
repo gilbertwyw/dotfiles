@@ -79,6 +79,7 @@ require('packer').startup({
           'hrsh7th/vim-vsnip-integ',
           'onsails/lspkind-nvim',
           'quangnguyen30192/cmp-nvim-ultisnips',
+          'j-hui/fidget.nvim',
         }
       },
       config = function()
@@ -141,6 +142,8 @@ require('packer').startup({
           imap <expr> <C-l> vsnip#available(1) ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
           smap <expr> <C-l> vsnip#available(1) ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
         ]])
+
+        require('fidget').setup {}
       end
     }
 
