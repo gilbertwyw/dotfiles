@@ -181,12 +181,11 @@ require('packer').startup({
           vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
           vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
           vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-          vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+          vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, bufopts)
           vim.keymap.set('n', 'gK', vim.lsp.buf.signature_help, bufopts)
 
-          -- TODO assess
-          vim.keymap.set('n', '<LocalLeader>ws', vim.lsp.buf.workspace_symbol, bufopts)
-          vim.keymap.set('n', 'g0', vim.lsp.buf.document_symbol, bufopts)
+          vim.keymap.set('n', '<LocalLeader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, bufopts)
+          vim.keymap.set('n', 'g0', require('telescope.builtin').lsp_document_symbols, bufopts)
         end
 
         local lspconfig = require('lspconfig')
