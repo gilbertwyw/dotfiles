@@ -173,11 +173,6 @@ require('packer').startup({
           vim.keymap.set('n', '<LocalLeader>f', function() vim.lsp.buf.format { async = true } end, bufopts)
           vim.keymap.set('n', '<LocalLeader>gt', vim.lsp.buf.type_definition, bufopts)
           vim.keymap.set('n', '<LocalLeader>rn', vim.lsp.buf.rename, bufopts)
-          vim.keymap.set('n', '<LocalLeader>wa', vim.lsp.buf.add_workspace_folder, bufopts)
-          vim.keymap.set('n', '<LocalLeader>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
-          vim.keymap.set('n', '<LocalLeader>wl', function()
-            print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-          end, bufopts)
           vim.keymap.set('n', '<c-]>', vim.lsp.buf.definition, bufopts)
           vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
           vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
@@ -185,7 +180,13 @@ require('packer').startup({
           vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, bufopts)
           vim.keymap.set('n', 'gK', vim.lsp.buf.signature_help, bufopts)
 
-          vim.keymap.set('n', '<LocalLeader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, bufopts)
+          vim.keymap.set('n', '<Leader>wa', vim.lsp.buf.add_workspace_folder, bufopts)
+          vim.keymap.set('n', '<Leader>wl', function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end,
+            bufopts)
+          vim.keymap.set('n', '<Leader>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
+          vim.keymap.set('n', '<Leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols,
+            { desc = '[W]orkspace [S]ymbol', noremap = true, silent = true, buffer = bufnr })
+
           vim.keymap.set('n', 'g0', require('telescope.builtin').lsp_document_symbols, bufopts)
         end
 
@@ -404,7 +405,7 @@ require('packer').startup({
       'ellisonleao/glow.nvim',
       opt = true,
       ft = { 'markdown' },
-      config = function ()
+      config = function()
         vim.keymap.set('n', '<leader>p', ':Glow<cr>')
       end
     }
