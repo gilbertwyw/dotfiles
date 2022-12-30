@@ -91,7 +91,6 @@ require('packer').startup({
           'hrsh7th/vim-vsnip',
           'hrsh7th/vim-vsnip-integ',
           'onsails/lspkind-nvim',
-          'quangnguyen30192/cmp-nvim-ultisnips',
           'j-hui/fidget.nvim',
         }
       },
@@ -106,7 +105,6 @@ require('packer').startup({
             { name = 'nvim_lsp' },
             { name = 'nvim_lsp_signature_help' },
             { name = 'nvim_lua' },
-            { name = 'ultisnips' },
             { name = 'vsnip' },
             { name = 'path' },
             -- TODO keyword_length option
@@ -124,7 +122,6 @@ require('packer').startup({
             -- REQUIRED - you must specify a snippet engine
             expand = function(args)
               vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-              vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
             end,
           },
           experimental = {
@@ -287,17 +284,6 @@ require('packer').startup({
 
     -- snippets
     -- use 'rafamadriz/friendly-snippets'
-    use {
-      'SirVer/ultisnips',
-      config = function()
-        vim.opt.rtp:append('~/dotfiles/vim/')
-
-        vim.g.UltiSnipsExpandTrigger      = "<C-e>"
-        vim.g.UltiSnipsEditSplit          = 'vertical'
-        vim.g.UltiSnipsSnippetsDir        = '~/dotfiles/vim/snips/'
-        vim.g.UltiSnipsSnippetDirectories = { 'UltiSnips', 'snips' }
-      end
-    }
     use 'honza/vim-snippets'
 
     -- comment
