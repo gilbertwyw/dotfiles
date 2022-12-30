@@ -431,7 +431,6 @@ require('packer').startup({
 
     -- misc.
     use 'AndrewRadev/splitjoin.vim'
-
     use {
       'RRethy/vim-hexokinase',
       run = 'make hexokinase',
@@ -565,14 +564,18 @@ require('packer').startup({
       end
     }
 
-    -- keep?
-    use 'Raimondi/delimitMate'
     use {
-      'Yggdroot/indentLine', config = function()
-        vim.g.indentLine_faster     = 1
-        vim.g.indentLine_setConceal = 0
+      'lukas-reineke/indent-blankline.nvim',
+      config = function()
+        require('indent_blankline').setup {
+          char = '┊',
+          show_trailing_blankline_indent = false,
+        }
       end
     }
+
+    -- keep?
+    use 'Raimondi/delimitMate'
     use {
       'heavenshell/vim-jsdoc',
       ft = { 'javascript', 'javascript.jsx', 'typescript' },
