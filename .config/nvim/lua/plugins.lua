@@ -315,8 +315,9 @@ require('packer').startup({
         'kyazdani42/nvim-web-devicons', -- optional, for file icons
       },
       config = function()
-        require("nvim-tree").setup()
-
+        require("nvim-tree").setup({
+          hijack_netrw = false,
+        })
         vim.keymap.set('n', '<leader>fd', ':NvimTreeFindFileToggle<cr>')
         vim.keymap.set("n", "<localleader>bn", require("nvim-tree.marks.navigation").next)
         vim.keymap.set("n", "<localleader>bp", require("nvim-tree.marks.navigation").prev)
