@@ -373,9 +373,9 @@ require('packer').startup({
     use {
       'tpope/vim-fugitive',
       config = function()
-        vim.keymap.set('n', '<leader>gb', ':Git blame<cr>')
-        vim.keymap.set('n', '<leader>gl', ':Glog %<cr>')
-        vim.keymap.set('n', '<leader>gg', ':Git<cr>')
+        vim.keymap.set('n', '<leader>gb', function() vim.cmd.Git 'blame' end)
+        vim.keymap.set('n', '<leader>gl', function() vim.cmd.Gclog '%' end)
+        vim.keymap.set('n', '<leader>gg', vim.cmd.Git)
       end
     }
     use { 'tpope/vim-git' }
@@ -519,7 +519,7 @@ require('packer').startup({
     use {
       'mbbill/undotree',
       config = function()
-        vim.keymap.set('n', '<leader>tu', ':UndotreeToggle<cr>')
+        vim.keymap.set('n', '<leader>tu', vim.cmd.UndotreeToggle)
       end
     }
     use 'psliwka/vim-smoothie'
