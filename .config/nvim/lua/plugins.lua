@@ -25,12 +25,12 @@ require('packer').startup({
     use {
       'nvim-telescope/telescope.nvim',
 
-      requires = { {
+      requires = {
         'nvim-lua/plenary.nvim',
         'nvim-telescope/telescope-file-browser.nvim',
         'nvim-telescope/telescope-project.nvim',
         { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
-      } },
+      },
       config = function()
         local telescope = require('telescope')
         -- extensions
@@ -77,7 +77,7 @@ require('packer').startup({
       end
     }
 
-    -- cmp
+    -- Autocompletion
     use {
       'hrsh7th/nvim-cmp', requires = {
         {
@@ -94,7 +94,7 @@ require('packer').startup({
         }
       },
       config = function()
-        -- https://github.com/hrsh7th/nvim-cmp/blob/main/lua/cmp/config/default.lua
+        -- Defaults: https://github.com/hrsh7th/nvim-cmp/blob/main/lua/cmp/config/default.lua
         local cmp = require 'cmp'
         local lspkind = require 'lspkind'
         local luasnip = require 'luasnip'
