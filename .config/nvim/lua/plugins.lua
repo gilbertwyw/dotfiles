@@ -267,39 +267,9 @@ require('packer').startup({
     use {
       'nvim-treesitter/nvim-treesitter', -- TODO this fails sometimes
       run = ':TSUpdate',
-      config = function()
-
-        require 'nvim-treesitter.configs'.setup {
-          -- https://github.com/nvim-treesitter/nvim-treesitter#modules
-          ensure_installed = {
-            "bash",
-            "css",
-            "go",
-            "hcl",
-            "html",
-            "help",
-            "javascript",
-            "json",
-            "lua",
-            "python",
-            "typescript",
-            "vim",
-            "yaml",
-          },
-          highlight = {
-            enable = true,
-          },
-        }
-      end
     }
-    use {
-      'nvim-treesitter/playground',
-      after = 'nvim-treesitter',
-      config = function()
-        vim.keymap.set('n', '<leader>ph', ':TSHighlightCapturesUnderCursor<cr>')
-        vim.keymap.set('n', '<leader>tp', ':TSPlaygroundToggle<cr>')
-      end
-    }
+    use { 'nvim-treesitter/nvim-treesitter-textobjects', after = 'nvim-treesitter' }
+    use { 'nvim-treesitter/playground', after = 'nvim-treesitter' }
     use { 'romgrk/nvim-treesitter-context', after = 'nvim-treesitter' }
 
     -- snippets
@@ -510,17 +480,6 @@ require('packer').startup({
       end
     }
     use 'kshenoy/vim-signature'
-    use {
-      'machakann/vim-swap',
-      config = function()
-        vim.g.swap_no_default_key_mappings = 1
-
-        vim.keymap.set('n', 'g<', '<Plug>(swap-prev)')
-        vim.keymap.set('n', 'g>', '<Plug>(swap-next)')
-        vim.keymap.set('n', '<localleader>gs', '<Plug>(swap-interactive)')
-        vim.keymap.set('x', '<localleader>gs', '<Plug>(swap-interactive)')
-      end
-    }
     use { 'mattn/emmet-vim', ft = { 'html', 'css' } }
     use {
       'mbbill/undotree',
