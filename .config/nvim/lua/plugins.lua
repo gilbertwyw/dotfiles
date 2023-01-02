@@ -91,7 +91,6 @@ require('packer').startup({
           'L3MON4D3/LuaSnip',
           'saadparwaiz1/cmp_luasnip',
           'onsails/lspkind-nvim',
-          'j-hui/fidget.nvim',
         }
       },
       config = function()
@@ -167,7 +166,6 @@ require('packer').startup({
         })
 
         require("luasnip.loaders.from_vscode").lazy_load()
-        require('fidget').setup {}
       end
     }
 
@@ -254,6 +252,14 @@ require('packer').startup({
             },
           },
         }
+      end
+    }
+
+    use {
+      'j-hui/fidget.nvim',
+      after = 'nvim-lspconfig',
+      config = function()
+        require('fidget').setup {}
       end
     }
 
