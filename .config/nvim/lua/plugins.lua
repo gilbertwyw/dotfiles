@@ -531,7 +531,6 @@ require('packer').startup({
     use 'tpope/vim-obsession'
     use 'tpope/vim-repeat'
     use 'tpope/vim-rsi'
-    use 'tpope/vim-sensible'
     use 'tpope/vim-surround'
     use 'tpope/vim-unimpaired'
     use {
