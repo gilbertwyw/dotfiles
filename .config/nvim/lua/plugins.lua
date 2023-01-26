@@ -123,7 +123,7 @@ require('packer').startup({
     use { 'tmux-plugins/vim-tmux' }
 
     -- color scheme
-    use { 'bluz71/vim-nightfly-guicolors' }
+    use { 'bluz71/vim-nightfly-guicolors', as = 'nightfly' }
     use { 'fenetikm/falcon' }
     use { 'folke/tokyonight.nvim',
       config = function()
