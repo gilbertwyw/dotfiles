@@ -11,7 +11,7 @@ fi
 export ZPLUG_HOME=$HOMEBREW_PREFIX/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
+zplug "lib/key-bindings", from:oh-my-zsh
 zplug "plugins/brew", from:oh-my-zsh
 zplug "plugins/common-aliases", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
@@ -77,6 +77,8 @@ for function in $ZDOTDIR/functions/*; do
 done
 
 # key bindings
+bindkey "^E" end-of-line
+
 zle -N jump_after_first_word
 bindkey "^x1" jump_after_first_word
 
