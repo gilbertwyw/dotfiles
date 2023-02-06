@@ -53,6 +53,9 @@ o.termguicolors = true
 
 o.undofile = true
 
+-- scrolling
+o.scrolloff = 8
+
 -- leader keys
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ','
