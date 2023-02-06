@@ -23,7 +23,6 @@ stow -v [-n] .
 ## Zsh
 
 - [zplug](https://github.com/zplug/zplug)
-- [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
 ```sh
 brew install zsh zplug
