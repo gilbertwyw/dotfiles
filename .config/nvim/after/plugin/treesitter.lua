@@ -11,6 +11,7 @@ require('nvim-treesitter.configs').setup {
     "json",
     "lua",
     "python",
+    "terraform",
     "typescript",
     "vim",
     "yaml",
