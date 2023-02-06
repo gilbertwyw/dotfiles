@@ -6,9 +6,10 @@
 - [GNU Stow](https://www.gnu.org/software/stow/)
 
 ```sh
-brew install bat ddgr direnv fd go ripgrep stow trash universal-ctags z
+brew install bat ddgr direnv fd ripgrep stow trash universal-ctags z
 
-# Regarding "Github API Rate limit exceeded"
+# For Github API Rate limit
+# https://github.com/Homebrew/brew/blob/master/docs/Manpage.md#environment
 echo "export HOMEBREW_GITHUB_API_TOKEN=<token>" > ~/.envrc
 ```
 
@@ -17,7 +18,7 @@ git clone --recursive https://github.com/gilbertwyw/dotfiles.git
 cd dotfiles
 
 # use -n to see any filesystem changes
-stow -v [-n] .
+stow -v -R [-n] .
 ```
 
 ## Zsh
@@ -87,7 +88,7 @@ ln -s ~/.config/nvim/init.vim ~/.vimrc
 pip[3] install --user neovim
 ```
 
-## Miscs.
+## Misc.
 
 - [EditorConfig](https://editorconfig.org)
 - [kitty](https://sw.kovidgoyal.net/kitty/index.html)
