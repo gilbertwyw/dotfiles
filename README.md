@@ -41,12 +41,6 @@ Run `brew install fzf ` and follow the instruction from `brew info fzf`.
 ```sh
 brew install git git-delta git-lfs gh
 ```
-## Python
-
-```sh
-# https://github.com/preservim/tagbar/wiki#markdown
-pip install --user markdown2ctags
-```
 
 ## Ruby
 
@@ -73,19 +67,11 @@ brew install tmux
 
 ## Neovim
 
-- [Following HEAD](https://github.com/neovim/neovim/wiki/Installing-Neovim#homebrew-on-macos-or-linux)
-
 ```sh
-nvim +PlugInstall +UpdateRemotePlugins +qa
+brew install neovim
 
-# in nvim
+# Run all healthchecks in Neovim
 :checkhealth
-
-# share config between Neovim and vim
-ln -s ~/.config/nvim/init.vim ~/.vimrc
-
-# to satisfy `:checkhealth provider`
-pip[3] install --user neovim
 ```
 
 ## Misc.
