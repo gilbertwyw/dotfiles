@@ -60,6 +60,13 @@ require('packer').startup({
       end
     }
 
+    use {
+      "williamboman/mason.nvim",
+      config = function ()
+        require("mason").setup()
+      end
+    }
+
     -- treesitter
     use {
       'nvim-treesitter/nvim-treesitter', -- TODO this fails sometimes
