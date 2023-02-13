@@ -72,9 +72,9 @@ require('packer').startup({
       'nvim-treesitter/nvim-treesitter', -- TODO this fails sometimes
       run = ':TSUpdate',
     }
+    use { 'nvim-treesitter/nvim-treesitter-context', after = 'nvim-treesitter' }
     use { 'nvim-treesitter/nvim-treesitter-textobjects', after = 'nvim-treesitter' }
     use { 'nvim-treesitter/playground', after = 'nvim-treesitter' }
-    use { 'romgrk/nvim-treesitter-context', after = 'nvim-treesitter' }
 
     -- snippets
     use 'honza/vim-snippets'
