@@ -42,6 +42,7 @@ setopt no_beep
 
 # Do not write a duplicate event to the history file.
 setopt HIST_SAVE_NO_DUPS
+setopt HIST_IGNORE_SPACE
 
 path=(
   $HOME/bin
