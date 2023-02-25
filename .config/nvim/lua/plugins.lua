@@ -106,7 +106,6 @@ require('packer').startup({
     }
 
     -- git
-    use { 'rhysd/git-messenger.vim' } -- TOOD layz load, https://github.com/rhysd/git-messenger.vim#installation
     use { 'lewis6991/gitsigns.nvim' }
     use {
       'tpope/vim-fugitive',
