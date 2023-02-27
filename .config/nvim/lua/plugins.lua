@@ -115,11 +115,11 @@ require('lazy').setup({
   },
 
   -- color scheme
-  { 'bluz71/vim-nightfly-guicolors', name = 'nightfly', priorities = 1000 },
-  { 'fenetikm/falcon',               priorities = 1000 },
+  { 'bluz71/vim-nightfly-guicolors', name = 'nightfly', priority = 1000 },
+  { 'fenetikm/falcon',               priority = 1000 },
   {
     'folke/tokyonight.nvim',
-    priorities = 1000,
+    priority = 1000,
     config = function()
       vim.g.tokyonight_style = "night"
       vim.g.tokyonight_sidebars = { "qf", "terminal" }
@@ -127,9 +127,9 @@ require('lazy').setup({
       vim.cmd.colorscheme 'tokyonight'
     end
   },
-  { 'haishanh/night-owl.vim',   priorities = 1000 },
-  { 'joshdick/onedark.vim',     priorities = 1000 },
-  { 'mhartington/oceanic-next', priorities = 1000 },
+  { 'haishanh/night-owl.vim',   priority = 1000 },
+  { 'joshdick/onedark.vim',     priority = 1000 },
+  { 'mhartington/oceanic-next', priority = 1000 },
 
   -- ctags
   'ludovicchabant/vim-gutentags',
