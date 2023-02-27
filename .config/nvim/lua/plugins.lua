@@ -105,7 +105,6 @@ require('lazy').setup({
   },
 
   -- tmux
-  'edkolev/tmuxline.vim',
   'tmux-plugins/vim-tmux',
   {
     'christoomey/vim-tmux-navigator',
@@ -155,6 +154,9 @@ require('lazy').setup({
   'hashivim/vim-terraform',
   'pearofducks/ansible-vim',
 
+  -- statusline
+  { 'nvim-lualine/lualine.nvim', opts = {} },
+
   -- misc.
   {
     'RRethy/vim-hexokinase',
@@ -177,15 +179,8 @@ require('lazy').setup({
     end
   },
 
-  { 'andymass/vim-matchup', event = 'VimEnter' },
+  { 'andymass/vim-matchup',      event = 'VimEnter' },
 
-  {
-    'bling/vim-airline',
-    config = function()
-      -- make symbols look okay
-      vim.g.airline_powerline_fonts = 1
-    end
-  },
 
   {
     'editorconfig/editorconfig-vim',
@@ -236,7 +231,7 @@ require('lazy').setup({
     end
   },
 
-  { 'mattn/emmet-vim',      ft = { 'html', 'css' }, },
+  { 'mattn/emmet-vim', ft = { 'html', 'css' }, },
 
   {
     'mbbill/undotree',
