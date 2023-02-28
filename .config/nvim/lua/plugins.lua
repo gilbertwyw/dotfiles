@@ -126,9 +126,7 @@ require('lazy').setup({
       vim.cmd.colorscheme 'tokyonight'
     end
   },
-  { 'haishanh/night-owl.vim',   priority = 1000 },
   { 'joshdick/onedark.vim',     priority = 1000 },
-  { 'mhartington/oceanic-next', priority = 1000 },
 
   -- ctags
   'ludovicchabant/vim-gutentags',
