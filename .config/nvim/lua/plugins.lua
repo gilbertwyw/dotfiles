@@ -300,7 +300,6 @@ require('lazy').setup({
   'justinmk/vim-dirvish',
   'kshenoy/vim-signature',
   'psliwka/vim-smoothie',
-  'ryanoasis/vim-devicons',
   'tommcdo/vim-exchange',
   'tpope/vim-abolish',
   'tpope/vim-characterize',
