@@ -219,15 +219,16 @@ require('lazy').setup({
 
   {
     'justinmk/vim-sneak',
+    keys = {
+      -- These mappings do not invoke label-mode, even if you have it enabled.
+      { 'f', '<Plug>Sneak_f', mode = { 'n', 'v', 'o' }, desc = 'sneak: f' },
+      { 'F', '<Plug>Sneak_F', mode = { 'n', 'v', 'o' }, desc = 'sneak: F' },
+      { 't', '<Plug>Sneak_t', mode = { 'n', 'v', 'o' }, desc = 'sneak: t' },
+      { 'T', '<Plug>Sneak_T', mode = { 'n', 'v', 'o' }, desc = 'sneak: T' },
+    },
     config = function()
       vim.g['sneak#s_next'] = 1
       vim.g['sneak#label']  = 1
-
-      -- These mappings do not invoke label-mode
-      vim.keymap.set({ 'n', 'v', 'o' }, 'f', '<Plug>Sneak_f')
-      vim.keymap.set({ 'n', 'v', 'o' }, 'F', '<Plug>Sneak_F')
-      vim.keymap.set({ 'n', 'v', 'o' }, 't', '<Plug>Sneak_t')
-      vim.keymap.set({ 'n', 'v', 'o' }, 'T', '<Plug>Sneak_T')
     end
   },
 
