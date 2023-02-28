@@ -2,7 +2,6 @@
   "Comment.nvim": { "branch": "master", "commit": "6821b3ae27a57f1f3cf8ed030e4a55d70d0c4e43" },
   "ListToggle": { "branch": "master", "commit": "63fb8acb57d57380b2e30e7a831247140559c95f" },
   "LuaSnip": { "branch": "master", "commit": "f7c845749aba6096f041a73a26ba64f3817bab99" },
-  "MatchTagAlways": { "branch": "master", "commit": "352eb479a4ad1608e0880b79ab2357aac2cf4bed" },
   "ReplaceWithRegister": { "branch": "master", "commit": "832efc23111d19591d495dc72286de2fb0b09345" },
   "ale": { "branch": "master", "commit": "c8e914604963063b7bb827e9b6f5a6ca741dad60" },
   "ansible-vim": { "branch": "master", "commit": "93798e8c89c441d29d4678da0c0d5e1429eb43b0" },

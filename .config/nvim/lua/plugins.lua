@@ -167,11 +167,6 @@ require('lazy').setup({
   },
 
   {
-    'Valloric/MatchTagAlways',
-    ft = { 'xml', 'html' },
-  },
-
-  {
     'Valloric/ListToggle',
     config = function()
       vim.g.lt_location_list_toggle_map = '<leader>tl'
