@@ -280,12 +280,10 @@ require('lazy').setup({
 
   {
     'lukas-reineke/indent-blankline.nvim',
-    config = function()
-      require('indent_blankline').setup {
-        char = '┊',
-        show_trailing_blankline_indent = false,
-      }
-    end
+    opts = {
+      char = '┊',
+      show_trailing_blankline_indent = false,
+    },
   },
 
   {
