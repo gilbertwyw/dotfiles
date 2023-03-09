@@ -1,20 +1,18 @@
 require('nvim-treesitter.configs').setup {
   -- https://github.com/nvim-treesitter/nvim-treesitter#modules
   ensure_installed = {
+    "c", "lua", "vim", "help", "query", -- always
     "bash",
     "dockerfile",
     "go",
     "hcl",
-    "help",
     "javascript",
     "json",
-    "lua",
     "make",
     "python",
     "terraform",
     "toml",
     "typescript",
-    "vim",
     "yaml",
   },
   sync_install = false,
