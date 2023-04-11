@@ -171,7 +171,12 @@ require('lazy').setup({
     end
   },
 
-  { 'andymass/vim-matchup',      event = 'VimEnter' },
+  {
+    'andymass/vim-matchup',
+    config = function()
+      vim.g.matchup_matchparen_offscreen = { method = "popup" }
+    end
+  },
 
   {
     'embear/vim-localvimrc',
