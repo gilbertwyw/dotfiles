@@ -1,7 +1,7 @@
 require('nvim-treesitter.configs').setup {
   -- https://github.com/nvim-treesitter/nvim-treesitter#modules
   ensure_installed = {
-    "c", "lua", "vim", "help", "query", -- always
+    "c", "lua", "vim", "vimdoc", "query", -- always
     "bash",
     "dockerfile",
     "go",
@@ -76,4 +76,4 @@ require('nvim-treesitter.configs').setup {
 }
 
 vim.keymap.set('n', '<leader>ph', ':TSHighlightCapturesUnderCursor<cr>')
-vim.keymap.set('n', '<leader>tp', ':TSPlaygroundToggle<cr>')
+vim.keymap.set('n', '<leader>tp', ':InspectTree<cr>')
