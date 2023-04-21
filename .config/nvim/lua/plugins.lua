@@ -35,6 +35,7 @@ require('lazy').setup({
       'hrsh7th/cmp-path',
       -- snippet
       'L3MON4D3/LuaSnip',
+      'rafamadriz/friendly-snippets',
       'saadparwaiz1/cmp_luasnip',
       -- UI
       'onsails/lspkind-nvim',
@@ -63,7 +64,6 @@ require('lazy').setup({
 
   -- snippets
   'honza/vim-snippets',
-  'rafamadriz/friendly-snippets',
 
   -- comment
   { 'numToStr/Comment.nvim',         opts = {} },
@@ -125,7 +125,7 @@ require('lazy').setup({
       vim.cmd.colorscheme 'tokyonight'
     end
   },
-  { 'joshdick/onedark.vim',     priority = 1000 },
+  { 'joshdick/onedark.vim',      priority = 1000 },
 
   -- ctags
   'ludovicchabant/vim-gutentags',
