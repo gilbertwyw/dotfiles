@@ -1,8 +1,29 @@
 local telescope = require('telescope')
+local lga_actions = require("telescope-live-grep-args.actions")
+
+telescope.setup {
+  extensions = {
+    -- https://github.com/nvim-telescope/telescope-live-grep-args.nvim#configuration
+    live_grep_args = {
+      auto_quoting = true, -- enable/disable auto-quoting
+      -- define mappings, e.g.
+      mappings = {
+        -- extend mappings
+        i = {
+          ["<C-k>"] = lga_actions.quote_prompt(),
+          ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
+          ["<C-h>"] = lga_actions.quote_prompt({ postfix = " --hidden " }),
+        },
+      },
+    }
+  }
+}
+
 -- extensions
 telescope.load_extension('file_browser')
 telescope.load_extension('fzf')
-telescope.load_extension('project')
+telescope.load_extension("live_grep_args")
+telescope.load_extension('project') -- https://github.com/nvim-telescope/telescope-project.nvim#project
 
 local builtin = require('telescope.builtin')
 
@@ -37,6 +58,6 @@ vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[D]iagnostics' 
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[H]elp tags' })
 vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[K]ey mappings' })
 vim.keymap.set('n', '<leader>sm', builtin.marks, { desc = '[M]arks' })
-vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[G]rep' })
+vim.keymap.set('n', '<leader>sg', telescope.extensions.live_grep_args.live_grep_args, { desc = '[G]rep' })
 vim.keymap.set('n', '<leader>st', builtin.tags, { desc = '[T]ags' })
 vim.keymap.set('n', 'gW', builtin.grep_string, { desc = 'Search current word' })
