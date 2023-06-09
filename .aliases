@@ -1,14 +1,13 @@
 alias a=alias
-# brew install bat
-alias c=bat
-alias k=kubectl
+alias c=bat     # brew install bat
+alias d=docker  # brew install docker
+alias k=kubectl # brew install kubernetes-cli
 alias m=man
-# brew install ddgr
-alias s=ddgr
-alias tf="terraform"
+alias s=ddgr    # brew install ddgr
 alias u=unrar
 
-alias rm=trash
+alias rm=trash  # brew install trash
+alias tf=terraform
 alias vd='$EDITOR -d'
 
 ##########
