@@ -156,6 +156,13 @@ require('lazy').setup({
 
   -- misc.
   {
+    'ggandor/leap.nvim',
+    config = function()
+      require('leap').add_default_mappings()
+    end
+  },
+
+  {
     'RRethy/vim-hexokinase',
     build = 'make hexokinase',
     keys = {
@@ -203,21 +210,6 @@ require('lazy').setup({
         target_pane = "{last}",
       }
       vim.g.slime_dont_ask_default = 1
-    end
-  },
-
-  {
-    'justinmk/vim-sneak',
-    keys = {
-      -- These mappings do not invoke label-mode, even if you have it enabled.
-      { 'f', '<Plug>Sneak_f', mode = { 'n', 'v', 'o' }, desc = 'sneak: f' },
-      { 'F', '<Plug>Sneak_F', mode = { 'n', 'v', 'o' }, desc = 'sneak: F' },
-      { 't', '<Plug>Sneak_t', mode = { 'n', 'v', 'o' }, desc = 'sneak: t' },
-      { 'T', '<Plug>Sneak_T', mode = { 'n', 'v', 'o' }, desc = 'sneak: T' },
-    },
-    config = function()
-      vim.g['sneak#s_next'] = 1
-      vim.g['sneak#label']  = 1
     end
   },
 
