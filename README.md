@@ -34,7 +34,12 @@ chsh -s $HOMEBREW_PREFIX/bin/zsh
 
 ## fzf
 
-Run `brew install fzf ` and follow the instruction from `brew info fzf`.
+```sh
+brew install fzf
+
+# install keybindings
+$HOMEBREW_PREFIX/opt/fzf/install
+```
 
 ## Git
 
