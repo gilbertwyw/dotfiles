@@ -34,6 +34,9 @@ alias o=open
 #################
 alias -g CC='| pbcopy'
 alias -g FF='| fzf'
+alias -g H='-h'
+alias -g HH='--help'
+alias -g HHH='-help'
 alias -g L='| less'
 
 #################
