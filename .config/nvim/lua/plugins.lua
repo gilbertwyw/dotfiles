@@ -118,6 +118,7 @@ require('lazy').setup({
   { 'fenetikm/falcon',               priority = 1000 },
   {
     'folke/tokyonight.nvim',
+    lazy = false,
     priority = 1000,
     config = function()
       vim.g.tokyonight_style = "night"
