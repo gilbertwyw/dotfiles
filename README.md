@@ -28,8 +28,8 @@ stow -v -R [-n] .
 ```sh
 brew install zsh zplug
 
-echo '/usr/local/bin/zsh' >> /etc/shells
-chsh -s /usr/local/bin/zsh
+echo "$HOMEBREW_PREFIX/bin/zsh" | sudo tee -a /etc/shells
+chsh -s $HOMEBREW_PREFIX/bin/zsh
 ```
 
 ## fzf
