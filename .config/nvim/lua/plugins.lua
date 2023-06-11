@@ -277,7 +277,6 @@ require('lazy').setup({
 
   'AndrewRadev/splitjoin.vim',
   'Raimondi/delimitMate', -- keep?
-  'airblade/vim-rooter',
   'chrisbra/unicode.vim',
   'justinmk/vim-dirvish',
   'kshenoy/vim-signature',
