@@ -129,15 +129,6 @@ require('lazy').setup({
   },
   { 'joshdick/onedark.vim',      priority = 1000 },
 
-  -- ctags
-  'ludovicchabant/vim-gutentags',
-  {
-    'majutsushi/tagbar', -- `ctags --list-languages`
-    keys = {
-      { '<leader>tt', vim.cmd.TagbarToggle, desc = 'Toggle tagbar' }
-    },
-  },
-
   -- markdown
   {
     'ellisonleao/glow.nvim',
