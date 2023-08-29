@@ -16,13 +16,15 @@ require('lazy').setup({
   -- telescope
   {
     'nvim-telescope/telescope.nvim',
-    version = '*',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    tag = '0.1.2',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope-file-browser.nvim',
+      'nvim-telescope/telescope-project.nvim',
+      { 'nvim-telescope/telescope-live-grep-args.nvim', version = "^1.0.0" },
+      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    },
   },
-  { 'nvim-telescope/telescope-file-browser.nvim' },
-  { 'nvim-telescope/telescope-fzf-native.nvim',    build = 'make' },
-  { 'nvim-telescope/telescope-live-grep-args.nvim' },
-  { 'nvim-telescope/telescope-project.nvim' },
 
   -- Autocompletion
   {
