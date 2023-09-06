@@ -38,8 +38,6 @@ require('lazy').setup({
       'hrsh7th/cmp-path',
       -- snippet
       'L3MON4D3/LuaSnip',
-      'rafamadriz/friendly-snippets',
-      'saadparwaiz1/cmp_luasnip',
       -- UI
       'onsails/lspkind-nvim',
     },
@@ -120,6 +118,15 @@ require('lazy').setup({
   },
 
   -- snippets
+  {
+    "L3MON4D3/LuaSnip",
+    version = "2.*",
+    build = "make install_jsregexp",
+    dependencies = {
+      "rafamadriz/friendly-snippets",
+      'saadparwaiz1/cmp_luasnip',
+    },
+  },
   'honza/vim-snippets',
 
   -- comment
@@ -129,7 +136,7 @@ require('lazy').setup({
   {
     'nvim-tree/nvim-tree.lua',
     dependencies = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icons
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
     keys = {
       { '<leader>fd', vim.cmd.NvimTreeFindFileToggle, desc = 'Toggle nvim-tree' },
