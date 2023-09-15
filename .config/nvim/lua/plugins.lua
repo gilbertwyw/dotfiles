@@ -219,14 +219,6 @@ require('lazy').setup({
   },
 
   {
-    'RRethy/vim-hexokinase',
-    build = 'make hexokinase',
-    keys = {
-      { '<leader>tc', vim.cmd.HexokinaseToggle, desc = 'Toggle hexokinase' },
-    }
-  },
-
-  {
     'Valloric/ListToggle',
     config = function()
       vim.g.lt_location_list_toggle_map = '<leader>tl'
@@ -268,8 +260,6 @@ require('lazy').setup({
       vim.g.slime_dont_ask_default = 1
     end
   },
-
-  { 'mattn/emmet-vim', ft = { 'html', 'css' }, },
 
   {
     'mbbill/undotree',
@@ -321,12 +311,6 @@ require('lazy').setup({
       char = '┊',
       show_trailing_blankline_indent = false,
     },
-  },
-
-  {
-    'heavenshell/vim-jsdoc',
-    ft = { 'javascript', 'javascript.jsx', 'typescript' },
-    build = 'make install'
   },
 
   'AndrewRadev/splitjoin.vim',
