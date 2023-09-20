@@ -22,7 +22,7 @@ require('lazy').setup({
       'nvim-telescope/telescope-file-browser.nvim',
       'nvim-telescope/telescope-project.nvim',
       { 'nvim-telescope/telescope-live-grep-args.nvim', version = "^1.0.0" },
-      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+      { 'nvim-telescope/telescope-fzf-native.nvim',     build = 'make' },
     },
   },
 
@@ -212,6 +212,13 @@ require('lazy').setup({
 
   -- misc.
   {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    opts = {},
+  },
+
+  {
     'ggandor/leap.nvim',
     config = function()
       require('leap').add_default_mappings()
@@ -325,7 +332,6 @@ require('lazy').setup({
   'tpope/vim-obsession',
   'tpope/vim-repeat',
   'tpope/vim-rsi',
-  'tpope/vim-surround',
   'tpope/vim-unimpaired',
   'vim-scripts/ReplaceWithRegister',
   'wellle/targets.vim',
