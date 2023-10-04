@@ -312,13 +312,7 @@ require('lazy').setup({
     end
   },
 
-  {
-    'lukas-reineke/indent-blankline.nvim',
-    opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
-    },
-  },
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
   'AndrewRadev/splitjoin.vim',
   'Raimondi/delimitMate', -- keep?
