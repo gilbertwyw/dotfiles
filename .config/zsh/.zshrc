@@ -34,10 +34,6 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
-if type brew &>/dev/null; then
-  FPATH=$HOMEBREW_PREFIX/share/zsh/site-functions:$FPATH
-fi
-
 setopt no_beep
 
 # Do not write a duplicate event to the history file.
