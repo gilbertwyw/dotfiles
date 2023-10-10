@@ -85,11 +85,6 @@ if type direnv &>/dev/null; then
   eval "$(direnv hook zsh)"
 fi
 
-# brew install direnv, https://github.com/zimbatm/direnv#zsh
-if type direnv &>/dev/null; then
-  eval "$(direnv hook zsh)"
-fi
-
 eval "$(starship init zsh)"
 
 # zprof
