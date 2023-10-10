@@ -60,12 +60,6 @@ fi
 
 typeset -U path
 
-# brew info chruby
-if type chruby-exec &>/dev/null; then
-  source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
-  source $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh
-fi
-
 # brew info z
 [[ -f $HOMEBREW_PREFIX/etc/profile.d/z.sh ]] && source $HOMEBREW_PREFIX/etc/profile.d/z.sh
 
