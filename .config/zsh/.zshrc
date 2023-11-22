@@ -34,7 +34,10 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
+setopt auto_cd
+setopt correct
 setopt no_beep
+setopt nocaseglob
 
 # Do not write a duplicate event to the history file.
 setopt HIST_SAVE_NO_DUPS
