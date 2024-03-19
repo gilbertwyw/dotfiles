@@ -86,4 +86,6 @@ fi
 
 eval "$(starship init zsh)"
 
+# brew isntall zoxide
+eval "$(zoxide init --cmd j zsh)"
 # zprof

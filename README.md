@@ -6,7 +6,7 @@
 - [GNU Stow](https://www.gnu.org/software/stow/)
 
 ```sh
-brew install bat ddgr direnv fd ripgrep stow trash universal-ctags z
+brew install bat ddgr direnv fd fzf go ripgrep starship stow trash universal-ctags zoxide
 
 # For Github API Rate limit
 # https://github.com/Homebrew/brew/blob/master/docs/Manpage.md#environment
