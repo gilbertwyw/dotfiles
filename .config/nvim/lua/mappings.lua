@@ -67,9 +67,6 @@ vim.keymap.set('n', 'C', '"_C')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
--- from Damian Conway
-vim.keymap.set('n', 'S', ':%s//g<Left><Left>')
-
 ------------------------------------------------------------------------
 --                            Select mode                             --
 ------------------------------------------------------------------------
