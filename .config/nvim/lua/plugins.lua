@@ -77,6 +77,7 @@ require('lazy').setup({
     'mfussenegger/nvim-dap',
     dependencies = {
       'rcarriga/nvim-dap-ui',
+      'nvim-neotest/nvim-nio', -- required by 'nvim-dap-ui'
 
       'williamboman/mason.nvim',
       'jay-babu/mason-nvim-dap.nvim',
