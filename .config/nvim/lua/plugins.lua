@@ -178,8 +178,6 @@ require('lazy').setup({
   },
 
   -- color scheme
-  { 'bluz71/vim-nightfly-guicolors', name = 'nightfly', priority = 1000 },
-  { 'fenetikm/falcon',               priority = 1000 },
   {
     'folke/tokyonight.nvim',
     lazy = false,
@@ -188,10 +186,9 @@ require('lazy').setup({
       vim.g.tokyonight_style = "night"
       vim.g.tokyonight_sidebars = { "qf", "terminal" }
 
-      vim.cmd.colorscheme 'tokyonight'
+      vim.cmd[[colorscheme tokyonight]]
     end
   },
-  { 'joshdick/onedark.vim',      priority = 1000 },
 
   -- markdown
   {
