@@ -293,26 +293,6 @@ require('lazy').setup({
     end
   },
 
-  {
-    'w0rp/ale',
-    cmd = 'ALEEnable',
-    config = function()
-      vim.g.ale_disable_lsp          = 1
-      -- https://github.com/w0rp/ale#5ii-how-can-i-keep-the-sign-gutter-open
-      vim.g.ale_sign_column_always   = 1
-      -- https://github.com/w0rp/ale#5vii-how-can-i-change-the-format-for-echo-messages
-      vim.g.ale_echo_msg_error_str   = 'E'
-      vim.g.ale_echo_msg_warning_str = 'W'
-      vim.g.ale_echo_msg_format      = '[%linter%] %s [%severity%]'
-
-      -- https://github.com/w0rp/ale#5ix-how-can-i-navigate-between-errors-quickly
-      vim.keymap.set('n', '[W', '<Plug>(ale_first)')
-      vim.keymap.set('n', '[w', '<Plug>(ale_previous_wrap)')
-      vim.keymap.set('n', ']w', '<Plug>(ale_next_wrap)')
-      vim.keymap.set('n', ']W', '<Plug>(ale_last)')
-    end
-  },
-
   { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
   'AndrewRadev/splitjoin.vim',
