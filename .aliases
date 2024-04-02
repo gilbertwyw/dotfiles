@@ -3,7 +3,6 @@ alias c=bat     # brew install bat
 alias d=docker  # brew install docker
 alias k=kubectl # brew install kubernetes-cli
 alias m=man
-alias s=ddgr    # brew install ddgr
 alias u=unrar
 
 alias rm=trash  # brew install trash
