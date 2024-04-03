@@ -5,7 +5,8 @@ alias k=kubectl # brew install kubernetes-cli
 alias m=man
 alias u=unrar
 
-alias rm=trash  # brew install trash
+alias ls=lsd   # brew install lsd
+alias rm=trash # brew install trash
 alias tf=terraform
 alias vd='$EDITOR -d'
 
