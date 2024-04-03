@@ -1,0 +1,21 @@
+matches:
+  - trigger: ";at"
+    replace: "alternatives"
+  - trigger: ";ex"
+    replace: "e.g., "
+
+  # (c)amel
+  - trigger: ";cdo"
+    replace: "DevOps"
+  - trigger: ";cgh"
+    replace: "GitHub"
+  - trigger: ";cmo"
+    replace: "MLOps"
+
+  # (e)nglish (d)ictionary
+  - trigger: ";edc"
+    replace: "https://dictionary.cambridge.org/dictionary/english-chinese-traditional/"
+  - trigger: ";edt"
+    replace: "tfd.com/"
+
+

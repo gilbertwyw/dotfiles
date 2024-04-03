@@ -1,0 +1,17 @@
+matches:
+  - trigger: ";dl"
+    replace: "docker logs --follow "
+  - trigger: ";lh"
+    replace: "localhost:"
+  - trigger: ";occ"
+    replace: "openssl s_client -connect "
+  - trigger: ";py"
+    replace: "python"
+  - trigger: ";si"
+    replace: "sudo -i"
+
+  # Home(b)rew
+  - trigger: ";bi"
+    replace: "brew install "
+  - trigger: ";bs"
+    replace: "brew search "

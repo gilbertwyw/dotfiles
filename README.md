@@ -16,7 +16,7 @@ ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 gh repo clone gilbertwyw/dotfiles
 ```
 
-> [!TIP] 
+> [!NOTE] 
 > Read `HOMEBREW_GITHUB_API_TOKEN` in https://github.com/Homebrew/brew/blob/master/docs/Manpage.md#environment
 
 ```sh
@@ -36,7 +36,7 @@ chsh -s $HOMEBREW_PREFIX/bin/zsh
 
 ## Tmux
 
-> [!NOTE]
+> [!IMPORTANT]
 > Make sure `<prefix>` does not clash with system shortcut.
 
 ```sh
@@ -55,6 +55,13 @@ chsh -s $HOMEBREW_PREFIX/bin/zsh
 ```sh
 ln -s $HOMEBREW_PREFIX/opt/emacs-plus/Emacs.app /Applications/Emacs.app
 ```
+
+## Espanso
+
+- [Documentation](https://espanso.org/docs/get-started/) 
+
+> [!TIP]
+> Run `espanso path` to verify the setup
 
 ## Xcode
 

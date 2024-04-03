@@ -1,0 +1,8 @@
+matches:
+  # AWS (a)
+  # user data
+  - trigger: ";aud"
+    replace: "/var/lib/cloud/instance/user-data.txt"
+  # clout-init-output
+  - trigger: ";acio"
+    replace: "/var/log/cloud-init-output.log"

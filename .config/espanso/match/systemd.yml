@@ -1,0 +1,8 @@
+matches:
+  - trigger: ";se"
+    replace: "systemctl edit --full "
+  # (j)ournalctl
+  - trigger: ";je"
+    replace: "journalctl --no-pager -e -u "
+  - trigger: ";ju"
+    replace: "journalctl -u "

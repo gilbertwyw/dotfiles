@@ -1,0 +1,5 @@
+matches:
+  - trigger: ';sig'
+    replace: |
+      Best Regards,
+      Gilbert Wong
