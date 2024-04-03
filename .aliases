@@ -3,6 +3,7 @@ alias c=bat     # brew install bat
 alias d=docker  # brew install docker
 alias k=kubectl # brew install kubernetes-cli
 alias m=man
+alias v=$EDITOR
 alias u=unrar
 
 alias ls=lsd   # brew install lsd

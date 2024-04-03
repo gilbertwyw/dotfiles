@@ -25,6 +25,10 @@ telescope.load_extension('fzf')
 telescope.load_extension("live_grep_args")
 telescope.load_extension('project') -- https://github.com/nvim-telescope/telescope-project.nvim#project
 
+-- for :Telescope session-lens commands
+-- see: https://github.com/rmagatti/auto-session?tab=readme-ov-file#-session-lens
+telescope.load_extension "session-lens"
+
 local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<C-p>', function() telescope.extensions.project.project { display_type = 'full' } end,
