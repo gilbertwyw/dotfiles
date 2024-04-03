@@ -88,4 +88,8 @@ eval "$(starship init zsh)"
 
 # brew isntall zoxide
 eval "$(zoxide init --cmd j zsh)"
+
+# https://docs.atuin.sh/guide/installation/#installing-the-shell-plugin
+eval "$(atuin init zsh)"
+
 # zprof
