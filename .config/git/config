@@ -57,3 +57,4 @@
 	rebase = false
 [delta]
   features = side-by-side
+  navigate = true
