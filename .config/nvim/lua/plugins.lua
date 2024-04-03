@@ -131,7 +131,7 @@ require('lazy').setup({
   'honza/vim-snippets',
 
   -- comment
-  { 'numToStr/Comment.nvim',         opts = {} },
+  { 'numToStr/Comment.nvim',     opts = {} },
 
   -- file explorer
   {
@@ -186,18 +186,17 @@ require('lazy').setup({
       vim.g.tokyonight_style = "night"
       vim.g.tokyonight_sidebars = { "qf", "terminal" }
 
-      vim.cmd[[colorscheme tokyonight]]
+      vim.cmd [[colorscheme tokyonight]]
     end
   },
 
   -- markdown
   {
-    'ellisonleao/glow.nvim',
-    opts = {},
-    lazy = true,
-    ft = { 'markdown' },
+    "ellisonleao/glow.nvim",
+    config = true,
+    cmd = "Glow",
     keys = {
-      { '<leader>p', vim.cmd.Glow, desc = ':Glow' }
+      { "<leader>p", vim.cmd.Glow, desc = ":Glow" },
     },
   },
 
