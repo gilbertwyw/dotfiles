@@ -48,7 +48,15 @@ chsh -s $HOMEBREW_PREFIX/bin/zsh
 :checkhealth
 ```
 
-### Xcode
+## Doom Emacs
+
+- [install](https://github.com/doomemacs/doomemacs?tab=readme-ov-file#install) 
+
+```sh
+ln -s $HOMEBREW_PREFIX/opt/emacs-plus/Emacs.app /Applications/Emacs.app
+```
+
+## Xcode
 
 ```sh
 xcode-select --install
