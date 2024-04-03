@@ -21,7 +21,7 @@ gh repo clone gilbertwyw/dotfiles
 
 ```sh
 cd dotfiles
-brew brewdle [--dry-run] -v
+brew brewdle -v
 
 # use -n to see any filesystem changes
 stow -v -R [-n] .
