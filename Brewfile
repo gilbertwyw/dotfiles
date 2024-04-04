@@ -138,7 +138,6 @@ cask "signal"
 cask "slack"
 cask "sloth"
 cask "stats"
-cask "vlc"
 mas "Bitwarden", id: 1352778147
 mas "Flow", id: 1423210932
 mas "Keynote", id: 409183694
