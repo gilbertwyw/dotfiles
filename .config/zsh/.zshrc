@@ -84,6 +84,7 @@ if type direnv &>/dev/null; then
   eval "$(direnv hook zsh)"
 fi
 
+# brew install starship
 eval "$(starship init zsh)"
 
 # brew isntall zoxide

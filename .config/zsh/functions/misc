@@ -1,14 +1,3 @@
-# copy from: https://github.com/tpope/vim-obsession/issues/11#issue-19117942
-function v() {
-  if test $# -gt 0; then
-    $EDITOR "$@"
-  elif test -f Session.vim; then
-    $EDITOR -S
-  else
-    $EDITOR -c Obsession
-  fi
-}
-
 function jump_after_first_word () {
     local words
     words=(${(z)BUFFER})
