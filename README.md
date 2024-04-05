@@ -21,7 +21,7 @@ gh repo clone gilbertwyw/dotfiles
 
 ```sh
 cd dotfiles
-brew brewdle -v --no-lock
+brew bundle -v --no-lock
 
 # use -n to see any filesystem changes
 stow -v -R [-n] .
