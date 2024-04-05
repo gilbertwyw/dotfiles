@@ -15,3 +15,5 @@ matches:
     replace: "brew install "
   - trigger: ";bs"
     replace: "brew search "
+  - trigger: ";bbb"
+    replace: "brew bundle -v --no-lock"
