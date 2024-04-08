@@ -7,7 +7,7 @@ matches:
     replace: "openssl s_client -connect "
   - trigger: ";py"
     replace: "python"
-  - trigger: ";si"
+  - trigger: ";su"
     replace: "sudo -i"
 
   # Home(b)rew
