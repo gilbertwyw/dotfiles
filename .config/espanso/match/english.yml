@@ -3,6 +3,8 @@ matches:
     replace: "alternatives"
   - trigger: ";ex"
     replace: "e.g., "
+  - trigger: ";fn"
+    replace: "function"
 
   # (c)amel
   - trigger: ";cdo"
