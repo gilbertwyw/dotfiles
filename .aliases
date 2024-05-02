@@ -11,6 +11,8 @@ alias rm=trash # brew install trash
 alias tf=terraform
 alias vd='$EDITOR -d'
 
+alias assume='. assume' # brew install common-fate/granted/granted
+
 ##########
 #  Tmux  #
 ##########
