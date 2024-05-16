@@ -279,17 +279,6 @@ require('lazy').setup({
     cmd = { 'Dispatch', 'Make', 'Focus', 'Start' },
   },
 
-  {
-    'tyru/open-browser.vim',
-    keys = {
-      { 'gx', '<Plug>(openbrowser-smart-search)', mode = { 'n', 'v' }, desc = 'Search in browser' }
-    },
-    config = function()
-      -- disable netrw's gx mapping
-      vim.g.netrw_nogx = 1
-    end
-  },
-
   { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
   {
