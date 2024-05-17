@@ -46,9 +46,6 @@ lspconfig.gopls.setup {
   },
 }
 
-vim.keymap.set('n', '<Leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 -- Add buffer diagnostics to the location list
 vim.keymap.set('n', '<Leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
@@ -68,7 +65,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<LocalLeader>gt', vim.lsp.buf.type_definition, opts)
     vim.keymap.set('n', '<LocalLeader>rn', vim.lsp.buf.rename, opts)
     vim.keymap.set('n', '<c-]>', vim.lsp.buf.definition, opts)
-    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
     vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, opts)
