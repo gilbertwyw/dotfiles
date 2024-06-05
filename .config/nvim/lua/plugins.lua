@@ -309,6 +309,17 @@ require('lazy').setup({
       })
     end,
   },
+
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {},
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    },
+  },
+
   'AndrewRadev/splitjoin.vim',
   'Raimondi/delimitMate', -- keep?
   'chrisbra/unicode.vim',
