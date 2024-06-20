@@ -9,15 +9,3 @@ matches:
     replace: "python"
   - trigger: ";su"
     replace: "sudo -i"
-
-  # Home(b)rew
-  - trigger: ";bi"
-    replace: "brew install "
-  - trigger: ";bs"
-    replace: "brew search "
-  - trigger: ";bbc"
-    replace: "brew bundle cleanup"
-  - trigger: ";bbd"
-    replace: "brew bundle dump --force"
-  - trigger: ";bbi"
-    replace: "brew bundle install -v --no-lock"

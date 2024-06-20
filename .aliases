@@ -29,6 +29,12 @@ alias ngo='npm outdated -g'
 #  macOS  #
 ###########
 alias b=brew
+alias bi='brew install'
+alias bs='brew search'
+alias bbc='brew bundle cleanup'
+alias bbd='brew bundle dump --force'
+alias bbi='brew bundle install -v --no-lock'
+
 alias o=open
 
 #################
