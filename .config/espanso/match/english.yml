@@ -15,9 +15,7 @@ matches:
     replace: "MLOps"
 
   # (e)nglish (d)ictionary
-  - trigger: ";edc"
+  - trigger: ";tc"
     replace: "https://dictionary.cambridge.org/dictionary/english-chinese-traditional/"
-  - trigger: ";edt"
-    replace: "tfd.com/"
-
-
+  - trigger: ";tf"
+    replace: "https://tfd.com/"
