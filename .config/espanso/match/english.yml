@@ -1,10 +1,16 @@
 matches:
   - trigger: ";at"
     replace: "alternatives"
+  - trigger: ";df"
+    replace: "default"
+  - trigger: ";rc"
+    replace: "recommended"
   - trigger: ";ex"
     replace: "e.g., "
   - trigger: ";fn"
     replace: "function"
+  - trigger: ";sp"
+    replace: "snippets"
 
   # (c)amel
   - trigger: ";cdo"
