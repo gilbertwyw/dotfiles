@@ -8,6 +8,11 @@ function jump_after_first_word () {
         CURSOR=${#${words[1]}}+1
     fi
 }
+
 function lk {
   cd "$(walk "$@")"
+}
+
+take () {
+    mkdir -p "$1" && cd "$1"
 }
