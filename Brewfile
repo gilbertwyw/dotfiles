@@ -85,7 +85,6 @@ brew "semgrep"
 brew "shellcheck"
 brew "starship"
 brew "stow"
-brew "tailscale"
 brew "tenv"
 brew "tflint"
 brew "tfsec"
@@ -155,6 +154,7 @@ mas "Kindle Classic", id: 405399194
 mas "Little Snitch Mini", id: 1629008763
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Tailscale", id: 1475387142
 mas "The Unarchiver", id: 425424353
 mas "Trello", id: 1278508951
 mas "Velja", id: 1607635845
