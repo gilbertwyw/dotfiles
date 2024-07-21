@@ -129,7 +129,6 @@ require('lazy').setup({
       'saadparwaiz1/cmp_luasnip',
     },
   },
-  'honza/vim-snippets',
 
   -- comment
   { 'numToStr/Comment.nvim',     opts = {} },
