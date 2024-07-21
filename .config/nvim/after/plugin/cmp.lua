@@ -18,27 +18,8 @@ cmp.setup({
       with_text = true,
     }),
   },
-  mapping = cmp.mapping.preset.insert({
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    ['<Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
-  }),
+  -- default mapping: https://github.com/hrsh7th/nvim-cmp/blob/main/lua/cmp/config/mapping.lua
+  mapping = cmp.mapping.preset.insert(),
   snippet = {
     -- REQUIRED - you must specify a snippet engine
     expand = function(args)
