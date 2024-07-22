@@ -144,7 +144,14 @@ require('lazy').setup({
       end, { silent = true })
     end,
   },
-
+  {
+    "benfowler/telescope-luasnip.nvim",
+    dependencies = {
+      "L3MON4D3/LuaSnip",
+      "nvim-telescope/telescope.nvim",
+    },
+  },
+   
   -- comment
   { 'numToStr/Comment.nvim',     opts = {} },
 

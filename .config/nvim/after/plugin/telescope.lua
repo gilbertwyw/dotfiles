@@ -24,6 +24,7 @@ telescope.load_extension('file_browser')
 telescope.load_extension('fzf')
 telescope.load_extension("live_grep_args")
 telescope.load_extension('project') -- https://github.com/nvim-telescope/telescope-project.nvim#project
+telescope.load_extension('luasnip') -- https://github.com/benfowler/telescope-luasnip.nvim?tab=readme-ov-file#setup
 
 -- for :Telescope session-lens commands
 -- see: https://github.com/rmagatti/auto-session?tab=readme-ov-file#-session-lens
@@ -63,5 +64,6 @@ vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[H]elp tags' })
 vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[K]ey mappings' })
 vim.keymap.set('n', '<leader>sm', builtin.marks, { desc = '[M]arks' })
 vim.keymap.set('n', '<leader>sg', telescope.extensions.live_grep_args.live_grep_args, { desc = '[G]rep' })
+vim.keymap.set('n', '<leader>ss', telescope.extensions.luasnip.luasnip, { desc = 'LuaSnip snippets' })
 vim.keymap.set('n', '<leader>st', builtin.tags, { desc = '[T]ags' })
 vim.keymap.set('n', 'gW', builtin.grep_string, { desc = 'Search current word' })
