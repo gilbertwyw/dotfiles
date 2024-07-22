@@ -76,5 +76,4 @@ require('nvim-treesitter.configs').setup {
   },
 }
 
-vim.keymap.set('n', '<leader>ph', ':TSHighlightCapturesUnderCursor<cr>')
 vim.keymap.set('n', '<leader>tp', ':InspectTree<cr>')
