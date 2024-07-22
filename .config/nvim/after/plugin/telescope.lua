@@ -32,8 +32,6 @@ telescope.load_extension "session-lens"
 
 local builtin = require('telescope.builtin')
 
-vim.keymap.set('n', '<C-p>', function() telescope.extensions.project.project { display_type = 'full' } end,
-  { desc = 'Projects' })
 vim.keymap.set('n', '<localleader>,', builtin.builtin, { desc = 'Built-in pickers' })
 vim.keymap.set('n', '<leader>.', builtin.resume, { desc = 'Previous picker' })
 vim.keymap.set('n', '<leader>/', builtin.search_history, { desc = 'Search history' })
@@ -60,10 +58,12 @@ vim.keymap.set('n', '<leader>gf', builtin.git_files, { desc = 'Files tracked by 
 vim.keymap.set('n', '<leader>gs', builtin.git_status, { desc = 'Git status' })
 
 vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[D]iagnostics' })
+vim.keymap.set('n', '<leader>sg', telescope.extensions.live_grep_args.live_grep_args, { desc = '[G]rep' })
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[H]elp tags' })
 vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[K]ey mappings' })
 vim.keymap.set('n', '<leader>sm', builtin.marks, { desc = '[M]arks' })
-vim.keymap.set('n', '<leader>sg', telescope.extensions.live_grep_args.live_grep_args, { desc = '[G]rep' })
+vim.keymap.set('n', '<leader>sp', function() telescope.extensions.project.project { display_type = 'full' } end,
+  { desc = 'Projects' })
 vim.keymap.set('n', '<leader>ss', telescope.extensions.luasnip.luasnip, { desc = 'LuaSnip snippets' })
 vim.keymap.set('n', '<leader>st', builtin.tags, { desc = '[T]ags' })
 vim.keymap.set('n', 'gW', builtin.grep_string, { desc = 'Search current word' })
