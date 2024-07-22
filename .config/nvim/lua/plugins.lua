@@ -133,9 +133,9 @@ require('lazy').setup({
 
       local ls = require("luasnip")
 
-      vim.keymap.set({ "i" }, "<C-K>", function() ls.expand() end, { silent = false })
-      vim.keymap.set({ "i", "s" }, "<C-n>", function() ls.jump(1) end, { silent = false })
-      vim.keymap.set({ "i", "s" }, "<C-p>", function() ls.jump(-1) end, { silent = false })
+      vim.keymap.set({ "i" }, "<C-L>", function() ls.expand() end, { silent = false })
+      vim.keymap.set({ "i", "s" }, "<C-J>", function() ls.jump(1) end, { silent = false })
+      vim.keymap.set({ "i", "s" }, "<C-K>", function() ls.jump(-1) end, { silent = false })
 
       vim.keymap.set({ "i", "s" }, "<C-E>", function()
         if ls.choice_active() then
