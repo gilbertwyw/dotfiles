@@ -163,4 +163,4 @@ mas "Tailscale", id: 1475387142
 mas "The Unarchiver", id: 425424353
 mas "Trello", id: 1278508951
 mas "Velja", id: 1607635845
-mas "WhatsApp", id: 1147396723
+mas "‎WhatsApp", id: 310633997
