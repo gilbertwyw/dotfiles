@@ -231,6 +231,13 @@ require('lazy').setup({
 
   -- misc.
   {
+    'nvimtools/none-ls.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+    }
+  },
+
+  {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
