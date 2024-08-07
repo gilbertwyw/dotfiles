@@ -8,6 +8,7 @@ local servers = {
   "helm_ls",
   "pyright",
   "terraformls",
+  "tflint",
   "tsserver",
   "yamlls",
 }
