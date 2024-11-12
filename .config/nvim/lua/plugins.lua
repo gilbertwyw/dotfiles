@@ -317,6 +317,12 @@ require('lazy').setup({
   },
 
   {
+    'stevearc/oil.nvim',
+    opts = {},
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+
+  {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = {},
@@ -329,7 +335,6 @@ require('lazy').setup({
   'AndrewRadev/splitjoin.vim',
   'Raimondi/delimitMate', -- keep?
   'chrisbra/unicode.vim',
-  'justinmk/vim-dirvish',
   'kshenoy/vim-signature',
   'psliwka/vim-smoothie',
   'tommcdo/vim-exchange',
