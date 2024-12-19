@@ -3,31 +3,17 @@ alias c=bat     # brew install bat
 alias d=docker  # brew install docker
 alias k=kubectl # brew install kubernetes-cli
 alias m=man
-alias v=$EDITOR
+alias o=open
 alias u=unrar
+alias v=$EDITOR
 
 alias ls=lsd   # brew install lsd
 alias rm=trash # brew install trash
 alias tf=terraform
 alias vd='$EDITOR -d'
 
-alias assume='. assume' # brew install common-fate/granted/granted
 
-##########
-#  Tmux  #
-##########
-alias tat='tmux new-session -As $(basename $PWD | tr . -)'
-
-#########
-#  npm  #
-#########
-alias ngi='npm install -g'
-alias ngl='npm ls -g --depth=0'
-alias ngo='npm outdated -g'
-
-###########
-#  macOS  #
-###########
+### homebrew
 alias b=brew
 alias bh='brew home'
 alias bi='brew install'
@@ -36,11 +22,18 @@ alias bbc='brew bundle cleanup'
 alias bbd='brew bundle dump --force'
 alias bbi='brew bundle install -v --no-lock'
 
-alias o=open
 
-#################
-#  Zsh: global  #
-#################
+### npm
+alias ngi='npm install -g'
+alias ngl='npm ls -g --depth=0'
+alias ngo='npm outdated -g'
+
+
+### tmux
+alias tat='tmux new-session -As $(basename $PWD | tr . -)'
+
+
+### zsh
 alias -g CC='| pbcopy'
 alias -g FF='| fzf'
 alias -g H='-h'
@@ -49,8 +42,12 @@ alias -g HHH='-help'
 alias -g L='| less'
 alias -g BZ='| base64 -d | zcat'
 alias -g DY='--dry-run=client -o yaml'
-
-#################
-#  Zsh: suffix  #
-#################
 alias -s go=$EDITOR
+
+
+### Misc.
+# Granted
+alias assume='. assume' # brew install common-fate/granted/granted
+
+# cheat.sh
+alias chtsh="curl -s cht.sh/:list | fzf --preview 'curl -s cht.sh/{}'"
