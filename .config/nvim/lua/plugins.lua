@@ -28,18 +28,20 @@ require('lazy').setup({
 
   -- Autocompletion
   {
-    'hrsh7th/nvim-cmp',
-    dependencies = {
-      'hrsh7th/cmp-buffer',
-      'hrsh7th/cmp-cmdline',
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-nvim-lsp-signature-help',
-      'hrsh7th/cmp-nvim-lua',
-      'hrsh7th/cmp-path',
-      -- snippet
-      'L3MON4D3/LuaSnip',
-      -- UI
-      'onsails/lspkind-nvim',
+    'saghen/blink.cmp',
+    dependencies = 'rafamadriz/friendly-snippets',
+
+    version = 'v0.*',
+
+    opts = {
+      keymap = { preset = 'default' },
+
+      appearance = {
+        use_nvim_cmp_as_default = true,
+        nerd_font_variant = 'mono'
+      },
+      -- experimental signature help support
+      signature = { enabled = true }
     },
   },
 
@@ -47,7 +49,6 @@ require('lazy').setup({
   {
     'neovim/nvim-lspconfig',
     dependencies = {
-      'hrsh7th/cmp-nvim-lsp',
       { 'j-hui/fidget.nvim', event = "LspAttach", opts = {} },
       {
         "williamboman/mason-lspconfig.nvim",
@@ -122,27 +123,8 @@ require('lazy').setup({
   -- snippets
   {
     "L3MON4D3/LuaSnip",
-    version = "2.*",
+    version = "v2.*",
     build = "make install_jsregexp",
-    dependencies = {
-      "rafamadriz/friendly-snippets",
-      'saadparwaiz1/cmp_luasnip',
-    },
-    config = function()
-      require("luasnip.loaders.from_vscode").lazy_load()
-
-      local ls = require("luasnip")
-
-      vim.keymap.set({ "i" }, "<C-L>", function() ls.expand() end, { silent = false })
-      vim.keymap.set({ "i", "s" }, "<C-J>", function() ls.jump(1) end, { silent = false })
-      vim.keymap.set({ "i", "s" }, "<C-K>", function() ls.jump(-1) end, { silent = false })
-
-      vim.keymap.set({ "i", "s" }, "<C-E>", function()
-        if ls.choice_active() then
-          ls.change_choice(1)
-        end
-      end, { silent = true })
-    end,
   },
   {
     "benfowler/telescope-luasnip.nvim",
@@ -151,7 +133,7 @@ require('lazy').setup({
       "nvim-telescope/telescope.nvim",
     },
   },
-   
+
   -- comment
   { 'numToStr/Comment.nvim',     opts = {} },
 
