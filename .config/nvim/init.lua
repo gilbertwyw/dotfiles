@@ -16,9 +16,6 @@ o.cursorline = true
 o.ignorecase = true
 o.smartcase = true
 
--- do not redraw screen in the middle of a macro
-o.lazyredraw = true
-
 -- line number
 o.number = true
 o.relativenumber = true
