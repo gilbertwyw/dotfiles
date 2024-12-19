@@ -48,6 +48,7 @@ alias -g HH='--help'
 alias -g HHH='-help'
 alias -g L='| less'
 alias -g BZ='| base64 -d | zcat'
+alias -g DY='--dry-run=client -o yaml'
 
 #################
 #  Zsh: suffix  #
