@@ -320,15 +320,6 @@ require('lazy').setup({
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
 
-  {
-    "folke/noice.nvim",
-    event = "VeryLazy",
-    opts = {},
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
-    },
-  },
 
   'AndrewRadev/splitjoin.vim',
   'Raimondi/delimitMate', -- keep?
