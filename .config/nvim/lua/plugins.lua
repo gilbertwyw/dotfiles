@@ -311,9 +311,7 @@ require('lazy').setup({
 
   {
     'rmagatti/auto-session',
-    dependencies = {
-      'nvim-telescope/telescope.nvim',
-    }
+    lazy = false,
   },
 
   {
