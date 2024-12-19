@@ -137,26 +137,6 @@ require('lazy').setup({
   -- comment
   { 'numToStr/Comment.nvim',     opts = {} },
 
-  -- file explorer
-  {
-    'nvim-tree/nvim-tree.lua',
-    dependencies = {
-      'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    },
-    keys = {
-      { '<leader>fd', vim.cmd.NvimTreeFindFileToggle, desc = 'Toggle nvim-tree' },
-    },
-    config = function()
-      require("nvim-tree").setup({
-        hijack_netrw = false,
-      })
-      -- TODO fix: module 'nvim-tree.api' not found
-      vim.keymap.set('n', '<localleader>bn', require('nvim-tree.api').marks.navigate.next)
-      vim.keymap.set('n', '<localleader>bp', require('nvim-tree.api').marks.navigate.prev)
-      vim.keymap.set('n', '<localleader>bs', require('nvim-tree.api').marks.navigate.select)
-    end
-  },
-
   -- git
   'lewis6991/gitsigns.nvim',
   {
@@ -299,7 +279,7 @@ require('lazy').setup({
   {
     'stevearc/oil.nvim',
     opts = {},
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    dependencies = { { "nvim-tree/nvim-web-devicons", opts = {} } },
   },
 
 
