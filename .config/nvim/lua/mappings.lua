@@ -1,7 +1,6 @@
 ------------------------------------------------------------------------
 --                         Command-line mode                          --
 ------------------------------------------------------------------------
-
 vim.keymap.set('c', 'w!!', 'w !sudo -S tee > /dev/null %')
 
 ------------------------------------------------------------------------
@@ -25,6 +24,9 @@ vim.keymap.set('i', ';u', '<Plug>UpCase', { remap = true })
 --                            Normal mode                             --
 ------------------------------------------------------------------------
 
+vim.keymap.set('n', '<M-j>', '<cmd>cnext<CR>')
+vim.keymap.set('n', '<M-k>', '<cmd>cprev<CR>')
+
 -- join line without moving the cursor
 vim.keymap.set('n', 'J', 'mzJ`z')
 
@@ -32,8 +34,8 @@ vim.keymap.set('n', 'J', 'mzJ`z')
 vim.keymap.set('n', 'gV', '`[V`]')
 
 -- move vertically by visual line
-local moveWithHistoryFn = function (key, min_line_count)
-  return function ()
+local moveWithHistoryFn = function(key, min_line_count)
+  return function()
     local vcount = vim.v.count
 
     if not vcount then
