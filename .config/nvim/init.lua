@@ -86,4 +86,4 @@ vim.api.nvim_create_autocmd({ 'TextChanged', 'InsertLeave', 'FocusLost' }, {
 })
 
 require('mappings')
-require('plugins')
+require('config.lazy')
