@@ -49,7 +49,6 @@ require('lazy').setup({
   {
     'neovim/nvim-lspconfig',
     dependencies = {
-      { 'j-hui/fidget.nvim', event = "LspAttach", opts = {} },
       {
         "williamboman/mason-lspconfig.nvim",
         dependencies = { "williamboman/mason.nvim" },
@@ -63,6 +62,7 @@ require('lazy').setup({
       },
     },
   },
+  { 'j-hui/fidget.nvim',     opts = {} },
 
   -- treesitter
   {
@@ -174,7 +174,7 @@ require('lazy').setup({
   },
 
   -- comment
-  { 'numToStr/Comment.nvim',     opts = {} },
+  { 'numToStr/Comment.nvim', opts = {} },
 
   -- git
   'lewis6991/gitsigns.nvim',
@@ -228,7 +228,7 @@ require('lazy').setup({
   'pearofducks/ansible-vim',
 
   -- statusline
-  { 'nvim-lualine/lualine.nvim', opts = {} },
+  { 'nvim-lualine/lualine.nvim',           opts = {} },
 
   -- misc.
   {
