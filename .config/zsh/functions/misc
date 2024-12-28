@@ -1,3 +1,5 @@
+# vim:ft=zsh
+
 function jump_after_first_word () {
     local words
     words=(${(z)BUFFER})
@@ -9,10 +11,16 @@ function jump_after_first_word () {
     fi
 }
 
-function lk {
-  cd "$(walk "$@")"
-}
-
 take () {
     mkdir -p "$1" && cd "$1"
+}
+
+# https://yazi-rs.github.io/docs/quick-start/#shell-wrapper
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
 }
