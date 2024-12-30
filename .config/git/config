@@ -1,3 +1,4 @@
+# vim:noexpandtab
 [user]
 	name = Gilbert Wong
 	email = gilbertwyw@gmail.com
@@ -54,3 +55,5 @@
 [delta]
   features = side-by-side
   navigate = true
+[branch]
+	sort = -committerdate
