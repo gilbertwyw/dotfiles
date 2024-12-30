@@ -43,8 +43,6 @@
 	smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
-[init]
-	templatedir = ~/.config/git/template
 [mergetool]
 	prompt = false
 	keepBackup = false
