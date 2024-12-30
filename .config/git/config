@@ -20,8 +20,6 @@
 	autocorrect = 1
 [alias]
   ec = config --global -e
-  # git flow
-  ffs = "!f() { git flow feature start $1; }; f"
 	bb = branch -vv
 	us = reset --soft @~
 [filter "media"]
