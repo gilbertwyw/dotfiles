@@ -18,6 +18,8 @@ return {
           "javascript",
           "json",
           "make",
+          "markdown",
+          "markdown_inline",
           "python",
           "terraform",
           "toml",
