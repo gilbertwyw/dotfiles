@@ -68,5 +68,5 @@ ln -s $HOMEBREW_PREFIX/opt/emacs-plus/Emacs.app /Applications/Emacs.app
 ```sh
 xcode-select --install
 
-sudo xcodebuild -license
+sudo xcodebuild -license accept
 ```
