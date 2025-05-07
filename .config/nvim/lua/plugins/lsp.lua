@@ -9,17 +9,18 @@ return {
           require("mason").setup()
           require("mason-lspconfig").setup {
             ensure_installed = { "lua_ls" },
-            automatic_installation = true,
+            automatic_enable = {
+              exclude = {
+                "lua_ls",
+                "pyright",
+              }
+            }
           }
         end
       },
     },
     config = function()
       local servers = {
-        ansiblels = {},
-        bashls = {},
-        gopls = {},
-        helm_ls = {},
         lua_ls = {
           -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls
           settings = {
@@ -45,11 +46,6 @@ return {
             },
           },
         },
-        ruff = {},
-        terraformls = {},
-        tflint = {},
-        ts_ls = {},
-        yamlls = {},
       }
 
       for server, config in pairs(servers) do
