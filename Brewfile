@@ -112,7 +112,7 @@ brew "zplug"
 brew "zsh"
 brew "buildpacks/tap/pack"
 brew "common-fate/granted/granted"
-brew "d12frosted/emacs-plus/emacs-plus@29"
+brew "d12frosted/emacs-plus/emacs-plus@29", args: ["with-native-comp"]
 brew "hashicorp/tap/packer"
 brew "simonwhitaker/tap/gibo"
 cask "alt-tab"
