@@ -97,6 +97,5 @@ return {
   'tpope/vim-repeat',
   'tpope/vim-rsi',
   'tpope/vim-unimpaired',
-  'vim-scripts/ReplaceWithRegister',
   'wellle/targets.vim',
 }

@@ -83,13 +83,10 @@ return {
           -- Buffer local mappings.
           -- See `:help vim.lsp.*` for documentation on any of the below functions
           local opts = { buffer = args.buf }
-          vim.keymap.set({ 'n', 'v' }, '<LocalLeader>ca', vim.lsp.buf.code_action, opts)
-          vim.keymap.set('n', '<LocalLeader>gt', vim.lsp.buf.type_definition, opts)
-          vim.keymap.set('n', '<LocalLeader>rn', vim.lsp.buf.rename, opts)
+          vim.keymap.set('n', 'g0', require('telescope.builtin').lsp_document_symbols, opts)
           vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-          vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-          vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, opts)
-          vim.keymap.set('n', 'gK', vim.lsp.buf.signature_help, opts)
+          vim.keymap.set('n', 'grr', require('telescope.builtin').lsp_references, opts)
+          vim.keymap.set('n', 'gtd', vim.lsp.buf.type_definition, opts)
 
           vim.keymap.set('n', '<Leader>wa', vim.lsp.buf.add_workspace_folder, opts)
           vim.keymap.set('n', '<Leader>wl', function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end,
@@ -98,7 +95,6 @@ return {
           vim.keymap.set('n', '<Leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols,
             { desc = '[W]orkspace [S]ymbols', noremap = true, silent = true, buffer = args.buf })
 
-          vim.keymap.set('n', 'g0', require('telescope.builtin').lsp_document_symbols, opts)
         end
       })
     end

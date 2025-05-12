@@ -17,7 +17,7 @@ return {
       }
 
       -- couldn't use lazy's "key" because of lazy loading
-      vim.keymap.set("n", "<C-s>", require("auto-session.session-lens").search_session, {
+      vim.keymap.set("n", "<LocalLeader>s", require("auto-session.session-lens").search_session, {
         noremap = true,
       })
     end
