@@ -1,25 +1,22 @@
 return {
   {
-    'neovim/nvim-lspconfig',
+    'williamboman/mason-lspconfig.nvim',
     dependencies = {
-      {
-        "williamboman/mason-lspconfig.nvim",
-        dependencies = { "williamboman/mason.nvim" },
-        config = function()
-          require("mason").setup()
-          require("mason-lspconfig").setup {
-            ensure_installed = { "lua_ls" },
-            automatic_enable = {
-              exclude = {
-                "lua_ls",
-                "pyright",
-              }
-            }
-          }
-        end
-      },
+      'neovim/nvim-lspconfig',
+      "williamboman/mason.nvim",
     },
     config = function()
+      require("mason").setup()
+      require("mason-lspconfig").setup {
+        ensure_installed = { "lua_ls" },
+        automatic_enable = {
+          exclude = {
+            "lua_ls",
+            "pyright",
+          }
+        }
+      }
+
       local servers = {
         lua_ls = {
           -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls
@@ -94,7 +91,6 @@ return {
           vim.keymap.set('n', '<Leader>wr', vim.lsp.buf.remove_workspace_folder, opts)
           vim.keymap.set('n', '<Leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols,
             { desc = '[W]orkspace [S]ymbols', noremap = true, silent = true, buffer = args.buf })
-
         end
       })
     end
