@@ -1,19 +1,19 @@
 return {
   {
     'saghen/blink.cmp',
+
     dependencies = 'rafamadriz/friendly-snippets',
 
-    version = '*',
+    version = '1.*',
 
+    -- https://cmp.saghen.dev/configuration/reference
     opts = {
-      keymap = { preset = 'default' },
-
-      appearance = {
-        use_nvim_cmp_as_default = true,
-        nerd_font_variant = 'mono'
+      keymap = {
+        preset = 'default',
+        ['<c-m>'] = { 'show', 'show_documentation', 'hide_documentation' },
       },
-      -- experimental signature help support
-      signature = { enabled = true }
     },
+
+    opts_extend = { "sources.default" }
   },
 }
