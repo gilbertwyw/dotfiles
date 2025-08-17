@@ -1,7 +1,9 @@
 return {
   {
     'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate', -- TODO this fails sometimes
+    branch = 'master',
+    lazy = false,
+    build = ':TSUpdate',
     dependencies = {
       'nvim-treesitter/nvim-treesitter-context',
       'nvim-treesitter/nvim-treesitter-textobjects',
