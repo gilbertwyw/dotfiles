@@ -83,7 +83,6 @@ return {
           vim.keymap.set('n', 'g0', require('telescope.builtin').lsp_document_symbols, opts)
           vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
           vim.keymap.set('n', 'grr', require('telescope.builtin').lsp_references, opts)
-          vim.keymap.set('n', 'gtd', vim.lsp.buf.type_definition, opts)
 
           vim.keymap.set('n', '<Leader>wa', vim.lsp.buf.add_workspace_folder, opts)
           vim.keymap.set('n', '<Leader>wl', function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end,
