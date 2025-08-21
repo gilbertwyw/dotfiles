@@ -7,10 +7,13 @@ return {
         suppressed_dirs = { '~/', '~/Downloads', '/' },
       }
 
-      -- couldn't use lazy's "key" because of lazy loading
-      vim.keymap.set("n", "<LocalLeader>s", "<cmd>SessionSearch<CR>", {
+      local opts = {
         noremap = true,
-      })
+      }
+      -- couldn't use lazy's "key" because of lazy loading
+      vim.keymap.set("n", "<LocalLeader>sa", "<cmd>SessionSave<CR>", opts)
+      vim.keymap.set("n", "<LocalLeader>sd", "<cmd>SessionDelete<CR>", opts)
+      vim.keymap.set("n", "<LocalLeader>ss", "<cmd>SessionSearch<CR>", opts)
     end
   }
 }
