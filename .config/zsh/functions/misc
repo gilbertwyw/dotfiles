@@ -1,28 +1,28 @@
 # vim:ft=zsh
 
 function jump_after_first_word () {
-    local words
-    words=(${(z)BUFFER})
+  local words
+  words=(${(z)BUFFER})
 
-    if (( ${#words} <= 1 )) ; then
-        CURSOR=${#BUFFER}
+  if (( ${#words} <= 1 )) ; then
+    CURSOR=${#BUFFER}
     else
-        CURSOR=${#${words[1]}}+1
-    fi
+      CURSOR=${#${words[1]}}+1
+  fi
 }
 
 function take () {
-    mkdir -p "$1" && cd "$1"
+  mkdir -p "$1" && cd "$1"
 }
 
 # brew install yazi
 # https://yazi-rs.github.io/docs/quick-start/#shell-wrapper
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd < "$tmp"
+  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+  rm -f -- "$tmp"
 }
 
 # brew install walk

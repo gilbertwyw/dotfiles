@@ -1,5 +1,6 @@
 alias a=alias
 alias c=bat     # brew install bat
+alias C='bat --plain'
 alias d=docker  # brew install docker
 alias k=kubectl # brew install kubernetes-cli
 alias m=man
