@@ -12,8 +12,10 @@ alias rm=trash # brew install trash
 alias tf=terraform
 alias vd='$EDITOR -d'
 
+# Granted
+alias assume='. assume' # brew install common-fate/granted/granted
 
-### homebrew
+# Homebrew
 alias b=brew
 alias bh='brew home'
 alias bi='brew install'
@@ -22,19 +24,17 @@ alias bbc='brew bundle cleanup'
 alias bbd='brew bundle dump --force'
 alias bbi='brew bundle install -v --no-lock'
 
-
-### npm
+# Node.js
 alias ngi='npm install -g'
 alias ngl='npm ls -g --depth=0'
 alias ngo='npm outdated -g'
 
-
-### tmux
+# Tmux
 alias tat='tmux new-session -As $(basename $PWD | tr . -)'
 
-
-### zsh
+# Zsh
 alias -g CC='| pbcopy'
+alias -g F='--force'
 alias -g FF='| fzf'
 alias -g H='-h'
 alias -g HH='--help'
@@ -42,12 +42,8 @@ alias -g HHH='-help'
 alias -g L='| less'
 alias -g BZ='| base64 -d | zcat'
 alias -g DY='--dry-run=client -o yaml'
+alias -g VV='--version'
 alias -s go=$EDITOR
-
-
-### Misc.
-# Granted
-alias assume='. assume' # brew install common-fate/granted/granted
 
 # cheat.sh
 alias chtsh="curl -s cht.sh/:list | fzf --preview 'curl -s cht.sh/{}'"
