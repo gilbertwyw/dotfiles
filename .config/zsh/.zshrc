@@ -1,7 +1,9 @@
 # zmodload zsh/zprof
 
 # https://github.com/Homebrew/brew/blob/master/docs/Manpage.md#--prefix---unbrewed---installed-formula-
-if [[ "$(uname -m)" = "x86_64" ]]; then
+if [[  -d /home/linuxbrew/.linuxbrew ]]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"  
+elif [[ "$(uname -m)" = "x86_64" ]]; then
   eval "$(/usr/local/bin/brew shellenv)"
 else
   eval "$(/opt/homebrew/bin/brew shellenv)"
