@@ -11,9 +11,9 @@ return {
         noremap = true,
       }
       -- couldn't use lazy's "key" because of lazy loading
-      vim.keymap.set("n", "<LocalLeader>sa", "<cmd>SessionSave<CR>", opts)
-      vim.keymap.set("n", "<LocalLeader>sd", "<cmd>SessionDelete<CR>", opts)
-      vim.keymap.set("n", "<LocalLeader>ss", "<cmd>SessionSearch<CR>", opts)
+      vim.keymap.set("n", "<LocalLeader>sa", "<cmd>AutoSession save<CR>", opts)
+      vim.keymap.set("n", "<LocalLeader>sd", "<cmd>AutoSession delete<CR>", opts)
+      vim.keymap.set("n", "<LocalLeader>ss", "<cmd>AutoSession search<CR>", opts)
     end
   }
 }
