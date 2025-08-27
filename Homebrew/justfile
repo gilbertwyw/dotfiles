@@ -1,0 +1,33 @@
+alias C := cleanup
+alias c := check
+alias d := dump
+alias i := install
+alias l := list
+
+@_:
+  just --list
+
+_bundle *args:
+	brew bundle {{ args }}
+
+# List all dependencies present in the Brewfile.
+list:
+  @just _bundle list
+
+# Check if all dependencies present in the Brewfile are installed.
+check:
+  @just _bundle check
+
+# Uninstall all dependencies not present in the Brewfile.
+cleanup:
+  @just _bundle cleanup
+
+# Write all installed casks/formulae/images/taps into a Brewfile
+dump:
+  # always use: --force
+  @just _bundle dump --force
+
+# Install and upgrade (by default) all dependencies from the Brewfile.
+install:
+	@just _bundle install -v --no-lock
+

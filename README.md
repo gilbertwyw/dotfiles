@@ -3,7 +3,6 @@
 ## Prerequisites
 
 - [Homebrew](http://brew.sh/)
-- [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle)
 
 ```sh
 # brew install gh
@@ -25,6 +24,20 @@ brew bundle -v --no-lock
 
 # use -n to see any filesystem changes
 stow -v -R [-n] .
+```
+
+## Homebrew (via Just)
+
+- [Just](https://just.systems/) 
+
+```sh
+# list available recipes
+just -f ./Homebrew/Justfile 
+# or 
+cd ./Homebrew && just
+
+# e.g., dump 
+just -f Homebrew/justfile d
 ```
 
 ## Zsh
