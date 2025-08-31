@@ -46,7 +46,7 @@ setopt HIST_SAVE_NO_DUPS
 setopt HIST_IGNORE_SPACE
 
 path=(
-  $HOME/bin
+  $HOME/.local/bin
   /usr/local/bin
   /usr/local/sbin
   $path
