@@ -30,3 +30,8 @@ function y() {
 function lk {
   cd "$(walk "$@")"
 }
+
+# https://docs.python.org/3/library/pydoc.html 
+pd () {
+  python3 -m pydoc "$@"
+}
