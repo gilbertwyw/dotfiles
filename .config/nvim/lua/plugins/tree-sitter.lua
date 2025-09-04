@@ -89,8 +89,6 @@ return {
         },
         additional_vim_regex_highlighting = false,
       }
-
-      vim.keymap.set('n', '<leader>tp', ':InspectTree<cr>')
     end
   },
 }
