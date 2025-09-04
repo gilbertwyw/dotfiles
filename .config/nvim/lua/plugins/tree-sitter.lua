@@ -7,9 +7,10 @@ return {
     dependencies = {
       'nvim-treesitter/nvim-treesitter-context',
       'nvim-treesitter/nvim-treesitter-textobjects',
+      'andersevenrud/nvim_context_vt',
     },
     config = function()
-      require'nvim-treesitter.configs'.setup {
+      require 'nvim-treesitter.configs'.setup {
         -- https://github.com/nvim-treesitter/nvim-treesitter#modules
         ensure_installed = {
           "c", "lua", "vim", "vimdoc", "query", -- always
@@ -89,6 +90,8 @@ return {
         },
         additional_vim_regex_highlighting = false,
       }
+
+      vim.keymap.set('n', '<leader>tv', ':NvimContextVtToggle<CR>')
     end
   },
 }
