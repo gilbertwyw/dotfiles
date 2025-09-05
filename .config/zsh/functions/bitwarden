@@ -1,0 +1,55 @@
+# vim:ft=zsh
+
+# https://bitwarden.com/help/cli/#using-an-api-key
+bwlogin () {
+  if [[ ! -v BW_CLIENTID || ! -v BW_CLIENTSECRET ]]; then
+    printf 'Missing environment variables:\n\n'
+    printf 'export BW_CLIENTID=\nexport BW_CLIENTSECRET=\n'
+    return 1
+  fi
+
+  if [[ $(_bwrequirelogin) ]]; then
+    bw login --apikey --nointeraction
+  else
+    print 'Authenticated.'
+    print 'Tips: run "bw unlock" to generate a new session key.'
+  fi
+}
+
+_bwrequirelogin() {
+  local bwstatus
+  bwstatus=$(bw status --pretty | jq -r .status)
+
+  if [[ $bwstatus == "unauthenticated" ]]; then
+    return 0
+  fi
+  return 1
+}
+
+bwgetpw () {
+  if [[ -z $1 ]]; then
+    printf 'bwget <item name>'
+    return 1
+  fi
+
+  local bwsession=$BW_SESSION
+  if [[ -z $bwsession ]]; then
+    echo -n "Master password:"
+    read -r -s masterpw
+
+    bwsession=$(bw unlock "$masterpw" --raw)
+    if [[ $? -ne 0 ]]; then
+      return 1
+    fi
+    print "\n\nTo avoid typing master password again:\nexport BW_SESSION=\"$bwsession\"\n"
+  fi
+
+  # https://bitwarden.com/help/cli/#list
+  item=$(bw list items --session "$bwsession" --search "$1" | jq -r --compact-output '.[] | { id, name }'|fzf)
+  itemid=$(echo "$item" | jq -r '.id')
+
+  print "$item"
+  # https://bitwarden.com/help/cli/#get
+  bw get password --session "$bwsession" "$itemid"
+}
+
