@@ -1,0 +1,19 @@
+# vim:ft=zsh
+
+aws-who() {
+  local profile=${1:-default}
+  aws sts get-caller-identity --profile "$profile"
+}
+# switch profile
+awsprofile() {
+  export AWS_PROFILE=$1
+  echo "Switched to profile: $1"
+  aws sts get-caller-identity
+}
+
+# find S3 objects
+s3find() {
+    local bucket=$1
+    local pattern=$2
+    aws s3api list-objects-v2 --bucket "$bucket" | jq -r ".Contents[] | select(.Key | contains(\"$pattern\")) | .Key"
+}
