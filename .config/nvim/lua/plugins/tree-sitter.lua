@@ -10,24 +10,10 @@ return {
       'andersevenrud/nvim_context_vt',
     },
     config = function()
+      -- https://github.com/nvim-treesitter/nvim-treesitter#modules
       require 'nvim-treesitter.configs'.setup {
-        -- https://github.com/nvim-treesitter/nvim-treesitter#modules
         ensure_installed = {
-          "c", "lua", "vim", "vimdoc", "query", -- always
-          "bash",
-          "dockerfile",
-          "go",
-          "hcl",
-          "javascript",
-          "json",
-          "make",
-          "markdown",
-          "markdown_inline",
-          "python",
-          "terraform",
-          "toml",
-          "typescript",
-          "yaml",
+          "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline",
         },
         sync_install = false,
         auto_install = true,
