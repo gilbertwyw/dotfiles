@@ -9,46 +9,7 @@ return {
       require("mason").setup()
       require("mason-lspconfig").setup {
         ensure_installed = { "lua_ls" },
-        automatic_enable = {
-          exclude = {
-            "lua_ls",
-            "pyright",
-          }
-        }
       }
-
-      local servers = {
-        lua_ls = {
-          -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls
-          settings = {
-            Lua = {
-              diagnostics = {
-                globals = { 'vim' }
-              }
-            }
-          }
-        },
-        pyright = {
-          -- https://docs.astral.sh/ruff/editors/setup/#neovim
-          settings = {
-            pyright = {
-              -- Using Ruff's import organizer
-              disableOrganizeImports = true,
-            },
-            python = {
-              analysis = {
-                -- Ignore all files for analysis to exclusively use Ruff for linting
-                ignore = { '*' },
-              },
-            },
-          },
-        },
-      }
-
-      for server, config in pairs(servers) do
-        config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
-        require('lspconfig')[server].setup(config)
-      end
 
       -- Add buffer diagnostics to the location list
       -- vim.keymap.set('n', '<Leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
