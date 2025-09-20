@@ -126,6 +126,7 @@ brew "common-fate/granted/granted"
 brew "d12frosted/emacs-plus/emacs-plus@29", args: ["with-native-comp"]
 brew "hashicorp/tap/packer"
 cask "alt-tab"
+cask "amazon-q"
 cask "betterdisplay"
 cask "brave-browser"
 cask "calibre"

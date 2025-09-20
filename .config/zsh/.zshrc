@@ -1,3 +1,5 @@
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # zmodload zsh/zprof
 
 # https://github.com/Homebrew/brew/blob/master/docs/Manpage.md#--prefix---unbrewed---installed-formula-
@@ -96,3 +98,6 @@ eval "$(zoxide init --cmd j zsh)"
 eval "$(atuin init zsh)"
 
 # zprof
+
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
