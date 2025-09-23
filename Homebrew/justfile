@@ -22,7 +22,7 @@ check:
 cleanup:
   @just _bundle cleanup
 
-# Write all installed casks/formulae/images/taps into a Brewfile
+# Write all installed casks/formulae/images/taps into a Brewfile.
 dump:
   # always use: --force
   @just _bundle dump --force

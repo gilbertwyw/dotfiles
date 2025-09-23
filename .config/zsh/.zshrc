@@ -4,7 +4,7 @@
 
 # https://github.com/Homebrew/brew/blob/master/docs/Manpage.md#--prefix---unbrewed---installed-formula-
 if [[  -d /home/linuxbrew/.linuxbrew ]]; then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"  
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 elif [[ "$(uname -m)" = "x86_64" ]]; then
   eval "$(/usr/local/bin/brew shellenv)"
 else

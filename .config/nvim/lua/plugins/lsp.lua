@@ -40,6 +40,7 @@ return {
 
           -- Buffer local mappings.
           -- See `:help vim.lsp.*` for documentation on any of the below functions
+          -- https://neovim.io/doc/user/lsp.html#lsp-defaults
           local opts = { buffer = args.buf }
           vim.keymap.set('n', 'g0', require('telescope.builtin').lsp_document_symbols, opts)
           vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
