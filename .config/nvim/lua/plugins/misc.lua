@@ -25,7 +25,7 @@ return {
 
   {
     'Valloric/ListToggle',
-    config = function()
+    init = function()
       vim.g.lt_location_list_toggle_map = '<leader>tl'
       vim.g.lt_quickfix_list_toggle_map = '<leader>tq'
     end
@@ -33,14 +33,14 @@ return {
 
   {
     'andymass/vim-matchup',
-    config = function()
+    init = function()
       vim.g.matchup_matchparen_offscreen = { method = "popup" }
     end
   },
 
   {
     'embear/vim-localvimrc',
-    config = function()
+    init = function()
       -- https://github.com/embear/vim-localvimrc#the-glocalvimrc_persistent-setting
       vim.g.localvimrc_persistent = 1
     end
@@ -56,7 +56,7 @@ return {
 
   {
     'jpalardy/vim-slime',
-    config = function()
+    init = function()
       vim.g.slime_target = 'tmux'
       vim.g.slime_default_config = {
         socket_name = "default",
