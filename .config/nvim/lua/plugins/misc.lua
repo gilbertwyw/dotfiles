@@ -17,22 +17,6 @@ return {
   },
 
   {
-    'ggandor/leap.nvim',
-    config = function()
-      require('leap').create_default_mappings()
-
-      vim.keymap.set({ 'x', 'o' }, 'R', function()
-        require('leap.treesitter').select {
-          -- To increase/decrease the selection in a clever-f-like manner,
-          -- with the trigger key itself (vRRRRrr...). The default keys
-          -- (<enter>/<backspace>) also work, so feel free to skip this.
-          opts = require('leap.user').with_traversal_keys('R', 'r')
-        }
-      end)
-    end
-  },
-
-  {
     'Valloric/ListToggle',
     init = function()
       vim.g.lt_location_list_toggle_map = '<leader>tl'
