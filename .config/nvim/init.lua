@@ -6,7 +6,6 @@ vim.g.loaded_netrwPlugin = 1
 local o = vim.opt
 
 -- 0.8
-o.ch = 0 -- command height
 o.winbar = '%f'
 
 o.colorcolumn:append('80')
