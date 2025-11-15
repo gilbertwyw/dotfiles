@@ -24,7 +24,7 @@ return {
                 ["<C-k>"] = lga_actions.quote_prompt(),
                 ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
                 ["<C-h>"] = lga_actions.quote_prompt({ postfix = " --hidden " }),
-                ["<C-space>"] = require('telescope.actions').to_fuzzy_refine,
+                ["<C-y>"] = require('telescope.actions').to_fuzzy_refine,
               },
             },
           }
