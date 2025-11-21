@@ -83,3 +83,15 @@ xcode-select --install
 
 sudo xcodebuild -license accept
 ```
+
+## Java
+
+[jEnv](https://www.jenv.be/) 
+
+```sh
+jenv add "$(/usr/libexec/java_home)" 
+
+# e.g., OpenJDK 21
+brew install openjdk@21
+jenv add /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home/
+```

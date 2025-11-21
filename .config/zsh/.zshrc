@@ -49,6 +49,7 @@ setopt HIST_IGNORE_SPACE
 
 path=(
   $HOME/.local/bin
+  $HOME/.jenv/bin
   /usr/local/bin
   /usr/local/sbin
   $path
@@ -86,6 +87,10 @@ eval "$(fzf --zsh)"
 # brew install direnv, https://github.com/zimbatm/direnv#zsh
 if type direnv &>/dev/null; then
   eval "$(direnv hook zsh)"
+fi
+
+if type jenv &>/dev/null; then
+  eval "$(jenv init -)"
 fi
 
 # brew install starship
