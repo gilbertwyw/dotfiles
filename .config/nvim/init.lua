@@ -5,6 +5,9 @@ vim.g.loaded_netrwPlugin = 1
 
 local o = vim.opt
 
+-- session
+o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
 -- 0.8
 o.winbar = '%f'
 
