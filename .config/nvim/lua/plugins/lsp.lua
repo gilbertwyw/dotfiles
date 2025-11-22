@@ -4,6 +4,7 @@ return {
     dependencies = {
       { "mason-org/mason.nvim", opts = {} },
       'neovim/nvim-lspconfig',
+      'mfussenegger/nvim-jdtls',
     },
     config = function()
       require("mason").setup()
