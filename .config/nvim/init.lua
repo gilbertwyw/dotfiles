@@ -1,5 +1,10 @@
 local o = vim.opt
 
+-- folding
+o.foldmethod = 'expr'
+o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+o.foldenable = false
+
 -- session
 o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
