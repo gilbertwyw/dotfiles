@@ -12,47 +12,38 @@ return {
         ensure_installed = { "lua_ls" },
       }
 
-      -- Add buffer diagnostics to the location list
-      -- vim.keymap.set('n', '<Leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+      vim.diagnostic.config({ virtual_text = true })
 
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('UserLspConfig', {}),
         callback = function(args)
-          local client = vim.lsp.get_client_by_id(args.data.client_id)
+          local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
 
-          -- https://docs.astral.sh/ruff/editors/setup/#neovim
-          if client == nil then
-            return
-          end
-          if client.name == 'ruff' then
-            -- Disable hover in favor of Pyright
-            client.server_capabilities.hoverProvider = false
-          end
-
-          if client:supports_method('textDocument/formatting') then
-            -- Format the current buffer on save
+          if not client:supports_method('textDocument/willSaveWaitUntil') and client:supports_method('textDocument/formatting') then
             vim.api.nvim_create_autocmd('BufWritePre', {
+              group = vim.api.nvim_create_augroup('my.lsp', { clear = false }),
               buffer = args.buf,
               callback = function()
-                vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
+                vim.lsp.buf.format({ bufnr = args.buf, id = client.id, timeout_ms = 1000 })
               end,
             })
           end
 
-          -- Buffer local mappings.
-          -- See `:help vim.lsp.*` for documentation on any of the below functions
-          -- https://neovim.io/doc/user/lsp.html#lsp-defaults
           local opts = { buffer = args.buf }
+
+          -- override defaults
+          -- https://neovim.io/oc/user/lsp.html#lsp-defaults
           vim.keymap.set('n', 'g0', require('telescope.builtin').lsp_document_symbols, opts)
-          vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
           vim.keymap.set('n', 'grr', require('telescope.builtin').lsp_references, opts)
 
-          vim.keymap.set('n', '<Leader>wa', vim.lsp.buf.add_workspace_folder, opts)
-          vim.keymap.set('n', '<Leader>wl', function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end,
+          -- workspace
+          vim.keymap.set('n', 'gwa', vim.lsp.buf.add_workspace_folder, opts)
+          vim.keymap.set('n', 'gwl', function()
+              print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+            end,
             opts)
-          vim.keymap.set('n', '<Leader>wr', vim.lsp.buf.remove_workspace_folder, opts)
-          vim.keymap.set('n', '<Leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols,
-            { desc = '[W]orkspace [S]ymbols', noremap = true, silent = true, buffer = args.buf })
+          vim.keymap.set('n', 'gwr', vim.lsp.buf.remove_workspace_folder, opts)
+          vim.keymap.set('n', 'gws', require('telescope.builtin').lsp_dynamic_workspace_symbols, opts)
         end
       })
     end
