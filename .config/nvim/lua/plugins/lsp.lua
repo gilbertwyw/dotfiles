@@ -29,10 +29,16 @@ return {
             })
           end
 
-          local opts = { buffer = args.buf }
+          if client.server_capabilities.inlayHintProvider then
+            -- https://neovim.io/doc/user/lsp.html#vim.lsp.inlay_hint.enable()
+            vim.keymap.set('n', '<leader>ti', function()
+              vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+            end)
+          end
 
+          local opts = { buffer = args.buf }
           -- override defaults
-          -- https://neovim.io/oc/user/lsp.html#lsp-defaults
+          -- https://neovim.io/doc/user/lsp.html#lsp-defaults
           vim.keymap.set('n', 'g0', require('telescope.builtin').lsp_document_symbols, opts)
           vim.keymap.set('n', 'grr', require('telescope.builtin').lsp_references, opts)
 
