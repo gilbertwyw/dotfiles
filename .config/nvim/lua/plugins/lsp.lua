@@ -50,7 +50,8 @@ return {
             end,
             opts)
           vim.keymap.set('n', 'gwr', vim.lsp.buf.remove_workspace_folder, opts)
-          vim.keymap.set('n', 'gws', require('telescope.builtin').lsp_dynamic_workspace_symbols, opts)
+          vim.keymap.set('n', 'gws', require('telescope.builtin').lsp_workspace_symbols, opts)
+          vim.keymap.set('n', 'gWs', require('telescope.builtin').lsp_dynamic_workspace_symbols, opts)
 
           vim.keymap.set('n', '<leader>tw', function()
             vim.diagnostic.enable(not vim.diagnostic.is_enabled())
