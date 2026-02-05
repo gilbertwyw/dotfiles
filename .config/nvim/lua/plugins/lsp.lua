@@ -39,7 +39,7 @@ return {
           local opts = { buffer = args.buf }
           -- override defaults
           -- https://neovim.io/doc/user/lsp.html#lsp-defaults
-          vim.keymap.set('n', 'g0', require('telescope.builtin').lsp_document_symbols, opts)
+          vim.keymap.set('n', 'gO', require('telescope.builtin').lsp_document_symbols, opts)
           vim.keymap.set('n', 'grr', require('telescope.builtin').lsp_references, opts)
 
           -- workspace
