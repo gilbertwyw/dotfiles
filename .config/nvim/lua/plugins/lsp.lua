@@ -33,6 +33,7 @@ return {
             -- https://neovim.io/doc/user/lsp.html#vim.lsp.inlay_hint.enable()
             vim.keymap.set('n', '<leader>ti', function()
               vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+              vim.notify(vim.lsp.inlay_hint.is_enabled() and "Inlay hints enabled" or "Inlay hints disabled")
             end)
           end
 
@@ -50,6 +51,11 @@ return {
             opts)
           vim.keymap.set('n', 'gwr', vim.lsp.buf.remove_workspace_folder, opts)
           vim.keymap.set('n', 'gws', require('telescope.builtin').lsp_dynamic_workspace_symbols, opts)
+
+          vim.keymap.set('n', '<leader>tw', function()
+            vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+            vim.notify(vim.diagnostic.is_enabled() and "Diagnostics enabled" or "Diagnostics disabled")
+          end, opts)
         end
       })
     end
