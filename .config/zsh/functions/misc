@@ -35,3 +35,30 @@ function lk {
 pd () {
   python3 -m pydoc "$@"
 }
+
+copy-command() {
+  echo -n $BUFFER | pbcopy
+  zle -M "Copied to clipboard"
+}
+zle -N copy-command
+bindkey '^Xc' copy-command
+
+bindkey -s '^Xgc' 'git commit -m ""\C-b'
+
+# from: https://github.com/Piotr1215/dotfiles/tree/master
+function nm() {
+    # View man pages in nvim with optional fzf selection
+    command -v nvim >/dev/null 2>&1 || { echo "Error: nvim is required but not installed"; return 1; }
+    
+    if command -v fzf >/dev/null 2>&1; then
+        # If fzf is available, use it for searching
+        local page=$(command man -k . | fzf --prompt='Man> ' | awk '{print $1}')
+        if [[ -n $page ]]; then
+            nvim +"Man $page | only"
+        fi
+    else
+        # If fzf is not available, use the argument directly
+        [[ -z "$1" ]] && { echo "Usage: nman <manual_page>"; return 1; }
+        nvim +"Man $1 | only"
+    fi
+}
