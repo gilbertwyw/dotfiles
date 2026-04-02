@@ -38,8 +38,8 @@ return {
   {
     'Valloric/ListToggle',
     init = function()
-      vim.g.lt_location_list_toggle_map = '<leader>tl'
-      vim.g.lt_quickfix_list_toggle_map = '<leader>tq'
+      vim.g.lt_location_list_toggle_map = '<LocalLeader>tl'
+      vim.g.lt_quickfix_list_toggle_map = '<LocalLeader>tq'
     end
   },
 
@@ -83,7 +83,7 @@ return {
   {
     'mbbill/undotree',
     keys = {
-      { '<leader>tu', vim.cmd.UndotreeToggle, desc = 'Toggle undotree' }
+      { '<LocalLeader>tu', vim.cmd.UndotreeToggle, desc = 'Toggle undotree' }
     },
   },
 

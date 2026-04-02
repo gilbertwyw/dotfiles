@@ -4,6 +4,6 @@ return {
     dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' },
     opts = { latex = { enabled = false } },
     lazy = false,
-    keys = { { "<leader>tm", "<cmd>RenderMarkdown toggle<CR>", desc = "Toggle markdown rendering" } },
+    keys = { { "<LocalLeader>tm", "<cmd>RenderMarkdown toggle<CR>", desc = "Toggle markdown rendering" } },
   },
 }

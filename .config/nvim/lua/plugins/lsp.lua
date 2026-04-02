@@ -31,7 +31,7 @@ return {
 
           if client.server_capabilities.inlayHintProvider then
             -- https://neovim.io/doc/user/lsp.html#vim.lsp.inlay_hint.enable()
-            vim.keymap.set('n', '<leader>ti', function()
+            vim.keymap.set('n', '<LocalLeader>ti', function()
               vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
               vim.notify(vim.lsp.inlay_hint.is_enabled() and "Inlay hints enabled" or "Inlay hints disabled")
             end)
@@ -53,7 +53,7 @@ return {
           vim.keymap.set('n', 'gws', require('telescope.builtin').lsp_workspace_symbols, opts)
           vim.keymap.set('n', 'gWs', require('telescope.builtin').lsp_dynamic_workspace_symbols, opts)
 
-          vim.keymap.set('n', '<leader>tw', function()
+          vim.keymap.set('n', '<LocalLeader>td', function()
             vim.diagnostic.enable(not vim.diagnostic.is_enabled())
             vim.notify(vim.diagnostic.is_enabled() and "Diagnostics enabled" or "Diagnostics disabled")
           end, opts)
