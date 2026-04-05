@@ -93,8 +93,6 @@ return {
     cmd = { 'Dispatch', 'Make', 'Focus', 'Start' },
   },
 
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
-
   {
     'rmagatti/auto-session',
     lazy = false,
@@ -104,7 +102,6 @@ return {
   'Raimondi/delimitMate', -- keep?
   'chrisbra/unicode.vim',
   'kshenoy/vim-signature',
-  'psliwka/vim-smoothie',
   'tommcdo/vim-exchange',
   'tpope/vim-abolish',
   'tpope/vim-characterize',
