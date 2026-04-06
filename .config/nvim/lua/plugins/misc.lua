@@ -92,11 +92,6 @@ return {
     cmd = { 'Dispatch', 'Make', 'Focus', 'Start' },
   },
 
-  {
-    'rmagatti/auto-session',
-    lazy = false,
-  },
-
   'AndrewRadev/splitjoin.vim',
   'Raimondi/delimitMate', -- keep?
   'chrisbra/unicode.vim',
