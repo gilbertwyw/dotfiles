@@ -94,7 +94,6 @@ return {
 
   'AndrewRadev/splitjoin.vim',
   'Raimondi/delimitMate', -- keep?
-  'chrisbra/unicode.vim',
   'kshenoy/vim-signature',
   'tommcdo/vim-exchange',
   'tpope/vim-abolish',
