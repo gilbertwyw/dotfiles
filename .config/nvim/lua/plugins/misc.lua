@@ -84,7 +84,6 @@ return {
     cmd = { 'Dispatch', 'Make', 'Focus', 'Start' },
   },
 
-  'AndrewRadev/splitjoin.vim',
   'Raimondi/delimitMate', -- keep?
   'kshenoy/vim-signature',
   'tommcdo/vim-exchange',
