@@ -35,14 +35,6 @@ return {
   },
 
   {
-    'Valloric/ListToggle',
-    init = function()
-      vim.g.lt_location_list_toggle_map = '<LocalLeader>tl'
-      vim.g.lt_quickfix_list_toggle_map = '<LocalLeader>tq'
-    end
-  },
-
-  {
     'andymass/vim-matchup',
     opts = {
       treesitter = {

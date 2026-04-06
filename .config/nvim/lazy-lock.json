@@ -1,6 +1,5 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
-  "ListToggle": { "branch": "master", "commit": "63fb8acb57d57380b2e30e7a831247140559c95f" },
   "LuaSnip": { "branch": "master", "commit": "458560534a73f7f8d7a11a146c801db00b081df0" },
   "ansible-vim": { "branch": "master", "commit": "3329367d2e5f90d203c8d340c53fa83c60a1ad41" },
   "blink.cmp": { "branch": "main", "commit": "bae4bae0eedd1fa55f34b685862e94a222d5c6f8" },
@@ -30,6 +29,7 @@
   "opencode.nvim": { "branch": "main", "commit": "df533d6da724109bf08446392db860fdceddbd0c" },
   "plenary.nvim": { "branch": "master", "commit": "b9fd5226c2f76c951fc8ed5923d85e4de065e509" },
   "splitjoin.vim": { "branch": "main", "commit": "b55d5ba3e2b2649317925c21a68f90c8f28ec3e9" },
+  "quicker.nvim": { "branch": "master", "commit": "063cc44da1eef8681bbd653b29d3bc961780886a" },
   "render-markdown.nvim": { "branch": "main", "commit": "687de727de91a63b0bff9cff4e71d73f9d40fa77" },
   "snacks.nvim": { "branch": "main", "commit": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e" },
   "targets.vim": { "branch": "master", "commit": "6325416da8f89992b005db3e4517aaef0242602e" },
