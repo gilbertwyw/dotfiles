@@ -54,8 +54,6 @@ vim.keymap.set("n", 'k', moveWithHistoryFn('k', 5), { expr = true })
 vim.keymap.set('n', '<leader>re', ':e $MYVIMRC<cr>')
 vim.keymap.set('n', '<leader>rr', ':so $MYVIMRC<cr>')
 
-vim.keymap.set('n', '<Backspace>', '<C-^>')
-
 -- Resize window
 vim.keymap.set('n', '<Left>', ':vertical resize +2<cr>')
 vim.keymap.set('n', '<Right>', ':vertical resize -2<cr>')
